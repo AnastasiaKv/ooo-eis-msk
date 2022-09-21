@@ -8,14 +8,18 @@ function App() {
   return (
     <LayoutProvider>
       <div className="container">
-      
+
+        <header>
           <Header />
-        
-        <content>
-          <main>MAIN CONTENT</main>
-          <aside className="left-sidebar">LEFT SIDEBAR</aside>
-          <aside className="right-sidebar">RIGHT SIDEBAR</aside>
-        </content>
+        </header>
+
+        <body>
+          <content>
+            <main>MAIN CONTENT</main>
+            <aside className="left-sidebar">LEFT SIDEBAR</aside>
+            <aside className="right-sidebar">RIGHT SIDEBAR</aside>
+          </content>
+        </body>
 
         <footer>
           <Footer />
