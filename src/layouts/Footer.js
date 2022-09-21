@@ -3,6 +3,9 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import RedLine from '../layouts/components/RedLine';
+import LeftDecor from '../layouts/components/DecorLeft';
+import RightDecor from '../layouts/components/DecorRight';
 import {
      makeStyles,
      createMuiTheme,
@@ -28,18 +31,17 @@ export default function Footer() {
      const classes = useStyles();
      return (
           <div>
-               <footer style={{ color: "#292929", position: "fixed", width: "100%", bottom: 0 }}>
-
-                    <AppBar sx={{ bgcolor: "#292929" }} position="static" >
-                         <div style={leftPadding}>
-                              <Toolbar className={classes.customizeToolbar} >
-                                   <div> <Typography variant="caption">©Copyright</Typography></div>
-                                   <div style={spacing_10cm}> <Typography variant="caption">Карта сайта</Typography></div>
-                                   <div style={spacing_40px}>  <Typography variant="caption">Политика</Typography></div>
-                                   <div style={spacing_40px}> <Typography variant="caption">Конфеденциальность</Typography></div>
-                              </Toolbar>
-                         </div>
-                    </AppBar>
-               </footer></div>
+               <LeftDecor />
+               <RightDecor />
+               <RedLine />
+               <AppBar sx={{ bgcolor: "#292929" }} position="static" >
+                    <Toolbar className={classes.customizeToolbar} >
+                         <div> <Typography variant="caption">©Copyright</Typography></div>
+                         <div style={spacing_10cm}> <Typography variant="caption">Карта сайта</Typography></div>
+                         <div style={spacing_40px}>  <Typography variant="caption">Политика</Typography></div>
+                         <div style={spacing_40px}> <Typography variant="caption">Конфеденциальность</Typography></div>
+                    </Toolbar>
+               </AppBar>
+          </div>
      );
 }
