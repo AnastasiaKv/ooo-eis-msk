@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   border: {
     borderRadius: 2,
     borderColor: "#292929",
-     marginTop: theme.spacing(4.5)
+    marginTop: theme.spacing(4.5)
   },
   title: {
     flexGrow: 1
@@ -108,7 +108,7 @@ export default function Header() {
   const [example, setExample] = useState("primary");
 
   return (
-    <header style={{ color: "white", position: "relative", width: "100%" }}>
+    <header style={{ color: "white", position: "fixed", width: "100%" }}>
       <AppBar elevation={0} sx={{ bgcolor: "white" }} position="static">
         <div style={leftPadding}>
           <Toolbar >

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"], // Список файлов библиотеки для включения в компиляцию
+    "allowJs": true, // Разрешить компиляцию файлов JavaScript
+    "skipLibCheck": true, // Пропустить проверку типов всех файлов объявлений
+    "esModuleInterop": true, // Отключает импорт пространства имен (импорт * как fs из "fs") и включает импорт в стиле CJS / AMD / UMD (импорт fs из "fs")
+    "allowSyntheticDefaultImports": true, // Разрешить импорт по умолчанию из модулей без экспорта по умолчанию
+    "strict": true, // Включить все параметры строгой проверки типов
+    "forceConsistentCasingInFileNames": true, // Запрещаем ссылки с несогласованным регистром на один и тот же файл.
+    "noFallthroughCasesInSwitch": true,
+    "module": "CommonJS", // Указываем генерацию кода модуля
+    "moduleResolution": "node", // Разрешить модули в стиле Node.js
+    "resolveJsonModule": true, // Включить модули, импортированные с расширением .json
+    "isolatedModules": true, // Безоговорочно генерировать импорт для неразрешенных файлов
+    "noEmit": true, // Не выводить вывод (то есть не компилировать код, а только выполнять проверку типа)
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "jsx": "react" // Поддержка JSX в файлах .tsx
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "build"] //  *** Файлы, которые не нужно вводить, проверять ***
+}
