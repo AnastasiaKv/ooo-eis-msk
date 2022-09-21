@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  max-width: 100%;
+  margin: auto;
 }
 
 .App-logo {
   height: 25vmin;
   pointer-events: none;
+}
+
+.body {
+  background: #eee;
+  margin: 0px;
+  padding: 0px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,6 +30,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { styled, alpha } from '@mui/material/styles';
 // importing material UI components
 import AppBar from "@mui/material/AppBar";
@@ -18,6 +18,9 @@ import {
   ThemeProvider
 } from "@material-ui/core/styles";
 
+const leftPadding = {
+  paddingLeft: "7cm",
+};
 const toolbarStyle = {
   paddingTop: 3,
   paddingLeft: "8cm"
@@ -81,74 +84,82 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 const useStyles = makeStyles((theme) => ({
-  margin: {
-    "& > *": {
-      margin: theme.spacing(1)
-    }
-  },
   border: {
     borderRadius: 2,
-    borderColor: "#292929", marginTop: theme.spacing(4.3)
+    borderColor: "#292929",
+     marginTop: theme.spacing(4.5)
   },
-  spacer: {
-    marginTop: theme.spacing(4.5)
-  }
+  title: {
+    flexGrow: 1
+  },
+  customColor: {
+    // or hex code, this is normal CSS background-color
+    backgroundColor: "#292929"
+  },
+  customHeight: {
+    minHeight: 1200
+  },
+  offset: theme.mixins.toolbar
 }));
 
 
 export default function Header() {
   const classes = useStyles();
+  const [example, setExample] = useState("primary");
+
   return (
+    <header style={{ color: "white", position: "relative", width: "100%" }}>
+      <AppBar elevation={0} sx={{ bgcolor: "white" }} position="static">
+        <div style={leftPadding}>
+          <Toolbar >
+            <Box sx={{ width: "auto", height: 85, paddingTop: 3 }}
+              component='img'
+              alt='Company logo.'
+              src={Logo} />
 
-    <AppBar sx={{ bgcolor: "white" }} position="static" >
-      <div style={toolbarStyle}>
-        <Toolbar >
-          <Box sx={{ height: 64, paddingTop: 3 }}
-            component='img'
-            alt='Company logo.'
-            src={Logo} />
+            <div style={mapAndMailStyle}>
+              <Typography variant="h6"
+                component="div" sx={{ flexGrow: 1 }} style={{ color: "#292929" }}>
+                info@ers.msk.ru
+              </Typography>
+              <Button
+                component="div"
+                style={{
+                  backgroundColor: '#292929',
+                }}
+                variant="contained" startIcon={<MapIcon />}>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </Button>
+            </div>
 
-          <div style={mapAndMailStyle}>
-            <Typography variant="h6"
-              component="div" sx={{ flexGrow: 1 }} style={{ color: "#292929" }}>
-              info@ers.msk.ru
-            </Typography>
-            <Button
-              component="div"
-              style={{
-                backgroundColor: '#292929',
-              }}
-              variant="contained" startIcon={<MapIcon />}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </Button>
-          </div>
+            <div className={classes.border} style={searchBorderStyle}>
+              <Search>
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Поиск.."
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+              </Search>
+            </div>
 
-          <div className={classes.border} style={searchBorderStyle}>
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Поиск.."
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </Search>
-          </div>
+            <div style={callButtonStyle}>
+              <Typography variant="h6"
+                component="div" sx={{ flexGrow: 1 }} style={{ color: "#292929" }}>
+                8-800-232-32-22
+              </Typography>
+              <Button
+                style={{ backgroundColor: "red" }}
+                variant="contained" startIcon={<HeadsetMicIcon />}>
+                Обратный звонок
+              </Button>
+            </div>
 
-          <div style={callButtonStyle}>
-            <Typography variant="h6"
-              component="div" sx={{ flexGrow: 1 }} style={{ color: "#292929" }}>
-              8-800-232-32-22
-            </Typography>
-            <Button
-              style={{ backgroundColor: "red" }}
-              variant="contained" startIcon={<HeadsetMicIcon />}>
-              Обратный звонок
-            </Button>
-          </div>
+          </Toolbar>
+        </div>
+      </AppBar>
 
-        </Toolbar>
-      </ div>
-    </AppBar>
+    </header>
   );
 }

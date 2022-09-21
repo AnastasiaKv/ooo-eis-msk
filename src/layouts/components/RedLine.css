@@ -1,0 +1,9 @@
+.RedLine {
+     background-color: rgb(241, 43, 41);
+     position: fixed;
+     left: 0px;
+     display: block;
+     width: 100%;
+     height: 12px;
+     bottom: 88px;
+}
