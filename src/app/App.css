@@ -1,5 +1,4 @@
 /* RESET */
-/* RESET */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,15 +14,25 @@ body {
 }
 
 header {
-  background: orangered;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  background: white;
 }
 
 main {
-  background: darkslateblue;
+  background: white;
 }
 
 footer {
-  background: deeppink;
+  position: fixed;
+  display: inline-flexbox;
+  align-items: center;
+  flex-direction: column;
+  background: #292929;
 }
 
 .left-sidebar {
@@ -59,9 +68,26 @@ footer {
 }
 
 @media screen and (max-width: 575px) {
+
   .container,
   .content {
     display: flex;
     flex-direction: column;
   }
+}
+
+@font-face {
+  font-family: 'NeoSansPro';
+  src: url('../assets/fonts/Furore.otf') format('otf'),
+    url('../assets/fonts/NeoSansPro-Bold.otf') format('otf'),
+    url('../assets/fonts/NeoSansPro-BoldItalic.otf') format('otf'),
+    url('../assets/fonts/NeoSansPro-Italic.ttf') format('truetype'),
+    url('../assets/fonts/NeoSansPro-Light.otf') format('otf'),
+    url('../assets/fonts/NeoSansPro-LightItalic.ttf') format('truetype'),
+    url('../assets/fonts/NeoSansPro-Medium.otf') format('otf'),
+    url('../assets/fonts/NeoSansPro-Regular.otf') format('otf'),
+    url('../assets/fonts/NeoSansPro-Ultra.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }

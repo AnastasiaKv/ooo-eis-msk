@@ -1,32 +1,27 @@
 import * as React from 'react';
-
 import './App.css';
-import Header from '../layouts/Header';
-import Footer from '../layouts/Footer';
-
-
-const bodyStyle = {
-  backgroundColor: "white"
-};
+import Header from '../components/Header';
+import Footer from '../components/Footer/Footer';
+import { LayoutProvider } from './layouts/LayoutProvider'
 
 function App() {
   return (
-   
-        <div className="container">
-          <div className="header">
-            <Header />
-          </div>
+    <LayoutProvider>
+      <div className="container">
+      
+          <Header />
+        
+        <content>
+          <main>MAIN CONTENT</main>
+          <aside className="left-sidebar">LEFT SIDEBAR</aside>
+          <aside className="right-sidebar">RIGHT SIDEBAR</aside>
+        </content>
 
-          <div className="content">
-            <main>MAIN CONTENT</main>
-            <aside class="left-sidebar">LEFT SIDEBAR</aside>
-            <aside class="right-sidebar">RIGHT SIDEBAR</aside>
-          </div>
-
-          <div className="footer">
-            <Footer />
-          </div>
-        </div>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
+    </LayoutProvider>
   );
 }
 

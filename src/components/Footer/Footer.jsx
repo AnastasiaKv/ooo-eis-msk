@@ -3,12 +3,11 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import RedLine from '../layouts/components/RedLine';
-import LeftDecor from '../layouts/components/DecorLeft';
-import RightDecor from '../layouts/components/DecorRight';
+import RedLine from './Decor/RedLine';
+import LeftDecor from './Decor/DecorLeft';
+import RightDecor from './Decor/DecorRight';
 import {
      makeStyles,
-     createMuiTheme,
      ThemeProvider
 } from "@material-ui/core/styles";
 
@@ -34,7 +33,7 @@ export default function Footer() {
                <LeftDecor />
                <RightDecor />
                <RedLine />
-               <AppBar sx={{ bgcolor: "#292929" }} position="static" >
+               <AppBar sx={{ bgcolor: "#292929" }} position="static">
                     <Toolbar className={classes.customizeToolbar} >
                          <div> <Typography variant="caption">©Copyright</Typography></div>
                          <div style={spacing_10cm}> <Typography variant="caption">Карта сайта</Typography></div>
