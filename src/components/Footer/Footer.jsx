@@ -35,7 +35,7 @@ export default function Footer() {
                     <RightDecor />
                     {/* <RedLine /> */}
                     {/* Витя, AppBar генерит тег <header>, а тебе нужен тут просто <div> */}
-                    <AppBar sx={{ bgcolor: "transparent" }} position="static">
+                    <AppBar elevation={0} sx={{ bgcolor: "transparent" }} position="static">
                          <Toolbar className={classes.customizeToolbar} >
                               <div> <Typography variant="caption">©Copyright</Typography></div>
                               <div style={spacing_10cm}> <Typography variant="caption">Карта сайта</Typography></div>

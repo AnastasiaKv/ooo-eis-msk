@@ -5,6 +5,6 @@ import './DecorRight.css';
 
 export default function DecorRight() {
      return (
-          <img className="rightbox" src={image} alt="DecorRight" />
+          <img width="190" className="rightbox" src={image} alt="DecorRight" />
      );
 }
