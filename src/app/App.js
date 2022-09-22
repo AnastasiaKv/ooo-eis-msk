@@ -14,9 +14,10 @@ function App() {
             <div className="ees-pillar">
               <Header />
               <div className="ees-main">
+               <Slider/>
                 <div className="ees-main-row">
                   <aside className="ees-sidebar-left">LEFT SIDEBAR</aside>
-                  <main className="ees-content">MAIN CONTENT</main>
+                  <main className="ees-content"></main>
                   <aside className="ees-sidebar-right">RIGHT SIDEBAR</aside>
                 </div>
               </div>

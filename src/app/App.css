@@ -130,12 +130,12 @@ footer {
   position: static;
 }
 .ees-sidebar-left {
-  color: white;
-  background: dodgerblue;
+  color: black;
+ 
 }
 .ees-sidebar-right {
-  color: white;
-  background: forestgreen;
+  color: black;
+ 
 }
 .ees-footer {
   background-color: #292929;
