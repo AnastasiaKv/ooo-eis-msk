@@ -4,11 +4,12 @@ import PaginationDot from './PaginationDot';
 
 const styles = {
      root: {
-          position: 'absolute',
-          bottom: 28,
-          right: 20,
+          position: 'relative',
+          bottom: 190,
+          right: 44,
           display: 'flex',
           flexDirection: 'row',
+          justifyContent: 'center'
      },
 };
 

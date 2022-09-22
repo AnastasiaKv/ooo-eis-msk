@@ -9,14 +9,14 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
      root: {
-          position: 'relative',
+          // position: 'relative',
      },
      slide: {
-          marginRight: 100,
-          display: 'inline-block',
+          marginRight: 0,
+          display: 'flex',
           width: 886,
           height: 476,
-          padding: 46,
+          padding: 0,
           color: '#fff',
      },
      slide1: {
@@ -30,14 +30,14 @@ const styles = {
      },
 
      image1: {
-          objectFit: 'contain',
+          objectFit: 'clip',
           width: 886,
-          height: 476,
+          height: 326,
      },
      image2: {
-          objectFit: 'stretch',
+          objectFit: 'cover',
           width: 886,
-          height: 476,
+          height: 326,
      },
      dots: {
 
@@ -67,11 +67,10 @@ class Slider extends React.Component {
                          <div style={Object.assign({}, styles.slide)}>
                               <img style={styles.image2} src={sliderimg2} alt="2" />
                          </div>
-
-
                     </AutoPlaySwipeableViews>
-                    <div style={styles.dots}>
-                         <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} /></div>
+                    {/* <div style={styles.dots}> */}
+                    <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} />
+                    {/* </div> */}
 
                </div>
           );

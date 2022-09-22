@@ -14,13 +14,21 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 const mapAndMailStyle = {
 
-  paddingLeft: "80px",
   paddingRight: "20px"
 };
 const callButtonStyle = {
-
-  paddingLeft: "20px",
+  paddingLeft: "7px",
   paddingRight: "20px"
+};
+const ss = {
+  position: 'relative',
+  display: "flex",
+  flexDirection: "row"
+};
+const searchStyle = {
+  top: 3,
+  verticalAlign: "bottom",
+  fontSize: 10,
 };
 const IconTextField = ({ iconStart, iconEnd, InputProps, ...props }) => {
   return (
@@ -44,14 +52,14 @@ export default function Header() {
     <div className="ees-header">
       <AppBar className="ees-header-content" elevation={0} sx={{ bgcolor: "white" }}>
         <Toolbar >
-          <Box sx={{ width: "auto", height: 85, paddingTop: 3 }}
+          <Box sx={{marginLeft:"-18px", marginRight: "60px", height: 75 }}
             component='img'
             alt='Company logo.'
             src={Logo} />
 
           <div style={mapAndMailStyle}>
             <Typography variant="h6"
-              component="div" sx={{ flexGrow: 1 }} style={{ color: "#292929" }}>
+              component="div" sx={{ flexGrow: 1 }} style={{ fontSize: 18, color: "#292929" }}>
               info@ers.msk.ru
             </Typography>
             <Button component="div" style={{ backgroundColor: '#292929', }}
@@ -60,19 +68,18 @@ export default function Header() {
             </Button>
           </div>
 
+          <IconTextField style={searchStyle} label="Поиск.." iconEnd={<SearchIcon />} />
 
-          <div>
-            <IconTextField label="Поиск.." iconEnd={<SearchIcon />} />
-          </div>
           <div style={callButtonStyle}>
             <Typography variant="h6"
-              component="div" sx={{ flexGrow: 1 }} style={{ color: "#292929" }}>
+              component="div" sx={{ flexGrow: 1 }} style={{ fontSize: 18, color: "#292929" }}>
               8-800-232-32-22
             </Typography>
             <Button style={{ backgroundColor: "#f12b29" }} variant="contained" startIcon={<HeadsetMicIcon />}>
               Обратный звонок
             </Button>
           </div>
+
         </Toolbar>
       </AppBar>
     </div>
