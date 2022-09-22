@@ -14,39 +14,8 @@ html, body, #root {
 body {
   text-align: center;
   font-size: 24px;
-  line-height: 3;
+  line-height: 1;
 }
-
-/* header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-
-  background: white;
-}
-
-main {
-  background: white;
-}
-
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
-  align-content: center;
-  flex-direction: column;
-  background: #292929;
-}
-
-.left-sidebar {
-  background: dodgerblue;
-}
-
-.right-sidebar {
-  background: forestgreen;
-} */
-
 /* Holy Grail */
 .ees-parent {
   box-sizing: border-box;
@@ -77,6 +46,7 @@ footer {
   align-items: normal;
   justify-content: center;
   flex-flow: row nowrap;
+  margin-left: -48px;
 }
 .ees-header-content {
   flex: 1 1 auto;
@@ -100,11 +70,14 @@ footer {
   min-width: 40em;
 }
 .ees-content {
+  top:'15px';
   display: flex;
   align-items: normal;
   justify-content: normal;
   flex-flow: row nowrap;
+  flex-direction: row;
   flex: 1 1 auto;
+  flex-wrap: wrap;
 }
 .ees-sidebar-left {
   flex: 0 1 auto;
