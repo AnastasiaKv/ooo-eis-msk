@@ -13,23 +13,13 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 
 const mapAndMailStyle = {
-
   paddingRight: "20px"
 };
 const callButtonStyle = {
   paddingLeft: "7px",
   paddingRight: "20px"
 };
-const ss = {
-  position: 'relative',
-  display: "flex",
-  flexDirection: "row"
-};
-const searchStyle = {
-  top: 3,
-  verticalAlign: "bottom",
-  fontSize: 10,
-};
+
 const IconTextField = ({ iconStart, iconEnd, InputProps, ...props }) => {
   return (
     <TextField
@@ -52,7 +42,7 @@ export default function Header() {
     <div className="ees-header">
       <AppBar className="ees-header-content" elevation={0} sx={{ bgcolor: "white" }}>
         <Toolbar >
-          <Box sx={{marginLeft:"-18px", marginRight: "60px", height: 75 }}
+          <Box sx={{ marginLeft: "-18px", marginRight: "60px", height: 75 }}
             component='img'
             alt='Company logo.'
             src={Logo} />
@@ -68,14 +58,14 @@ export default function Header() {
             </Button>
           </div>
 
-          <IconTextField style={searchStyle} label="Поиск.." iconEnd={<SearchIcon />} />
+          <IconTextField style={{ top: 16 }} size="small" label="Поиск.." iconEnd={<SearchIcon />} />
 
           <div style={callButtonStyle}>
-            <Typography variant="h6"
+            <div style={{ top: 16 }}> <Typography variant="h6"
               component="div" sx={{ flexGrow: 1 }} style={{ fontSize: 18, color: "#292929" }}>
               8-800-232-32-22
-            </Typography>
-            <Button style={{ backgroundColor: "#f12b29" }} variant="contained" startIcon={<HeadsetMicIcon />}>
+            </Typography></div>
+            <Button size="" style={{ backgroundColor: "#f12b29" }} variant="contained" startIcon={<HeadsetMicIcon />}>
               Обратный звонок
             </Button>
           </div>
