@@ -14,10 +14,10 @@ root.render(
   </BrowserRouter>
 )
 
-ReactDOM.render(App, document.getElementById('root'))
+// ReactDOM.render(App, document.getElementById('root'))
 
-console.log(process.env)
+// console.log(process.env)
 
-reportWebVitals(console.log)
+// reportWebVitals(console.log)
 
 serviceWorker.unregister()

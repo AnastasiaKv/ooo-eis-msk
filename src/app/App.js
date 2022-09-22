@@ -7,23 +7,22 @@ import { LayoutProvider } from './layouts/LayoutProvider'
 function App() {
   return (
     <LayoutProvider>
-      <div className="container">
-
-        <header>
-          <Header />
-        </header>
-
-        <body>
-          <content>
-            <main>MAIN CONTENT</main>
-            <aside className="left-sidebar">LEFT SIDEBAR</aside>
-            <aside className="right-sidebar">RIGHT SIDEBAR</aside>
-          </content>
-        </body>
-
-        <footer>
-          <Footer />
-        </footer>
+      <div className="ees-parent">
+        <div className="ees-container">
+          <div className="ees-container-helper">
+            <div className="ees-pillar">
+              <Header />
+              <div className="ees-main">
+                <div className="ees-main-row">
+                  <aside className="ees-sidebar-left">LEFT SIDEBAR</aside>
+                  <main className="ees-content">MAIN CONTENT</main>
+                  <aside className="ees-sidebar-right">RIGHT SIDEBAR</aside>
+                </div>
+              </div>
+              <Footer />
+            </div>
+          </div>
+        </div>
       </div>
     </LayoutProvider>
   );

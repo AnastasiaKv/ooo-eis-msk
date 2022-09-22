@@ -1,10 +1,14 @@
 .rightbox {
-     display: flex;
+     /* display: flex;
      flex-direction: column;
      align-items: flex-end;
      align-content: flex-end;
      justify-items: flex-end;
 
      justify-content: flex-end;
-     flex-wrap: wrap;
+     flex-wrap: wrap; */
+     position: absolute;
+     right: 0;
+     bottom: -2em;
+     clip-path: inset(0 0 6em);
 }

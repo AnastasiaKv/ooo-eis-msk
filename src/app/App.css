@@ -5,15 +5,19 @@
   margin: 0;
 }
 
+html, body, #root {
+  box-sizing: border-box;
+  height: 100%;
+}
+
 /* COLORS and FONTS */
 body {
-  color: white;
   text-align: center;
   font-size: 24px;
   line-height: 3;
 }
 
-header {
+/* header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,10 +45,105 @@ footer {
 
 .right-sidebar {
   background: forestgreen;
+} */
+
+/* Holy Grail */
+.ees-parent {
+  box-sizing: border-box;
+  height: 100%;
+}
+.ees-container {
+  box-sizing: border-box;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.ees-container-helper {
+  box-sizing: border-box;
+  height: 100%;
+  display: table-cell;
+}
+.ees-pillar {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: normal;
+  flex-flow: column nowrap;
+}
+.ees-header {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+.ees-header-content {
+  flex: 1 1 auto;
+  max-width: 40em;
+  min-width: 40em;
+}
+.ees-main {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-flow: row nowrap;
+  flex: 1 1 auto;
+}
+.ees-main-row {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-flow: row nowrap;
+  flex: 1 1 auto;
+  max-width: 40em;
+  min-width: 40em;
+}
+.ees-content {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-flow: row nowrap;
+  flex: 1 1 auto;
+}
+.ees-sidebar-left {
+  flex: 0 1 auto;
+}
+.ees-sidebar-right {
+  flex: 0 1 auto;
+}
+.ees-footer {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+.ees-footer-content {
+  flex: 1 1 auto;
+  max-width: 40em;
+  min-width: 40em;
+  position: relative;
+}
+
+/* Не касательно Holy Grail */
+.ees-header-content.ees-header-content {
+  position: static;
+}
+.ees-sidebar-left {
+  color: white;
+  background: dodgerblue;
+}
+.ees-sidebar-right {
+  color: white;
+  background: forestgreen;
+}
+.ees-footer {
+  background-color: #292929;
+  border-top: .5em solid rgb(241, 43, 41);
 }
 
 /*DESKTOP SIZE*/
-@media all and (min-width: 768px) {
+/* @media all and (min-width: 768px) {
   .content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -65,16 +164,16 @@ footer {
     flex: 1;
     order: 3;
   }
-}
+} */
 
-@media screen and (max-width: 575px) {
+/* @media screen and (max-width: 575px) {
 
   .container,
   .content {
     display: flex;
     flex-direction: column;
   }
-}
+} */
 
 @font-face {
   font-family: 'NeoSansPro';

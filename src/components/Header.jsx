@@ -41,8 +41,8 @@ const IconTextField = ({ iconStart, iconEnd, InputProps, ...props }) => {
 
 export default function Header() {
   return (
-    <div>
-      <AppBar elevation={0} sx={{ bgcolor: "white" }}>
+    <div className="ees-header">
+      <AppBar className="ees-header-content" elevation={0} sx={{ bgcolor: "white" }}>
         <Toolbar >
           <Box sx={{ width: "auto", height: 85, paddingTop: 3 }}
             component='img'

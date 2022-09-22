@@ -29,18 +29,21 @@ const useStyles = makeStyles((theme) => ({
 export default function Footer() {
      const classes = useStyles();
      return (
-          <div>
-               <LeftDecor />
-               <RightDecor />
-               <RedLine />
-               <AppBar sx={{ bgcolor: "#292929" }} position="static">
-                    <Toolbar className={classes.customizeToolbar} >
-                         <div> <Typography variant="caption">©Copyright</Typography></div>
-                         <div style={spacing_10cm}> <Typography variant="caption">Карта сайта</Typography></div>
-                         <div style={spacing_40px}>  <Typography variant="caption">Политика</Typography></div>
-                         <div style={spacing_40px}> <Typography variant="caption">Конфеденциальность</Typography></div>
-                    </Toolbar>
-               </AppBar>
-          </div>
+          <footer className="ees-footer">
+               <div className="ees-footer-content">
+                    <LeftDecor />
+                    <RightDecor />
+                    {/* <RedLine /> */}
+                    {/* Витя, AppBar генерит тег <header>, а тебе нужен тут просто <div> */}
+                    <AppBar sx={{ bgcolor: "transparent" }} position="static">
+                         <Toolbar className={classes.customizeToolbar} >
+                              <div> <Typography variant="caption">©Copyright</Typography></div>
+                              <div style={spacing_10cm}> <Typography variant="caption">Карта сайта</Typography></div>
+                              <div style={spacing_40px}>  <Typography variant="caption">Политика</Typography></div>
+                              <div style={spacing_40px}> <Typography variant="caption">Конфеденциальность</Typography></div>
+                         </Toolbar>
+                    </AppBar>
+               </div>
+          </footer>
      );
 }

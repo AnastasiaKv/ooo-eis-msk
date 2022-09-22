@@ -6,8 +6,6 @@ import './DecorLeft.css';
 
 export default function DecorLeft() {
      return (
-          <div class="leftbox">
-               <img src={image} alt="DecorLeft" />
-          </ div>
+          <img className="leftbox" src={image} alt="DecorLeft" />
      );
 }
