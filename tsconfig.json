@@ -9,15 +9,26 @@
     "strict": true, // Включить все параметры строгой проверки типов
     "forceConsistentCasingInFileNames": true, // Запрещаем ссылки с несогласованным регистром на один и тот же файл.
     "noFallthroughCasesInSwitch": true,
-    "module": "CommonJS", // Указываем генерацию кода модуля
+    "module": "esnext", // Указываем генерацию кода модуля
     "moduleResolution": "node", // Разрешить модули в стиле Node.js
     "resolveJsonModule": true, // Включить модули, импортированные с расширением .json
     "isolatedModules": true, // Безоговорочно генерировать импорт для неразрешенных файлов
     "noEmit": true, // Не выводить вывод (то есть не компилировать код, а только выполнять проверку типа)
     "noImplicitAny": false,
     "sourceMap": true,
-    "jsx": "react" // Поддержка JSX в файлах .tsx
+    "jsx": "react", // Поддержка JSX в файлах .tsx
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@app/*": ["app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@config/*": ["app/*"],
+      "@environment/*": ["environments/*"],
+      "@shared/*": ["app/_shared/*"],
+      "@helpers/*": ["helpers/*"],
+      "@images/*": ["src/assets/*"]
+    }
   },
-  "include": ["./src/**/*"],
+  "include": ["src", "webpack.config.js"],
   "exclude": ["node_modules", "build"] //  *** Файлы, которые не нужно вводить, проверять ***
 }

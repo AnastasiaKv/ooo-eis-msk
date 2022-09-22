@@ -69,7 +69,7 @@ export default function Header() {
               component="div" sx={{ flexGrow: 1 }} style={{ color: "#292929" }}>
               8-800-232-32-22
             </Typography>
-            <Button style={{ backgroundColor: "red" }} variant="contained" startIcon={<HeadsetMicIcon />}>
+            <Button style={{ backgroundColor: "#f12b29" }} variant="contained" startIcon={<HeadsetMicIcon />}>
               Обратный звонок
             </Button>
           </div>
