@@ -24,6 +24,7 @@ function App() {
         <footer>
           <Footer />
         </footer>
+        
       </div>
     </LayoutProvider>
   );

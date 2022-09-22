@@ -39,6 +39,7 @@
     "eslint-import-resolver-typescript": "^2.7.0",
     "eslint-plugin-typescript": "^0.14.0",
     "material-ui-search-bar": "^1.0.0",
+    "node-sass": "^7.0.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
