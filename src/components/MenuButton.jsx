@@ -5,34 +5,34 @@ import Typography from '@mui/material/Typography'
 
 export default function MenuButtonStack() {
   return (
-    <div style={{ marginTop: '1px' }} className='ees-menu-button'>
+    <div style={{marginTop: '1px'}} className='ees-menu-button'>
       <Stack direction='row' spacing={4}>
         <Button
-          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           Главная
         </Button>
         <Button
-          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           О нас
         </Button>
         <Button
-          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           Стоимость
         </Button>
         <Button
-          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           Статьи
         </Button>
         <Button
-          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           Контакты
@@ -52,7 +52,7 @@ export default function MenuButtonStack() {
           <Typography
             variant='body2'
             component='span'
-            sx={{ flexGrow: 1 }}
+            sx={{flexGrow: 1}}
             style={{
               position: 'relative',
               justifyContent: 'space-around',

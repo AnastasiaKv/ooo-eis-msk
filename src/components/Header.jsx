@@ -22,7 +22,8 @@ const callButtonStyle = {
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
   return (
-    <TextField style={{}}
+    <TextField
+      style={{}}
       {...props}
       InputProps={{
         ...InputProps,
@@ -61,7 +62,12 @@ export default function Header() {
             </Button>
           </div>
 
-          <IconTextField style={{ borderRadius: '0', top: 16}} size='small' label='Поиск..' iconEnd={<SearchIcon />} />
+          <IconTextField
+            style={{borderRadius: '0', top: 16}}
+            size='small'
+            label='Поиск..'
+            iconEnd={<SearchIcon />}
+          />
 
           <div style={callButtonStyle}>
             <div style={{top: 16}}>

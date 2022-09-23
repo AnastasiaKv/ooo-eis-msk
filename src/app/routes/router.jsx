@@ -20,3 +20,4 @@ const App = () => {
     </section>
   )
 }
+export default App

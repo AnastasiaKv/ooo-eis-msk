@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LayoutProvider } from './layouts/LayoutProvider'
+import {LayoutProvider} from './layouts/LayoutProvider'
 import './App.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer/Footer'
