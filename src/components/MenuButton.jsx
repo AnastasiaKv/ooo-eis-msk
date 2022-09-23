@@ -1,55 +1,63 @@
 import * as React from 'react'
-import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import { styled } from '@mui/material/styles'
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}))
 
 export default function MenuButtonStack() {
   return (
     <div style={{ marginTop: '1px' }} className='ees-menu-button'>
       <Stack direction='row' spacing={4}>
-        <Button style={{ borderRadius: 0, width: "150px", height: "25px", backgroundColor: '#b1b1b1' }} variant='contained'>
+        <Button
+          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          variant='contained'
+        >
           Главная
         </Button>
-        <Button style={{ borderRadius: 0, width: "150px", height: "25px", backgroundColor: '#b1b1b1' }} variant='contained'>
+        <Button
+          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          variant='contained'
+        >
           О нас
         </Button>
-        <Button style={{ borderRadius: 0, width: "150px", height: "25px", backgroundColor: '#b1b1b1' }} variant='contained'>
+        <Button
+          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          variant='contained'
+        >
           Стоимость
         </Button>
-        <Button style={{ borderRadius: 0, width: "150px", height: "25px", backgroundColor: '#b1b1b1' }} variant='contained'>
+        <Button
+          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          variant='contained'
+        >
           Статьи
         </Button>
-        <Button style={{ borderRadius: 0, width: "150px", height: "25px", backgroundColor: '#b1b1b1' }} variant='contained'>
+        <Button
+          style={{ borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1' }}
+          variant='contained'
+        >
           Контакты
         </Button>
       </Stack>
       <Stack direction='row' spacing={0}>
-        <p style={{
-          textAlign: 'left',
-          paddingLeft: '0px',
-          paddingTop: '20px',
-          margin: '5px 0',
-          width: '23cm'
-        }} className="blocktext">
+        <p
+          style={{
+            textAlign: 'left',
+            paddingLeft: '0px',
+            paddingTop: '20px',
+            margin: '5px 0',
+            width: '23cm',
+          }}
+          className='blocktext'
+        >
           <Typography
-            variant='h8'
-            component='div'
+            variant='body2'
+            component='span'
             sx={{ flexGrow: 1 }}
             style={{
               position: 'relative',
               justifyContent: 'space-around',
               fontSize: 12,
-              color: '#292929'
+              color: '#292929',
             }}
           >
             Также как перспективное планирование предоставляет широкие возможности для системы
@@ -59,7 +67,6 @@ export default function MenuButtonStack() {
             распределения внутренних резервов и ресурсов.
           </Typography>
         </p>
-
       </Stack>
     </div>
   )

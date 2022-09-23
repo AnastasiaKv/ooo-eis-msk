@@ -5,7 +5,9 @@
   margin: 0;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   box-sizing: border-box;
   height: 100%;
 }
@@ -70,7 +72,7 @@ body {
   min-width: 40em;
 }
 .ees-content {
-  top:'15px';
+  top: '15px';
   display: flex;
   align-items: normal;
   justify-content: normal;
@@ -104,15 +106,13 @@ body {
 }
 .ees-sidebar-left {
   color: black;
- 
 }
 .ees-sidebar-right {
   color: black;
- 
 }
 .ees-footer {
   background-color: #292929;
-  border-top: .5em solid rgb(241, 43, 41);
+  border-top: 0.5em solid rgb(241, 43, 41);
 }
 
 /*DESKTOP SIZE*/
