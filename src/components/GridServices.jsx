@@ -104,8 +104,10 @@ export default function ResponsiveGridService() {
                          component="span"
                          sx={{ flexGrow: 1 }} style={{
                               position: "relative",
-                              fontSize: 26,
-                              textAlign: "center", color: "#292929",
+                              fontSize: 21,
+                              textAlign: "center",
+                              fontWeight: 'bold',
+                              color: "#292929",
                          }}
 
                     >
