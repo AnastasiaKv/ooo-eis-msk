@@ -2,68 +2,103 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import r1 from "../assets/img/Services/Ремонт электродвигателей.png";
-import r2 from "../assets/img/Services/Ремонт генераторов.png";
-import r3 from "../assets/img/Services/Ремонт трансформаторов.png";
-import r4 from "../assets/img/Services/Ремонт холодильных машин.png";
-import r5 from "../assets/img/Services/Ремонт электродвигателей.png";
-import r6 from "../assets/img/Services/Ремонт электронагревателей.png";
+import FirstRow from "../containers/FirstRow";
+import SecondRow from "../containers/SecondRow";
+import ThirdRow from "../containers/ThirdRow";
+import FourthRow from "../containers/FourthRow";
+import { Stack } from "@mui/system";
+import Button from '@mui/material/Button';
 
-import r7 from "../assets/img/Services/Ремонт электродвигателей.png";
-import r8 from "../assets/img/Services/Ремонт электродвигателей.png";
-import r9 from "../assets/img/Services/Ремонт электродвигателей.png";
 
-const Item = styled(Paper)(({ theme }) => ({
-     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-     ...theme.typography.body2,
-     padding: theme.spacing(13, 16),
-     textAlign: 'center',
-     size: theme.spacing(2),
-     color: theme.palette.text.secondary
+
+const useStyles = styled((theme) => ({
+     Item: {
+
+          padding: theme.spacing(1),
+          textAlign: "center",
+          color: theme.palette.text.secondary
+     }
 }));
-const section = {
 
-     backgroundColor: "#fff"
-};
-function FormRow() {
+function StackItem1({ classes }) {
      return (
-          <React.Fragment>
-               <Grid item xs={1.7}>
-                    <div>   <img style={{
-                         height: '10em',
-                         width: '10em',
-                    }} src={r1} alt="1" /></div>
-               </Grid>
-               <Grid item xs={1.7}>
-                    <div> <img style={{
-                         height: '10em',
-                         width: '10em',
-                    }} src={r2} alt="1" /></div>
-               </Grid>
-               <Grid item xs={1.7} >
-                    <div>  <img style={{
-                         height: '10em',
-                         width: '10em',
-                    }} src={r3} alt="1" /></div>
-               </Grid>
-          </React.Fragment>
+          // From 0 to 600px wide (smart-phones), I take up 12 columns, or the whole device width!
+          // From 600-690px wide (tablets), I take up 6 out of 12 columns, so 2 columns fit the screen.
+          // From 960px wide and above, I take up 25% of the device (3/12), so 7 columns fit the screen.
+          <Stack direction='row' spacing={1}>
+               {FirstRow.map((work) => (
+                    <Paper sx={{ boxShadow: 'none' }} className={classes.Item}>
+                         <Button>
+                              <Box
+                                   sx={{ height: '250px', width: '250px' }}
+                                   component='img'
+                                   alt='button'
+                                   src={work.image}
+                              />
+                         </Button>
+                    </Paper>
+               ))}
+          </Stack>
      );
 }
-function SingleFormRow() {
+function StackItem2({ classes }) {
      return (
-          <React.Fragment>
-               <Grid item xs={1.7}>
-                    <div style={section}>  <Item>Item</Item></div>
-               </Grid>
-          </React.Fragment>
+          <Stack direction='row' spacing={1}>
+               {SecondRow.map((work) => (
+                    <Paper sx={{ boxShadow: 'none' }} className={classes.Item}>
+                         <Button>
+                              <Box
+                                   sx={{ height: '250px', width: '250px' }}
+                                   component='img'
+                                   alt='button'
+                                   src={work.image}
+                              />
+                         </Button>
+                    </Paper>
+               ))}
+          </Stack>
+     );
+} function StackItem3({ classes }) {
+     return (
+          <Stack direction='row' spacing={1}>
+               {ThirdRow.map((work) => (
+                    <Paper sx={{ boxShadow: 'none' }} className={classes.Item}>
+                         <Button>
+                              <Box
+                                   sx={{ height: '250px', width: '250px' }}
+                                   component='img'
+                                   alt='button'
+                                   src={work.image}
+                              />
+                         </Button>
+                    </Paper>
+               ))}
+          </Stack>
+     );
+} function StackItem4({ classes }) {
+     return (
+          <Stack direction='row' spacing={1}>
+               {FourthRow.map((work) => (
+                    <Paper sx={{ boxShadow: 'none' }} className={classes.Item}>
+                         <Button>
+                              <Box
+                                   sx={{ height: '250px', width: '250px' }}
+                                   component='img'
+                                   alt='button'
+                                   src={work.image}
+                              />
+                         </Button>
+                    </Paper>
+               ))}
+          </Stack>
      );
 }
-export default function NestedGrid() {
+export default function ResponsiveGridService() {
+     const classes = useStyles();
      return (
-          <div style={{ padding: '15px' }}>
-               <p style={{ paddingRight: '893px' }}>
+          <div>
+               <p style={{ paddingLeft: '35px', paddingTop: '14px', paddingBottom: '4px' }}>
                     <Typography
                          variant="body2"
                          component="span"
@@ -78,21 +113,12 @@ export default function NestedGrid() {
                     </Typography>
                </p>
                <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={2}>
-                         <Grid container item spacing={33}>
-                              <FormRow />
-                         </Grid>
-                         <Grid container item spacing={33}>
-                              <FormRow />
-                         </Grid>
-                         <Grid container item spacing={33}>
-                              <FormRow />
-                         </Grid>
-                         <Grid container item spacing={33}>
-                              <SingleFormRow />
-                         </Grid>
-                    </Grid>
+                    <StackItem1 classes={classes} />
+                    <StackItem2 classes={classes} />
+                    <StackItem3 classes={classes} />
+                    <StackItem4 classes={classes} />
                </Box>
+
                <p
                     style={{
                          textAlign: 'left',

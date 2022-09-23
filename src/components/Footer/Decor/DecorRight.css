@@ -9,7 +9,7 @@
      flex-wrap: wrap; */
   position: absolute;
   right: 0;
-  left: 33.6em;
+  left: 33em;
   bottom: -2em;
   clip-path: inset(0 0 6em);
 }
