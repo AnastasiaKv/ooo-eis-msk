@@ -22,7 +22,7 @@ const callButtonStyle = {
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
   return (
-    <TextField
+    <TextField style={{}}
       {...props}
       InputProps={{
         ...InputProps,
@@ -53,7 +53,7 @@ export default function Header() {
             </Typography>
             <Button
               component='div'
-              style={{backgroundColor: '#292929'}}
+              style={{borderRadius: '0', backgroundColor: '#292929'}}
               variant='contained'
               startIcon={<MapIcon />}
             >
@@ -61,7 +61,7 @@ export default function Header() {
             </Button>
           </div>
 
-          <IconTextField style={{top: 16}} size='small' label='Поиск..' iconEnd={<SearchIcon />} />
+          <IconTextField style={{ borderRadius: '0', top: 16}} size='small' label='Поиск..' iconEnd={<SearchIcon />} />
 
           <div style={callButtonStyle}>
             <div style={{top: 16}}>
@@ -76,7 +76,7 @@ export default function Header() {
               </Typography>
             </div>
             <Button
-              style={{backgroundColor: '#f12b29'}}
+              style={{borderRadius: '0', backgroundColor: '#f12b29'}}
               variant='contained'
               startIcon={<HeadsetMicIcon />}
             >

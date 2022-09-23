@@ -1,10 +1,11 @@
 import * as React from 'react'
-import {LayoutProvider} from './layouts/LayoutProvider'
+import { LayoutProvider } from './layouts/LayoutProvider'
 import './App.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer/Footer'
 import TopMediaBlock from '../components/containers/TopMediaBlock'
 import BottomMediaBlock from '../components/containers/BottomMediaBlock'
+import GridServices from '../components/GridServices'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <div className='ees-main-row'>
                   <main className='ees-content'>
                     <TopMediaBlock />
+                    <GridServices />
                   </main>
                 </div>
               </div>

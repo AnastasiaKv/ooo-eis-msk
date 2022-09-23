@@ -18,22 +18,26 @@ body {
   font-size: 24px;
   line-height: 1;
 }
+
 /* Holy Grail */
 .ees-parent {
   box-sizing: border-box;
   height: 100%;
 }
+
 .ees-container {
   box-sizing: border-box;
   display: table;
   height: 100%;
   width: 100%;
 }
+
 .ees-container-helper {
   box-sizing: border-box;
   height: 100%;
   display: table-cell;
 }
+
 .ees-pillar {
   box-sizing: border-box;
   height: 100%;
@@ -43,6 +47,7 @@ body {
   justify-content: normal;
   flex-flow: column nowrap;
 }
+
 .ees-header {
   display: flex;
   align-items: normal;
@@ -50,11 +55,13 @@ body {
   flex-flow: row nowrap;
   margin-left: -48px;
 }
+
 .ees-header-content {
   flex: 1 1 auto;
   max-width: 40em;
   min-width: 40em;
 }
+
 .ees-main {
   display: flex;
   align-items: normal;
@@ -62,6 +69,7 @@ body {
   flex-flow: row nowrap;
   flex: 1 1 auto;
 }
+
 .ees-main-row {
   display: flex;
   align-items: normal;
@@ -71,6 +79,7 @@ body {
   max-width: 40em;
   min-width: 40em;
 }
+
 .ees-content {
   top: '15px';
   display: flex;
@@ -81,18 +90,22 @@ body {
   flex: 1 1 auto;
   flex-wrap: wrap;
 }
+
 .ees-sidebar-left {
   flex: 0 1 auto;
 }
+
 .ees-sidebar-right {
   flex: 0 1 auto;
 }
+
 .ees-footer {
   display: flex;
   align-items: normal;
   justify-content: center;
   flex-flow: row nowrap;
 }
+
 .ees-footer-content {
   flex: 1 1 auto;
   max-width: 40em;
@@ -104,15 +117,18 @@ body {
 .ees-header-content.ees-header-content {
   position: static;
 }
+
 .ees-sidebar-left {
   color: black;
 }
+
 .ees-sidebar-right {
   color: black;
 }
+
 .ees-footer {
   background-color: #292929;
-  border-top: 0.5em solid rgb(241, 43, 41);
+  border-top: 0.3em solid rgb(241, 43, 41);
 }
 
 /*DESKTOP SIZE*/
