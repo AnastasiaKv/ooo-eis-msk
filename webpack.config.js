@@ -7,7 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 //формируем настройки
 module.exports = {
-  entry: {main: './src/index.js'},
+  entry: { main: './src/index.js' },
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -18,8 +18,8 @@ module.exports = {
   },
   module: {
     rules: [
-      {test: /\.tsx?$/, loader: 'awesome-typescript-loader'},
-      {test: /\.js$/, exclude: /node_modules/, use: {loader: 'babel-loader'}},
+      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+      { test: /\.js$/, exclude: /node_modules/, use: { loader: 'babel-loader' } },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
@@ -29,13 +29,20 @@ module.exports = {
       },
       //img loader
       {
-        test: /\.(svg|png|jpe?g|)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: '/src/asset/img',
         use: {
           loader: 'file-loader',
           options: {
-            name: '../img/[name].[ext]',
+            name: './src/assets/img/[name].[ext]',
           },
         },
+      },
+
+      // шрифты и SVG
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: './src/asset/fonts',
       },
     ],
   },
@@ -44,8 +51,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new ExtractTextPlugin({filename: 'css/style.css', disable: false, allChunks: true}),
-    new CopyPlugin([{from: 'src/img', to: 'img'}]),
+    new ExtractTextPlugin({ filename: 'css/style.css', disable: false, allChunks: true }),
+    new CopyPlugin([{ from: 'src/img', to: 'img' }]),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,

@@ -4,9 +4,9 @@ import {Routes, Route} from 'react-router-dom'
 import ScreensApp from './App'
 import {Error404} from '../app/core/errors/Error404'
 import RepairMotorsPage from './pages/services/RepairMotorsPage'
-import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage'
-import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage'
-import RefrigerationMachineRepair from '../app/pages/services/4_RefrigerationMachineRepairPage'
+import GeneratorRepairPage from './pages/services/2_GeneratorRepairPage'
+import RepairTransformersPage from './pages/services/3_RepairTransformersPage'
+import RefrigerationMachineRepair from './pages/services/4_RefrigerationMachineRepairPage'
 
 const ScreensRoot = () => (
   <Routes>
