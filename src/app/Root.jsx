@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, {Component} from 'react'
+import {Routes, Route} from 'react-router-dom'
 
 import ScreensApp from './App'
-import { Error404 } from '../app/core/errors/Error404'
+import {Error404} from '../app/core/errors/Error404'
 import RepairMotorsPage from './pages/services/RepairMotorsPage'
 import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage'
 import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage'

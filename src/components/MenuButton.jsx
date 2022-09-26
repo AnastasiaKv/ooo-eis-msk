@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 export default function MenuButtonStack() {
   const classes = useStyles()
   return (
-    <div style={{marginTop: '1px', paddingLeft:'6px'}} className={classes.flexGrow}>
+    <div style={{marginTop: '1px', paddingLeft: '6px'}} className={classes.flexGrow}>
       <Stack direction='row' spacing={4}>
         <Button
           className={classes.button}
