@@ -1,37 +1,60 @@
-import * as React from 'react'
+import React from 'react'
+import {styled} from '@mui/material/styles'
+import {makeStyles} from '@material-ui/styles'
 import Stack from '@mui/material/Stack'
+
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
+const useStyles = makeStyles({
+  flexGrow: {
+    flex: '1',
+  },
+  button: {
+    backgroundColor: '#b1b1b1',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: '#b1b1b1',
+      color: '#fff',
+    },
+  },
+})
+
 export default function MenuButtonStack() {
+  const classes = useStyles()
   return (
-    <div style={{marginTop: '1px'}} className='ees-menu-button'>
+    <div style={{marginTop: '1px', paddingLeft:'6px'}} className={classes.flexGrow}>
       <Stack direction='row' spacing={4}>
         <Button
+          className={classes.button}
           style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           Главная
         </Button>
         <Button
+          className={classes.button}
           style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           О нас
         </Button>
         <Button
+          className={classes.button}
           style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           Стоимость
         </Button>
         <Button
+          className={classes.button}
           style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >
           Статьи
         </Button>
         <Button
+          className={classes.button}
           style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
           variant='contained'
         >

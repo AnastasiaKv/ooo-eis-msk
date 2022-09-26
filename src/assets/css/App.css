@@ -17,8 +17,8 @@ body {
   text-align: center;
   font-size: 24px;
   line-height: 1;
+  font-family: 'NeoSansPro';
 }
-
 /* Holy Grail */
 .ees-parent {
   box-sizing: border-box;
@@ -131,50 +131,17 @@ body {
   border-top: 0.3em solid rgb(241, 43, 41);
 }
 
-/*DESKTOP SIZE*/
-/* @media all and (min-width: 768px) {
-  .content {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  main {
-    flex: 2;
-    order: 2;
-    min-height: 80vh;
-  }
-
-  .left-sidebar {
-    order: 1;
-    flex: 1;
-  }
-
-  .right-sidebar {
-    flex: 1;
-    order: 3;
-  }
-} */
-
-/* @media screen and (max-width: 575px) {
-
-  .container,
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-} */
-
 @font-face {
   font-family: 'NeoSansPro';
-  src: url('../assets/fonts/Furore.otf') format('otf'),
-    url('../assets/fonts/NeoSansPro-Bold.otf') format('otf'),
-    url('../assets/fonts/NeoSansPro-BoldItalic.otf') format('otf'),
-    url('../assets/fonts/NeoSansPro-Italic.ttf') format('truetype'),
-    url('../assets/fonts/NeoSansPro-Light.otf') format('otf'),
-    url('../assets/fonts/NeoSansPro-LightItalic.ttf') format('truetype'),
-    url('../assets/fonts/NeoSansPro-Medium.otf') format('otf'),
-    url('../assets/fonts/NeoSansPro-Regular.otf') format('otf'),
-    url('../assets/fonts/NeoSansPro-Ultra.otf') format('otf');
+  src: local('NeoSansPro'), local('../fonts/Furore.otf') format('otf'),
+    local('../fonts/NeoSansPro-Bold.otf') format('otf'),
+    local('../fonts/NeoSansPro-BoldItalic.otf') format('otf'),
+    local('../fonts/NeoSansPro-Italic.ttf') format('truetype'),
+    local('../fonts/NeoSansPro-Light.otf') format('otf'),
+    local('../fonts/NeoSansPro-LightItalic.ttf') format('truetype'),
+    local('../fonts/NeoSansPro-Medium.otf') format('otf'),
+    local('../fonts/NeoSansPro-Regular.otf') format('otf'),
+    local('../fonts/NeoSansPro-Ultra.otf') format('otf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

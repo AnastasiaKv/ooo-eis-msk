@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 export default (store) => (next) => (action) => {
   const errorHandler = (error) => {
     console.error('\n\n', error, '\n\n')

@@ -6,8 +6,10 @@ const disableSplashScreen = () => {
     splashScreen.style.setProperty('display', 'none')
   }
 }
-
-const LayoutProvider: React.FC = ({children}) => {
+type Props = {
+  children: React.ReactNode
+}
+const LayoutProvider: React.FC<Props> = ({children}: Props) => {
   useEffect(() => {
     disableSplashScreen()
   }, [])

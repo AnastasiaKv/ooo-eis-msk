@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'NeoSansPro', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'NeoSansPro', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+  font-family: 'NeoSansPro';
+  src: local('NeoSansPro'), local('../assets/fonts/Furore.otf') format('otf'),
+    local('../assets/fonts/NeoSansPro-Bold.otf') format('otf'),
+    local('../assets/fonts/NeoSansPro-BoldItalic.otf') format('otf'),
+    local('../assets/fonts/NeoSansPro-Italic.ttf') format('truetype'),
+    local('../assets/fonts/NeoSansPro-Light.otf') format('otf'),
+    local('../assets/fonts/NeoSansPro-LightItalic.ttf') format('truetype'),
+    local('../assets/fonts/NeoSansPro-Medium.otf') format('otf'),
+    local('../assets/fonts/NeoSansPro-Regular.otf') format('otf'),
+    local('../assets/fonts/NeoSansPro-Ultra.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
