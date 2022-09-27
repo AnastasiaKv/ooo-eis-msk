@@ -13,14 +13,15 @@ import TextField from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment'
 
 const mapAndMailStyle = {
-  paddingRight: '20px',
+
 }
 const callButtonStyle = {
-  paddingLeft: '7px',
-  paddingRight: '20px',
+  // paddingLeft: 30,
+  // paddingRight: 10,
+
 }
 
-const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
+const IconTextField = ({ iconStart, iconEnd, InputProps, ...props }) => {
   return (
     <TextField
       style={{}}
@@ -39,22 +40,22 @@ const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
 export default function Header() {
   return (
     <div className='ees-header'>
-      <AppBar className='ees-header-content' elevation={0} sx={{bgcolor: 'white'}}>
+      <AppBar className='ees-header-content' elevation={0} sx={{ bgcolor: 'white' }}>
         <Toolbar>
           <Box
-            sx={{marginRight: '60px', height: '93px', paddingTop: '17px'}}
+            sx={{ marginRight: 0, height: '93px', paddingTop: '28px' }}
             component='img'
             alt='Company logo.'
             src={Logo}
           />
 
           <div style={mapAndMailStyle}>
-            <Typography variant='h6' component='div' sx={{flexGrow: 1}} style={{color: '#292929'}}>
+            <Typography variant='h6' component='div' sx={{ flexGrow: 1 }} style={{ paddingLeft: 70, color: '#292929' }}>
               info@ers.msk.ru
             </Typography>
             <Button
               component='div'
-              style={{borderRadius: '0', backgroundColor: '#292929'}}
+              style={{ borderRadius: '0', backgroundColor: '#292929' }}
               variant='contained'
               startIcon={<MapIcon />}
             >
@@ -63,26 +64,26 @@ export default function Header() {
           </div>
 
           <IconTextField
-            style={{borderRadius: '0', top: 16}}
+            style={{ left: '-10px', borderRadius: '0', top: 16 }}
             size='small'
-            label='Поиск..'
+            label=''
             iconEnd={<SearchIcon />}
           />
 
           <div style={callButtonStyle}>
-            <div style={{top: 16}}>
+            <div style={{ top: 16 }}>
               {' '}
               <Typography
                 variant='h6'
                 component='div'
-                sx={{flexGrow: 1}}
-                style={{color: '#292929'}}
+                sx={{ flexGrow: 1 }}
+                style={{ paddingLeft: 70, color: '#292929' }}
               >
                 8-800-232-32-22
               </Typography>
             </div>
             <Button
-              style={{borderRadius: '0', backgroundColor: '#f12b29'}}
+              style={{ borderRadius: '0', backgroundColor: '#f12b29' }}
               variant='contained'
               startIcon={<HeadsetMicIcon />}
             >

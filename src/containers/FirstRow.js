@@ -1,6 +1,6 @@
-import r1 from '../assets/img/Services/Ремонт электродвигателей.png'
-import r2 from '../assets/img/Services/Ремонт генераторов.png'
-import r3 from '../assets/img/Services/Ремонт трансформаторов.png'
+import r1 from '../assets/img/services/Ремонт электродвигателей.png'
+import r2 from '../assets/img/services/Ремонт генераторов.png'
+import r3 from '../assets/img/services/Ремонт трансформаторов.png'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [

@@ -24,7 +24,7 @@ export default function TopMediaBlock() {
 
         width: 'auto',
         '& > div': {
-          overflow: 'auto hidden',
+          overflow: 'hidden',
           '&::-webkit-scrollbar': {height: 10, WebkitAppearance: 'none'},
           '&::-webkit-scrollbar-thumb': {
             borderRadius: 8,

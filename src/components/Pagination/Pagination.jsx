@@ -6,7 +6,7 @@ const styles = {
   root: {
     position: 'relative',
     bottom: 220,
-    right: 44,
+    paddingRight: 175,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',

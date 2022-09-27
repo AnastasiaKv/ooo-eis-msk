@@ -1,6 +1,6 @@
-import r4 from '../assets/img/Services/Ремонт холодильных машин.png'
-import r5 from '../assets/img/Services/Перемотка.png'
-import r6 from '../assets/img/Services/Ремонт электронагревателей.png'
+import r4 from '../assets/img/services/Ремонт холодильных машин.png'
+import r5 from '../assets/img/services/Перемотка.png'
+import r6 from '../assets/img/services/Ремонт электронагревателей.png'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
