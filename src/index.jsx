@@ -1,16 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {ThemeProvider} from '@material-ui/styles'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import reportWebVitals from './app/core/reports/reportWebVitals'
 import * as serviceWorker from './app/core/serviceWorker'
 import App from './app/App'
-import theme from './app/layouts/theme.js'
 import './assets/css/index.css'
 import 'typeface-cormorant'
-
-const defaultFontFamily = 'NeoSansPro'
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
