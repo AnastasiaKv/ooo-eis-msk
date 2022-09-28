@@ -75,7 +75,7 @@ const GeneratorRepairPage = () => {
         <Typography variant='caption'>Ремонт генератора</Typography>
       </h2>
       <h4>
-        <Typography variant='caption'>ОТ 500 руб.</Typography>
+        <Typography variant='caption'>от 500 руб.</Typography>
       </h4>
       <Stack>
         <MaterialReactTable

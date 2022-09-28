@@ -6,14 +6,15 @@ import * as serviceWorker from './app/core/serviceWorker';
 import App from './app/App';
 import './assets/css/index.css';
 import 'typeface-cormorant';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<App />} />
-      <Route path='*' />
-    </Routes>
-  </BrowserRouter>
+ <BrowserRouter>
+  <Routes>
+   <Route path='/' element={<App />} />
+   <Route path='*' />
+  </Routes>
+ </BrowserRouter>
 );
 console.log(process.env);
 reportWebVitals(console.log);
