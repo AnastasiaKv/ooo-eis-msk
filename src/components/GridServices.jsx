@@ -15,7 +15,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {StaticRouter} from 'react-router-dom/server';
 
 import {Error404} from '../app/core/errors/Error404';
-import RepairMotorsPage from '../app/pages/services/RepairMotorsPage';
+import RepairMotorsPage from '../app/pages/services/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage';
 import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage';
 import RefrigerationMachineRepair from '../app/pages/services/4_RefrigerationMachineRepairPage';

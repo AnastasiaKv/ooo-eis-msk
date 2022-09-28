@@ -9,7 +9,7 @@ import BottomMediaBlock from '../components/containers/BottomMediaBlock';
 import GridServices from '../components/GridServices';
 
 import {Error404} from '../app/core/errors/Error404';
-import RepairMotorsPage from './pages/services/RepairMotorsPage';
+import RepairMotorsPage from './pages/services/1_RepairMotorsPage';
 import GeneratorRepairPage from './pages/services/2_GeneratorRepairPage';
 import RepairTransformersPage from './pages/services/3_RepairTransformersPage';
 
