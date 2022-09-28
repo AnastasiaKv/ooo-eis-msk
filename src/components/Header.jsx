@@ -14,85 +14,84 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 const mapAndMailStyle = {};
 const callButtonStyle = {
-  // paddingLeft: 30,
-  // paddingRight: 10,
+ // paddingLeft: 30,
+ // paddingRight: 10,
 };
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
-  return (
-    <TextField
-      style={{}}
-      {...props}
-      InputProps={{
-        ...InputProps,
-        startAdornment: iconStart ? (
-          <InputAdornment position='start'>{iconStart}</InputAdornment>
-        ) : null,
-        endAdornment: iconEnd ? <InputAdornment position='end'>{iconEnd}</InputAdornment> : null,
-      }}
-    />
-  );
+ return (
+  <TextField
+   style={{}}
+   {...props}
+   InputProps={{
+    ...InputProps,
+    startAdornment: iconStart ? (
+     <InputAdornment position='start'>{iconStart}</InputAdornment>
+    ) : null,
+    endAdornment: iconEnd ? <InputAdornment position='end'>{iconEnd}</InputAdornment> : null,
+   }}
+  />
+ );
 };
 
 export default function Header() {
-  return (
+ return (
+  <AppBar className='ees-header-content' elevation={0} sx={{bgcolor: 'white'}}>
+   <Toolbar>
+    <Box
+     sx={{marginRight: 0, height: '93px', paddingTop: '28px'}}
+     component='img'
+     alt='Company logo.'
+     src={Logo}
+    />
 
-      <AppBar className='ees-header-content' elevation={0} sx={{bgcolor: 'white'}}>
-        <Toolbar>
-          <Box
-            sx={{marginRight: 0, height: '93px', paddingTop: '28px'}}
-            component='img'
-            alt='Company logo.'
-            src={Logo}
-          />
+    <div style={mapAndMailStyle}>
+     <Typography
+      variant='h6'
+      component='div'
+      sx={{flexGrow: 1}}
+      style={{paddingLeft: 70, color: '#292929'}}
+     >
+      info@ers.msk.ru
+     </Typography>
+     <Button
+      component='div'
+      style={{borderRadius: '0', backgroundColor: '#292929'}}
+      variant='contained'
+      startIcon={<MapIcon />}
+     >
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     </Button>
+    </div>
 
-          <div style={mapAndMailStyle}>
-            <Typography
-              variant='h6'
-              component='div'
-              sx={{flexGrow: 1}}
-              style={{paddingLeft: 70, color: '#292929'}}
-            >
-              info@ers.msk.ru
-            </Typography>
-            <Button
-              component='div'
-              style={{borderRadius: '0', backgroundColor: '#292929'}}
-              variant='contained'
-              startIcon={<MapIcon />}
-            >
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </Button>
-          </div>
+    <IconTextField
+     style={{left: '-10px', borderRadius: '0', top: 16}}
+     size='small'
+     label=''
+     iconEnd={<SearchIcon />}
+    />
 
-          <IconTextField
-            style={{left: '-10px', borderRadius: '0', top: 16}}
-            size='small'
-            label=''
-            iconEnd={<SearchIcon />}
-          />
-
-          <div style={callButtonStyle}>
-            <div style={{top: 16}}>
-              {' '}
-              <Typography
-                variant='h6'
-                component='div'
-                sx={{flexGrow: 1}}
-                style={{paddingLeft: 70, color: '#292929'}}
-              >
-                8-800-232-32-22
-              </Typography>
-            </div>
-            <Button
-              style={{borderRadius: '0', backgroundColor: '#f12b29'}}
-              variant='contained'
-              startIcon={<HeadsetMicIcon />}
-            >
-              Обратный звонок
-            </Button>
-          </div>
-        </Toolbar>
-      </AppBar>
-  );
+    <div style={callButtonStyle}>
+     <div style={{top: 16}}>
+      {' '}
+      <Typography
+       variant='h6'
+       component='div'
+       sx={{flexGrow: 1}}
+       style={{paddingLeft: 70, color: '#292929'}}
+      >
+       8-800-232-32-22
+      </Typography>
+     </div>
+     <Button
+      style={{borderRadius: '0', backgroundColor: '#f12b29'}}
+      variant='contained'
+      startIcon={<HeadsetMicIcon />}
+     >
+      Обратный звонок
+     </Button>
+    </div>
+   </Toolbar>
+  </AppBar>
+ );
 }

@@ -1,149 +1,149 @@
 /* RESET */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  left: 35px;
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ left: 35px;
 }
 
 html,
 body,
 #root {
-  box-sizing: border-box;
-  height: 100%;
+ box-sizing: border-box;
+ height: 100%;
 }
 
 /* COLORS and FONTS */
 body {
-  text-align: center;
-  font-size: 24px;
-  line-height: 1;
+ text-align: center;
+ font-size: 24px;
+ line-height: 1;
 }
 
 /* Holy Grail */
 .ees-parent {
-  box-sizing: border-box;
-  height: 100%;
+ box-sizing: border-box;
+ height: 100%;
 }
 
 .ees-container {
-  box-sizing: border-box;
-  display: table;
-  height: 100%;
-  width: 100%;
+ box-sizing: border-box;
+ display: table;
+ height: 100%;
+ width: 100%;
 }
 
 .ees-container-helper {
-  box-sizing: border-box;
-  height: 100%;
-  display: table-cell;
+ box-sizing: border-box;
+ height: 100%;
+ display: table-cell;
 }
 
 .ees-pillar {
-  box-sizing: border-box;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: stretch;
-  justify-content: normal;
-  flex-flow: column nowrap;
+ box-sizing: border-box;
+ height: 100%;
+ overflow: hidden;
+ display: flex;
+ align-items: stretch;
+ justify-content: normal;
+ flex-flow: column nowrap;
 }
 
 .ees-header {
-  display: flex;
-  align-items: normal;
-  justify-content: center;
-  flex-flow: row nowrap;
-  margin-left: -48px;
+ display: flex;
+ align-items: normal;
+ justify-content: center;
+ flex-flow: row nowrap;
+ margin-left: -48px;
 }
 
 .ees-header-content {
-  flex: 1 1 auto;
-  max-width: 40em;
-  min-width: 40em;
+ flex: 1 1 auto;
+ max-width: 40em;
+ min-width: 40em;
 }
 
 .ees-main {
-  display: flex;
-  align-items: normal;
-  justify-content: center;
-  flex-flow: row nowrap;
-  flex: 1 1 auto;
+ display: flex;
+ align-items: normal;
+ justify-content: center;
+ flex-flow: row nowrap;
+ flex: 1 1 auto;
 }
 
 .ees-main-row {
-  display: grid;
-  align-items: normal;
-  justify-content: normal;
-  flex-flow: row nowrap;
-  flex: 1 1 auto;
-  max-width: 40em;
-  min-width: 40em;
+ display: grid;
+ align-items: normal;
+ justify-content: normal;
+ flex-flow: row nowrap;
+ flex: 1 1 auto;
+ max-width: 40em;
+ min-width: 40em;
 }
 
 .ees-content {
-  top: '15px';
-  display: flex;
-  align-items: normal;
-  justify-content: normal;
-  flex-flow: row nowrap;
-  flex-direction: row;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
+ top: '15px';
+ display: flex;
+ align-items: normal;
+ justify-content: normal;
+ flex-flow: row nowrap;
+ flex-direction: row;
+ flex: 1 1 auto;
+ flex-wrap: wrap;
 }
 
 .ees-sidebar-left {
-  flex: 0 1 auto;
+ flex: 0 1 auto;
 }
 
 .ees-sidebar-right {
-  flex: 0 1 auto;
+ flex: 0 1 auto;
 }
 
 .ees-footer {
-  display: flex;
-  align-items: normal;
-  justify-content: center;
-  flex-flow: row nowrap;
+ display: flex;
+ align-items: normal;
+ justify-content: center;
+ flex-flow: row nowrap;
 }
 
 .ees-footer-content {
-  flex: 1 1 auto;
-  max-width: 40em;
-  min-width: 40em;
-  position: relative;
+ flex: 1 1 auto;
+ max-width: 40em;
+ min-width: 40em;
+ position: relative;
 }
 
 /* Не касательно Holy Grail */
 .ees-header-content.ees-header-content {
-  position: static;
+ position: static;
 }
 
 .ees-sidebar-left {
-  color: black;
+ color: black;
 }
 
 .ees-sidebar-right {
-  color: black;
+ color: black;
 }
 
 .ees-footer {
-  background-color: #292929;
-  border-top: 0.3em solid rgb(241, 43, 41);
+ background-color: #292929;
+ border-top: 0.3em solid rgb(241, 43, 41);
 }
 
 @font-face {
-  font-family: 'NeoSansPro';
-  src: local('NeoSansPro'), local('../fonts/Furore.otf') format('otf'),
-    local('../fonts/NeoSansPro-Bold.otf') format('otf'),
-    local('../fonts/NeoSansPro-BoldItalic.otf') format('otf'),
-    local('../fonts/NeoSansPro-Italic.ttf') format('truetype'),
-    local('../fonts/NeoSansPro-Light.otf') format('otf'),
-    local('../fonts/NeoSansPro-LightItalic.ttf') format('truetype'),
-    local('../fonts/NeoSansPro-Medium.otf') format('otf'),
-    local('../fonts/NeoSansPro-Regular.otf') format('otf'),
-    local('../fonts/NeoSansPro-Ultra.otf') format('otf');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+ font-family: 'NeoSansPro';
+ src: local('NeoSansPro'), local('../fonts/Furore.otf') format('otf'),
+  local('../fonts/NeoSansPro-Bold.otf') format('otf'),
+  local('../fonts/NeoSansPro-BoldItalic.otf') format('otf'),
+  local('../fonts/NeoSansPro-Italic.ttf') format('truetype'),
+  local('../fonts/NeoSansPro-Light.otf') format('otf'),
+  local('../fonts/NeoSansPro-LightItalic.ttf') format('truetype'),
+  local('../fonts/NeoSansPro-Medium.otf') format('otf'),
+  local('../fonts/NeoSansPro-Regular.otf') format('otf'),
+  local('../fonts/NeoSansPro-Ultra.otf') format('otf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
 }

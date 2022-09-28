@@ -4,5 +4,5 @@ import styled from 'styled-components';
 import './DecorLeft.css';
 
 export default function DecorLeft() {
-  return <img width='90' className='leftbox' src={image} alt='DecorLeft' />;
+ return <img width='90' className='leftbox' src={image} alt='DecorLeft' />;
 }

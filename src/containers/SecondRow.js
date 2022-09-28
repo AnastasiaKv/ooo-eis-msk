@@ -4,19 +4,19 @@ import r6 from '../assets/img/services/Ремонт электронагрева
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
-  {
-    id: '4',
-    image: r4,
-    link: '/assets/img/slider_img_2.png',
-  },
-  {
-    id: '5',
-    image: r5,
-    link: '/assets/img/slider_img_2.png',
-  },
-  {
-    id: '6',
-    image: r6,
-    link: '/assets/img/slider_img_2.png',
-  },
+ {
+  id: '4',
+  image: r4,
+  link: '/assets/img/slider_img_2.png',
+ },
+ {
+  id: '5',
+  image: r5,
+  link: '/assets/img/slider_img_2.png',
+ },
+ {
+  id: '6',
+  image: r6,
+  link: '/assets/img/slider_img_2.png',
+ },
 ];

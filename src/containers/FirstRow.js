@@ -4,19 +4,19 @@ import r3 from '../assets/img/services/Ремонт трансформаторо
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
-  {
-    id: '1',
-    image: r1,
-    link: '/assets/img/slider_img_1.png',
-  },
-  {
-    id: '2',
-    image: r2,
-    link: '/assets/img/slider_img_2.png',
-  },
-  {
-    id: '3',
-    image: r3,
-    link: '/assets/img/slider_img_2.png',
-  },
+ {
+  id: '1',
+  image: r1,
+  link: '/assets/img/slider_img_1.png',
+ },
+ {
+  id: '2',
+  image: r2,
+  link: '/assets/img/slider_img_2.png',
+ },
+ {
+  id: '3',
+  image: r3,
+  link: '/assets/img/slider_img_2.png',
+ },
 ];

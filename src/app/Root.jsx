@@ -9,10 +9,10 @@ import RepairTransformersPage from './pages/services/3_RepairTransformersPage';
 import RefrigerationMachineRepair from './pages/services/4_RefrigerationMachineRepairPage';
 
 const ScreensRoot = () => (
-  <Routes>
-    <Route path='*' element={<ScreensApp />} />
-    <Route path='/error404' element={<Error404 />} />
-  </Routes>
+ <Routes>
+  <Route path='*' element={<ScreensApp />} />
+  <Route path='/error404' element={<Error404 />} />
+ </Routes>
 );
 
 export default ScreensRoot;
