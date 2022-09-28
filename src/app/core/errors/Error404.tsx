@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Error404 = () => {
   return (
@@ -8,7 +8,7 @@ const Error404 = () => {
         The page you looked not found! <br /> Plan your blog post by choosing a topic
       </div>
     </>
-  )
-}
+  );
+};
 
-export {Error404}
+export {Error404};

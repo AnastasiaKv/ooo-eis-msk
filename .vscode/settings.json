@@ -11,5 +11,10 @@
                 "user": "u522535", "password": "sexessist4ven"
             }
         ]
+    },
+    "editor.tabSize": 10,
+    "editor.fontLigatures": true,
+    "[markdown]": {
+        "editor.formatOnSave": true
     }
 }

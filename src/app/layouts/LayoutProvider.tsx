@@ -1,20 +1,20 @@
-import React, {useEffect} from 'react'
+import React, {useEffect} from 'react';
 
 const disableSplashScreen = () => {
-  const splashScreen = document.getElementById('splash')
+  const splashScreen = document.getElementById('splash');
   if (splashScreen) {
-    splashScreen.style.setProperty('display', 'none')
+    splashScreen.style.setProperty('display', 'none');
   }
-}
+};
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 const LayoutProvider: React.FC<Props> = ({children}: Props) => {
   useEffect(() => {
-    disableSplashScreen()
-  }, [])
+    disableSplashScreen();
+  }, []);
 
-  return <>{children}</>
-}
+  return <>{children}</>;
+};
 
-export {LayoutProvider}
+export {LayoutProvider};

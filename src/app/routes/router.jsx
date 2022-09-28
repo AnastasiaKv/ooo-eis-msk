@@ -1,5 +1,5 @@
-import {Link, BrowserRouter as Router, Route, IndexRoute, Redirect} from 'react-router-dom'
-import React from 'react'
+import {Link, BrowserRouter as Router, Route, IndexRoute, Redirect} from 'react-router-dom';
+import React from 'react';
 
 const App = () => {
   return (
@@ -18,6 +18,6 @@ const App = () => {
         </Route>
       </Router>
     </section>
-  )
-}
-export default App
+  );
+};
+export default App;

@@ -1,25 +1,25 @@
-import * as React from 'react'
-import { styled } from '@mui/material/styles'
-import Box from '@mui/material/Box'
-import Paper from '@mui/material/Paper'
-import Typography from '@mui/material/Typography'
+import * as React from 'react';
+import {styled} from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import FirstRow from '../containers/FirstRow';
 import SecondRow from '../containers/SecondRow';
 import ThirdRow from '../containers/ThirdRow';
 import FourthRow from '../containers/FourthRow';
-import { Stack } from '@mui/system';
+import {Stack} from '@mui/system';
 import Button from '@mui/material/Button';
-import PropTypes from 'prop-types'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import PropTypes from 'prop-types';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-import { StaticRouter } from 'react-router-dom/server'
+import {StaticRouter} from 'react-router-dom/server';
 
-import { Error404 } from '../app/core/errors/Error404'
-import RepairMotorsPage from '../app/pages/services/RepairMotorsPage'
-import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage'
-import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage'
-import RefrigerationMachineRepair from '../app/pages/services/4_RefrigerationMachineRepairPage'
-import { useNavigate } from 'react-router-dom'
+import {Error404} from '../app/core/errors/Error404';
+import RepairMotorsPage from '../app/pages/services/RepairMotorsPage';
+import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage';
+import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage';
+import RefrigerationMachineRepair from '../app/pages/services/4_RefrigerationMachineRepairPage';
+import {useNavigate} from 'react-router-dom';
 
 const useStyles = styled((theme) => ({
   Item: {
@@ -27,17 +27,17 @@ const useStyles = styled((theme) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
-}))
+}));
 
-function StackItem1({ classes }) {
-  let navigate = useNavigate()
+function StackItem1({classes}) {
+  let navigate = useNavigate();
   return (
     <Stack direction='row' spacing={1}>
       {FirstRow.map((work, index) => (
-        <Paper key={index} sx={{ boxShadow: 'none' }} className={classes.Item}>
+        <Paper key={index} sx={{boxShadow: 'none'}} className={classes.Item}>
           <Button key={work.id}>
             <Box
-              sx={{ height: '250px', width: '250px' }}
+              sx={{height: '250px', width: '250px'}}
               component='img'
               alt='button'
               src={work.image}
@@ -46,17 +46,17 @@ function StackItem1({ classes }) {
         </Paper>
       ))}
     </Stack>
-  )
+  );
 }
 
-function StackItem2({ classes }) {
+function StackItem2({classes}) {
   return (
     <Stack direction='row' spacing={1}>
       {SecondRow.map((work, index) => (
-        <Paper key={index} sx={{ boxShadow: 'none' }} className={classes.Item}>
+        <Paper key={index} sx={{boxShadow: 'none'}} className={classes.Item}>
           <Button>
             <Box
-              sx={{ height: '250px', width: '250px' }}
+              sx={{height: '250px', width: '250px'}}
               component='img'
               alt='button'
               src={work.image}
@@ -65,16 +65,16 @@ function StackItem2({ classes }) {
         </Paper>
       ))}
     </Stack>
-  )
+  );
 }
-function StackItem3({ classes }) {
+function StackItem3({classes}) {
   return (
     <Stack direction='row' spacing={1}>
       {ThirdRow.map((work, index) => (
-        <Paper key={index} sx={{ boxShadow: 'none' }} className={classes.Item}>
+        <Paper key={index} sx={{boxShadow: 'none'}} className={classes.Item}>
           <Button>
             <Box
-              sx={{ height: '250px', width: '250px' }}
+              sx={{height: '250px', width: '250px'}}
               component='img'
               alt='button'
               src={work.image}
@@ -83,16 +83,16 @@ function StackItem3({ classes }) {
         </Paper>
       ))}
     </Stack>
-  )
+  );
 }
-function StackItem4({ classes }) {
+function StackItem4({classes}) {
   return (
     <Stack direction='row' spacing={1}>
       {FourthRow.map((work, index) => (
-        <Paper key={index} sx={{ boxShadow: 'none' }} className={classes.Item}>
+        <Paper key={index} sx={{boxShadow: 'none'}} className={classes.Item}>
           <Button>
             <Box
-              sx={{ height: '250px', width: '250px' }}
+              sx={{height: '250px', width: '250px'}}
               component='img'
               alt='button'
               src={work.image}
@@ -101,18 +101,18 @@ function StackItem4({ classes }) {
         </Paper>
       ))}
     </Stack>
-  )
+  );
 }
 
 export default function ResponsiveGridService() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
-    <div style={{ paddingLeft: '30px' }}>
-      <p style={{ paddingLeft: '35px', paddingTop: '14px', paddingBottom: '4px' }}>
+    <div style={{paddingLeft: '30px'}}>
+      <p style={{paddingLeft: '35px', paddingTop: '14px', paddingBottom: '4px'}}>
         <Typography
           variant='body2'
           component='span'
-          sx={{ flexGrow: 1 }}
+          sx={{flexGrow: 1}}
           style={{
             position: 'relative',
             fontSize: 21,
@@ -124,7 +124,7 @@ export default function ResponsiveGridService() {
           Наши услуги
         </Typography>
       </p>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{flexGrow: 1}}>
         <StackItem1 classes={classes} />
         <StackItem2 classes={classes} />
         <StackItem3 classes={classes} />
@@ -144,7 +144,7 @@ export default function ResponsiveGridService() {
         <Typography
           variant='body2'
           component='span'
-          sx={{ flexGrow: 1 }}
+          sx={{flexGrow: 1}}
           style={{
             position: 'relative',
             justifyContent: 'space-around',
@@ -160,5 +160,5 @@ export default function ResponsiveGridService() {
         </Typography>
       </p>
     </div>
-  )
+  );
 }

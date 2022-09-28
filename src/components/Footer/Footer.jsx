@@ -1,30 +1,30 @@
-import React from 'react'
+import React from 'react';
 
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import RedLine from './Decor/RedLine'
-import LeftDecor from './Decor/DecorLeft'
-import RightDecor from './Decor/DecorRight'
-import {makeStyles, ThemeProvider} from '@material-ui/core/styles'
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import RedLine from './Decor/RedLine';
+import LeftDecor from './Decor/DecorLeft';
+import RightDecor from './Decor/DecorRight';
+import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 
 const leftPadding = {
   paddingLeft: '8cm',
-}
+};
 const spacing_10cm = {
   paddingLeft: '10cm',
-}
+};
 const spacing_40px = {
   paddingLeft: '40px',
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   customizeToolbar: {
     height: 90,
   },
-}))
+}));
 export default function Footer() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <footer className='ees-footer'>
       <div className='ees-footer-content'>
@@ -54,5 +54,5 @@ export default function Footer() {
         </AppBar>
       </div>
     </footer>
-  )
+  );
 }

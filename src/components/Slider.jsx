@@ -1,11 +1,11 @@
-import React from 'react'
-import SwipeableViews from 'react-swipeable-views'
-import {autoPlay} from 'react-swipeable-views-utils'
-import sliderimg1 from '../assets/img/slider_img_1.png'
-import sliderimg2 from '../assets/img/slider_img_2.png'
-import Pagination from '../components/Pagination/Pagination'
+import React from 'react';
+import SwipeableViews from 'react-swipeable-views';
+import {autoPlay} from 'react-swipeable-views-utils';
+import sliderimg1 from '../assets/img/slider_img_1.png';
+import sliderimg2 from '../assets/img/slider_img_2.png';
+import Pagination from '../components/Pagination/Pagination';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   root: {
@@ -42,21 +42,21 @@ const styles = {
     height: 326,
   },
   dots: {},
-}
+};
 
 class Slider extends React.Component {
   state = {
     index: 0,
-  }
+  };
 
   handleChangeIndex = (index) => {
     this.setState({
       index,
-    })
-  }
+    });
+  };
 
   render() {
-    const {index} = this.state
+    const {index} = this.state;
 
     return (
       <div style={styles.root}>
@@ -76,8 +76,8 @@ class Slider extends React.Component {
         <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} />
         {/* </div> */}
       </div>
-    )
+    );
   }
 }
 
-export default Slider
+export default Slider;

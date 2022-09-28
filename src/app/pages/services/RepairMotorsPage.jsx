@@ -1,7 +1,7 @@
-import React, {useMemo} from 'react'
-import MaterialReactTable from 'material-react-table'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
+import React, {useMemo} from 'react';
+import MaterialReactTable from 'material-react-table';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 const data = [
   {
@@ -48,7 +48,7 @@ const data = [
     name: 'Замена обгонной муфты (для некоторых моделей)',
     price: 'от 2300 руб.',
   },
-]
+];
 
 export default function RepairMotorsPage() {
   const columns = useMemo(
@@ -67,7 +67,7 @@ export default function RepairMotorsPage() {
       },
     ],
     []
-  )
+  );
 
   return (
     <div>
@@ -91,5 +91,5 @@ export default function RepairMotorsPage() {
         />
       </Stack>
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import React, {useMemo} from 'react'
-import MaterialReactTable from 'material-react-table'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
+import React, {useMemo} from 'react';
+import MaterialReactTable from 'material-react-table';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 const data = [
   {
@@ -48,7 +48,7 @@ const data = [
     name: 'Замена обгонной муфты (для некоторых моделей)',
     price: 'от 2300 руб.',
   },
-]
+];
 
 const GeneratorRepairPage = () => {
   const columns = useMemo(
@@ -67,7 +67,7 @@ const GeneratorRepairPage = () => {
       },
     ],
     []
-  )
+  );
 
   return (
     <div>
@@ -91,7 +91,7 @@ const GeneratorRepairPage = () => {
         />
       </Stack>
     </div>
-  )
-}
+  );
+};
 
-export default GeneratorRepairPage
+export default GeneratorRepairPage;

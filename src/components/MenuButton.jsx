@@ -1,10 +1,10 @@
-import React from 'react'
-import {styled} from '@mui/material/styles'
-import {makeStyles} from '@material-ui/styles'
-import Stack from '@mui/material/Stack'
+import React from 'react';
+import {styled} from '@mui/material/styles';
+import {makeStyles} from '@material-ui/styles';
+import Stack from '@mui/material/Stack';
 
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const useStyles = makeStyles({
   flexGrow: {
@@ -18,10 +18,10 @@ const useStyles = makeStyles({
       color: '#fff',
     },
   },
-})
+});
 
 export default function MenuButtonStack() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <div style={{marginTop: '1px', paddingLeft: '6px'}} className={classes.flexGrow}>
       <Stack direction='row' spacing={4}>
@@ -92,5 +92,5 @@ export default function MenuButtonStack() {
         </p>
       </Stack>
     </div>
-  )
+  );
 }
