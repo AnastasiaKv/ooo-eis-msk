@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import {Outlet} from 'react-router-dom';
 
 export default function SaleOfElectricalComponentsPage() {
  return (
@@ -15,6 +16,7 @@ export default function SaleOfElectricalComponentsPage() {
     <li>Перечень деталей в наличии.</li>
     <li>Проффесиональная консультация по подбору.</li>
    </ul>
+   <Outlet />
   </div>
  );
 }

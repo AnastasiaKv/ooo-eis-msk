@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Footer() {
   const classes = useStyles();
   return (
-    <footer className='ees-footer'>
+    
       <div className='ees-footer-content'>
         <LeftDecor />
         <RightDecor />
@@ -53,6 +53,5 @@ export default function Footer() {
           </Toolbar>
         </AppBar>
       </div>
-    </footer>
   );
 }

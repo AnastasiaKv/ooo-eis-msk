@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import MaterialReactTable from 'material-react-table';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import {Outlet} from 'react-router-dom';
 
 const data = [
  {
@@ -110,6 +111,7 @@ const RepairTransformersPage = () => {
      muiTableContainerProps={{sx: {maxHeight: '600px'}}} //optionally customize the virtualizer
     />
    </Stack>
+   <Outlet />
   </div>
  );
 };

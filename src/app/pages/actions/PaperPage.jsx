@@ -9,6 +9,8 @@ import image3 from '../../../assets/img/actions/PaperPage/Статья1.png';
 import image4 from '../../../assets/img/actions/PaperPage/Статья2.png';
 import image5 from '../../../assets/img/actions/PaperPage/Статья3.png';
 import GridItem from './components/GridItem';
+import {Outlet} from 'react-router-dom';
+
 
 export default function PaperPage() {
   return (
@@ -116,6 +118,7 @@ export default function PaperPage() {
           </Grid>
         </Stack>
       </div>
+      <Outlet />
     </div>
   );
 }

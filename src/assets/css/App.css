@@ -72,7 +72,7 @@ body {
 }
 
 .ees-main-row {
-  display: flex;
+  display: grid;
   align-items: normal;
   justify-content: normal;
   flex-flow: row nowrap;

@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+import {Outlet} from 'react-router-dom';
 export default function RepairOfBoardsAndBlocksPage() {
  return (
   <div>
@@ -30,6 +31,7 @@ export default function RepairOfBoardsAndBlocksPage() {
     <li>Ремонт компьютеризованных панелей управления</li>
     <li>Ремонт различных источников питания (в т.ч. специального назначения)</li>
    </ul>
+   <Outlet />
   </div>
  );
 }

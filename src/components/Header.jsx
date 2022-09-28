@@ -36,7 +36,7 @@ const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
 
 export default function Header() {
   return (
-    <div className='ees-header'>
+
       <AppBar className='ees-header-content' elevation={0} sx={{bgcolor: 'white'}}>
         <Toolbar>
           <Box
@@ -94,6 +94,5 @@ export default function Header() {
           </div>
         </Toolbar>
       </AppBar>
-    </div>
   );
 }
