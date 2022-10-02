@@ -1,5 +1,6 @@
 import React from 'react';
 import {LayoutProvider} from './layouts/LayoutProvider';
+import Layout from './layouts/Layout';
 import {Routes, Route, Link, Outlet} from 'react-router-dom';
 import '../assets/css/App.css';
 import Header from '../components/Header';
@@ -16,31 +17,29 @@ import RepairTransformersPage from './pages/services/3_RepairTransformersPage';
 function App() {
  return (
   <div>
-   <LayoutProvider>
-    <div className='ees-parent'>
-     <div className='ees-container'>
-      <div className='ees-container-helper'>
-       <div className='ees-pillar'>
-        <div className='ees-header'>
-         <Header />
-        </div>
-        <div className='ees-main'>
-         <div className='ees-main-row'>
-          <TopMediaBlock />
-          <main className='ees-content'>
-           <Outlet />
-           <GridServices />
-          </main>
-         </div>
-        </div>
-        <div className='ees-footer'>
-         <Footer />
+   <div className='ees-parent'>
+    <div className='ees-container'>
+     <div className='ees-container-helper'>
+      <div className='ees-pillar'>
+       <header className='ees-header'>
+        <Header />
+       </header>
+       <div className='ees-main'>
+        <div className='ees-main-row'>
+         <TopMediaBlock />
+         <main className='ees-content'>
+          <GridServices />
+          <Outlet />
+         </main>
         </div>
        </div>
+       <footer className='ees-footer'>
+        <Footer />
+       </footer>
       </div>
      </div>
     </div>
-   </LayoutProvider>
+   </div>
   </div>
  );
 }
