@@ -1,6 +1,6 @@
 import React from 'react';
 import {LayoutProvider} from './layouts/LayoutProvider';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Link, Outlet} from 'react-router-dom';
 import '../assets/css/App.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer/Footer';
@@ -28,6 +28,7 @@ function App() {
          <div className='ees-main-row'>
           <TopMediaBlock />
           <main className='ees-content'>
+           <Outlet />
            <GridServices />
           </main>
          </div>
@@ -40,11 +41,6 @@ function App() {
      </div>
     </div>
    </LayoutProvider>
-   <Routes>
-    <Route path='/' element={App} />
-    <Route path='/services/repairMotors' element={<RepairMotorsPage />} />
-    <Route path='/services/generatorRepair' element={<GeneratorRepairPage />} />
-   </Routes>
   </div>
  );
 }

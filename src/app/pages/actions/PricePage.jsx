@@ -49,7 +49,6 @@ export default function PricePage() {
     <br />
     <Box component='img' alt='Этапы работ' src={image4} />
    </div>
-   <Outlet />
   </>
  );
 }

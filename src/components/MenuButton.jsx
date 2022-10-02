@@ -27,7 +27,7 @@ export default function MenuButtonStack() {
    <Stack direction='row' spacing={4}>
     <Button
      component={Link}
-     to='../app/App'
+     to='/'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
      variant='contained'
@@ -43,7 +43,7 @@ export default function MenuButtonStack() {
     </Button>
     <Button
      component={Link}
-     to='./app/pages/actions/PricePage'
+     to='/PricePage'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
      variant='contained'
@@ -52,7 +52,7 @@ export default function MenuButtonStack() {
     </Button>
     <Button
      component={Link}
-     to='../app/pages/actions/PaperPage'
+     to='PaperPage'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
      variant='contained'

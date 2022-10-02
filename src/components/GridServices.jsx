@@ -35,7 +35,7 @@ function StackItem1({classes}) {
   <Stack direction='row' spacing={1}>
    {FirstRow.map((work, index) => (
     <Paper key={index} sx={{boxShadow: 'none'}} className={classes.Item}>
-     <Button component={Link} to='../app/pages/services/2_GeneratorRepairPage.jsx' key={work.id}>
+     <Button component={Link} key={work.id}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={work.image} />
      </Button>
     </Paper>
