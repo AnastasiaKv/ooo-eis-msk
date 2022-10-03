@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from './layouts/Layout';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 import '../assets/css/App.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer/Footer';
@@ -16,7 +16,7 @@ import News from './pages/actions/News';
 
 function App() {
  return (
-  <div>
+  <Router>
    <div className='ees-parent'>
     <div className='ees-container'>
      <div className='ees-container-helper'>
@@ -28,7 +28,9 @@ function App() {
         <div className='ees-main-row'>
          <TopMediaBlock />
          <main className='ees-content'>
-          <GridServices />
+          <Routes>
+           <Route path='/' element={<GridServices />} />
+          </Routes>
          </main>
         </div>
        </div>
@@ -39,7 +41,7 @@ function App() {
      </div>
     </div>
    </div>
-  </div>
+  </Router>
  );
 }
 

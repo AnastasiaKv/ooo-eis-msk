@@ -4,6 +4,7 @@ import {makeStyles} from '@material-ui/styles';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
 const useStyles = makeStyles({
  flexGrow: {
@@ -47,7 +48,6 @@ export default function MenuButtonStack() {
      Стоимость
     </Button>
     <Button
-     to='PaperPage'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
      variant='contained'
