@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {Outlet} from 'react-router-dom';
 
 export default function MaintenanceAndRepairOfPassengerCarsPage() {
  return (
@@ -34,7 +33,6 @@ export default function MaintenanceAndRepairOfPassengerCarsPage() {
      </Typography>
     </li>
    </ul>
-   <Outlet />
   </div>
  );
 }

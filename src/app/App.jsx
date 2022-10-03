@@ -1,7 +1,6 @@
 import React from 'react';
-import {LayoutProvider} from './layouts/LayoutProvider';
 import Layout from './layouts/Layout';
-import {Routes, Route, Link, Outlet} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import '../assets/css/App.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer/Footer';
@@ -9,10 +8,11 @@ import TopMediaBlock from '../components/containers/TopMediaBlock';
 import BottomMediaBlock from '../components/containers/BottomMediaBlock';
 import GridServices from '../components/GridServices';
 
-import {Error404} from '../app/core/errors/Error404';
 import RepairMotorsPage from './pages/services/1_RepairMotorsPage';
 import GeneratorRepairPage from './pages/services/2_GeneratorRepairPage';
 import RepairTransformersPage from './pages/services/3_RepairTransformersPage';
+import Prices from './pages/actions/Prices';
+import News from './pages/actions/News';
 
 function App() {
  return (
@@ -29,7 +29,6 @@ function App() {
          <TopMediaBlock />
          <main className='ees-content'>
           <GridServices />
-          <Outlet />
          </main>
         </div>
        </div>

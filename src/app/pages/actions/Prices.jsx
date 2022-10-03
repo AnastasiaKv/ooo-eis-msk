@@ -3,17 +3,16 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@material-ui/core/Grid';
 import {Stack} from '@mui/system';
-import {Outlet} from 'react-router-dom';
 import image1 from '../../../assets/img/actions/PricePage/Нам доверяют.png';
 import image2 from '../../../assets/img/actions/PricePage/Карточки услуг.png';
 import image3 from '../../../assets/img/actions/PricePage/Ремонт генератора.png';
 import image4 from '../../../assets/img/actions/PricePage/Ремонт электродвигателей.png';
 
-export default function PricePage() {
+export default function Prices() {
  return (
   <>
-   <br />
    <div className='block1'>
+    <br />
     <p>
      <Typography variant='caption'>
       Ремонт и замена обмотки двигателя - кропотливый, системный, скрупулёзный процесс. И перед

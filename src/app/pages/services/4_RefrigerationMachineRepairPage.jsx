@@ -1,7 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {Outlet} from 'react-router-dom';
 
 export default function RefrigerationMachineRepairPage() {
  return (
@@ -27,7 +26,6 @@ export default function RefrigerationMachineRepairPage() {
     <li>Сборка холодильного компрессора</li>
     <li>Испытание компрессора под максимальной нагрузкой</li>
    </ul>
-   <Outlet />
   </div>
  );
 }

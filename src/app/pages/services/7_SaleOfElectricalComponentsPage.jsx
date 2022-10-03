@@ -16,7 +16,6 @@ export default function SaleOfElectricalComponentsPage() {
     <li>Перечень деталей в наличии.</li>
     <li>Проффесиональная консультация по подбору.</li>
    </ul>
-   <Outlet />
   </div>
  );
 }

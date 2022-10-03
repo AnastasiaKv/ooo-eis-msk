@@ -16,39 +16,41 @@ const Item = styled(Paper)(({theme}) => ({
 
 export default function TopMediaBlock() {
  return (
-  <Box
-   sx={(theme) => ({
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 3,
+  <>
+   <Box
+    sx={(theme) => ({
+     display: 'flex',
+     flexDirection: 'column',
+     gap: 3,
 
-    width: 'auto',
-    '& > div': {
-     overflow: 'hidden',
-     '&::-webkit-scrollbar': {height: 10, WebkitAppearance: 'none'},
-     '&::-webkit-scrollbar-thumb': {
-      borderRadius: 8,
-      border: '2px solid',
-      borderColor: theme.palette.mode === 'dark' ? '' : '#E7EBF0',
-      backgroundColor: 'rgba(0 0 0 / 0.5)',
+     width: 'auto',
+     '& > div': {
+      overflow: 'hidden',
+      '&::-webkit-scrollbar': {height: 10, WebkitAppearance: 'none'},
+      '&::-webkit-scrollbar-thumb': {
+       borderRadius: 8,
+       border: '2px solid',
+       borderColor: theme.palette.mode === 'dark' ? '' : '#E7EBF0',
+       backgroundColor: 'rgba(0 0 0 / 0.5)',
+      },
      },
-    },
-   })}
-  >
-   <div className='ees-top-media'>
-    <Grid container spacing={3} disableEqualOverflow sx={{flexGrow: 1}}>
-     <Grid xs={12}>
-      <Slider />
+    })}
+   >
+    <div className='ees-top-media'>
+     <Grid container spacing={3} disableEqualOverflow sx={{flexGrow: 1}}>
+      <Grid xs={12}>
+       <Slider />
+      </Grid>
      </Grid>
-    </Grid>
-   </div>
-   <div>
-    <Grid container spacing={0} disableEqualOverflow sx={{flexGrow: 1}}>
-     <Grid xs={12}>
-      <MenuButton />
+    </div>
+    <div>
+     <Grid container spacing={0} disableEqualOverflow sx={{flexGrow: 1}}>
+      <Grid xs={12}>
+       <MenuButton />
+      </Grid>
      </Grid>
-    </Grid>
-   </div>
-  </Box>
+    </div>
+   </Box>
+  </>
  );
 }

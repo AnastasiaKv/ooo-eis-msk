@@ -4,7 +4,6 @@ import {makeStyles} from '@material-ui/styles';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles({
  flexGrow: {
@@ -26,7 +25,6 @@ export default function MenuButtonStack() {
   <div style={{marginTop: '1px', paddingLeft: '6px'}} className={classes.flexGrow}>
    <Stack direction='row' spacing={4}>
     <Button
-     component={Link}
      to='/'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
@@ -42,8 +40,6 @@ export default function MenuButtonStack() {
      О нас
     </Button>
     <Button
-     component={Link}
-     to='/PricePage'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
      variant='contained'
@@ -51,7 +47,6 @@ export default function MenuButtonStack() {
      Стоимость
     </Button>
     <Button
-     component={Link}
      to='PaperPage'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}

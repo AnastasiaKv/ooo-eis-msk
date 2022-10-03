@@ -10,16 +10,10 @@ import FourthRow from '../containers/FourthRow';
 import {Stack} from '@mui/system';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
-
-import {Link} from 'react-router-dom';
-import {StaticRouter} from 'react-router-dom/server';
-import {BrowserRouter, Route, Routes, Outlet} from 'react-router-dom';
-import {Error404} from '../app/core/errors/Error404';
 import RepairMotorsPage from '../app/pages/services/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage';
 import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage';
 import RefrigerationMachineRepair from '../app/pages/services/4_RefrigerationMachineRepairPage';
-import {useNavigate} from 'react-router-dom';
 
 const useStyles = styled((theme) => ({
  Item: {
@@ -30,12 +24,11 @@ const useStyles = styled((theme) => ({
 }));
 
 function StackItem1({classes}) {
- const navigate = useNavigate();
  return (
   <Stack direction='row' spacing={1}>
    {FirstRow.map((work, index) => (
     <Paper key={index} sx={{boxShadow: 'none'}} className={classes.Item}>
-     <Button component={Link} key={work.id}>
+     <Button key={work.id}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={work.image} />
      </Button>
     </Paper>
@@ -139,7 +132,6 @@ export default function ResponsiveGridService() {
      ресурсов.
     </Typography>
    </p>
-   <Outlet />
   </div>
  );
 }
