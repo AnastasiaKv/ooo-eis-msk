@@ -115,7 +115,6 @@ export default function PaperPage() {
      </Grid>
     </Stack>
    </div>
-   <Outlet />
   </div>
  );
 }

@@ -10,10 +10,10 @@ import FourthRow from '../containers/FourthRow';
 import {Stack} from '@mui/system';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
-import {BrowserRouter, Route, Routes, Outlet} from 'react-router-dom';
+
 import {Link} from 'react-router-dom';
 import {StaticRouter} from 'react-router-dom/server';
-
+import {BrowserRouter, Route, Routes, Outlet} from 'react-router-dom';
 import {Error404} from '../app/core/errors/Error404';
 import RepairMotorsPage from '../app/pages/services/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage';
@@ -30,7 +30,7 @@ const useStyles = styled((theme) => ({
 }));
 
 function StackItem1({classes}) {
- let navigate = useNavigate();
+ const navigate = useNavigate();
  return (
   <Stack direction='row' spacing={1}>
    {FirstRow.map((work, index) => (
