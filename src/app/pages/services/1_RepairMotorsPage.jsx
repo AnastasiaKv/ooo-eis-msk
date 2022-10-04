@@ -55,15 +55,19 @@ export default function RepairMotorsPage() {
   () => [
    {
     accessorKey: 'name', //simple recommended way to define a column
-    header: '',
+    header: 'Услуга',
     muiTableHeadCellProps: {sx: {color: ''}}, //custom props
-    Cell: ({cell}) => <strong>{cell.getValue()}</strong>, //optional custom cell render
+    Cell: ({cell}) => {
+     cell.getValue();
+    }, //optional custom cell render
    },
    {
-    accessorFn: (row) => row.age, //alternate way
-    id: 'price', //id required if you use accessorFn instead of accessorKey
-    header: '',
-    Header: <i style={{color: ''}}>Age</i>, //optional custom markup
+    accessorFn: (row) => row.price, //alternate way
+    accessorKey: 'price',
+    header: 'Цена',
+    Cell: ({cell}) => {
+     cell.getValue();
+    },
    },
   ],
   []
@@ -72,20 +76,23 @@ export default function RepairMotorsPage() {
  return (
   <div>
    <h2>
-    <Typography variant='caption'>Ремонт двигателей</Typography>
+    <Typography variant='h5'>Ремонт двигателей</Typography>
    </h2>
    <h4>
-    <Typography variant='caption'>от 500 руб.</Typography>
+    <Typography variant='body1'>от 500 руб.</Typography>
    </h4>
    <Stack>
     <MaterialReactTable
      columns={columns}
      data={data}
      enableBottomToolbar={false}
-     enableGlobalFilterModes
+     enableGlobalFilterModes={false}
      enablePagination={false}
      enableRowNumbers={false}
      enableRowVirtualization={false}
+     enableColumnActions={false}
+     enableColumnOrdering={false}
+     enableTopToolbar={false}
      initialState={{density: 'compact'}}
      muiTableContainerProps={{sx: {maxHeight: '600px'}}} //optionally customize the virtualizer
     />

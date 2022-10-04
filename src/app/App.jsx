@@ -29,7 +29,7 @@ function App() {
          <TopMediaBlock />
          <main className='ees-content'>
           <Routes>
-           <Route path='/' element={<News />} />
+           <Route path='/' element={<Prices />} />
           </Routes>
          </main>
         </div>
