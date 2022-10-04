@@ -48,6 +48,7 @@ export default function MenuButtonStack() {
      Стоимость
     </Button>
     <Button
+     to='/news'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
      variant='contained'

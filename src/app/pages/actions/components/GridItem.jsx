@@ -9,26 +9,25 @@ import Typography from '@mui/material/Typography';
 export default function GridItem({image}) {
  return (
   <Grid item>
-   <Paper sx={{width: 320}}>
-    <ButtonBase>
-     <Box
-      sx={{
-       marginRight: 0,
-       height: '93px',
-       paddingTop: '28px',
-       width: '320px',
-       borderTopLeftRadius: '4px',
-       borderTopRightRadius: '4px',
-      }}
-      component='img'
-      alt='Company logo.'
-      src={image}
-     />
-    </ButtonBase>
+   <Paper sx={{width: 225}}>
+    <Box
+     sx={{
+      marginRight: 0,
+      height: '140px',
+      paddingTop: '23px',
+      width: '225px',
+     }}
+     component='img'
+     alt='Company logo.'
+     src={image}
+    />
     <Box sx={{p: 1}}>
-     <Typography variant='subtitle1'>Crowd Prediction</Typography>
-     <Typography variant='caption'>
-      Crowd Predictions in Ford to forecast weekly vehicles sale volumes across business units
+     <Typography variant='subtitle1'>
+      <b>Пример названия</b>
+     </Typography>
+     <Typography variant='caption' style={{lineHeight: 1}}>
+      Пример первого абзаца статьи для визуализации визуализации объёма и демонстрации. Пример
+      абзаца.
      </Typography>
     </Box>
    </Paper>
