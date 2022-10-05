@@ -1,12 +1,12 @@
 .leftbox {
- /* display: flex;
+    /* display: flex;
      flex-direction: column;
      align-items: flex-start;
      align-content: flex-start;
      justify-items: flex-start;
      justify-content: flex-start; */
- position: absolute;
- left: -78px;
- bottom: 0;
- clip-path: inset(0 0 4em);
+    position: absolute;
+    left: -148px;
+    bottom: 0;
+    clip-path: inset(0 0 4em);
 }

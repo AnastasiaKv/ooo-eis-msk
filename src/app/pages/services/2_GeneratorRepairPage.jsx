@@ -1,7 +1,7 @@
-import React, {useMemo} from 'react';
-import MaterialReactTable from 'material-react-table';
+import React from 'react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import SimpleTable from '../../components/SimpleTable';
 
 const data = [
  {
@@ -51,24 +51,6 @@ const data = [
 ];
 
 const GeneratorRepairPage = () => {
- const columns = useMemo(
-  () => [
-   {
-    accessorKey: 'name', //simple recommended way to define a column
-    header: '',
-    muiTableHeadCellProps: {sx: {color: ''}}, //custom props
-    Cell: ({cell}) => <strong>{cell.getValue()}</strong>, //optional custom cell render
-   },
-   {
-    accessorFn: (row) => row.age, //alternate way
-    id: 'price', //id required if you use accessorFn instead of accessorKey
-    header: '',
-    Header: <i style={{color: ''}}>Age</i>, //optional custom markup
-   },
-  ],
-  []
- );
-
  return (
   <div>
    <h2>
@@ -78,17 +60,7 @@ const GeneratorRepairPage = () => {
     <Typography variant='caption'>от 500 руб.</Typography>
    </h4>
    <Stack>
-    <MaterialReactTable
-     columns={columns}
-     data={data}
-     enableBottomToolbar={false}
-     enableGlobalFilterModes
-     enablePagination={false}
-     enableRowNumbers={false}
-     enableRowVirtualization={false}
-     initialState={{density: 'compact'}}
-     muiTableContainerProps={{sx: {maxHeight: '600px'}}} //optionally customize the virtualizer
-    />
+    <SimpleTable data={data} />
    </Stack>
   </div>
  );

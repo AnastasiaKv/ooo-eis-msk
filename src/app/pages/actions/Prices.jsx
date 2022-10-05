@@ -7,6 +7,55 @@ import image1 from '../../../assets/img/actions/PricePage/Нам доверяю�
 import image2 from '../../../assets/img/actions/PricePage/Карточки услуг.png';
 import image3 from '../../../assets/img/actions/PricePage/Ремонт генератора.png';
 import image4 from '../../../assets/img/actions/PricePage/Ремонт электродвигателей.png';
+import SimpleTable from '../../components/SimpleTable';
+import JobsType from '../../components/JobsType';
+
+const data = [
+ {
+  name: 'Замена щеточного узла (для некоторых моделей)',
+  price: 'от 900 руб.',
+ },
+ {
+  name: 'Замена реле-регулятора напряжения',
+  price: 'от 1300 руб.',
+ },
+ {
+  name: 'Замена диодного моста',
+  price: 'от 1600 руб.',
+ },
+ {
+  name: 'Замена диодов',
+  price: 'от 550 руб.',
+ },
+ {
+  name: 'Замена роторных колец',
+  price: 'от 900 руб.',
+ },
+ {
+  name: 'Замена подшипников',
+  price: 'от 700 руб.',
+ },
+ {
+  name: 'Замена или ремонт ротора',
+  price: 'от 2000 руб.',
+ },
+ {
+  name: 'Замена статорной обмотки',
+  price: 'от 1800 руб.',
+ },
+ {
+  name: 'Замена проставок под подшипники — только работа',
+  price: 'от 500 руб.',
+ },
+ {
+  name: 'Замена шкива',
+  price: 'от 700 руб.',
+ },
+ {
+  name: 'Замена обгонной муфты (для некоторых моделей)',
+  price: 'от 2300 руб.',
+ },
+];
 
 const componentStyle = {
  paddingTop: '15px',
@@ -42,22 +91,16 @@ export default function Prices() {
     </p>
    </div>
    <br /> <br />
-   <div className='block2'>
+   <div className='block2' style={{paddingLeft: '4em'}}>
     <h2>
      <Typography variant='h4' component='h2' sx={{paddingRight: '376px'}}>
       Виды работ
      </Typography>
     </h2>
-    <Box
-     component='img'
-     alt='Этапы работ'
-     src={image2}
-     sx={{
-      height: '271px',
-      paddingRight: '340px',
-     }}
-    />
+    <br />
+    <JobsType />
    </div>
+   <br />
    <br />
    <div className='block3'>
     <h2>
@@ -65,9 +108,44 @@ export default function Prices() {
       Прейскурант цен
      </Typography>
     </h2>
-    <Box component='img' alt='Этапы работ' src={image3} />
     <br />
-    <Box component='img' alt='Этапы работ' src={image4} />
+    <p style={{textAlign: 'left', float: 'left'}}>
+     <p style={{paddingLeft: '12rem'}}>
+      <h4>
+       <Typography variant='h4' component='h4'>
+        Ремонт генератора
+       </Typography>
+      </h4>
+      <h6>
+       <span>
+        <Typography variant='h6' component='span'>
+         от 500 руб.
+        </Typography>
+       </span>
+      </h6>
+     </p>
+     <br />
+     <SimpleTable data={data} />
+    </p>
+    <br />
+    <p style={{textAlign: 'left', float: 'left'}}>
+     <p style={{paddingLeft: '12rem'}}>
+      <h4>
+       <Typography variant='h4' component='h4'>
+        Ремонт електродвигателя
+       </Typography>
+      </h4>
+      <h6>
+       <span>
+        <Typography variant='h6' component='span'>
+         от 500 руб.
+        </Typography>
+       </span>
+      </h6>
+     </p>
+     <br />
+     <SimpleTable data={data} />
+    </p>
    </div>
   </div>
  );

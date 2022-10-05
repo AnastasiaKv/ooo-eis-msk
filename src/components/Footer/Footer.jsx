@@ -1,21 +1,28 @@
-import React from 'react';
-
-import AppBar from '@mui/material/AppBar';
+import * as React from 'react';
+import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import RedLine from './Decor/RedLine';
 import LeftDecor from './Decor/DecorLeft';
 import RightDecor from './Decor/DecorRight';
 import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
+import Box from '@mui/material/Box';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import CopyrightIcon from '@mui/icons-material/Copyright';
+import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import PolicyIcon from '@mui/icons-material/Policy';
+import MapIcon from '@mui/icons-material/Map';
 
-const leftPadding = {
- paddingLeft: '8cm',
+const color = {
+ color: 'white',
+ paddingRight: '260px',
 };
 const spacing_10cm = {
- paddingLeft: '10cm',
+ color: 'white',
 };
 const spacing_40px = {
- paddingLeft: '40px',
+ color: 'white',
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -23,34 +30,30 @@ const useStyles = makeStyles((theme) => ({
   height: 90,
  },
 }));
+
 export default function Footer() {
+ const [value, setValue] = React.useState(0);
  const classes = useStyles();
  return (
-  <div className='ees-footer-content'>
+  <div className='ees-footer-content' style={{height: '91px'}}>
    <LeftDecor />
    <RightDecor />
    {/* <RedLine /> */}
    {/* Витя, AppBar генерит тег <header>, а тебе нужен тут просто <div> */}
-   <AppBar elevation={0} sx={{bgcolor: 'transparent'}} position='static'>
-    <Toolbar className={classes.customizeToolbar}>
-     <div>
-      {' '}
-      <Typography variant='caption'>©Copyright</Typography>
-     </div>
-     <div style={spacing_10cm}>
-      {' '}
-      <Typography variant='caption'>Карта сайта</Typography>
-     </div>
-     <div style={spacing_40px}>
-      {' '}
-      <Typography variant='caption'>Политика</Typography>
-     </div>
-     <div style={spacing_40px}>
-      {' '}
-      <Typography variant='caption'>Конфеденциальность</Typography>
-     </div>
-    </Toolbar>
-   </AppBar>
+   <BottomNavigation
+    style={{paddingRight: '250px', height: '90px'}}
+    sx={{bgcolor: 'transparent'}}
+    showLabels
+    value={value}
+    onChange={(event, newValue) => {
+     setValue(newValue);
+    }}
+   >
+    <BottomNavigationAction style={color} label='©Copyright' />
+    <BottomNavigationAction style={spacing_10cm} label='Карта сайта' />
+    <BottomNavigationAction style={spacing_40px} label='Политика' />
+    <BottomNavigationAction style={spacing_40px} label='Конфеденциальность' />
+   </BottomNavigation>
   </div>
  );
 }

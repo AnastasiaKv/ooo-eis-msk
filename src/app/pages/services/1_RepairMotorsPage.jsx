@@ -1,7 +1,7 @@
-import React, {useMemo} from 'react';
-import MaterialReactTable from 'material-react-table';
+import React from 'react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import SimpleTable from '../../components/SimpleTable';
 
 const data = [
  {
@@ -38,7 +38,7 @@ const data = [
  },
  {
   name: 'Замена проставок под подшипники — только работа',
-  price: '500 руб.',
+  price: 'от 500 руб.',
  },
  {
   name: 'Замена шкива',
@@ -51,28 +51,6 @@ const data = [
 ];
 
 export default function RepairMotorsPage() {
- const columns = useMemo(
-  () => [
-   {
-    accessorKey: 'name', //simple recommended way to define a column
-    header: 'Услуга',
-    muiTableHeadCellProps: {sx: {color: ''}}, //custom props
-    Cell: ({cell}) => {
-     cell.getValue();
-    }, //optional custom cell render
-   },
-   {
-    accessorFn: (row) => row.price, //alternate way
-    accessorKey: 'price',
-    header: 'Цена',
-    Cell: ({cell}) => {
-     cell.getValue();
-    },
-   },
-  ],
-  []
- );
-
  return (
   <div>
    <h2>
@@ -81,22 +59,7 @@ export default function RepairMotorsPage() {
    <h4>
     <Typography variant='body1'>от 500 руб.</Typography>
    </h4>
-   <Stack>
-    <MaterialReactTable
-     columns={columns}
-     data={data}
-     enableBottomToolbar={false}
-     enableGlobalFilterModes={false}
-     enablePagination={false}
-     enableRowNumbers={false}
-     enableRowVirtualization={false}
-     enableColumnActions={false}
-     enableColumnOrdering={false}
-     enableTopToolbar={false}
-     initialState={{density: 'compact'}}
-     muiTableContainerProps={{sx: {maxHeight: '600px'}}} //optionally customize the virtualizer
-    />
-   </Stack>
+    <SimpleTable data={data} />
   </div>
  );
 }
