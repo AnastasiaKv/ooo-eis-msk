@@ -143,7 +143,7 @@ export default function News() {
        Находиться в головном уборе, полностью застегнутой спецодежде (остерегаясь ее захвата
        вращающимися частями двигателя);
       </Typography>
-     </Stack>{' '}
+     </Stack>
      <Stack direction='row' spacing={3}>
       <CircleIcon style={{margin: '5px 0px 0px 0px', height: 10, color: '#f12b29'}} />
       <Typography variant='caption' component='span' style={{marginLeft: 0}}>

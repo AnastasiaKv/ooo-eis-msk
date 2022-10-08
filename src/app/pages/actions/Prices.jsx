@@ -10,6 +10,7 @@ import image4 from '../../../assets/img/actions/PricePage/Ремонт элек�
 import SimpleTable from '../../components/SimpleTable';
 import JobsType from '../../components/JobsType';
 import JobsStepper from '../../components/JobsStepper';
+import TrustedBox from './components/TrustedBox';
 
 const data = [
  {
@@ -64,37 +65,40 @@ const componentStyle = {
  paddingRight: '18em',
  paddingLeft: '0px',
 };
-
+const textStyle = {
+ fontFamily: 'NeoSansPro',
+ display: 'block',
+ textAlign: 'justify',
+ maxWidth: '1000px',
+ fontSize: 13,
+ lineHeight: '1.5',
+};
 export default function Prices() {
  return (
   <div style={componentStyle}>
    <div className='block1' style={componentStyle}>
     <br />
-    <Box
-     sx={{
-      float: 'right' /* Выравнивание по правому краю  */,
-      margin: '2px 0 7px 72px' /* Отступы вокруг картинки */,
-      height: '250px',
-     }}
-     component='img'
-     alt='Нам доверяют'
-     src={image1}
-    />
+    <TrustedBox />
     <p>
-     <Typography variant='body2' component='p' style={{paddingLeft: '40px', textAlign: 'justify'}}>
-      Ремонт и замена обмотки двигателя - кропотливый, системный, скрупулёзный процесс. И перед
-      выдачей двигателя клиенту он проходит 5 ступенчатый контроль качества, что позволяет нам быть
-      уверенными в его стабильной работе. Гарантия качества работ. Ремонт и замена обмотки двигателя
-      - кропотливый, системный, скрупулёзный процесс. Ремонт и замена обмотки двигателя -
-      кропотливый, системный, скрупулёзный процесс. И перед выдачей двигателя клиенту он проходит 5
-      ступенчатый контроль качества, что позволяет нам быть уверенными в его стабильной работе.
+     <Typography
+      variant='body2'
+      component='p'
+      style={{fontSize: '16px', paddingLeft: '40px', textAlign: 'justify'}}
+     >
+      Ремонт и замена обмотки двигателя - кропотливый, системный, скрупулёзный процесс.
+      <br />И перед выдачей двигателя клиенту он проходит 5 ступенчатый контроль качества, что
+      позволяет нам быть уверенными в его стабильной работе. Гарантия качества работ. <br />
+      Ремонт и замена обмотки двигателя - кропотливый, системный, скрупулёзный процесс. Ремонт и
+      замена обмотки двигателя - кропотливый, системный, скрупулёзный процесс. <br />И перед выдачей
+      двигателя клиенту он проходит 5 ступенчатый контроль качества, что позволяет нам быть
+      уверенными в его стабильной работе.
      </Typography>
     </p>
    </div>
    <br /> <br />
    <div className='block2' style={{paddingLeft: '2em'}}>
     <h2>
-     <Typography variant='h4' component='h2' style={{paddingRight: '476px'}}>
+     <Typography variant='h4' component='h2' style={{fontSize: '30px', paddingRight: '376px'}}>
       Виды работ
      </Typography>
     </h2>
@@ -105,49 +109,51 @@ export default function Prices() {
    <br />
    <div className='block3'>
     <h2>
-     <Typography variant='h4' component='h2' sx={{paddingRight: '376px'}}>
-      <strong>Прейскурант цен</strong>
+     <Typography variant='h4' component='h2' sx={{fontSize: '30px', paddingRight: '343px'}}>
+      Прейскурант цен
      </Typography>
     </h2>
     <br />
     <br />
-    <p style={{textAlign: 'left', float: 'left'}}>
-     <p style={{paddingLeft: '12rem'}}>
-      <h4>
-       <Typography variant='h4' component='h4'>
-        Ремонт генератора
-       </Typography>
-      </h4>
-      <h6>
-       <span>
-        <Typography variant='h6' component='span'>
-         от 500 руб.
+    <Stack direction='column' spacing={0} style={{paddingLeft: '7em', paddingBottom: '20px'}}>
+     <p style={{width: '600px', textAlign: 'left'}}>
+      <p style={{paddingLeft: '2rem'}}>
+       <h4>
+        <Typography variant='h4' component='h4' style={{fontSize: '25px'}}>
+         Ремонт генератора
         </Typography>
-       </span>
-      </h6>
+       </h4>
+       <h6>
+        <span>
+         <Typography variant='h6' component='span' style={{fontSize: '16px'}}>
+          от 500 руб.
+         </Typography>
+        </span>
+       </h6>
+      </p>
+      <br />
+      <SimpleTable data={data} view={'compact'} /> <br />
      </p>
      <br />
-     <SimpleTable data={data} /> <br />
-    </p>
-    <br />
-    <p style={{textAlign: 'left', float: 'left'}}>
-     <p style={{paddingLeft: '12rem'}}>
-      <h4>
-       <Typography variant='h4' component='h4'>
-        Ремонт электродвигателя
-       </Typography>
-      </h4>
-      <h6>
-       <span>
-        <Typography variant='h6' component='span'>
-         от 500 руб.
+     <p style={{width: '600px', textAlign: 'left'}}>
+      <p style={{paddingLeft: '2rem'}}>
+       <h4>
+        <Typography variant='h4' component='h4' style={{fontSize: '25px'}}>
+         Ремонт электродвигателя
         </Typography>
-       </span>
-      </h6>
+       </h4>
+       <h6>
+        <span>
+         <Typography variant='h6' component='span' style={{fontSize: '16px'}}>
+          от 500 руб.
+         </Typography>
+        </span>
+       </h6>
+      </p>
+      <br />
+      <SimpleTable data={data} />
      </p>
-     <br />
-     <SimpleTable data={data} />
-    </p>
+    </Stack>
    </div>
   </div>
  );

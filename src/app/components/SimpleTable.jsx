@@ -3,7 +3,7 @@ import MaterialReactTable from 'material-react-table';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-export default function SimpleTable({data}) {
+export default function SimpleTable({data}, {view}) {
  const columns = useMemo(
   () => [
    {
@@ -11,7 +11,7 @@ export default function SimpleTable({data}) {
     header: 'Услуга',
 
     muiTableHeadCellProps: {
-     sx: {minWidth: 'max(464px, 40px)', width: '500px', padding: 0, color: ''},
+     sx: {minWidth: 'max(464px, 40px)', width: '800px', padding: 0, color: ''},
     }, //custom props
     Cell: ({cell}) => {
      cell.getValue();
@@ -31,7 +31,7 @@ export default function SimpleTable({data}) {
  );
 
  return (
-  <Stack spacing={0} style={{paddingLeft: '8em', paddingBottom: '20px'}}>
+  <Stack spacing={0} style={{paddingLeft: '1em'}}>
    <MaterialReactTable
     columns={columns}
     data={data}
@@ -45,9 +45,9 @@ export default function SimpleTable({data}) {
     enableDensityToggle={false}
     tab
     muiTableBodyRowProps={{hover: false}}
-    initialState={{density: 'compact'}}
+    initialState={{density: view}}
     muiTableContainerProps={{
-     sx: {textAlign: 'justify', overflowX: 'hidden', maxHeight: '800px'},
+     sx: {textAlign: 'justify', overflowX: 'hidden', maxHeight: '900px'},
     }}
    />
   </Stack>

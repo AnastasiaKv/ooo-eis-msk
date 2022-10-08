@@ -79,9 +79,11 @@ export default function MenuButtons({route}) {
       component='span'
       sx={{flexGrow: 1}}
       style={{
+       fontFamily: 'Roboto',
+       fontSize: '14px',
        position: 'relative',
        justifyContent: 'space-around',
-       fontSize: 12,
+       textAlign: 'justify',
        color: '#292929',
       }}
      >
