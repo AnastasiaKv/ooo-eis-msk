@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import GridServices from './GridServices';
 
 const useStyles = makeStyles({
  flexGrow: {
@@ -26,7 +27,6 @@ export default function MenuButtonStack() {
   <div style={{marginTop: '1px', paddingLeft: '6px'}} className={classes.flexGrow}>
    <Stack direction='row' spacing={4}>
     <Button
-     to='/'
      className={classes.button}
      style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
      variant='contained'

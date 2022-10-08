@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 const divStyle = {
- width: '33em',
+ width: '36em',
  borderTop: '0.9em solid rgb(241, 43, 41)',
 };
 const stackStyle = {

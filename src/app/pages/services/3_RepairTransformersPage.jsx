@@ -85,3 +85,4 @@ const RepairTransformersPage = () => {
   </div>
  );
 };
+export default RepairTransformersPage;

@@ -9,6 +9,7 @@ import image3 from '../../../assets/img/actions/PricePage/Ремонт гене�
 import image4 from '../../../assets/img/actions/PricePage/Ремонт электродвигателей.png';
 import SimpleTable from '../../components/SimpleTable';
 import JobsType from '../../components/JobsType';
+import JobsStepper from '../../components/JobsStepper';
 
 const data = [
  {
@@ -60,7 +61,7 @@ const data = [
 const componentStyle = {
  paddingTop: '15px',
  paddingBottom: '0px',
- paddingRight: '20em',
+ paddingRight: '18em',
  paddingLeft: '0px',
 };
 
@@ -72,7 +73,7 @@ export default function Prices() {
     <Box
      sx={{
       float: 'right' /* Выравнивание по правому краю  */,
-      margin: '7px 0 7px 20px' /* Отступы вокруг картинки */,
+      margin: '2px 0 7px 72px' /* Отступы вокруг картинки */,
       height: '250px',
      }}
      component='img'
@@ -80,7 +81,7 @@ export default function Prices() {
      src={image1}
     />
     <p>
-     <Typography variant='body2'>
+     <Typography variant='body2' component='p' style={{paddingLeft: '40px', textAlign: 'justify'}}>
       Ремонт и замена обмотки двигателя - кропотливый, системный, скрупулёзный процесс. И перед
       выдачей двигателя клиенту он проходит 5 ступенчатый контроль качества, что позволяет нам быть
       уверенными в его стабильной работе. Гарантия качества работ. Ремонт и замена обмотки двигателя
@@ -91,9 +92,10 @@ export default function Prices() {
     </p>
    </div>
    <br /> <br />
-   <div className='block2' style={{paddingLeft: '4em'}}>
+  
+   <div className='block2' style={{paddingLeft: '2em'}}>
     <h2>
-     <Typography variant='h4' component='h2' sx={{paddingRight: '376px'}}>
+     <Typography variant='h4' component='h2' style={{paddingRight: '476px'}}>
       Виды работ
      </Typography>
     </h2>
@@ -105,9 +107,10 @@ export default function Prices() {
    <div className='block3'>
     <h2>
      <Typography variant='h4' component='h2' sx={{paddingRight: '376px'}}>
-      Прейскурант цен
+      <strong>Прейскурант цен</strong>
      </Typography>
     </h2>
+    <br />
     <br />
     <p style={{textAlign: 'left', float: 'left'}}>
      <p style={{paddingLeft: '12rem'}}>
@@ -125,14 +128,14 @@ export default function Prices() {
       </h6>
      </p>
      <br />
-     <SimpleTable data={data} />
+     <SimpleTable data={data} /> <br />
     </p>
     <br />
     <p style={{textAlign: 'left', float: 'left'}}>
      <p style={{paddingLeft: '12rem'}}>
       <h4>
        <Typography variant='h4' component='h4'>
-        Ремонт електродвигателя
+        Ремонт электродвигателя
        </Typography>
       </h4>
       <h6>

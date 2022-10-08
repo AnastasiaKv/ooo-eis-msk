@@ -8,9 +8,17 @@ import TopMediaBlock from '../components/containers/TopMediaBlock';
 import BottomMediaBlock from '../components/containers/BottomMediaBlock';
 import GridServices from '../components/GridServices';
 
-import RepairMotorsPage from './pages/services/1_RepairMotorsPage';
-import GeneratorRepairPage from './pages/services/2_GeneratorRepairPage';
-import RepairTransformersPage from './pages/services/3_RepairTransformersPage';
+import RepairMotors from './pages/services/1_RepairMotorsPage';
+import GeneratorRepair from './pages/services/2_GeneratorRepairPage';
+import RepairTransformers from './pages/services/3_RepairTransformersPage';
+import RefrigerationMachineRepair from './pages/services/4_RefrigerationMachineRepairPage';
+import RewindingMotors from './pages/services/5_RewindingMotorsPage';
+import RepairOfElectricHeaters from './pages/services/6_RepairOfElectricHeatersPage';
+import SaleOfElectricalComponents from './pages/services/7_SaleOfElectricalComponentsPage';
+import RepairOfBoardsAndBlocks from './pages/services/8_RepairOfBoardsAndBlocksPage';
+import MaintenanceAndRepairOfPassengerCars from './pages/services/9_MaintenanceAndRepairOfPassengerCarsPage';
+import SurfacingOfShaftsAndShields from './pages/services/10_SurfacingOfShaftsAndShieldsPage';
+
 import Prices from './pages/actions/Prices';
 import News from './pages/actions/News';
 
