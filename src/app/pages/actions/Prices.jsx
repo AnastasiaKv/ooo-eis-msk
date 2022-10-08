@@ -92,7 +92,6 @@ export default function Prices() {
     </p>
    </div>
    <br /> <br />
-  
    <div className='block2' style={{paddingLeft: '2em'}}>
     <h2>
      <Typography variant='h4' component='h2' style={{paddingRight: '476px'}}>

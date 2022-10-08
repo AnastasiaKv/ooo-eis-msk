@@ -59,7 +59,7 @@ export default function RepairMotorsPage() {
    <h4>
     <Typography variant='body1'>от 500 руб.</Typography>
    </h4>
-    <SimpleTable data={data} />
+   <SimpleTable data={data} />
   </div>
  );
 }

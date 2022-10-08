@@ -167,7 +167,7 @@ export default function News() {
    </div>
 
    <br />
-   <div className='block4'>
+   <div className='block4' style={{paddingRight: '120px'}}>
     <h2 style={{paddingBottom: '15px'}}>
      <Typography
       variant='body2'

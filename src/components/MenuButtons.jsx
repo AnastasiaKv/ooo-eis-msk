@@ -21,7 +21,7 @@ const useStyles = makeStyles({
  },
 });
 
-export default function MenuButtonStack() {
+export default function MenuButtons({route}) {
  const classes = useStyles();
  return (
   <div style={{marginTop: '1px', paddingLeft: '6px'}} className={classes.flexGrow}>

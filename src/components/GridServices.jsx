@@ -77,7 +77,7 @@ function StackItem4({classes}) {
  );
 }
 
-export default function ResponsiveGridService() {
+export default function ResponsiveGridService({selected}) {
  const classes = useStyles();
  return (
   <div style={{paddingLeft: '30px'}}>

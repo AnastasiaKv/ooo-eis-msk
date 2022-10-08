@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {styled} from '@mui/material/styles';
 import Slider from '../Slider';
-import MenuButton from '../MenuButton';
+import MenuButtons from '../MenuButtons';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -46,7 +46,7 @@ export default function TopMediaBlock() {
     <div>
      <Grid container spacing={0} disableEqualOverflow sx={{flexGrow: 1}}>
       <Grid xs={12}>
-       <MenuButton />
+       <MenuButtons />
       </Grid>
      </Grid>
     </div>
