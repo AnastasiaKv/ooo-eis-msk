@@ -63,38 +63,7 @@ export default function MenuButtons({route}) {
      Контакты
     </Button>
    </Stack>
-   <Stack direction='row' spacing={0}>
-    <p
-     style={{
-      textAlign: 'left',
-      paddingLeft: '0px',
-      paddingTop: '20px',
-      margin: '5px 0',
-      width: '23cm',
-     }}
-     className='blocktext'
-    >
-     <Typography
-      variant='body2'
-      component='span'
-      sx={{flexGrow: 1}}
-      style={{
-       fontFamily: 'Roboto',
-       fontSize: '14px',
-       position: 'relative',
-       justifyContent: 'space-around',
-       textAlign: 'justify',
-       color: '#292929',
-      }}
-     >
-      Также как перспективное планирование предоставляет широкие возможности для системы массового
-      участия. Следует отметить, что сложившаяся структура организации позволяет оценить значение
-      поставленных обществом задач. Каждый из нас понимает очевидную вещь: консультация с широким
-      активом позволяет выполнить важные задания по разработке распределения внутренних резервов и
-      ресурсов.
-     </Typography>
-    </p>
-   </Stack>
+   <Stack direction='row' spacing={0}></Stack>
   </div>
  );
 }

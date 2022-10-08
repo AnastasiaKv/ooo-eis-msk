@@ -20,7 +20,7 @@ export default function HorizontalLabelPositionBelowStepper() {
  return (
   <div style={divStyle}>
    <Box sx={{width: '100%'}}>
-    <Stepper activeStep={1} alternativeLabel={5}>
+    <Stepper activeStep={0} alternativeLabel={5}>
      {steps.map((label) => (
       <Step key={label}>
        <StepLabel>{label}</StepLabel>

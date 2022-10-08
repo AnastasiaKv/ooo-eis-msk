@@ -80,37 +80,14 @@ function StackItem4({classes}) {
 export default function ResponsiveGridService({selected}) {
  const classes = useStyles();
  return (
-  <div style={{paddingLeft: '30px'}}>
-   <p style={{paddingLeft: '35px', paddingTop: '14px', paddingBottom: '4px'}}>
-    <Typography
-     variant='body2'
-     component='span'
-     sx={{flexGrow: 1}}
-     style={{
-      position: 'relative',
-      fontSize: 21,
-      textAlign: 'center',
-      fontWeight: 'bold',
-      color: '#292929',
-     }}
-    >
-     Наши услуги
-    </Typography>
-   </p>
-   <Box sx={{flexGrow: 1}}>
-    <StackItem1 classes={classes} />
-    <StackItem2 classes={classes} />
-    <StackItem3 classes={classes} />
-    <StackItem4 classes={classes} />
-   </Box>
-
+  <div>
    <p
     style={{
      textAlign: 'left',
      paddingLeft: '0px',
      paddingTop: '20px',
-     margin: '0px 0',
-     width: '21cm',
+     margin: '5px 0',
+     width: '23cm',
     }}
     className='blocktext'
    >
@@ -119,9 +96,11 @@ export default function ResponsiveGridService({selected}) {
      component='span'
      sx={{flexGrow: 1}}
      style={{
+      fontFamily: 'Roboto',
+      fontSize: '14px',
       position: 'relative',
       justifyContent: 'space-around',
-      fontSize: 12,
+      textAlign: 'justify',
       color: '#292929',
      }}
     >
@@ -132,6 +111,59 @@ export default function ResponsiveGridService({selected}) {
      ресурсов.
     </Typography>
    </p>
+   <div style={{paddingLeft: '30px'}}>
+    <p style={{paddingLeft: '35px', paddingTop: '14px', paddingBottom: '4px'}}>
+     <Typography
+      variant='body2'
+      component='span'
+      sx={{flexGrow: 1}}
+      style={{
+       position: 'relative',
+       fontSize: 21,
+       textAlign: 'center',
+       fontWeight: 'bold',
+       color: '#292929',
+      }}
+     >
+      Наши услуги
+     </Typography>
+    </p>
+    <Box sx={{flexGrow: 1}}>
+     <StackItem1 classes={classes} />
+     <StackItem2 classes={classes} />
+     <StackItem3 classes={classes} />
+     <StackItem4 classes={classes} />
+    </Box>
+
+    <p
+     style={{
+      textAlign: 'left',
+      paddingLeft: '0px',
+      paddingTop: '20px',
+      margin: '0px 0',
+      width: '21cm',
+     }}
+     className='blocktext'
+    >
+     <Typography
+      variant='body2'
+      component='span'
+      sx={{flexGrow: 1}}
+      style={{
+       position: 'relative',
+       justifyContent: 'space-around',
+       fontSize: 12,
+       color: '#292929',
+      }}
+     >
+      Также как перспективное планирование предоставляет широкие возможности для системы массового
+      участия. Следует отметить, что сложившаяся структура организации позволяет оценить значение
+      поставленных обществом задач. Каждый из нас понимает очевидную вещь: консультация с широким
+      активом позволяет выполнить важные задания по разработке распределения внутренних резервов и
+      ресурсов.
+     </Typography>
+    </p>
+   </div>
   </div>
  );
 }

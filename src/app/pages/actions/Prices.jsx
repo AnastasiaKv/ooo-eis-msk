@@ -83,7 +83,7 @@ export default function Prices() {
      <Typography
       variant='body2'
       component='p'
-      style={{fontSize: '16px', paddingLeft: '40px', textAlign: 'justify'}}
+      style={{fontSize: '15px', paddingLeft: '40px', textAlign: 'justify'}}
      >
       Ремонт и замена обмотки двигателя - кропотливый, системный, скрупулёзный процесс.
       <br />И перед выдачей двигателя клиенту он проходит 5 ступенчатый контроль качества, что
