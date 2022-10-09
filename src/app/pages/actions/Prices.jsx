@@ -60,6 +60,7 @@ const data = [
 ];
 
 const componentStyle = {
+ color: '#3c3c3c',
  paddingTop: '15px',
  paddingBottom: '0px',
  paddingRight: '18em',

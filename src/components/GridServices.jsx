@@ -113,10 +113,10 @@ export default function ResponsiveGridService({selected}) {
      </Typography>
     </p>
     <div style={{paddingLeft: '30px'}}>
-     <p style={{paddingLeft: '35px', paddingTop: '14px', paddingBottom: '4px'}}>
+     <p style={{paddingLeft: 0, paddingTop: '14px', paddingBottom: '4px'}}>
       <Typography
        variant='body2'
-       component='span'
+       component='p'
        sx={{flexGrow: 1}}
        style={{
         position: 'relative',

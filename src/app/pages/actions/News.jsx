@@ -12,6 +12,7 @@ import GridItem from './components/GridItem';
 import CircleIcon from '@mui/icons-material/Circle';
 
 const componentStyle = {
+ color: '#3c3c3c',
  paddingTop: '15px',
  paddingBottom: '15px',
  paddingRight: '53rem',
