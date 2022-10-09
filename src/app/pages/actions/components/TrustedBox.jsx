@@ -30,7 +30,7 @@ export default function TrustedBox() {
      height: '250px',
      width: '420px',
      background:
-      'linear-gradient(to left top, rgba(241, 43, 41, 1) 0%/*bottom-right color*/,rgba(207, 97, 97, 1) 50% /*middle color*/, rgba(241, 43, 41, 1) 100% /*top-left color*/)',
+      'linear-gradient(to left top, #f12b29 0%/*bottom-right color*/,rgba(207, 97, 97, 1) 50% /*middle color*/, #f12b29 100% /*top-left color*/)',
     }}
    >
     <p style={{paddingTop: '33px'}}>

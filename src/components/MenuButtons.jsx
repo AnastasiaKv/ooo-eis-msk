@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   backgroundColor: '#b1b1b1',
   color: '#fff',
   '&:hover': {
-   backgroundColor: '#b1b1b1',
+   backgroundColor: 'rgba(241, 43, 41, 1)',
    color: '#fff',
   },
  },
@@ -25,10 +25,11 @@ export default function MenuButtons({route}) {
  const classes = useStyles();
  return (
   <div style={{marginTop: '1px', paddingLeft: '6px'}} className={classes.flexGrow}>
-   <Stack direction='row' spacing={4}>
+   <Stack  direction='row' spacing={4}>
     <Button
+    sx={{bgcolor: '#b1b1b1'}}
      className={classes.button}
-     style={{borderRadius: 0, width: '150px', height: '25px', backgroundColor: '#b1b1b1'}}
+     style={{borderRadius: 0, width: '150px', height: '25px'}}
      variant='contained'
     >
      Главная
@@ -63,7 +64,6 @@ export default function MenuButtons({route}) {
      Контакты
     </Button>
    </Stack>
-   <Stack direction='row' spacing={0}></Stack>
   </div>
  );
 }

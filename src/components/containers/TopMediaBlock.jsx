@@ -1,10 +1,11 @@
 import * as React from 'react';
 import {styled} from '@mui/material/styles';
 import Slider from '../Slider';
-import MenuButtons from '../MenuButtons';
+import M2 from '../MenuButtons';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
+import M1 from '../../app/components/MenuTabButtons';
 
 const Item = styled(Paper)(({theme}) => ({
  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -46,7 +47,7 @@ export default function TopMediaBlock() {
     <div>
      <Grid container spacing={0} disableEqualOverflow sx={{flexGrow: 1}}>
       <Grid xs={12}>
-       <MenuButtons />
+       <M1 />
       </Grid>
      </Grid>
     </div>
