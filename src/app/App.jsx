@@ -21,6 +21,24 @@ import SurfacingOfShaftsAndShields from './pages/services/10_SurfacingOfShaftsAn
 
 import Prices from './pages/actions/Prices';
 import News from './pages/actions/News';
+const elements = [
+ {
+  path: '/',
+  element: GridServices,
+ },
+ {
+  path: '/about',
+  element: '',
+ },
+ {
+  path: '/prices',
+  element: Prices,
+ },
+ {
+  path: '/news',
+  element: News,
+ },
+];
 
 function App() {
  return (
@@ -35,11 +53,9 @@ function App() {
        <div className='ees-main'>
         <div className='ees-main-row'>
          <TopMediaBlock />
-         <main className='ees-content'>
-          <Routes>
-           <Route path='/' element={<Prices />} />
-          </Routes>
-         </main>
+         {/* <main className='ees-content'>
+          
+         </main> */}
         </div>
        </div>
        <footer className='ees-footer'>

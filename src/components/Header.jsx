@@ -73,7 +73,6 @@ export default function Header() {
 
     <div style={callButtonStyle}>
      <div style={{top: 16}}>
-      {' '}
       <Typography
        variant='h6'
        component='div'

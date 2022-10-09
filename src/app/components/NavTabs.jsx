@@ -5,6 +5,11 @@ import Tab from '@mui/material/Tab';
 import Stack from '@mui/material/Stack';
 import {makeStyles} from '@material-ui/styles';
 import Typography from '@mui/material/Typography';
+import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+
+import GridServices from '../../components/GridServices';
+import Prices from '../pages/actions/Prices';
+import News from '../pages/actions/News';
 
 const buttonStyle = {
  borderRadius: '1px',
@@ -30,7 +35,7 @@ function LinkTab(props) {
  return (
   <Tab
    sx={{bgcolor: 'GrayText', minWidth: '100px', minHeight: '25px'}}
-   component='a'
+   component={Link}
    onClick={(event) => {
     event.preventDefault();
    }}
@@ -49,7 +54,6 @@ export default function NavTabs() {
  return (
   <div style={{color: '#FFFFFF'}}>
    <Tabs
-    value={value}
     onChange={handleChange}
     sx={{
      '.MuiTabs-indicator': {
@@ -60,13 +64,50 @@ export default function NavTabs() {
     }}
    >
     <Stack sx={{marginLeft: '-35px', paddingLeft: '0px'}} direction='row' spacing={4}>
-     <LinkTab label='Главная' href='/' className={classes.button} style={buttonStyle}></LinkTab>
-     <LinkTab label='О нас' href='/about' className={classes.button} style={buttonStyle} />
-     <LinkTab label='Стоимость' href='/prices' className={classes.button} style={buttonStyle} />
-     <LinkTab label='Статьи' href='/news' className={classes.button} style={buttonStyle} />
-     <LinkTab label='Контакты' href='/contacts' className={classes.button} style={buttonStyle} />
+     <LinkTab
+      onClick={value}
+      label='Главная'
+      to='/'
+      className={classes.button}
+      style={buttonStyle}
+     />
+     <LinkTab
+      onClick={value}
+      label='О нас'
+      to='/about'
+      className={classes.button}
+      style={buttonStyle}
+     />
+     <LinkTab
+      onClick={value}
+      label='Стоимость'
+      to='/prices'
+      className={classes.button}
+      style={buttonStyle}
+     />
+     <LinkTab
+      onClick={value}
+      label='Статьи'
+      to='/news'
+      className={classes.button}
+      style={buttonStyle}
+     />
+     <LinkTab
+      onClick={value}
+      label='Контакты'
+      to='/contacts'
+      className={classes.button}
+      style={buttonStyle}
+     />
     </Stack>
    </Tabs>
+   <Routes>
+    <Route path='/' element={<GridServices />} />
+    <Route path='/about' element={<></>} />
+    <Route path='/prices' element={<Prices />} />
+    <Route path='/news' element={<News />} />
+    <Route path='/contacts' element={<></>} />
+   </Routes>
   </div>
  );
 }
