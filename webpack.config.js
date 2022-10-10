@@ -10,7 +10,7 @@ module.exports = {
  entry: {main: './src/index.js'},
  mode: 'development',
  output: {
-  path: path.resolve(__dirname, 'dist'),
+  path: path.resolve(__dirname, 'src'),
   filename: 'js/[name].js',
  },
  resolve: {
@@ -34,7 +34,7 @@ module.exports = {
     use: {
      loader: 'file-loader',
      options: {
-      name: './src/assets/img/[name].[ext]',
+      name: '/src/assets/img/[name].[ext]',
      },
     },
    },
@@ -42,7 +42,7 @@ module.exports = {
    // шрифты и SVG
    {
     test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-    type: './src/asset/fonts',
+    type: '/src/asset/fonts',
    },
   ],
  },
@@ -56,7 +56,7 @@ module.exports = {
   new HtmlWebpackPlugin({
    inject: false,
    hash: true,
-   template: './src/index.html',
+   template: '/src/index.html',
    filename: 'index.html',
   }),
  ],

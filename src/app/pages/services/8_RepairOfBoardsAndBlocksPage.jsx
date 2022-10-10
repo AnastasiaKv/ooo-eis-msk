@@ -1,9 +1,12 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import SimpleTable from '../../components/SimpleTable';
+import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
 export default function RepairOfBoardsAndBlocksPage() {
- return (
+ return (<main className='ees-content'>
   <div>
    <h2>
     <Typography variant='caption'>Ремонт электронагревателей</Typography>
@@ -30,6 +33,6 @@ export default function RepairOfBoardsAndBlocksPage() {
     <li>Ремонт компьютеризованных панелей управления</li>
     <li>Ремонт различных источников питания (в т.ч. специального назначения)</li>
    </ul>
-  </div>
+  </div></main>
  );
 }

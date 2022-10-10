@@ -1,6 +1,10 @@
-import React from 'react';
-import Box from '@mui/material/Box';
+import * as React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Box from '@mui/material/Box';
 import Grid from '@material-ui/core/Grid';
 import {Stack} from '@mui/system';
 import image1 from '../../../assets/img/actions/PricePage/Нам доверяют.png';
@@ -11,7 +15,11 @@ import SimpleTable from '../../components/SimpleTable';
 import JobsType from '../../components/JobsType';
 import JobsStepper from '../../components/JobsStepper';
 import TrustedBox from './components/TrustedBox';
+import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
+import RepairMotorsPage from '../../pages/services/1_RepairMotorsPage';
+import GeneratorRepairPage from '../../pages/services/2_GeneratorRepairPage';
+import RepairTransformersPage from '../../pages/services/3_RepairTransformersPage';
 const data = [
  {
   name: 'Замена щеточного узла (для некоторых моделей)',
@@ -109,53 +117,43 @@ export default function Prices() {
     </div>
     <br />
     <br />
-    <div className='block3'>
-     <h2>
-      <Typography variant='h4' component='h2' sx={{fontSize: '30px', paddingRight: '343px'}}>
-       Прейскурант цен
-      </Typography>
-     </h2>
+    <h2>
+     <Typography variant='h4' component='h2' sx={{fontSize: '30px', paddingRight: '343px'}}>
+      Прейскурант цен
+     </Typography>
+    </h2>
+    <br />
+    <br />
+    <div style={{paddingLeft: '10px', paddingBottom: '20px'}}>
+     <Accordion sx={{width: '36em'}}>
+      <AccordionSummary
+       expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+       aria-controls='panel1a-content'
+       id='panel1a-header'
+      >
+       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+        Ремонт генератора
+       </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+       <GeneratorRepairPage />
+      </AccordionDetails>
+     </Accordion>
      <br />
-     <br />
-     <Stack direction='column' spacing={0} style={{paddingLeft: '7em', paddingBottom: '20px'}}>
-      <p style={{width: '600px', textAlign: 'left'}}>
-       <p style={{paddingLeft: '2rem'}}>
-        <h4>
-         <Typography variant='h4' component='h4' style={{fontSize: '25px'}}>
-          Ремонт генератора
-         </Typography>
-        </h4>
-        <h6>
-         <span>
-          <Typography variant='h6' component='span' style={{fontSize: '16px'}}>
-           от 500 руб.
-          </Typography>
-         </span>
-        </h6>
-       </p>
-       <br />
-       <SimpleTable data={data} view={'compact'} /> <br />
-      </p>
-      <br />
-      <p style={{width: '600px', textAlign: 'left'}}>
-       <p style={{paddingLeft: '2rem'}}>
-        <h4>
-         <Typography variant='h4' component='h4' style={{fontSize: '25px'}}>
-          Ремонт электродвигателя
-         </Typography>
-        </h4>
-        <h6>
-         <span>
-          <Typography variant='h6' component='span' style={{fontSize: '16px'}}>
-           от 500 руб.
-          </Typography>
-         </span>
-        </h6>
-       </p>
-       <br />
-       <SimpleTable data={data} />
-      </p>
-     </Stack>
+     <Accordion sx={{width: '36em'}}>
+      <AccordionSummary
+       aria-controls='panel2a-content'
+       id='panel2a-header'
+       expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+      >
+       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+        Ремонт электродвигателя
+       </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+       <RepairMotorsPage />
+      </AccordionDetails>
+     </Accordion>
     </div>
    </div>
   </main>

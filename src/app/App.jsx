@@ -5,8 +5,6 @@ import '../assets/css/App.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer/Footer';
 import TopMediaBlock from '../components/containers/TopMediaBlock';
-import BottomMediaBlock from '../components/containers/BottomMediaBlock';
-import GridServices from '../components/GridServices';
 
 import RepairMotors from './pages/services/1_RepairMotorsPage';
 import GeneratorRepair from './pages/services/2_GeneratorRepairPage';
@@ -21,24 +19,6 @@ import SurfacingOfShaftsAndShields from './pages/services/10_SurfacingOfShaftsAn
 
 import Prices from './pages/actions/Prices';
 import News from './pages/actions/News';
-const elements = [
- {
-  path: '/',
-  element: GridServices,
- },
- {
-  path: '/about',
-  element: '',
- },
- {
-  path: '/prices',
-  element: Prices,
- },
- {
-  path: '/news',
-  element: News,
- },
-];
 
 function App() {
  return (
@@ -53,9 +33,7 @@ function App() {
        <div className='ees-main'>
         <div className='ees-main-row'>
          <TopMediaBlock />
-         {/* <main className='ees-content'>
-          
-         </main> */}
+         <main className='ees-content'></main>
         </div>
        </div>
        <footer className='ees-footer'>

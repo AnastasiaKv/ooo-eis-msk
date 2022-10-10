@@ -7,24 +7,21 @@ export default function SimpleTable({data}) {
  const columns = useMemo(
   () => [
    {
-    accessorKey: 'name', //simple recommended way to define a column
+    accessorKey: 'name',
     header: 'Услуга',
-
-    muiTableHeadCellProps: {
-     sx: {minWidth: 'max(464px, 40px)', width: '800px', padding: 0, color: ''},
-    }, //custom props
+    muiTableHeadCellProps: {},
     Cell: ({cell}) => {
      cell.getValue();
-    }, //optional custom cell render
+    },
    },
    {
-    accessorFn: (row) => row.price, //alternate way
+    accessorFn: (row) => row.price,
     accessorKey: 'price',
     header: 'Цена',
-    muiTableHeadCellProps: {sx: {}}, //custom props
+    muiTableHeadCellProps: {},
     Cell: ({cell}) => {
      cell.getValue();
-    }, //optional custom cell render
+    },
    },
   ],
   []
@@ -43,7 +40,6 @@ export default function SimpleTable({data}) {
     enableBottomToolbar={false}
     enableTopToolbar={false}
     enableDensityToggle={false}
-    tab
     muiTableBodyRowProps={{hover: false}}
     initialState={{density: 'comfortable'}}
     muiTableContainerProps={{

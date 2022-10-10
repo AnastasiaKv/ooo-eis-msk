@@ -23,7 +23,7 @@ export default function TrustedBox() {
  return (
   <div style={divStyle}>
    <Box
-    sx={{
+    style={{
      borderRadius: '2px',
      float: 'right' /* Выравнивание по правому краю  */,
      margin: '2px 0 7px 72px' /* Отступы вокруг картинки */,

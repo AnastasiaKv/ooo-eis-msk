@@ -1,8 +1,12 @@
+import React from 'react';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import SimpleTable from '../../components/SimpleTable';
+import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
 export default function MaintenanceAndRepairOfPassengerCarsPage() {
- return (
+ return (<main className='ees-content'>
   <div>
    <h2>
     <Typography variant='caption'>ТО и ремонт электрооборудования пассажирских вагонов</Typography>
@@ -33,6 +37,6 @@ export default function MaintenanceAndRepairOfPassengerCarsPage() {
      </Typography>
     </li>
    </ul>
-  </div>
+  </div></main>
  );
 }
