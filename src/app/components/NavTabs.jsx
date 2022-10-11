@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
 import MenuServices from '../components/MenuServices';
+import Contacts from '../pages/actions/Contacts';
 import Prices from '../pages/actions/Prices';
 import News from '../pages/actions/News';
 import Main from '../pages/actions/Main';
@@ -122,7 +123,7 @@ export default function NavTabs() {
     <Route path='/about' element={<></>} />
     <Route path='/prices' element={<Prices />} />
     <Route path='/news' element={<News />} />
-    <Route path='/contacts' element={<></>} />
+    <Route path='/contacts' element={<Contacts />} />
     <Route path='*' element={<Error404 />} />
    </Routes>
   </div>

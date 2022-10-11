@@ -11,12 +11,15 @@ import Logo from '././../assets/img/logo.svg';
 import MapIcon from '@mui/icons-material/Map';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-
-const mapAndMailStyle = {};
-const callButtonStyle = {
- // paddingLeft: 30,
- // paddingRight: 10,
-};
+import Dialog from '@mui/material/Dialog';
+import {func} from 'prop-types';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import {Stack, width} from '@mui/system';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import {useTheme} from '@mui/material/styles';
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
  return (
@@ -34,7 +37,24 @@ const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
  );
 };
 
+function name(params) {}
+
 export default function Header() {
+ const theme = useTheme();
+ const [open, setOpen] = React.useState(false);
+ const [fullWidth, setFullWidth] = React.useState(true);
+ const [maxWidth, setMaxWidth] = React.useState('sm');
+ const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+ const handleClickOpen = (event) => {
+  setOpen(true);
+  setFullWidth(event.target.checked);
+ };
+
+ const handleClose = () => {
+  setOpen(false);
+ };
+
  return (
   <AppBar className='ees-header-content' elevation={0} sx={{bgcolor: 'white'}}>
    <Toolbar>
@@ -45,7 +65,7 @@ export default function Header() {
      src={Logo}
     />
 
-    <div style={mapAndMailStyle}>
+    <div>
      <Typography
       variant='h6'
       component='div'
@@ -71,7 +91,7 @@ export default function Header() {
      iconEnd={<SearchIcon />}
     />
 
-    <div style={callButtonStyle}>
+    <div>
      <div style={{top: 16}}>
       <Typography
        variant='h6'
@@ -82,13 +102,84 @@ export default function Header() {
        8-800-232-32-22
       </Typography>
      </div>
-     <Button
-      style={{borderRadius: '0', backgroundColor: '#f12b29'}}
-      variant='contained'
-      startIcon={<HeadsetMicIcon />}
-     >
-      Обратный звонок
-     </Button>
+
+     <div style={{display: 'flex'}}>
+      <Button
+       style={{borderRadius: '0', backgroundColor: '#f12b29'}}
+       variant='contained'
+       onClick={handleClickOpen}
+       startIcon={<HeadsetMicIcon />}
+      >
+       Обратный звонок
+      </Button>
+      <Dialog
+       sx={{width: '900px', padding: '25px 0px'}}
+       fullWidth='1000px'
+       maxWidth='1000px'
+       open={open}
+       onClose={handleClose}
+      >
+       <DialogContent sx={{padding: '25px 0px'}}>
+        <DialogContentText>
+         <strong>Оставьте свои данные - и мы Вам перезвоним!</strong>
+        </DialogContentText>
+        <br />
+        <Stack
+         sx={{overflow: 'hidden', padding: '10px 0px'}}
+         direction='row'
+         spacing={2}
+         noValidate
+         component='form'
+        >
+         <TextField
+          id='text'
+          type='text'
+          size='small'
+          label=''
+          variant='outlined'
+          InputLabelProps={{
+           shrink: true,
+           left: '20px',
+          }}
+         />
+
+         <TextField
+          id='tel'
+          type='tel'
+          size='small'
+          label=''
+          variant='outlined'
+          InputLabelProps={{
+           left: 20,
+           shrink: false,
+          }}
+         />
+
+         <TextField
+          id='mail'
+          type='tel'
+          size='small'
+          label=''
+          variant='outlined'
+          InputLabelProps={{
+           shrink: true,
+          }}
+         />
+        </Stack>
+       </DialogContent>
+       <DialogActions>
+        <div style={{paddingBottom: '20px', paddingRight: '15.5em'}}>
+         <Button
+          onClick={handleClose}
+          style={{width: '12em', height: '45px', borderRadius: '1', backgroundColor: '#292929'}}
+          variant='contained'
+         >
+          Отправить
+         </Button>
+        </div>
+       </DialogActions>
+      </Dialog>
+     </div>
     </div>
    </Toolbar>
   </AppBar>
