@@ -20,7 +20,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import {Stack, width} from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {useTheme} from '@mui/material/styles';
-import ContactUsButton from './ContactUsButton';
+import ContactUsButton from '../modules/header/ContactUsButton';
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
  return (

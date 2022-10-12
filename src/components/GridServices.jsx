@@ -3,29 +3,29 @@ import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import FirstRow from '../containers/FirstRow';
-import SecondRow from '../containers/SecondRow';
-import ThirdRow from '../containers/ThirdRow';
-import FourthRow from '../containers/FourthRow';
+import FirstRow from './containers/FirstRow';
+import SecondRow from './containers/SecondRow';
+import ThirdRow from './containers/ThirdRow';
+import FourthRow from './containers/FourthRow';
 import {Stack} from '@mui/system';
 import ButtonBase from '@mui/material/ButtonBase';
 import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
-import LinkButton from '../shared/LinkButton';
-import RepairMotorsPage from '../app/pages/services/1_RepairMotorsPage';
-import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage';
-import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage';
+import LinkButton from '../modules/common/LinkButton';
+import RepairMotorsPage from './pages/1_RepairMotorsPage';
+import GeneratorRepairPage from './pages/2_GeneratorRepairPage';
+import RepairTransformersPage from './pages/3_RepairTransformersPage';
 
-import RefrigerationMachineRepair from '../app/pages/services/4_RefrigerationMachineRepairPage';
-import RewindingMotorsPage from '../app/pages/services/5_RewindingMotorsPage';
-import RepairOfElectricHeatersPage from '../app/pages/services/6_RepairOfElectricHeatersPage';
+import RefrigerationMachineRepair from './pages/4_RefrigerationMachineRepairPage';
+import RewindingMotorsPage from './pages/5_RewindingMotorsPage';
+import RepairOfElectricHeatersPage from './pages/6_RepairOfElectricHeatersPage';
 
-import SaleOfElectricalComponentsPage from '../app/pages/services/7_SaleOfElectricalComponentsPage';
-import RepairOfBoardsAndBlocksPage from '../app/pages/services/8_RepairOfBoardsAndBlocksPage';
-import MaintenanceAndRepairOfPassengerCarsPage from '../app/pages/services/9_MaintenanceAndRepairOfPassengerCarsPage';
+import SaleOfElectricalComponentsPage from './pages/7_SaleOfElectricalComponentsPage';
+import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
+import MaintenanceAndRepairOfPassengerCarsPage from './pages/9_MaintenanceAndRepairOfPassengerCarsPage';
 
-import SurfacingOfShaftsAndShieldsPage from '../app/pages/services/10_SurfacingOfShaftsAndShieldsPage';
+import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
 
 const useStyles = styled((theme) => ({
  flexGrow: {
