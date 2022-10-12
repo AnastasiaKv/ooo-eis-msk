@@ -20,11 +20,13 @@ import DialogTitle from '@mui/material/DialogTitle';
 import {Stack, width} from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {useTheme} from '@mui/material/styles';
+import ContactUsButton from './ContactUsButton';
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
  return (
   <TextField
-   style={{}}
+   type='search'
+   sx={{width: '480px', padding: '0.65rem 0.5rem'}}
    {...props}
    InputProps={{
     ...InputProps,
@@ -65,18 +67,18 @@ export default function Header() {
      src={Logo}
     />
 
-    <div>
+    <div style={{display: 'flex', flexWrap: 'wrap'}}>
      <Typography
       variant='h6'
       component='div'
       sx={{flexGrow: 1}}
-      style={{paddingLeft: 70, color: '#292929'}}
+      style={{paddingLeft: '20px', color: '#292929'}}
      >
       info@ers.msk.ru
      </Typography>
      <Button
       component='div'
-      style={{borderRadius: '0', backgroundColor: '#292929'}}
+      style={{borderRadius: '0', backgroundColor: '#292929', textTransform: 'inherit'}}
       variant='contained'
       startIcon={<MapIcon />}
      >
@@ -85,101 +87,14 @@ export default function Header() {
     </div>
 
     <IconTextField
-     style={{left: '-10px', borderRadius: '0', top: 16}}
+     style={{left: '-27px', borderRadius: '0', top: '16px'}}
      size='small'
      label=''
      iconEnd={<SearchIcon />}
     />
 
-    <div>
-     <div style={{top: 16}}>
-      <Typography
-       variant='h6'
-       component='div'
-       sx={{flexGrow: 1}}
-       style={{paddingLeft: 70, color: '#292929'}}
-      >
-       8-800-232-32-22
-      </Typography>
-     </div>
-
-     <div style={{display: 'flex'}}>
-      <Button
-       style={{borderRadius: '0', backgroundColor: '#f12b29'}}
-       variant='contained'
-       onClick={handleClickOpen}
-       startIcon={<HeadsetMicIcon />}
-      >
-       Обратный звонок
-      </Button>
-      <Dialog
-       sx={{width: '900px', padding: '25px 0px'}}
-       fullWidth='1000px'
-       maxWidth='1000px'
-       open={open}
-       onClose={handleClose}
-      >
-       <DialogContent sx={{padding: '25px 0px'}}>
-        <DialogContentText>
-         <strong>Оставьте свои данные - и мы Вам перезвоним!</strong>
-        </DialogContentText>
-        <br />
-        <Stack
-         sx={{overflow: 'hidden', padding: '10px 0px'}}
-         direction='row'
-         spacing={2}
-         noValidate
-         component='form'
-        >
-         <TextField
-          id='text'
-          type='text'
-          size='small'
-          label=''
-          variant='outlined'
-          InputLabelProps={{
-           shrink: true,
-           left: '20px',
-          }}
-         />
-
-         <TextField
-          id='tel'
-          type='tel'
-          size='small'
-          label=''
-          variant='outlined'
-          InputLabelProps={{
-           left: 20,
-           shrink: false,
-          }}
-         />
-
-         <TextField
-          id='mail'
-          type='tel'
-          size='small'
-          label=''
-          variant='outlined'
-          InputLabelProps={{
-           shrink: true,
-          }}
-         />
-        </Stack>
-       </DialogContent>
-       <DialogActions>
-        <div style={{paddingBottom: '20px', paddingRight: '15.5em'}}>
-         <Button
-          onClick={handleClose}
-          style={{width: '12em', height: '45px', borderRadius: '1', backgroundColor: '#292929'}}
-          variant='contained'
-         >
-          Отправить
-         </Button>
-        </div>
-       </DialogActions>
-      </Dialog>
-     </div>
+    <div style={{display: 'flex', flexWrap: 'wrap'}}>
+     <ContactUsButton />
     </div>
    </Toolbar>
   </AppBar>

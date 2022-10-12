@@ -4,6 +4,7 @@
           // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
           "version": "0.2.0",
           "configurations": [
+                    
                     {
                               "command": "npm start",
                               "name": "Run npm start",
@@ -11,11 +12,12 @@
                               "type": "node-terminal"
                     },
                     {
-                              "type": "chrome",
+                              "type": "node",
                               "request": "launch",
-                              "name": "Launch Chrome against localhost",
+                              "name": "Launch Program",
                               "url": "http://localhost:3000",
-                              "webRoot": "${workspaceFolder}"
+                              "skipFiles": ["<node_internals>/**"],
+                              "program": "${workspaceFolder}\\app.js"
                     }
           ]
 }

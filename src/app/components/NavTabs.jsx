@@ -42,7 +42,12 @@ const useStyles = makeStyles({
 function LinkTab(props) {
  return (
   <Tab
-   sx={{bgcolor: '#808080', minWidth: '100px', minHeight: '25px'}}
+   sx={{
+    textTransform: 'inherit',
+    bgcolor: '#808080',
+    minWidth: '100px',
+    minHeight: '25px',
+   }}
    component={Link}
    onClick={(event) => {
     event.preventDefault();
@@ -77,7 +82,7 @@ export default function NavTabs() {
      <LinkTab
       onClick={value}
       label='Главная'
-      to='/service'
+      to='/'
       className={classes.button}
       style={buttonStyle}
      />
@@ -113,7 +118,7 @@ export default function NavTabs() {
    </Tabs>
    <Routes>
     <Route path='/' element={<Main />} />
-    <Route path='service/*' element={<GridServices />}>
+    <Route path='/*' element={<GridServices />}>
      <Route index element={<GridServices />} />
      <Route path='repair-motors-page' element={<Page1 />} />
      <Route path='generator-repair-page' element={<Page2 />} />

@@ -11,7 +11,7 @@ const styles = {
  root: {
   position: 'relative',
   height: '19rem',
-  top: '15px',
+  top: '5px',
  },
  slide: {
   marginRight: 0,

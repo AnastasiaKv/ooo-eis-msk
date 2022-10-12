@@ -49,6 +49,7 @@ const useStyles = styled((theme) => ({
   },
  },
 }));
+
 function LinkButton(props) {
  return (
   <ButtonBase
@@ -73,7 +74,7 @@ function RowsItem1(props) {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={3}>
+   <Stack direction='row' spacing={2}>
     <LinkButton onClick={value} to='repair-motors-page'>
      <Paper key='1' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r1} />
@@ -103,7 +104,7 @@ function RowsItem2() {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={1}>
+   <Stack direction='row' spacing={2}>
     <LinkButton>
      <Paper key='4' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r4} />
@@ -127,7 +128,7 @@ function RowsItem3() {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={1}>
+   <Stack direction='row' spacing={2}>
     <Paper key='7' sx={{boxShadow: 'none'}} className={classes.Item}>
      <ButtonBase key='7'>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r7} />
