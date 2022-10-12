@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import SimpleTable from '../../modules/common/SimpleTable';
+import SimpleTable from '../../../modules/common/SimpleTable';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
 export default function RepairOfElectricHeatersPage() {

@@ -12,19 +12,19 @@ import Prices from '../pages/Prices';
 import News from '../pages/News';
 import Main from '../pages/Main';
 
-import Page1 from './pages/1_RepairMotorsPage';
-import Page2 from './pages/2_GeneratorRepairPage';
-import Page3 from './pages/3_RepairTransformersPage';
-import Page4 from './pages/4_RefrigerationMachineRepairPage';
-import Page5 from './pages/5_RewindingMotorsPage';
-import Page6 from './pages/6_RepairOfElectricHeatersPage';
-import Page7 from './pages/7_SaleOfElectricalComponentsPage';
-import Page8 from './pages/8_RepairOfBoardsAndBlocksPage';
-import Page9 from './pages/9_MaintenanceAndRepairOfPassengerCarsPage';
-import Page10 from './pages/10_SurfacingOfShaftsAndShieldsPage';
+import Page1 from './OurServices/pages/1_RepairMotorsPage';
+import Page2 from './OurServices/pages/2_GeneratorRepairPage';
+import Page3 from './OurServices/pages/3_RepairTransformersPage';
+import Page4 from './OurServices/pages/4_RefrigerationMachineRepairPage';
+import Page5 from './OurServices/pages/5_RewindingMotorsPage';
+import Page6 from './OurServices/pages/6_RepairOfElectricHeatersPage';
+import Page7 from './OurServices/pages/7_SaleOfElectricalComponentsPage';
+import Page8 from './OurServices/pages/8_RepairOfBoardsAndBlocksPage';
+import Page9 from './OurServices/pages/9_MaintenanceAndRepairOfPassengerCarsPage';
+import Page10 from './OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
 
 import Error404 from '../app/core/errors/Error404';
-import GridServices from './GridServices';
+import GridServices from './OurServices/GridServices';
 
 const buttonStyle = {
  borderRadius: '1px',

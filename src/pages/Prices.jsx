@@ -13,9 +13,9 @@ import JobsStepper from '../modules/pages/prices/JobsStepper';
 import TrustedBox from '../modules/pages/prices/TrustedBox';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
-import RepairMotorsPage from '../components/pages/1_RepairMotorsPage';
-import GeneratorRepairPage from '../components/pages/2_GeneratorRepairPage';
-import RepairTransformersPage from '../components/pages/3_RepairTransformersPage';
+import RepairMotorsPage from '../components/OurServices/pages/1_RepairMotorsPage';
+import GeneratorRepairPage from '../components/OurServices/pages/2_GeneratorRepairPage';
+import RepairTransformersPage from '../components/OurServices/pages/3_RepairTransformersPage';
 
 const data = [
  {

@@ -2,10 +2,12 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import SimpleTable from '../../modules/common/SimpleTable';
+import SimpleTable from '../../../modules/common/SimpleTable';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import Grid from '@mui/material/Unstable_Grid2';
+import r1 from '../../../assets/img/services/Ремонт электродвигателей1.png';
+import {width} from '@mui/system';
 
-import r2 from '../../assets/img/services/Ремонт генераторов1.png';
 const data = [
  {
   name: 'Замена щеточного узла (для некоторых моделей)',
@@ -41,7 +43,7 @@ const data = [
  },
  {
   name: 'Замена проставок под подшипники — только работа',
-  price: '500 руб.',
+  price: 'от 500 руб.',
  },
  {
   name: 'Замена шкива',
@@ -53,7 +55,7 @@ const data = [
  },
 ];
 
-const GeneratorRepairPage = () => {
+export default function RepairMotorsPage() {
  return (
   <>
    <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
@@ -69,17 +71,18 @@ const GeneratorRepairPage = () => {
     >
      <Box
       sx={{
-       width: '9em',
-       height: '6em',
+       paddingTop: '18px',
+       width: '8em',
+       height: '7em',
        float: 'right' /* Выравнивание по правому краю  */,
       }}
       component='img'
       alt='Изображение неведомой детали'
-      src={r2}
+      src={r1}
      />
      <h4 style={{paddingTop: '20px'}}>
       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-       Ремонт генератора
+       Ремонт электродвигателя
       </Typography>
      </h4>
      <h4 style={{paddingTop: '30px'}}>
@@ -93,6 +96,4 @@ const GeneratorRepairPage = () => {
    </Stack>
   </>
  );
-};
-
-export default GeneratorRepairPage;
+}

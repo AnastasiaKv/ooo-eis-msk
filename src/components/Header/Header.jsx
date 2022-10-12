@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import Logo from '././../assets/img/logo.svg';
+import Logo from '../../assets/img/logo.svg';
 import MapIcon from '@mui/icons-material/Map';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -20,7 +20,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import {Stack, width} from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {useTheme} from '@mui/material/styles';
-import ContactUsButton from '../modules/header/ContactUsButton';
+import ContactUsButton from '../../modules/header/ContactUsButton';
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
  return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import {Routes, Route, NavLink, Outlet} from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import TopMediaBlock from './TopMediaBlockLayout';
-import GridServices from '../components/GridServices';
+import GridServices from '../components/OurServices/GridServices';
 
 const Layout = () => {
  return (
