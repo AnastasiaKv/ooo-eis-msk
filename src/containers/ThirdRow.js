@@ -1,22 +1,22 @@
-import r7 from '../assets/img/services/Продажа компонентов.png';
-import r8 from '../assets/img/services/Ремонт плат.png';
-import r9 from '../assets/img/services/ТО.png';
+import image7 from '../assets/img/services/Продажа компонентов.png';
+import image8 from '../assets/img/services/Ремонт плат.png';
+import image9 from '../assets/img/services/ТО.png';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
  {
-  id: '7',
-  image: r7,
-  link: '/assets/img/slider_img_2.png',
+  id: 7,
+  image: image7,
+  path: 'services/sale-of-electrical-components-page',
  },
  {
-  id: '8',
-  image: r8,
-  link: '/assets/img/slider_img_2.png',
+  id: 8,
+  image: image8,
+  path: 'services/repair-of-boards-and-blocks-page',
  },
  {
-  id: '9',
-  image: r9,
-  link: '/assets/img/slider_img_2.png',
+  id: 9,
+  image: image9,
+  path: 'services/maintenance-and-repair-of-passenger-cars-page',
  },
 ];

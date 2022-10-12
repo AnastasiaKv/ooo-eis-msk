@@ -12,6 +12,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
+import LinkButton from '../shared/LinkButton';
 import RepairMotorsPage from '../app/pages/services/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage';
 import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage';
@@ -25,20 +26,6 @@ import RepairOfBoardsAndBlocksPage from '../app/pages/services/8_RepairOfBoardsA
 import MaintenanceAndRepairOfPassengerCarsPage from '../app/pages/services/9_MaintenanceAndRepairOfPassengerCarsPage';
 
 import SurfacingOfShaftsAndShieldsPage from '../app/pages/services/10_SurfacingOfShaftsAndShieldsPage';
-
-import r1 from '../assets/img/services/Ремонт электродвигателей.png';
-import r2 from '../assets/img/services/Ремонт генераторов.png';
-import r3 from '../assets/img/services/Ремонт трансформаторов.png';
-
-import r4 from '../assets/img/services/Ремонт холодильных машин.png';
-import r5 from '../assets/img/services/Перемотка.png';
-import r6 from '../assets/img/services/Ремонт электронагревателей.png';
-
-import r7 from '../assets/img/services/Продажа компонентов.png';
-import r8 from '../assets/img/services/Ремонт плат.png';
-import r9 from '../assets/img/services/ТО.png';
-
-import r10 from '../assets/img/services/Наплавка.png';
 
 const useStyles = styled((theme) => ({
  flexGrow: {
@@ -59,20 +46,7 @@ const useStyles = styled((theme) => ({
  },
 }));
 
-function LinkButton(props) {
- return (
-  <ButtonBase
-   sx={{minWidth: '100px', minHeight: '25px'}}
-   component={Link}
-   onClick={(event) => {
-    event.preventDefault();
-    console.log('ClickClick: ', this);
-   }}
-   {...props}
-  />
- );
-}
-function RowsItem1(props) {
+function ItemsRow1() {
  const [isShown, setIsShown] = useState(false);
  const [value, setValue] = useState(0);
 
@@ -84,22 +58,19 @@ function RowsItem1(props) {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={2}>
-    <LinkButton onClick={handleClick} to='services/repair-motors-page'>
-     <Paper key='1' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r1} />
-     </Paper>
-    </LinkButton>
-    <LinkButton onClick={handleClick} to='services/generator-repair-page'>
-     <Paper key='2' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r2} />
-     </Paper>
-    </LinkButton>
-    <LinkButton onClick={handleClick} to='services/repair-transformers-page'>
-     <Paper key='3' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r3} />
-     </Paper>
-    </LinkButton>
+   <Stack direction='row' spacing={1}>
+    {FirstRow.map((service) => (
+     <LinkButton key={service.id} onClick={handleClick} to={service.path}>
+      <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        component='img'
+        alt='button'
+        src={service.image}
+       />
+      </Paper>
+     </LinkButton>
+    ))}
    </Stack>
    <Routes>
     {isShown && <Route path='services/repair-motors-page' element={<RepairMotorsPage />} />}
@@ -112,7 +83,7 @@ function RowsItem1(props) {
  );
 }
 
-function RowsItem2() {
+function ItemsRow2() {
  const [isShown, setIsShown] = useState(false);
  const [value, setValue] = React.useState(null);
 
@@ -124,22 +95,19 @@ function RowsItem2() {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={2}>
-    <LinkButton onClick={handleClick} to='services/refrigeration-machine-repair-page'>
-     <Paper key='4' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r4} />
-     </Paper>
-    </LinkButton>
-    <LinkButton onClick={handleClick} to='services/rewinding-motors-page'>
-     <Paper key='5' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r5} />
-     </Paper>
-    </LinkButton>
-    <LinkButton onClick={handleClick} to='services/repair-of-electric-heaters-page'>
-     <Paper key='6' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r6} />
-     </Paper>
-    </LinkButton>
+   <Stack direction='row' spacing={1}>
+    {SecondRow.map((service) => (
+     <LinkButton key={service.id} onClick={handleClick} to={service.path}>
+      <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        component='img'
+        alt='button'
+        src={service.image}
+       />
+      </Paper>
+     </LinkButton>
+    ))}
    </Stack>
    <Routes>
     {isShown && (
@@ -159,7 +127,7 @@ function RowsItem2() {
   </>
  );
 }
-function RowsItem3() {
+function ItemsRow3() {
  const [isShown, setIsShown] = useState(false);
  const [value, setValue] = React.useState(0);
 
@@ -171,24 +139,19 @@ function RowsItem3() {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={2}>
-    <LinkButton onClick={handleClick} to='services/sale-of-electrical-components-page'>
-     <Paper key='7' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r7} />
-     </Paper>
-    </LinkButton>
-
-    <LinkButton onClick={handleClick} to='services/repair-of-boards-and-blocks-page'>
-     <Paper key='8' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r8} />
-     </Paper>
-    </LinkButton>
-
-    <LinkButton onClick={handleClick} to='services/maintenance-and-repair-of-passenger-cars-page'>
-     <Paper key='9' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r9} />
-     </Paper>
-    </LinkButton>
+   <Stack direction='row' spacing={1}>
+    {ThirdRow.map((service) => (
+     <LinkButton key={service.id} onClick={handleClick} to={service.path}>
+      <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        component='img'
+        alt='button'
+        src={service.image}
+       />
+      </Paper>
+     </LinkButton>
+    ))}
    </Stack>
    <Routes>
     {isShown && (
@@ -213,7 +176,7 @@ function RowsItem3() {
   </>
  );
 }
-function RowsItem4() {
+function ItemsRow4() {
  const [isShown, setIsShown] = useState(false);
  const [value, setValue] = React.useState(0);
 
@@ -226,11 +189,18 @@ function RowsItem4() {
  return (
   <>
    <Stack direction='row' spacing={1}>
-    <LinkButton onClick={handleClick} to='services/surfacing-of-shafts-and-shields-page'>
-     <Paper key='10' sx={{boxShadow: 'none'}} className={classes.Item}>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r10} />{' '}
-     </Paper>
-    </LinkButton>
+    {FourthRow.map((service) => (
+     <LinkButton key={service.id} onClick={handleClick} to={service.path}>
+      <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        component='img'
+        alt='button'
+        src={service.image}
+       />
+      </Paper>
+     </LinkButton>
+    ))}
    </Stack>
    <Routes>
     {isShown && (
@@ -250,6 +220,7 @@ export default function GridServices() {
 
  const handleChange = (event, newValue) => {
   setValue(newValue);
+  setIsShown((current) => !current);
  };
  const classes = useStyles();
 
@@ -295,8 +266,7 @@ export default function GridServices() {
        style={{
         position: 'relative',
         fontSize: '30px',
-        paddingRight: '89px',
-        paddingBottom: '30px',
+        paddingRight: '66px',
         textAlign: 'center',
         color: '#292929',
        }}
@@ -305,10 +275,12 @@ export default function GridServices() {
       </Typography>
      </p>
      <Box sx={{flexGrow: 1}}>
-      <RowsItem1 classes={classes}></RowsItem1>
-      <RowsItem2 classes={classes} />
-      <RowsItem3 classes={classes} />
-      <RowsItem4 classes={classes} />
+      <Stack direction='column' spacing={1}>
+       <ItemsRow1 classes={classes} />
+       <ItemsRow2 classes={classes} />
+       <ItemsRow3 classes={classes} />
+       <ItemsRow4 classes={classes} />
+      </Stack>
      </Box>
 
      <p
