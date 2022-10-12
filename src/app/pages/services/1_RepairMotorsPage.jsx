@@ -57,7 +57,7 @@ const data = [
 
 export default function RepairMotorsPage() {
  return (
-  <div>
+  <>
    <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
     <p
      style={{
@@ -90,15 +90,10 @@ export default function RepairMotorsPage() {
        от 500 руб.
       </Typography>
      </h4>
-     <h6 style={{paddingTop: '17px', paddingBottom: '1em'}}>
-      <span>
-       <Typography variant='h6' component='span' style={{fontSize: '15px'}}></Typography>
-      </span>
-     </h6>
     </p>
 
     <SimpleTable data={data} />
    </Stack>
-  </div>
+  </>
  );
 }

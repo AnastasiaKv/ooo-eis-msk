@@ -55,8 +55,8 @@ const data = [
 
 const GeneratorRepairPage = () => {
  return (
-  <div>
-   <Stack direction='column' spacing={0} sx={{paddingLeft: '4em', paddingBottom: '2em'}}>
+  <>
+   <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
     <p
      style={{
       paddingTop: '45px',
@@ -82,19 +82,16 @@ const GeneratorRepairPage = () => {
        Ремонт генератора
       </Typography>
      </h4>
-     <h6 style={{paddingTop: '17px', paddingBottom: '1em'}}>
-      <br />
-      <span>
-       <Typography variant='h6' component='span' style={{fontSize: '15px'}}>
-        от 500 руб.
-       </Typography>
-      </span>
-     </h6>
+     <h4 style={{paddingTop: '30px'}}>
+      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+       от 500 руб.
+      </Typography>
+     </h4>
     </p>
 
     <SimpleTable data={data} />
    </Stack>
-  </div>
+  </>
  );
 };
 

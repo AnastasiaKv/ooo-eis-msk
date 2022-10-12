@@ -5,97 +5,115 @@ import Typography from '@mui/material/Typography';
 import SimpleTable from '../../components/SimpleTable';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
-import r3 from '../../../assets/img/services/Ремонт трансформаторов.png';
+import r3 from '../../../assets/img/services/Ремонт трансформаторов1.png';
 
 const data = [
  {
   name: 'ТДМ315',
-  price: '9800',
+  price: '9800 руб.',
  },
  {
   name: 'ТДМ317',
-  price: '10000',
+  price: '10000 руб.',
  },
  {
   name: 'ТДМ 401,402',
-  price: '11400',
+  price: '11400 руб.',
  },
  {
   name: 'ТДМ 500',
-  price: '11900',
+  price: '11900 руб.',
  },
  {
   name: 'ВД 250',
-  price: '9870',
+  price: '9870 руб.',
  },
  {
   name: 'ВД 306 СЭ',
-  price: '16520',
+  price: '16520 руб.',
  },
  {
   name: 'ВД 306 СЭМ',
-  price: '20790',
+  price: '20790 руб.',
  },
  {
   name: 'ВД 406 СЭ',
-  price: '17950',
+  price: '17950 руб.',
  },
  {
   name: 'ВД 505',
-  price: '27916',
+  price: '27916 руб.',
  },
  {
   name: 'ВД 505',
-  price: '41890',
+  price: '41890 руб.',
  },
  {
   name: 'ВДУ 350',
-  price: '41890',
+  price: '41890 руб.',
  },
  {
   name: 'ВДУ 506',
-  price: '33000',
+  price: '33000 руб.',
  },
  {
   name: 'ВДУ 601',
-  price: '37800',
+  price: '37800 руб.',
  },
  {
   name: 'ТК - 75 кВт',
-  price: '20000',
+  price: '20000 руб.',
  },
  {
   name: 'ТК - 100 кВт',
-  price: '25000',
+  price: '25000 руб.',
  },
  {
   name: 'ТК - 150 кВт',
-  price: '30000',
+  price: '30000 руб.',
  },
 ];
 
 const RepairTransformersPage = () => {
  return (
-  <div className='ees-content-card'>
-   <Stack direction='column' spacing={0} style={{paddingLeft: '7em', paddingBottom: '20px'}}>
-    <p style={{paddingLeft: '2rem'}}>
-     <h4>
-      <Typography variant='h4' component='h4' style={{fontSize: '25px'}}>
+  <>
+   <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
+    <p
+     style={{
+      paddingTop: '45px',
+      paddingLeft: '2rem',
+      width: '600px',
+      height: '211px',
+      textAlign: 'left',
+      paddingBottom: '0',
+     }}
+    >
+     <Box
+      sx={{
+       paddingTop: '18px',
+       width: '8em',
+       height: '7em',
+       float: 'right' /* Выравнивание по правому краю  */,
+      }}
+      component='img'
+      alt='Изображение неведомой детали'
+      src={r3}
+     />
+     <h4 style={{paddingTop: '10px'}}>
+      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
        Цены на перемотку трансформаторов
       </Typography>
      </h4>
-     <h6>
-      <span>
-       <Typography variant='h6' component='span' style={{fontSize: '16px'}}>
-        от 9000 руб.
-       </Typography>
-      </span>
-     </h6>
+     <h4>
+      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+       от 9000 руб.
+      </Typography>
+     </h4>
     </p>
 
     <SimpleTable data={data} />
    </Stack>
-  </div>
+  </>
  );
 };
 export default RepairTransformersPage;

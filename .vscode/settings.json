@@ -6,7 +6,7 @@
                 "name": "EIS@u522535.ftp.masterhost.ru",
                 "description": "EIS FTP folder",
 
-                "dir": "/eis-msk.ru/www",
+                "dir": "/dev.eis-msk.ru/www",
                 "host": "u522535.ftp.masterhost.ru", "port": 21,
                 "user": "u522535", "password": "sexessist4ven"
             }

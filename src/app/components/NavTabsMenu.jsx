@@ -7,7 +7,7 @@ import {makeStyles} from '@material-ui/styles';
 import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
-import MenuServices from '../components/MenuServices';
+import MenuServices from './MenuServices';
 import Contacts from '../pages/actions/Contacts';
 import Prices from '../pages/actions/Prices';
 import News from '../pages/actions/News';
@@ -16,6 +16,14 @@ import Main from '../pages/actions/Main';
 import Page1 from '../pages/services/1_RepairMotorsPage';
 import Page2 from '../pages/services/2_GeneratorRepairPage';
 import Page3 from '../pages/services/3_RepairTransformersPage';
+import Page4 from '../pages/services/4_RefrigerationMachineRepairPage';
+import Page5 from '../pages/services/5_RewindingMotorsPage';
+import Page6 from '../pages/services/6_RepairOfElectricHeatersPage';
+import Page7 from '../pages/services/7_SaleOfElectricalComponentsPage';
+import Page8 from '../pages/services/8_RepairOfBoardsAndBlocksPage';
+import Page9 from '../pages/services/9_MaintenanceAndRepairOfPassengerCarsPage';
+import Page10 from '../pages/services/10_SurfacingOfShaftsAndShieldsPage';
+
 import Error404 from '../core/errors/Error404';
 import GridServices from '../../components/GridServices';
 
@@ -118,11 +126,18 @@ export default function NavTabs() {
    </Tabs>
    <Routes>
     <Route path='/' element={<Main />} />
-    <Route path='/*' element={<GridServices />}>
-     <Route index element={<GridServices />} />
-     <Route path='repair-motors-page' element={<Page1 />} />
-     <Route path='generator-repair-page' element={<Page2 />} />
-     <Route path='repair-transformers-page' element={<Page3 />} />
+    <Route path='/*' element={<Main />}>
+     <Route index element={<Main />} />
+     <Route path='services/repair-motors-page' element={<Page1 />} />
+     <Route path='services/generator-repair-page' element={<Page2 />} />
+     <Route path='services/repair-transformers-page' element={<Page3 />} />
+     <Route path='services/refrigeration-machine-repair-page' element={<Page4 />} />
+     <Route path='services/rewinding-motors-page' element={<Page5 />} />
+     <Route path='services/repair-of-electric-heaters-page' element={<Page6 />} />
+     <Route path='services/sale-of-electrical-components-page' element={<Page7 />} />
+     <Route path='services/repair-of-boards-and-blocks-page' element={<Page8 />} />
+     <Route path='services/maintenance-and-repair-of-passenger-cars-page' element={<Page9 />} />
+     <Route path='services/surfacing-of-shafts-and-shields-page' element={<Page10 />} />
      <Route path='*' element={<Error404 />} />
     </Route>
     <Route path='/about' element={<></>} />

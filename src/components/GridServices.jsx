@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -15,7 +15,16 @@ import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router
 import RepairMotorsPage from '../app/pages/services/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/pages/services/2_GeneratorRepairPage';
 import RepairTransformersPage from '../app/pages/services/3_RepairTransformersPage';
+
 import RefrigerationMachineRepair from '../app/pages/services/4_RefrigerationMachineRepairPage';
+import RewindingMotorsPage from '../app/pages/services/5_RewindingMotorsPage';
+import RepairOfElectricHeatersPage from '../app/pages/services/6_RepairOfElectricHeatersPage';
+
+import SaleOfElectricalComponentsPage from '../app/pages/services/7_SaleOfElectricalComponentsPage';
+import RepairOfBoardsAndBlocksPage from '../app/pages/services/8_RepairOfBoardsAndBlocksPage';
+import MaintenanceAndRepairOfPassengerCarsPage from '../app/pages/services/9_MaintenanceAndRepairOfPassengerCarsPage';
+
+import SurfacingOfShaftsAndShieldsPage from '../app/pages/services/10_SurfacingOfShaftsAndShieldsPage';
 
 import r1 from '../assets/img/services/Ремонт электродвигателей.png';
 import r2 from '../assets/img/services/Ремонт генераторов.png';
@@ -57,113 +66,186 @@ function LinkButton(props) {
    component={Link}
    onClick={(event) => {
     event.preventDefault();
-    console.log(event.target);
-    console.log(event.preventDefault());
+    console.log('ClickClick: ', this);
    }}
    {...props}
   />
  );
 }
 function RowsItem1(props) {
- const [value, setValue] = React.useState(0);
+ const [isShown, setIsShown] = useState(false);
+ const [value, setValue] = useState(0);
 
  const handleClick = (event, newValue) => {
   setValue(newValue);
+  setIsShown((current) => !current);
  };
 
  const classes = useStyles();
  return (
   <>
    <Stack direction='row' spacing={2}>
-    <LinkButton onClick={value} to='repair-motors-page'>
+    <LinkButton onClick={handleClick} to='services/repair-motors-page'>
      <Paper key='1' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r1} />
      </Paper>
     </LinkButton>
-    <LinkButton onClick={handleClick} to='generator-repair-page'>
+    <LinkButton onClick={handleClick} to='services/generator-repair-page'>
      <Paper key='2' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r2} />
      </Paper>
     </LinkButton>
-    <LinkButton onClick={handleClick} to='repair-transformers-page'>
+    <LinkButton onClick={handleClick} to='services/repair-transformers-page'>
      <Paper key='3' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r3} />
      </Paper>
     </LinkButton>
    </Stack>
    <Routes>
-    <Route path='repair-motors-page' element={<RepairMotorsPage />} />
-    <Route path='generator-repair-page' element={<GeneratorRepairPage />} />
-    <Route path='repair-transformers-page' element={<RepairTransformersPage />} />
+    {isShown && <Route path='services/repair-motors-page' element={<RepairMotorsPage />} />}
+    {isShown && <Route path='services/generator-repair-page' element={<GeneratorRepairPage />} />}
+    {isShown && (
+     <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
+    )}
    </Routes>
   </>
  );
 }
 
 function RowsItem2() {
+ const [isShown, setIsShown] = useState(false);
+ const [value, setValue] = React.useState(null);
+
+ const handleClick = (event, newValue) => {
+  setValue(newValue);
+  setIsShown((current) => !current);
+ };
+
  const classes = useStyles();
  return (
   <>
    <Stack direction='row' spacing={2}>
-    <LinkButton>
+    <LinkButton onClick={handleClick} to='services/refrigeration-machine-repair-page'>
      <Paper key='4' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r4} />
      </Paper>
     </LinkButton>
-    <LinkButton key='5'>
+    <LinkButton onClick={handleClick} to='services/rewinding-motors-page'>
      <Paper key='5' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r5} />
      </Paper>
     </LinkButton>
-    <LinkButton key='6'>
+    <LinkButton onClick={handleClick} to='services/repair-of-electric-heaters-page'>
      <Paper key='6' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r6} />
      </Paper>
     </LinkButton>
    </Stack>
+   <Routes>
+    {isShown && (
+     <Route
+      path='services/refrigeration-machine-repair-page'
+      element={<RefrigerationMachineRepair />}
+     />
+    )}
+    {isShown && <Route path='services/rewinding-motors-page' element={<RewindingMotorsPage />} />}
+    {isShown && (
+     <Route
+      path='services/repair-of-electric-heaters-page'
+      element={<RepairOfElectricHeatersPage />}
+     />
+    )}
+   </Routes>
   </>
  );
 }
 function RowsItem3() {
+ const [isShown, setIsShown] = useState(false);
+ const [value, setValue] = React.useState(0);
+
+ const handleClick = (event, newValue) => {
+  setValue(newValue);
+  setIsShown((current) => !current);
+ };
+
  const classes = useStyles();
  return (
   <>
    <Stack direction='row' spacing={2}>
-    <Paper key='7' sx={{boxShadow: 'none'}} className={classes.Item}>
-     <ButtonBase key='7'>
+    <LinkButton onClick={handleClick} to='services/sale-of-electrical-components-page'>
+     <Paper key='7' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r7} />
-     </ButtonBase>
-    </Paper>
-    <Paper key='8' sx={{boxShadow: 'none'}} className={classes.Item}>
-     <ButtonBase key='8'>
+     </Paper>
+    </LinkButton>
+
+    <LinkButton onClick={handleClick} to='services/repair-of-boards-and-blocks-page'>
+     <Paper key='8' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r8} />
-     </ButtonBase>
-    </Paper>
-    <Paper key='9' sx={{boxShadow: 'none'}} className={classes.Item}>
-     <ButtonBase key='9'>
+     </Paper>
+    </LinkButton>
+
+    <LinkButton onClick={handleClick} to='services/maintenance-and-repair-of-passenger-cars-page'>
+     <Paper key='9' sx={{boxShadow: 'none'}} className={classes.Item}>
       <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r9} />
-     </ButtonBase>
-    </Paper>
+     </Paper>
+    </LinkButton>
    </Stack>
+   <Routes>
+    {isShown && (
+     <Route
+      path='services/sale-of-electrical-components-page'
+      element={<SaleOfElectricalComponentsPage />}
+     />
+    )}
+    {isShown && (
+     <Route
+      path='services/repair-of-boards-and-blocks-page'
+      element={<RepairOfBoardsAndBlocksPage />}
+     />
+    )}
+    {isShown && (
+     <Route
+      path='services/maintenance-and-repair-of-passenger-cars-page'
+      element={<MaintenanceAndRepairOfPassengerCarsPage />}
+     />
+    )}
+   </Routes>
   </>
  );
 }
 function RowsItem4() {
+ const [isShown, setIsShown] = useState(false);
+ const [value, setValue] = React.useState(0);
+
+ const handleClick = (event, newValue) => {
+  setValue(newValue);
+  setIsShown((current) => !current);
+ };
+
  const classes = useStyles();
  return (
   <>
    <Stack direction='row' spacing={1}>
-    <Paper key='10' sx={{boxShadow: 'none'}} className={classes.Item}>
-     <ButtonBase key='10'>
-      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r10} />
-     </ButtonBase>
-    </Paper>
+    <LinkButton onClick={handleClick} to='services/surfacing-of-shafts-and-shields-page'>
+     <Paper key='10' sx={{boxShadow: 'none'}} className={classes.Item}>
+      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={r10} />{' '}
+     </Paper>
+    </LinkButton>
    </Stack>
+   <Routes>
+    {isShown && (
+     <Route
+      path='services/surfacing-of-shafts-and-shields-page'
+      element={<SurfacingOfShaftsAndShieldsPage />}
+     />
+    )}
+   </Routes>
   </>
  );
 }
 
 export default function GridServices() {
+ const [isShown, setIsShown] = useState(false);
  const [value, setValue] = React.useState(0);
 
  const handleChange = (event, newValue) => {
