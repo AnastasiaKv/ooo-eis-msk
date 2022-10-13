@@ -126,12 +126,12 @@ export default function News() {
        </Typography>
       </p>
       <br />
-      <h2 style={{float: 'left'}}>
+      <h2 style={{float: 'left', marginTop: '-44px'}}>
        <Typography variant='h6' component='p' sx={{flexGrow: 1}} style={headerStyle}>
         Основы техники безопасности
        </Typography>
       </h2>
-      <p style={{paddingTop: '43px'}}>
+      <p style={{paddingTop: '11px'}}>
        <Typography variant='subtitle2' component='span' style={bodyStyle}>
         Перед началом проведения ремонта электродвигателей необходимо проверить исправность защитных
         средств, особое внимание обращают на дату их последней проверки. Принципиально важно, чтобы

@@ -275,7 +275,7 @@ export default function GridServices() {
       </Typography>
      </p>
      <Box sx={{flexGrow: 1}}>
-      <Stack direction='column' spacing={1}>
+      <Stack direction='column' spacing={0}>
        <ItemsRow1 classes={classes} />
        <ItemsRow2 classes={classes} />
        <ItemsRow3 classes={classes} />
