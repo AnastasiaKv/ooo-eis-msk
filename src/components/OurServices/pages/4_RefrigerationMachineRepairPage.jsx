@@ -5,15 +5,20 @@ import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 import r4 from '../../../assets/img/services/Ремонт холодильных машин1.png';
+import DoneIcon from '@mui/icons-material/Done';
 
 export default function RefrigerationMachineRepairPage() {
  return (
   <>
-   <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
+   <Stack
+    direction='column'
+    spacing={0}
+    sx={{color: '#1a202c', paddingLeft: '2em', paddingBottom: '2em'}}
+   >
     <p
      style={{
       paddingTop: '45px',
-      paddingLeft: '2rem',
+      paddingLeft: '1rem',
       width: '600px',
       height: '211px',
       textAlign: 'left',
@@ -41,22 +46,97 @@ export default function RefrigerationMachineRepairPage() {
        от 4000 руб.
       </Typography>
      </h4>
-     <br />
-     <br />
-     <p>
-      <Typography variant='caption'>Выполняем следующие технологические операции:</Typography>
-     </p>
-     <ul>
-      <li>Тщательная диагностика и дефектовка холодильного компрессора</li>
-      <li>Оценка уровня изношенности</li>
-      <li>Выпрессовка статоров любого типа и любых размеров (проводится наспециальном стенде)</li>
-      <li>Перемотка статора фреоностойким проводом высочайшего качества</li>
-      <li>Вакуумная пропитка</li>
-      <li>Металлообработка различного уровня сложности</li>
-      <li>Сборка холодильного компрессора</li>
-      <li>Испытание компрессора под максимальной нагрузкой</li>
-     </ul>
     </p>
+    <br />
+    <Typography
+     variant='caption'
+     style={{fontSize: '19px', paddingRight: '15em', paddingBottom: '15px'}}
+    >
+     Выполняем следующие технологические операции:
+    </Typography>
+
+    <ul style={{textAlign: 'left', listStyle: 'none'}}>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Тщательная диагностика и дефектовка холодильного компрессора
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px', color: 'sky'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Оценка уровня изношенности
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Выпрессовка статоров любого типа и любых размеров (проводится наспециальном стенде)
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Перемотка статора фреоностойким проводом высочайшего качества
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Вакуумная пропитка
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Металлообработка различного уровня сложности
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Сборка холодильного компрессора
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Испытание компрессора под максимальной нагрузкой
+      </Typography>
+     </Stack>
+    </ul>
    </Stack>
   </>
  );
