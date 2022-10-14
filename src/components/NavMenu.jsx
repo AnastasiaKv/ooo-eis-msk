@@ -20,7 +20,7 @@ import Page5 from './OurServices/pages/5_RewindingMotorsPage';
 import Page6 from './OurServices/pages/6_RepairOfElectricHeatersPage';
 import Page7 from './OurServices/pages/7_SaleOfElectricalComponentsPage';
 import Page8 from './OurServices/pages/8_RepairOfBoardsAndBlocksPage';
-import Page9 from './OurServices/pages/9_MaintenanceAndRepairOfPassengerCarsPage';
+import Page9 from './OurServices/pages/9_TORepairOfPassengerCarsPage';
 import Page10 from './OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
 
 import Error404 from '../app/core/errors/Error404';

@@ -13,7 +13,7 @@ import RewindingMotors from '../components/OurServices/pages/5_RewindingMotorsPa
 import RepairOfElectricHeaters from '../components/OurServices/pages/6_RepairOfElectricHeatersPage';
 import SaleOfElectricalComponents from '../components/OurServices/pages/7_SaleOfElectricalComponentsPage';
 import RepairOfBoardsAndBlocks from '../components/OurServices/pages/8_RepairOfBoardsAndBlocksPage';
-import MaintenanceAndRepairOfPassengerCars from '../components/OurServices/pages/9_MaintenanceAndRepairOfPassengerCarsPage';
+import MaintenanceAndRepairOfPassengerCars from '../components/OurServices/pages/9_TORepairOfPassengerCarsPage';
 import SurfacingOfShaftsAndShields from '../components/OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
 
 import Prices from '../pages/Prices';

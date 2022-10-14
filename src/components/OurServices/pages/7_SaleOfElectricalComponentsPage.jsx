@@ -50,7 +50,7 @@ export default function SaleOfElectricalComponentsPage() {
        <Stack direction='row' spacing={3}>
         <CurrencyRubleRoundedIcon
          style={{
-          margin: '0px 0px 0px 0px',
+          margin: '5px 0px 0px 0px',
           width: '25px',
           height: '26px',
           color: '#f12b29',
@@ -61,7 +61,7 @@ export default function SaleOfElectricalComponentsPage() {
          component='span'
          style={{
           paddingLeft: '3px',
-          fontSize: '15px',
+          fontSize: '18px',
           marginLeft: 0,
          }}
         >
@@ -71,7 +71,7 @@ export default function SaleOfElectricalComponentsPage() {
        <Stack direction='row' spacing={3} sx={{paddingTop: '10px'}}>
         <CurrencyRubleRoundedIcon
          style={{
-          margin: '0px 0px 0px 0px',
+          margin: '5px 0px 0px 0px',
           width: '25px',
           height: '26px',
           color: '#f12b29',
@@ -80,7 +80,7 @@ export default function SaleOfElectricalComponentsPage() {
         <Typography
          variant='caption'
          component='span'
-         style={{paddingLeft: '3px', fontSize: '15px', marginLeft: 0}}
+         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: 0}}
         >
          Перечень деталей в наличии.
         </Typography>
@@ -88,7 +88,7 @@ export default function SaleOfElectricalComponentsPage() {
        <Stack direction='row' spacing={3} sx={{paddingTop: '10px'}}>
         <CurrencyRubleRoundedIcon
          style={{
-          margin: '0px 0px 0px 0px',
+          margin: '5px 0px 0px 0px',
           width: '25px',
           height: '26px',
           color: '#f12b29',
@@ -97,7 +97,7 @@ export default function SaleOfElectricalComponentsPage() {
         <Typography
          variant='caption'
          component='span'
-         style={{paddingLeft: '3px', fontSize: '15px', marginLeft: 0}}
+         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: 0}}
         >
          Проффесиональная консультация по подбору.
         </Typography>

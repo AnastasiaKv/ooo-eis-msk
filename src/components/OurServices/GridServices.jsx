@@ -23,7 +23,7 @@ import RepairOfElectricHeatersPage from './pages/6_RepairOfElectricHeatersPage';
 
 import SaleOfElectricalComponentsPage from './pages/7_SaleOfElectricalComponentsPage';
 import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
-import MaintenanceAndRepairOfPassengerCarsPage from './pages/9_MaintenanceAndRepairOfPassengerCarsPage';
+import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
 
 import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
 
@@ -169,7 +169,7 @@ function ItemsRow3() {
     {isShown && (
      <Route
       path='services/maintenance-and-repair-of-passenger-cars-page'
-      element={<MaintenanceAndRepairOfPassengerCarsPage />}
+      element={<TORepairOfPassengerCarsPage />}
      />
     )}
    </Routes>
