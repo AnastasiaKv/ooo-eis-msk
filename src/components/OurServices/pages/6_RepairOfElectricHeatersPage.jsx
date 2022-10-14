@@ -64,7 +64,7 @@ export default function RepairOfElectricHeatersPage() {
       </Typography>
       <ul>
        <Stack sx={{paddingLeft: '1.5em', marginRight: '2em'}}>
-        <Stack direction='row' spacing={3} sx={{paddingTop: '1.5em'}}>
+        <Stack direction='row' spacing={3} sx={{paddingTop: '1.9em'}}>
          <ReportProblemRoundedIcon
           style={{
            margin: '0px 0px 0px 0px',
@@ -142,15 +142,17 @@ export default function RepairOfElectricHeatersPage() {
       <Typography
        variant='caption'
        component='p'
-       sx={{textAlign: 'justify', fontSize: '18px', color: '#1a202c'}}
+       sx={{
+          fontStyle: 'oblique',
+          textAlign: 'justify', fontSize: '18px', color: '#1a202c'}}
       >
-       <b>
+      
         *Наши специалисты устранят любые поломки накопительных водонагревателей,
         <br />
         ремонт которых оправдан из экономических соображений. Обращайтесь к нам,
         <br /> чтобы заказать выполнение профилактических работ для продления
         <br /> срока службы бойлера.
-       </b>
+      
       </Typography>
      </Stack>
     </Stack>

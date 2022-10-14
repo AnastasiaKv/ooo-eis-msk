@@ -94,7 +94,7 @@ body {
 
 .ees-content-card {
  display: flex;
- color: #292929;
+ color: #1a202c;
  flex: 1 1 auto;
  max-width: 40em;
  min-width: 40em;
@@ -128,11 +128,11 @@ body {
 }
 
 .ees-sidebar-left {
- color: black;
+ color:#1a202c;
 }
 
 .ees-sidebar-right {
- color: black;
+ color:#1a202c;
 }
 
 .ees-footer {
