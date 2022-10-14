@@ -62,7 +62,6 @@ export default function RepairOfElectricHeatersPage() {
        <br /> водонагревателей или бойлеров проточно типа может потребоваться в<br /> нескольким
        распространенных случаях:
       </Typography>
-      <st></st>
       <ul>
        <Stack sx={{paddingLeft: '1.5em', marginRight: '2em'}}>
         <Stack direction='row' spacing={3} sx={{paddingTop: '1.5em'}}>

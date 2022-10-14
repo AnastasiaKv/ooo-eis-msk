@@ -115,7 +115,9 @@ export default function News() {
         alt='Изображение неведомой детали'
         src={image1}
        />
-       <Typography variant='subtitle2' component='span' style={bodyStyle}>
+       <Typography variant='subtitle2'
+        component='span' 
+        style={bodyStyle}>
         инструктаж по технике безопасности (ответственный за его проведение – начальник
         электротехнической службы хозяйства). К устранению неисправностей привлеченные исполнители
         приступают лишь при наличии у них специальных защитных cредств для работы с установками под
