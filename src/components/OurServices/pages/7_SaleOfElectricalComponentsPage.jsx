@@ -10,14 +10,14 @@ export default function SaleOfElectricalComponentsPage() {
  return (
   <>
    <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
-    <h4 style={{paddingTop: '10px'}}>
-     <Typography variant='h4' component='h4' sx={{textAlign: 'left', fontSize: '28px'}}>
-      Продажа электрокомпонентов
-     </Typography>
-    </h4>
+    <Typography variant='h4' component='h4' sx={{paddingTop: '2em', textAlign: 'left'}}>
+     Продажа электрокомпонентов
+    </Typography>
+
     <Stack
      direction='row-reverse'
      sx={{
+      paddingTop: '2em',
       display: 'flex',
       textAlign: 'justify',
       alignItems: 'center',
@@ -32,8 +32,10 @@ export default function SaleOfElectricalComponentsPage() {
        sx={{
         height: '17em',
         width: '23em',
+        borderRadius: '7px',
+
         float: 'right' /* Выравнивание по правому краю  */,
-        margin: '0px 0 7px 25px' /* Отступы вокруг картинки */,
+        margin: '0px -22px 29px 9px' /* Отступы вокруг картинки */,
        }}
        component='img'
        alt='Изображение неведомой детали'
@@ -47,13 +49,13 @@ export default function SaleOfElectricalComponentsPage() {
         color: '#1a202c',
        }}
       >
-       <Stack direction='row' spacing={3}>
+       <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '2em'}}>
         <CurrencyRubleRoundedIcon
          style={{
           margin: '5px 0px 0px 0px',
           width: '25px',
           height: '26px',
-          color: '#f12b29',
+          color: '#f12b21',
          }}
         />
         <Typography
@@ -62,13 +64,13 @@ export default function SaleOfElectricalComponentsPage() {
          style={{
           paddingLeft: '3px',
           fontSize: '18px',
-          marginLeft: 0,
+          marginLeft: '11px',
          }}
         >
          Осуществляем розничную продажу электрокомпонетов по очень выгодным ценам!
         </Typography>
        </Stack>
-       <Stack direction='row' spacing={3} sx={{paddingTop: '10px'}}>
+       <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
         <CurrencyRubleRoundedIcon
          style={{
           margin: '5px 0px 0px 0px',
@@ -80,12 +82,12 @@ export default function SaleOfElectricalComponentsPage() {
         <Typography
          variant='caption'
          component='span'
-         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: 0}}
+         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: '11px'}}
         >
          Перечень деталей в наличии.
         </Typography>
        </Stack>
-       <Stack direction='row' spacing={3} sx={{paddingTop: '10px'}}>
+       <Stack direction='row' spacing={3} sx={{}}>
         <CurrencyRubleRoundedIcon
          style={{
           margin: '5px 0px 0px 0px',
@@ -97,7 +99,7 @@ export default function SaleOfElectricalComponentsPage() {
         <Typography
          variant='caption'
          component='span'
-         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: 0}}
+         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: '11px'}}
         >
          Проффесиональная консультация по подбору.
         </Typography>
