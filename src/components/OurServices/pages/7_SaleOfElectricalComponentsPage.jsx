@@ -9,7 +9,7 @@ import image7 from '../../../assets/img/services/Продажа компонен
 export default function SaleOfElectricalComponentsPage() {
  return (
   <>
-   <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
+   <Stack direction='column'sx={{ paddingBottom: '2em'}}>
     <Typography variant='h4' component='h4' sx={{paddingTop: '2em', textAlign: 'left'}}>
      Продажа электрокомпонентов
     </Typography>
@@ -27,7 +27,7 @@ export default function SaleOfElectricalComponentsPage() {
       color: '#292929',
      }}
     >
-     <Stack direction='row' sx={{paddingRight: '16em'}}>
+     <Stack direction='row' sx={{paddingRight: '15em'}}>
       <Box
        sx={{
         height: '17em',
@@ -49,7 +49,7 @@ export default function SaleOfElectricalComponentsPage() {
         color: '#1a202c',
        }}
       >
-       <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '2em'}}>
+       <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '1.6em'}}>
         <CurrencyRubleRoundedIcon
          style={{
           margin: '5px 0px 0px 0px',
@@ -63,14 +63,14 @@ export default function SaleOfElectricalComponentsPage() {
          component='span'
          style={{
           paddingLeft: '3px',
-          fontSize: '18px',
+          fontSize: '17px',
           marginLeft: '11px',
          }}
         >
          Осуществляем розничную продажу электрокомпонетов по очень выгодным ценам!
         </Typography>
        </Stack>
-       <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
+       <Stack direction='row' spacing={3} sx={{paddingBottom: '1.6em'}}>
         <CurrencyRubleRoundedIcon
          style={{
           margin: '5px 0px 0px 0px',
@@ -82,7 +82,7 @@ export default function SaleOfElectricalComponentsPage() {
         <Typography
          variant='caption'
          component='span'
-         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: '11px'}}
+         style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
         >
          Перечень деталей в наличии.
         </Typography>
@@ -99,7 +99,7 @@ export default function SaleOfElectricalComponentsPage() {
         <Typography
          variant='caption'
          component='span'
-         style={{paddingLeft: '3px', fontSize: '18px', marginLeft: '11px'}}
+         style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
         >
          Проффесиональная консультация по подбору.
         </Typography>

@@ -4,14 +4,14 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
-import image7 from '../../../assets/img/services/ТО2.png';
+import image9 from '../../../assets/img/services/ТО2.png';
 export default function TORepairOfPassengerCarsPage() {
  return (
   <>
    <Stack
     direction='column'
     spacing={0}
-    sx={{paddingTop: '2em', paddingLeft: '2em', paddingBottom: '2em'}}
+    sx={{paddingTop: '2em', paddingBottom: '2em'}}
    >
     <Typography
      variant='h4'
@@ -48,7 +48,7 @@ export default function TORepairOfPassengerCarsPage() {
        }}
        component='img'
        alt='Изображение неведомой детали'
-       src={image7}
+       src={image9}
       />
      </Stack>
      <ul>

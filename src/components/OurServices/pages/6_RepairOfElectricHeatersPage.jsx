@@ -12,8 +12,7 @@ export default function RepairOfElectricHeatersPage() {
   <>
    <Stack
     direction='column'
-    spacing={0}
-    sx={{color: '#1a202c', paddingLeft: '2em', paddingBottom: '2em'}}
+    sx={{color: '#1a202c', paddingBottom: '2em'}}
    >
     <p
      style={{

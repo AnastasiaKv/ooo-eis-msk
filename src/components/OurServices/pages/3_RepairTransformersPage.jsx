@@ -92,7 +92,7 @@ const RepairTransformersPage = () => {
       sx={{
        paddingTop: '18px',
        width: '8em',
-       height: '7em',
+       height: '8em',
        float: 'right' /* Выравнивание по правому краю  */,
       }}
       component='img'
