@@ -125,10 +125,6 @@ h6 {
  color: #1a202c;
 }
 
-p {
- margin-bottom: 1.563rem;
-}
-
 p > *:last-child {
  margin-bottom: 0;
 }
