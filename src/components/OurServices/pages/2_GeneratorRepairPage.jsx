@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import Paper from '@mui/material/Paper';
+import image2 from '../../../assets/img/services/Ремонт генераторов1.png';
 
-import r2 from '../../../assets/img/services/Ремонт генераторов1.png';
 const data = [
  {
   name: 'Замена щеточного узла (для некоторых моделей)',
@@ -56,41 +56,43 @@ const data = [
 const GeneratorRepairPage = () => {
  return (
   <>
-   <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
-    <p
-     style={{
-      paddingTop: '45px',
-      paddingLeft: '2rem',
-      width: '600px',
-      height: '211px',
-      textAlign: 'left',
-      paddingBottom: '0',
-     }}
-    >
-     <Box
-      sx={{
-       width: '9em',
-       height: '6em',
-       float: 'right' /* Выравнивание по правому краю  */,
+   <Paper elevation={4} sx={{marginBottom: 5}}>
+    <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
+     <p
+      style={{
+       paddingTop: '45px',
+       paddingLeft: '2rem',
+       width: '600px',
+       height: '211px',
+       textAlign: 'left',
+       paddingBottom: '0',
       }}
-      component='img'
-      alt='Изображение неведомой детали'
-      src={r2}
-     />
-     <h4 style={{paddingTop: '20px'}}>
-      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-       Ремонт генератора
-      </Typography>
-     </h4>
-     <h4 style={{paddingTop: '30px'}}>
-      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-       от 500 руб.
-      </Typography>
-     </h4>
-    </p>
+     >
+      <Box
+       sx={{
+        width: '9em',
+        height: '6em',
+        float: 'right' /* Выравнивание по правому краю  */,
+       }}
+       component='img'
+       alt='Изображение неведомой детали'
+       src={image2}
+      />
+      <h4 style={{paddingTop: '20px'}}>
+       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+        Ремонт генератора
+       </Typography>
+      </h4>
+      <h4 style={{paddingTop: '30px'}}>
+       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+        от 500 руб.
+       </Typography>
+      </h4>
+     </p>
 
-    <SimpleTable data={data} />
-   </Stack>
+     <SimpleTable data={data} />
+    </Stack>
+   </Paper>
   </>
  );
 };

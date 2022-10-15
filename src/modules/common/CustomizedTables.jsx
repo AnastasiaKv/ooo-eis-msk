@@ -14,14 +14,14 @@ export default function CustomizedTables() {
  return (
   <>
    <Stack>
-    <h4 style={{paddingRight: '10.2em'}}>
+    <h4 style={{paddingRight: '9em'}}>
      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
       Перемотка электродвигателей цены
      </Typography>
     </h4>
    </Stack>
    <Stack spacing={0} style={{paddingLeft: '1em'}}>
-    <Paper>
+    <Paper elevation={1} sx={{maxWidth: '670px'}}>
      <Table aria-label='simple table'>
       <TableHead>
        <TableRow>

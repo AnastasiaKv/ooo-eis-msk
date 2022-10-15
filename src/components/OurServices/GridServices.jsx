@@ -257,16 +257,14 @@ export default function GridServices() {
       ресурсов.
      </Typography>
     </p>
-    <div style={{paddingLeft: '30px'}}>
+    <div style={{paddingLeft: '63px'}}>
      <p style={{paddingLeft: 0, paddingTop: '14px', paddingBottom: '4px'}}>
       <Typography
        variant='h4'
        component='h2'
        sx={{flexGrow: 1}}
        style={{
-        position: 'relative',
         fontSize: '30px',
-        paddingRight: '66px',
         textAlign: 'center',
         color: '#292929',
        }}

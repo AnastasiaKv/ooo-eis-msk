@@ -2,7 +2,7 @@ import React, {useMemo} from 'react';
 import MaterialReactTable from 'material-react-table';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-
+import Paper from '@mui/material/Paper';
 export default function SimpleTable({data}) {
  const columns = useMemo(
   () => [
@@ -28,24 +28,26 @@ export default function SimpleTable({data}) {
  );
 
  return (
-  <Stack spacing={0} style={{paddingLeft: '1em'}}>
-   <MaterialReactTable
-    columns={columns}
-    data={data}
-    enablePinning
-    enableColumnActions={false}
-    enableColumnFilters={false}
-    enablePagination={false}
-    enableSorting={false}
-    enableBottomToolbar={false}
-    enableTopToolbar={false}
-    enableDensityToggle={false}
-    muiTableBodyRowProps={{hover: false}}
-    initialState={{density: 'comfortable'}}
-    muiTableContainerProps={{
-     sx: {textAlign: 'justify', overflowX: 'hidden', maxHeight: '900px'},
-    }}
-   />
+  <Stack spacing={0} style={{paddingTop: '1em', paddingLeft: '1em'}}>
+   <Paper elevation={1} sx={{maxWidth: '670px'}}>
+    <MaterialReactTable
+     columns={columns}
+     data={data}
+     enablePinning
+     enableColumnActions={false}
+     enableColumnFilters={false}
+     enablePagination={false}
+     enableSorting={false}
+     enableBottomToolbar={false}
+     enableTopToolbar={false}
+     enableDensityToggle={false}
+     muiTableBodyRowProps={{hover: false}}
+     initialState={{density: 'comfortable'}}
+     muiTableContainerProps={{
+      sx: {textAlign: 'justify', overflowX: 'hidden', maxHeight: '900px', maxWidth: '700px'},
+     }}
+    />
+   </Paper>
   </Stack>
  );
 }

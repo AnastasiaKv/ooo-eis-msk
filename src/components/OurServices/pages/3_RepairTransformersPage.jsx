@@ -3,9 +3,8 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
-
-import r3 from '../../../assets/img/services/Ремонт трансформаторов1.png';
+import Paper from '@mui/material/Paper';
+import image3 from '../../../assets/img/services/Ремонт трансформаторов1.png';
 
 const data = [
  {
@@ -77,42 +76,44 @@ const data = [
 const RepairTransformersPage = () => {
  return (
   <>
-   <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
-    <p
-     style={{
-      paddingTop: '45px',
-      paddingLeft: '2rem',
-      width: '600px',
-      height: '211px',
-      textAlign: 'left',
-      paddingBottom: '0',
-     }}
-    >
-     <Box
-      sx={{
-       paddingTop: '18px',
-       width: '8em',
-       height: '8em',
-       float: 'right' /* Выравнивание по правому краю  */,
+   <Paper elevation={4} sx={{marginBottom: 5}}>
+    <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
+     <p
+      style={{
+       paddingTop: '45px',
+       paddingLeft: '2rem',
+       width: '600px',
+       height: '211px',
+       textAlign: 'left',
+       paddingBottom: '0',
       }}
-      component='img'
-      alt='Изображение неведомой детали'
-      src={r3}
-     />
-     <h4 style={{paddingTop: '10px'}}>
-      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-       Цены на перемотку трансформаторов
-      </Typography>
-     </h4>
-     <h4>
-      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-       от 9000 руб.
-      </Typography>
-     </h4>
-    </p>
+     >
+      <Box
+       sx={{
+        paddingTop: '18px',
+        width: '8em',
+        height: '8em',
+        float: 'right' /* Выравнивание по правому краю  */,
+       }}
+       component='img'
+       alt='Изображение неведомой детали'
+       src={image3}
+      />
+      <h4 style={{paddingTop: '10px'}}>
+       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+        Цены на перемотку трансформаторов
+       </Typography>
+      </h4>
+      <h4>
+       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+        от 9000 руб.
+       </Typography>
+      </h4>
+     </p>
 
-    <SimpleTable data={data} />
-   </Stack>
+     <SimpleTable data={data} />
+    </Stack>
+   </Paper>
   </>
  );
 };

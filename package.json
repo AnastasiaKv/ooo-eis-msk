@@ -75,9 +75,7 @@
   "eject": "react-scripts eject",
   "flow": "flow",
   "lint": "prettier --check .",
-  "format": "prettier --write .",
-  "storybook": "start-storybook -p 6006 -s public",
-  "build-storybook": "build-storybook -s public"
+  "format": "prettier --write ."
  },
  "eslintConfig": {
   "extends": [
