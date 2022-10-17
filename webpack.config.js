@@ -7,11 +7,11 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 //формируем настройки
 module.exports = {
- entry: {main: './src/index.js'},
- mode: 'development',
+ entry: ['./src/index.jsx'],
  output: {
-  path: path.resolve(__dirname, 'src'),
-  filename: 'js/[name].js',
+  path: './build/static/js',
+  filename: 'bundle.js',
+  publicPath: '/',
  },
  resolve: {
   extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -30,11 +30,11 @@ module.exports = {
    //img loader
    {
     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-    type: '/src/asset/img',
+    type: './src/asset/img',
     use: {
      loader: 'file-loader',
      options: {
-      name: '/src/assets/img/[name].[ext]',
+      name: './src/assets/img/[name].[ext]',
      },
     },
    },
@@ -42,7 +42,7 @@ module.exports = {
    // шрифты и SVG
    {
     test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-    type: '/src/asset/fonts',
+    type: './src/asset/fonts',
    },
   ],
  },
@@ -56,7 +56,7 @@ module.exports = {
   new HtmlWebpackPlugin({
    inject: false,
    hash: true,
-   template: '/public/index.html',
+   template: './public/index.html',
    filename: 'index.html',
   }),
  ],
