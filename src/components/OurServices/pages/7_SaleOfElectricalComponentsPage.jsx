@@ -11,7 +11,7 @@ export default function SaleOfElectricalComponentsPage() {
   <>
    <Paper elevation={4} sx={{marginBottom: 5}}>
     <Stack direction='column' sx={{paddingBottom: '2em'}}>
-     <Typography variant='h4' component='h4' sx={{paddingTop: '2em', textAlign: 'left'}}>
+     <Typography variant='h4' component='h4' sx={{paddingTop: '2em', textAlign: 'center'}}>
       Продажа электрокомпонентов
      </Typography>
 
@@ -28,7 +28,7 @@ export default function SaleOfElectricalComponentsPage() {
        color: '#292929',
       }}
      >
-      <Stack direction='row' sx={{paddingRight: '5em'}}>
+      <Stack direction='row' sx={{paddingRight: '1em'}}>
        <Box
         sx={{
          height: '17em',
@@ -44,12 +44,7 @@ export default function SaleOfElectricalComponentsPage() {
        />
       </Stack>
       <ul>
-       <Stack
-        sx={{
-         marginRight: '2em',
-         color: '#1a202c',
-        }}
-       >
+       <Stack sx={{paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
         <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '1.6em'}}>
          <CurrencyRubleRoundedIcon
           style={{

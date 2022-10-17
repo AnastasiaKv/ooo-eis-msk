@@ -49,7 +49,7 @@ function Contact(props) {
     style={{
      textTransform: 'inherit',
      borderRadius: '0',
-     color: '#F1F1F1F1',
+     color: '#ffffff',
      backgroundColor: '#F12B29',
      height: '37.1px',
     }}

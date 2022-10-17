@@ -258,7 +258,7 @@ export default function GridServices() {
      </Typography>
     </p>
     <div style={{paddingLeft: '63px'}}>
-     <p style={{paddingLeft: 0, paddingTop: '14px', paddingBottom: '4px'}}>
+     <p style={{paddingLeft: '27px', paddingTop: '14px', paddingBottom: '4px'}}>
       <Typography
        variant='h4'
        component='h2'
