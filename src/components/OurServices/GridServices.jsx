@@ -263,8 +263,8 @@ export default function GridServices() {
        variant='h4'
        component='h2'
        sx={{flexGrow: 1}}
-       style={{
-        fontSize: '30px',
+       style={{paddingBottom:'18px',fontFamily: 'Furore', fontSize: '28px',
+    
         textAlign: 'center',
         color: '#292929',
        }}

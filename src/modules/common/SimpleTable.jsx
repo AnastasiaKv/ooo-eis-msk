@@ -28,7 +28,7 @@ export default function SimpleTable({data}) {
  );
 
  return (
-  <Stack spacing={0} style={{paddingTop: '1em', paddingLeft: '1em'}}>
+  <Stack spacing={0} style={{ bgcolor: '#f7f7f7',paddingTop: '1em', paddingLeft: '1em'}}>
    <Paper elevation={1} sx={{maxWidth: '670px'}}>
     <MaterialReactTable
      columns={columns}
@@ -44,7 +44,13 @@ export default function SimpleTable({data}) {
      muiTableBodyRowProps={{hover: false}}
      initialState={{density: 'comfortable'}}
      muiTableContainerProps={{
-      sx: {textAlign: 'justify', overflowX: 'hidden', maxHeight: '900px', maxWidth: '700px'},
+      sx: {
+       bgcolor: '#f7f7f7',
+       textAlign: 'justify',
+       overflowX: 'hidden',
+       maxHeight: '900px',
+       maxWidth: '700px',
+      },
      }}
     />
    </Paper>

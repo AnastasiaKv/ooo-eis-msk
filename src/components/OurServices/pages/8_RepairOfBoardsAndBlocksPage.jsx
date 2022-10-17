@@ -7,20 +7,24 @@ import Paper from '@mui/material/Paper';
 export default function RepairOfBoardsAndBlocksPage() {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <main className='ees-content'>
      <div>
-      <h2>
-       <Typography variant='caption'>Ремонт электронагревателей</Typography>
-      </h2>
-      <h4>
-       <Typography variant='caption'>от 900 руб.</Typography>
-      </h4>
+      <Typography
+       variant='h4'
+       component='h4'
+       style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '25px'}}
+      >
+       Наплавка валов и щитов от 900 руб.
+      </Typography>
       <br />
       <br />
       <h2>
-       <Typography variant='caption'>
-        Вот небольшщой список принимаемой в ремонт электроники:
+       <Typography
+        variant='caption'
+        style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '20px'}}
+       >
+        Список ремонтируемой электроники:
        </Typography>
       </h2>
       <br />

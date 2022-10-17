@@ -9,18 +9,18 @@ import Paper from '@mui/material/Paper';
 export default function RepairOfElectricHeatersPage() {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7',marginBottom: 5}}>
     <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '2em', paddingTop: '1em'}}>
      <Stack direction='row' spacing={10}>
       <Stack direction='column' sx={{paddingLeft: '2em', textAlign: 'left'}}>
        <h4 style={{paddingTop: '20px'}}>
-        <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-         Ремонт электронагревателей
+        <Typography variant='h4' component='h4' style={{fontFamily: 'Furore',fontSize: '25px'}}>
+         Ремонт электронагревателей от 500 руб.
         </Typography>
        </h4>
 
        <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        от 500 руб.
+        
        </Typography>
       </Stack>
       <Stack direction='row'>
@@ -34,7 +34,7 @@ export default function RepairOfElectricHeatersPage() {
      </Stack>
      <Stack sx={{paddingLeft: '2em', marginRight: '2em'}}>
       <h2>
-       <Typography variant='h4' component='h4' style={{textAlign: 'left', fontSize: '28px'}}>
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore',textAlign: 'left', fontSize: '20px'}}>
         Виды поломок
        </Typography>
       </h2>
@@ -44,9 +44,8 @@ export default function RepairOfElectricHeatersPage() {
         component='p'
         sx={{textAlign: 'left', fontSize: '18px', color: '#1a202c'}}
        >
-        Несмотря на относительную простоту конструкции, ремонт накопительных
-        <br /> водонагревателей или бойлеров проточно типа может потребоваться в<br /> нескольким
-        распространенных случаях:
+        Несмотря на относительную простоту конструкции, ремонт электрических
+        <br /> водонагревателей может потребоваться в нескольких случаях:
        </Typography>
        <ul>
         <Stack sx={{paddingLeft: '1.5em', marginRight: '2em'}}>
@@ -119,7 +118,7 @@ export default function RepairOfElectricHeatersPage() {
            component='span'
            style={{paddingLeft: '10px', fontSize: '17px', marginLeft: 0}}
           >
-           Возникновение коррозионных процессов в баке
+           Возникновение коррозионных процессов.
           </Typography>
          </Stack>
         </Stack>
@@ -135,11 +134,9 @@ export default function RepairOfElectricHeatersPage() {
          color: '#1a202c',
         }}
        >
-        *Наши специалисты устранят любые поломки накопительных водонагревателей,
+        *Наши специалисты устранят любые поломки электрических водонагревателей,
         <br />
-        ремонт которых оправдан из экономических соображений. Обращайтесь к нам,
-        <br /> чтобы заказать выполнение профилактических работ для продления
-        <br /> срока службы бойлера.
+        ремонт которых оправдан из экономических соображений.
        </Typography>
       </Stack>
      </Stack>

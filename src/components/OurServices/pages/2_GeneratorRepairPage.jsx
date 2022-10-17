@@ -56,7 +56,7 @@ const data = [
 const GeneratorRepairPage = () => {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
       style={{
@@ -73,19 +73,15 @@ const GeneratorRepairPage = () => {
         width: '9em',
         height: '6em',
         float: 'right' /* Выравнивание по правому краю  */,
+        margin: '0px -95px 13px 0px',
        }}
        component='img'
        alt='Изображение неведомой детали'
        src={image2}
       />
       <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        Ремонт генератора
-       </Typography>
-      </h4>
-      <h4 style={{paddingTop: '30px'}}>
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        от 500 руб.
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '25px'}}>
+        Ремонт генератора от 500 руб.
        </Typography>
       </h4>
      </p>

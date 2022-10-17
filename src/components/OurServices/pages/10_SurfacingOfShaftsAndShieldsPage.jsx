@@ -9,15 +9,18 @@ import Paper from '@mui/material/Paper';
 export default function SurfacingOfShaftsAndShieldsPage() {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack
      direction='column'
      spacing={0}
      sx={{color: '#1a202c', paddingTop: '1em', paddingLeft: '1em', paddingBottom: '1.6em'}}
     >
-     <Typography variant='h4' component='h4' style={{textAlign: 'left', fontSize: '28px'}}>
-      Наплавка валов и щитов <br />
-      <br /> от 4000 руб.
+     <Typography
+      variant='h4'
+      component='h4'
+      style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '28px'}}
+     >
+      Наплавка валов и щитов от 4000 руб.
      </Typography>
      <br />
      <Typography
@@ -50,9 +53,9 @@ export default function SurfacingOfShaftsAndShieldsPage() {
         sx={{
          borderRadius: '7px',
          height: '21em',
-         width: '34em',
+         width: '32em',
          float: 'right' /* Выравнивание по правому краю  */,
-         margin: '0px -69px 0px 1px' /* Отступы вокруг картинки */,
+         margin: '0px -35px 0px 1px' /* Отступы вокруг картинки */,
         }}
         component='img'
         alt='Изображение неведомой детали'

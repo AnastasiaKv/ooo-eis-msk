@@ -7,6 +7,7 @@ import {makeStyles} from '@material-ui/styles';
 import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
+import About from '../pages/About';
 import Contacts from '../pages/Contacts';
 import Prices from '../pages/Prices';
 import News from '../pages/News';
@@ -78,6 +79,7 @@ export default function NavTabs() {
    <Tabs
     onChange={handleChange}
     sx={{
+   
      '.MuiTabs-indicator': {
       left: '0px',
       width: 'auto',
@@ -139,7 +141,7 @@ export default function NavTabs() {
      <Route path='services/surfacing-of-shafts-and-shields-page' element={<Page10 />} />
      <Route path='*' element={<Error404 />} />
     </Route>
-    <Route path='/about' element={<></>} />
+    <Route path='/about' element={<About />} />
     <Route path='/prices' element={<Prices />} />
     <Route path='/news' element={<News />} />
     <Route path='/contacts' element={<Contacts />} />

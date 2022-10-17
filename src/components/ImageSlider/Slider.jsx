@@ -4,15 +4,11 @@ import {autoPlay} from 'react-swipeable-views-utils';
 import sliderimg1 from '../../assets/img/slider_img_1.png';
 import sliderimg2 from '../../assets/img/slider_img_2.png';
 import Pagination from './Pagination/Pagination';
-
+import Box from '@mui/material/Box';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
- root: {
-  position: 'relative',
-  height: '19rem',
-  top: '5px',
- },
+ root: {borderRadius: 3, position: 'relative', height: '19rem', top: '5px'},
  slide: {
   marginRight: 0,
   display: 'flex',
@@ -27,9 +23,7 @@ const styles = {
  slide2: {
   backgroundColor: '#B3DC4A',
  },
- slide3: {
-  backgroundColor: '#6AC0FF',
- },
+ slide3: {borderRadius: 3, backgroundColor: '#6AC0FF'},
 
  image1: {
   objectFit: 'clip',
@@ -59,19 +53,23 @@ class Slider extends React.Component {
   const {index} = this.state;
 
   return (
-   <div style={styles.root}>
-    <AutoPlaySwipeableViews autoplay={false} index={index} onChangeIndex={this.handleChangeIndex}>
-     <div style={Object.assign({}, styles.slide)}>
-      <img style={styles.image1} src={sliderimg1} alt='train' />
+   <>
+    <Box sx={{borderRadius: 3}}>
+     <div style={styles.root}>
+      <AutoPlaySwipeableViews autoplay={false} index={index} onChangeIndex={this.handleChangeIndex}>
+       <div style={Object.assign({}, styles.slide)}>
+        <img style={styles.image1} src={sliderimg1} alt='train' />
+       </div>
+       <div style={Object.assign({}, styles.slide)}>
+        <img style={styles.image2} src={sliderimg2} alt='2' />
+       </div>
+      </AutoPlaySwipeableViews>
+      {/* <div style={styles.dots}> */}
+      <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} />
+      {/* </div> */}
      </div>
-     <div style={Object.assign({}, styles.slide)}>
-      <img style={styles.image2} src={sliderimg2} alt='2' />
-     </div>
-    </AutoPlaySwipeableViews>
-    {/* <div style={styles.dots}> */}
-    <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} />
-    {/* </div> */}
-   </div>
+    </Box>
+   </>
   );
  }
 }

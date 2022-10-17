@@ -25,23 +25,19 @@ const headerStyle = {
  color: '#292929',
 };
 const bodyStyle = {
- fontFamily: 'NeoSansPro',
+ fontFamily: 'Roboto',
+ fontSize: '14px',
  display: 'block',
  textAlign: 'justify',
  maxWidth: '1000px',
- fontSize: 15,
- lineHeight: '1.5',
- color: '#292929',
 };
 
 const body2Style = {
- fontFamily: 'NeoSansPro',
+ fontFamily: 'Roboto',
+ fontSize: '14px',
  display: 'block',
  textAlign: 'justify',
  maxWidth: '1000px',
- fontSize: 15,
- lineHeight: '1.5',
- color: '#292929',
 };
 
 export default function News() {
@@ -89,17 +85,14 @@ export default function News() {
       </h2>
       <p>
        <Typography
-        variant='subtitle2'
+        variant='body2'
         component='span'
         style={{
-         fontFamily: 'NeoSansPro',
+         fontFamily: 'Roboto',
          display: 'block',
          textAlign: 'justify',
          maxWidth: '1000px',
-         fontSize: 15,
-         lineHeight: '1.5',
          paddingTop: '10px',
-         color: '#292929',
         }}
        >
         К ремонту моторов допускают электромонтеров с квалификационной группой не ниже III, перед
@@ -115,7 +108,7 @@ export default function News() {
         alt='Изображение неведомой детали'
         src={image1}
        />
-       <Typography variant='subtitle2' component='span' style={bodyStyle}>
+       <Typography variant='body2' component='span' style={bodyStyle}>
         инструктаж по технике безопасности (ответственный за его проведение – начальник
         электротехнической службы хозяйства). К устранению неисправностей привлеченные исполнители
         приступают лишь при наличии у них специальных защитных cредств для работы с установками под
@@ -132,7 +125,7 @@ export default function News() {
        </Typography>
       </h2>
       <p style={{paddingTop: '11px'}}>
-       <Typography variant='subtitle2' component='span' style={bodyStyle}>
+       <Typography variant='body2' component='span' style={bodyStyle}>
         Перед началом проведения ремонта электродвигателей необходимо проверить исправность защитных
         средств, особое внимание обращают на дату их последней проверки. Принципиально важно, чтобы
         установки были отключены от питающих сетей. Между губками и ножками отключающего рубильника
@@ -155,7 +148,7 @@ export default function News() {
         alt='Запрещается снимать во время работы'
         src={image2}
        />
-       <Typography style={body2Style} variant='caption' component='span'>
+       <Typography style={body2Style} variant='body2' component='span'>
         Обслуживание щеточного аппарата двигателя допускается проводить (в единоличном порядке)
         специально обученному сотруднику с группой допуска по электробезопасности не ниже III. При
         этом необходимо соблюдать ряд требований. К ремонту моторов допускают электромонтеров с

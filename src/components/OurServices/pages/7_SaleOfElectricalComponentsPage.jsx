@@ -9,9 +9,13 @@ import Paper from '@mui/material/Paper';
 export default function SaleOfElectricalComponentsPage() {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' sx={{paddingBottom: '2em'}}>
-     <Typography variant='h4' component='h4' sx={{paddingTop: '2em', textAlign: 'center'}}>
+     <Typography
+      variant='h4'
+      component='h4'
+      sx={{fontFamily: 'Furore', paddingTop: '2em', textAlign: 'center', fontSize: '25px'}}
+     >
       Продажа электрокомпонентов
      </Typography>
 
@@ -31,12 +35,12 @@ export default function SaleOfElectricalComponentsPage() {
       <Stack direction='row' sx={{paddingRight: '1em'}}>
        <Box
         sx={{
-         height: '17em',
-         width: '23em',
+         height: '15em',
+         width: '20em',
          borderRadius: '7px',
 
          float: 'right' /* Выравнивание по правому краю  */,
-         margin: '0px -22px 29px 9px' /* Отступы вокруг картинки */,
+         margin: '0px 0px 29px 9px' /* Отступы вокруг картинки */,
         }}
         component='img'
         alt='Изображение неведомой детали'

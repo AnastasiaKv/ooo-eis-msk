@@ -78,7 +78,7 @@ export default function Header() {
      </Typography>
      <Button
       component='div'
-      style={{borderRadius: '0', backgroundColor: '#292929', textTransform: 'inherit'}}
+      style={{borderRadius: 3, backgroundColor: '#292929', textTransform: 'inherit'}}
       variant='contained'
       startIcon={<MapIcon />}
      >

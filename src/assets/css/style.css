@@ -65,7 +65,7 @@ body {
 @media (prefers-color-scheme: dark) {
  body {
   color: white;
-  background-color: var(--gray-900);
+  background-color: white;
   caret-color: white;
  }
 }
@@ -115,7 +115,7 @@ h5 {
  font-size: 1.25rem;
  letter-spacing: -0.03rem;
  line-height: 1.4;
- color: #1a202c;
+ color: #fff;
 }
 
 h6 {
@@ -197,7 +197,7 @@ input[type='number'] {
  input[type='email'],
  input[type='text'],
  input[type='number'] {
-  background-color: var(--gray-800);
+  background-color: white;
   border-color: var(--gray-700);
   color: white;
  }
@@ -416,7 +416,7 @@ button {
  input[type='reset'],
  input[type='button'],
  button {
-  background-color: white;
+  background-color: var(--gray-700);
   border: 2px solid white;
   color: var(--gray-800);
  }

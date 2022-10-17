@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 export default function TORepairOfPassengerCarsPage() {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack
      direction='column'
      spacing={0}
@@ -18,10 +18,8 @@ export default function TORepairOfPassengerCarsPage() {
      <Typography
       variant='h4'
       component='h4'
-      sx={{
-       textAlign: 'left',
-       fontSize: '28px',
-      }}
+      style={{fontSize: '20px'}}
+      sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '28px'}}
      >
       ТО и ремонт электрооборудования пассажирских вагонов
      </Typography>

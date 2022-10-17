@@ -59,7 +59,7 @@ const data = [
 export default function RepairMotorsPage() {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
       style={{
@@ -77,19 +77,15 @@ export default function RepairMotorsPage() {
         width: '8em',
         height: '7em',
         float: 'right' /* Выравнивание по правому краю  */,
+        margin: '0px -95px 13px 0px',
        }}
        component='img'
        alt='Изображение неведомой детали'
        src={image1}
       />
       <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        Ремонт электродвигателя
-       </Typography>
-      </h4>
-      <h4 style={{paddingTop: '30px'}}>
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        от 500 руб.
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '25px'}}>
+        Ремонт электродвигателя от 500 руб.
        </Typography>
       </h4>
      </p>

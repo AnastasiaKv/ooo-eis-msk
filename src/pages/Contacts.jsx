@@ -40,7 +40,7 @@ const MyTextInput = ({label, ...props}) => {
 
 export default function Contacts() {
  return (
-  <div className='ees-content-card'>
+  <main className='ees-content-card'>
    <Box
     component='form'
     sx={{
@@ -131,6 +131,6 @@ export default function Contacts() {
      </p>
     </div>
    </Box>
-  </div>
+  </main>
  );
 }

@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import image4 from '../../../assets/img/services/Ремонт холодильных машин1.png';
-import DoneIcon from '@mui/icons-material/Done';
-import Paper from '@mui/material/Paper';
 
+import Paper from '@mui/material/Paper';
+import DoneIcon from '@mui/icons-material/AcUnit';
 export default function RefrigerationMachineRepairPage() {
  return (
   <>
-   <Paper elevation={4} sx={{marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack
      direction='column'
      spacing={0}
@@ -31,31 +31,29 @@ export default function RefrigerationMachineRepairPage() {
         width: '8em',
         height: '7em',
         float: 'right' /* Выравнивание по правому краю  */,
+        margin: '0px -129px 13px 0px',
        }}
        component='img'
        alt='Изображение неведомой детали'
        src={image4}
       />
       <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        Ремонт холодильных машин и компрессоров
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '24px'}}>
+        Ремонт холодильных машин и компрессоров от 4000 руб.
        </Typography>
       </h4>
-      <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-       от 4000 руб.
-      </Typography>
      </p>
      <br />
      <Typography
       variant='caption'
-      style={{fontSize: '19px', paddingRight: '5em', paddingBottom: '15px'}}
+      style={{textAlign: 'left', fontSize: '19px', paddingRight: '5em', paddingBottom: '15px'}}
      >
       Выполняем следующие технологические операции:
      </Typography>
 
      <ul style={{textAlign: 'left', listStyle: 'none'}}>
       <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+       <DoneIcon color='primary' style={{margin: '4px 0px 0px 0px', height: '18px'}} />
        <Typography
         variant='caption'
         component='span'
@@ -67,7 +65,7 @@ export default function RefrigerationMachineRepairPage() {
       <Stack direction='row' spacing={3}>
        <DoneIcon
         color='primary'
-        style={{margin: '1px 0px 0px 0px', height: '22px', color: 'sky'}}
+        style={{margin: '4px 0px 0px 0px', height: '18px', color: 'sky'}}
        />
        <Typography
         variant='caption'
@@ -77,18 +75,9 @@ export default function RefrigerationMachineRepairPage() {
         Оценка уровня изношенности
        </Typography>
       </Stack>
+
       <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
-       <Typography
-        variant='caption'
-        component='span'
-        style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-       >
-        Выпрессовка статоров любого типа и любых размеров (проводится наспециальном стенде)
-       </Typography>
-      </Stack>
-      <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+       <DoneIcon color='primary' style={{margin: '4px 0px 0px 0px', height: '18px'}} />
        <Typography
         variant='caption'
         component='span'
@@ -98,7 +87,7 @@ export default function RefrigerationMachineRepairPage() {
        </Typography>
       </Stack>
       <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+       <DoneIcon color='primary' style={{margin: '4px 0px 0px 0px', height: '18px'}} />
        <Typography
         variant='caption'
         component='span'
@@ -108,17 +97,7 @@ export default function RefrigerationMachineRepairPage() {
        </Typography>
       </Stack>
       <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
-       <Typography
-        variant='caption'
-        component='span'
-        style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-       >
-        Металлообработка различного уровня сложности
-       </Typography>
-      </Stack>
-      <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+       <DoneIcon color='primary' style={{margin: '4px 0px 0px 0px', height: '18px'}} />
        <Typography
         variant='caption'
         component='span'
@@ -128,7 +107,7 @@ export default function RefrigerationMachineRepairPage() {
        </Typography>
       </Stack>
       <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '1px 0px 0px 0px', height: '22px'}} />
+       <DoneIcon color='primary' style={{margin: '4px 0px 0px 0px', height: '18px'}} />
        <Typography
         variant='caption'
         component='span'
