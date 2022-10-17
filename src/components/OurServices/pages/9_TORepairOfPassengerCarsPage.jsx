@@ -38,7 +38,7 @@ export default function TORepairOfPassengerCarsPage() {
        color: '#292929',
       }}
      >
-      <Stack direction='row' sx={{paddingRight: '16em'}}>
+      <Stack direction='row' sx={{paddingRight: '3em'}}>
        <Box
         sx={{
          borderRadius: '7px',
