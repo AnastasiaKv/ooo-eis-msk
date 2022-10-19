@@ -53,32 +53,31 @@ export default function Contacts() {
      <p style={{paddingTop: '20px'}}>
       <ul
        style={{
-        paddingLeft: '70px',
+        paddingLeft: '30px',
         textAlign: 'justify',
         listStyle: 'none',
        }}
       >
-       <Typography style={{fontFamily: 'Roboto', fontSize: '25px'}} component='h4'>
+       <Typography style={{fontFamily: 'Furore', fontSize: '25px'}} component='h4'>
         <b>Контактная информация</b>
        </Typography>
        <br />
-       <Typography style={textStyle} variant='caption' component='p'>
+       <Typography sx={{paddingLeft: '30px'}} style={textStyle} variant='caption' component='p'>
         <p>В случае, если Вы хотите обсудить какие-либо вопросы, свяжитесь с нами:</p>
        </Typography>
-       <Stack direction='row' spacing={3}>
+       <Stack direction='row' spacing={3} sx={{paddingLeft: '30px'}}>
         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
         <Typography style={textStyle} variant='caption' component='p'>
-         по телефону: <strong>+74955404190</strong> , &nbsp;
-         <strong>+7 (495) 540-41-90</strong>
+         по телефону: <strong>+7 (495) 135 82 88</strong>
         </Typography>
        </Stack>
-       <Stack direction='row' spacing={3}>
+       <Stack direction='row' spacing={3} sx={{paddingLeft: '30px'}}>
         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
         <Typography style={textStyle} variant='caption' component='p'>
-         по электронной почте: <strong>info@ers.msk.ru</strong>
+         по электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
         </Typography>
        </Stack>
-       <Stack direction='row' spacing={3}>
+       <Stack direction='row' spacing={3} sx={{paddingLeft: '30px'}}>
         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
         <Typography style={textStyle} variant='caption' component='p'>
          заполнив форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
@@ -96,7 +95,7 @@ export default function Contacts() {
          }}
          validationSchema={Yup.object({
           firstName: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
-          lastName: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
+          tel: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
           email: Yup.string().email('Invalid email addresss`').required('Required'),
           acceptedTerms: Yup.boolean()
            .required('Required')
@@ -113,9 +112,9 @@ export default function Contacts() {
          }}
         >
          <Form>
-          <Stack sx={{paddingLeft: '150px'}} direction='column'>
+          <Stack sx={{paddingLeft: '150px', paddingBottom: '20px'}} direction='column'>
            <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
-           <MyTextInput label='Фамилия' name='lastName' type='text' placeholder='' />
+           <MyTextInput label='Номер' name='tel' type='text' placeholder='' />
            <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
            <button
             style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
