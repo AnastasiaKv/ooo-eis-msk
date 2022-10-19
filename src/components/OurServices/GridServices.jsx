@@ -3,7 +3,7 @@ import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import FirstRow from '../containers/FirstRow';
+import ServiceData from '../containers/ServicesData';
 import SecondRow from '../containers/SecondRow';
 import ThirdRow from '../containers/ThirdRow';
 import FourthRow from '../containers/FourthRow';
@@ -11,7 +11,7 @@ import {Stack} from '@mui/system';
 import ButtonBase from '@mui/material/ButtonBase';
 import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
-
+import Grid from '@material-ui/core/Grid';
 import LinkButton from '../../modules/common/LinkButton';
 import RepairMotorsPage from './pages/1_RepairMotorsPage';
 import GeneratorRepairPage from './pages/2_GeneratorRepairPage';
@@ -26,6 +26,7 @@ import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
 import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
 
 import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
+import ServiceItem from '../../modules/common/ServiceItem';
 
 const useStyles = styled((theme) => ({
  flexGrow: {
@@ -45,43 +46,6 @@ const useStyles = styled((theme) => ({
   },
  },
 }));
-
-function ItemsRow1() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
- const classes = useStyles();
- return (
-  <>
-   <Stack direction='row' spacing={1}>
-    {FirstRow.map((service) => (
-     <LinkButton key={service.id} onClick={handleClick} to={service.path}>
-      <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box
-        sx={{height: '250px', width: '250px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
-      </Paper>
-     </LinkButton>
-    ))}
-   </Stack>
-   <Routes>
-    {isShown && <Route path='services/repair-motors-page' element={<RepairMotorsPage />} />}
-    {isShown && <Route path='services/generator-repair-page' element={<GeneratorRepairPage />} />}
-    {isShown && (
-     <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
-    )}
-   </Routes>
-  </>
- );
-}
 
 function ItemsRow2() {
  const [isShown, setIsShown] = useState(false);
@@ -258,29 +222,49 @@ export default function GridServices() {
      </Typography>
     </p>
     <div style={{paddingLeft: '63px'}}>
-     <p style={{paddingLeft: '27px', paddingTop: '14px', paddingBottom: '4px'}}>
+     <Stack direction='column' sx={{textAlign: 'left'}}>
       <Typography
        variant='h4'
        component='h2'
        sx={{flexGrow: 1}}
-       style={{paddingBottom:'18px',fontFamily: 'Furore', fontSize: '28px',
-    
+       style={{
+        paddingBottom: '18px',
+        fontFamily: 'Furore',
+        fontSize: '28px',
+
         textAlign: 'center',
         color: '#292929',
        }}
       >
        Наши услуги
       </Typography>
-     </p>
-     <Box sx={{flexGrow: 1}}>
-      <Stack direction='column' spacing={0}>
+
+      <Stack direction='row' spacing={1} sx={{display: 'flex'}}>
+       <Grid sx={{width: '98%', mt: 3}} container>
+        <Grid  container spacing={1}>
+         {ServiceData.map((service) => (
+          <ServiceItem key={service.id} onClick={value} to={service.path} src={service.image} />
+         ))}
+        </Grid>
+       </Grid>
+       <Routes>
+        {isShown && <Route path='services/repair-motors-page' element={<RepairMotorsPage />} />}
+        {isShown && (
+         <Route path='services/generator-repair-page' element={<GeneratorRepairPage />} />
+        )}
+        {isShown && (
+         <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
+        )}
+       </Routes>
+      </Stack>
+     </Stack>
+     {/* {SecondRow.map((service) => ())};
+      {ThirdRow.map((service) => ())};
+      {FourthRow.map((service) => ())};
        <ItemsRow1 classes={classes} />
        <ItemsRow2 classes={classes} />
        <ItemsRow3 classes={classes} />
-       <ItemsRow4 classes={classes} />
-      </Stack>
-     </Box>
-
+       <ItemsRow4 classes={classes} /> */}
      <p
       style={{
        textAlign: 'left',
