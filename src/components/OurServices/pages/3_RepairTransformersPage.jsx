@@ -76,7 +76,7 @@ const data = [
 const RepairTransformersPage = () => {
  return (
   <>
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7',marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
       style={{
@@ -101,7 +101,7 @@ const RepairTransformersPage = () => {
        src={image3}
       />
       <h4 style={{paddingTop: '10px'}}>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '25px'}}>
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Цены на перемотку трансформаторов от 9000 руб.
        </Typography>
       </h4>

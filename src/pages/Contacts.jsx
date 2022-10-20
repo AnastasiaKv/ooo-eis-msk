@@ -45,6 +45,7 @@ export default function Contacts() {
     component='form'
     sx={{
      '& .MuiTextField-root': {m: 1, width: '25ch'},
+     paddingBottom: '1em',
     }}
     noValidate
     autoComplete='off'
@@ -84,11 +85,12 @@ export default function Contacts() {
         </Typography>
        </Stack>
        <br />
-       <Stack direction='row' spacing={0}>
+
+       <Stack direction='row' spacing={0} sx={{marginLeft: '6em'}}>
         <Formik
          initialValues={{
           firstName: '',
-          lastName: '',
+          tel: '',
           email: '',
           acceptedTerms: false, // added for our checkbox
           jobType: '', // added for our select
@@ -111,19 +113,21 @@ export default function Contacts() {
           setSubmitting(false);
          }}
         >
-         <Form>
-          <Stack sx={{paddingLeft: '150px', paddingBottom: '20px'}} direction='column'>
-           <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
-           <MyTextInput label='Номер' name='tel' type='text' placeholder='' />
-           <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-           <button
-            style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
-            type='submit'
-           >
-            Принять
-           </button>
-          </Stack>
-         </Form>
+         <Paper elevation={4} sx={{width: '-webkit-fill-available'}}>
+          <Form>
+           <Stack sx={{paddingLeft: '60px', paddingBottom: '20px'}} direction='column'>
+            <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
+            <MyTextInput label='Номер' name='tel' type='text' placeholder='' />
+            <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+            <button
+             style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
+             type='submit'
+            >
+             Принять
+            </button>
+           </Stack>
+          </Form>
+         </Paper>
         </Formik>
        </Stack>
       </ul>

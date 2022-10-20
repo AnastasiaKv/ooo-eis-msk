@@ -103,7 +103,6 @@ export default function Prices() {
       </Typography>
      </p>
     </div>
-    <br />
     <div className='block2' style={{paddingLeft: '2em'}}>
      <h2>
       <Typography
@@ -121,78 +120,80 @@ export default function Prices() {
     </div>
     <br />
     <br />
-    <h2>
+    <br />
+    <Stack sx={{}}>
      <Typography
       variant='h4'
       component='h2'
-      sx={{fontFamily: 'Furore', fontSize: '30px', paddingRight: '343px'}}
+      sx={{paddingRight: '343px', textAlign: 'center', fontFamily: 'Furore', fontSize: '30px'}}
      >
       Прейскурант цен
      </Typography>
-    </h2>
-    <br />
-    <br />
-    <div style={{paddingLeft: '10px', paddingBottom: '20px'}}>
-     <Accordion sx={{borderRadius: 3, width: '36em'}}>
-      <AccordionSummary
-       expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
-       aria-controls='panel1a-content'
-       id='panel1a-header'
-      >
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        Ремонт генераторов
-       </Typography>
-      </AccordionSummary>
-      <AccordionDetails>
-       <GeneratorRepairPage />
-      </AccordionDetails>
-     </Accordion>
+
      <br />
-     <Accordion sx={{width: '36em'}}>
-      <AccordionSummary
-       aria-controls='panel2a-content'
-       id='panel2a-header'
-       expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
-      >
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        Ремонт электродвигателей
-       </Typography>
-      </AccordionSummary>
-      <AccordionDetails>
-       <RepairMotorsPage />
-      </AccordionDetails>
-     </Accordion>
      <br />
-     <Accordion sx={{width: '36em'}}>
-      <AccordionSummary
-       aria-controls='panel2a-content'
-       id='panel2a-header'
-       expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
-      >
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        Ремонт трансформаторов
-       </Typography>
-      </AccordionSummary>
-      <AccordionDetails>
-       <RepairMotorsPage />
-      </AccordionDetails>
-     </Accordion>
-     <br />
-     <Accordion sx={{width: '36em'}}>
-      <AccordionSummary
-       aria-controls='panel2a-content'
-       id='panel2a-header'
-       expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
-      >
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        Перемотка электродвигателей
-       </Typography>
-      </AccordionSummary>
-      <AccordionDetails>
-       <RepairMotorsPage />
-      </AccordionDetails>
-     </Accordion>
-    </div>
+     <div style={{paddingLeft: '10px', paddingBottom: '20px'}}>
+      <Accordion sx={{borderRadius: 3, width: '36em'}}>
+       <AccordionSummary
+        expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+        aria-controls='panel1a-content'
+        id='panel1a-header'
+       >
+        <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         Ремонт генераторов
+        </Typography>
+       </AccordionSummary>
+       <AccordionDetails>
+        <GeneratorRepairPage />
+       </AccordionDetails>
+      </Accordion>
+      <br />
+      <Accordion sx={{width: '36em'}}>
+       <AccordionSummary
+        aria-controls='panel2a-content'
+        id='panel2a-header'
+        expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+       >
+        <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         Ремонт электродвигателей
+        </Typography>
+       </AccordionSummary>
+       <AccordionDetails>
+        <RepairMotorsPage />
+       </AccordionDetails>
+      </Accordion>
+      <br />
+      <Accordion sx={{width: '36em'}}>
+       <AccordionSummary
+        aria-controls='panel2a-content'
+        id='panel2a-header'
+        expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+       >
+        <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         Ремонт трансформаторов
+        </Typography>
+       </AccordionSummary>
+       <AccordionDetails>
+        <RepairMotorsPage />
+       </AccordionDetails>
+      </Accordion>
+      <br />
+      <Accordion sx={{width: '36em'}}>
+       <AccordionSummary
+        aria-controls='panel2a-content'
+        id='panel2a-header'
+        expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+       >
+        <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         Перемотка электродвигателей
+        </Typography>
+       </AccordionSummary>
+       <AccordionDetails>
+        <RepairMotorsPage />
+       </AccordionDetails>
+      </Accordion>
+     </div>
+    </Stack>
    </div>
   </main>
  );

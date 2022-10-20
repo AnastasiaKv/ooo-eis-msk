@@ -1,58 +1,40 @@
-import React, {useMemo} from 'react';
-import MaterialReactTable from 'material-react-table';
+import React from 'react';
+import {makeStyles} from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-export default function SimpleTable({data}) {
- const columns = useMemo(
-  () => [
-   {
-    accessorKey: 'name',
-    header: 'Услуга',
-    muiTableHeadCellProps: {},
-    Cell: ({cell}) => {
-     cell.getValue();
-    },
-   },
-   {
-    accessorFn: (row) => row.price,
-    accessorKey: 'price',
-    header: 'Цена',
-    muiTableHeadCellProps: {},
-    Cell: ({cell}) => {
-     cell.getValue();
-    },
-   },
-  ],
-  []
- );
 
+export default function SimpleTable2({data}) {
  return (
-  <Stack spacing={0} style={{ bgcolor: '#f7f7f7',paddingTop: '1em', paddingLeft: '1em'}}>
-   <Paper elevation={1} sx={{maxWidth: '670px'}}>
-    <MaterialReactTable
-     columns={columns}
-     data={data}
-     enablePinning
-     enableColumnActions={false}
-     enableColumnFilters={false}
-     enablePagination={false}
-     enableSorting={false}
-     enableBottomToolbar={false}
-     enableTopToolbar={false}
-     enableDensityToggle={false}
-     muiTableBodyRowProps={{hover: false}}
-     initialState={{density: 'comfortable'}}
-     muiTableContainerProps={{
-      sx: {
-       bgcolor: '#f7f7f7',
-       textAlign: 'justify',
-       overflowX: 'hidden',
-       maxHeight: '900px',
-       maxWidth: '700px',
-      },
-     }}
-    />
+  <Stack spacing={0} style={{paddingTop: '1em', paddingLeft: '1em'}}>
+   <Paper elevation={8} sx={{maxWidth: '670px'}}>
+    <Table aria-label='simple table' sx={{bgcolor: '#f7f7f7'}}>
+     <TableHead>
+      <TableRow>
+       <TableCell style={{fontSize: '18px'}}>
+        <b>Услуга</b>
+       </TableCell>
+       <TableCell style={{fontSize: '18px'}} align='right'>
+        <b>Цена</b>
+       </TableCell>
+      </TableRow>
+     </TableHead>
+     <TableBody>
+      {data.map((row) => (
+       <TableRow key={row.name}>
+        <TableCell style={{fontSize: '16px'}} component='th' scope='row'>
+         {row.name}
+        </TableCell>
+        <TableCell align='right'>{row.price}</TableCell>
+       </TableRow>
+      ))}
+     </TableBody>
+    </Table>
    </Paper>
   </Stack>
  );

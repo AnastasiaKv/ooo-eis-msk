@@ -32,6 +32,8 @@ import decorTop from '../../assets/img/Decor/decorTop.png';
 import decorBottom from '../../assets/img/Decor/decorBottom.png';
 import '../../assets/css/styles-custom.css';
 
+const data = [FirstRow, SecondRow, ThirdRow, FirstRow];
+
 const useStyles = styled((theme) => ({
  flexGrow: {
   flex: '1',
@@ -72,6 +74,7 @@ function ItemsRow1() {
    <Stack direction='row' spacing={1}>
     {FirstRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
+      {isShown && <DecorTop />}
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
        <Box
         sx={{height: '250px', width: '250px'}}
@@ -80,6 +83,7 @@ function ItemsRow1() {
         src={service.image}
        />
       </Paper>
+      {isShown && <DecorBottom />}
      </LinkButton>
     ))}
    </Stack>
@@ -289,10 +293,9 @@ export default function GridServices() {
 
       <Box sx={{flexGrow: 1}}>
        <Stack direction='column' spacing={0}>
-        <ItemsRow1 classes={classes} />
-        <ItemsRow2 classes={classes} />
-        <ItemsRow3 classes={classes} />
-        <ItemsRow4 classes={classes} />
+        {data.map((service) => (
+         <ServiceItem key={service.id} onClick={value} to={service.path} src={service.image} />
+        ))}
        </Stack>
       </Box>
      </Stack>

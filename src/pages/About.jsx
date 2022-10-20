@@ -80,12 +80,14 @@ export default function About() {
       >
        <b>Наши партнеры:</b>
        <br />
-       <Stack direction='row' spacing={3} sx={{paddingLeft: '4em', paddingTop: '1em'}}>
+       <Stack direction='row' spacing={8} sx={{paddingLeft: '4em', paddingTop: '1em'}}>
         <Paper elevation={0}>
          <Box
           sx={{
+           borderRadius: 30,
+           bgcolor: 'rgb(55, 96, 146)',
            height: '8em',
-           width: '10em',
+           width: '8em',
           }}
           component='img'
           src={trkLogo}
@@ -94,7 +96,7 @@ export default function About() {
         <Paper elevation={0}>
          <Box
           sx={{
-           borderRadius: '4',
+           borderRadius: 10,
            height: '8em',
            width: '17em',
           }}

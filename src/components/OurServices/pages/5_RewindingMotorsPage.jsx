@@ -38,7 +38,7 @@ export default function RewindingMotorsPage() {
        src={image5}
       />
       <h4 style={{paddingTop: '10px'}}>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '25px'}}>
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт и перемотка двигателей
        </Typography>
       </h4>

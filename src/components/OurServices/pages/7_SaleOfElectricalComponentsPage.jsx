@@ -14,7 +14,7 @@ export default function SaleOfElectricalComponentsPage() {
      <Typography
       variant='h4'
       component='h4'
-      sx={{fontFamily: 'Furore', paddingTop: '2em', textAlign: 'center', fontSize: '25px'}}
+      sx={{fontFamily: 'Furore', paddingTop: '2em', textAlign: 'center', fontSize: '28px'}}
      >
       Продажа электрокомпонентов
      </Typography>

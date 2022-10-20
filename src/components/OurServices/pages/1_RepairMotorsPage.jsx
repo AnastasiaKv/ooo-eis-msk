@@ -8,6 +8,7 @@ import image1 from '../../../assets/img/services/Ремонт электродв
 import {width} from '@mui/system';
 
 import Paper from '@mui/material/Paper';
+import {Outlet} from 'react-router-dom';
 
 const data = [
  {
@@ -73,6 +74,7 @@ export default function RepairMotorsPage() {
      >
       <Box
        sx={{
+        color: 'transparent',
         paddingTop: '18px',
         width: '8em',
         height: '7em',
@@ -84,7 +86,7 @@ export default function RepairMotorsPage() {
        src={image1}
       />
       <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '25px'}}>
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт электродвигателя от 500 руб.
        </Typography>
       </h4>

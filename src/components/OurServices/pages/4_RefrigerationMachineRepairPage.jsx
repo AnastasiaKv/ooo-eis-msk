@@ -38,7 +38,7 @@ export default function RefrigerationMachineRepairPage() {
        src={image4}
       />
       <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '24px'}}>
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт холодильных машин и компрессоров от 4000 руб.
        </Typography>
       </h4>

@@ -18,7 +18,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
      <Typography
       variant='h4'
       component='h4'
-      style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '28px'}}
+      style={{ textAlign: 'left',fontFamily: 'Furore', fontSize: '28px'}}
      >
       Наплавка валов и щитов от 4000 руб.
      </Typography>

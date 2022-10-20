@@ -80,7 +80,7 @@ const GeneratorRepairPage = () => {
        src={image2}
       />
       <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '25px'}}>
+       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт генератора от 500 руб.
        </Typography>
       </h4>

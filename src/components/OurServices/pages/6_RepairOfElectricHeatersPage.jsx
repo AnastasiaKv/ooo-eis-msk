@@ -9,23 +9,22 @@ import Paper from '@mui/material/Paper';
 export default function RepairOfElectricHeatersPage() {
  return (
   <>
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7',marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '2em', paddingTop: '1em'}}>
      <Stack direction='row' spacing={10}>
       <Stack direction='column' sx={{paddingLeft: '2em', textAlign: 'left'}}>
        <h4 style={{paddingTop: '20px'}}>
-        <Typography variant='h4' component='h4' style={{fontFamily: 'Furore',fontSize: '25px'}}>
+        <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
          Ремонт электронагревателей от 500 руб.
         </Typography>
        </h4>
-
-       <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
-        
-       </Typography>
-      </Stack>
-      <Stack direction='row'>
        <Box
-        sx={{paddingTop: '30px', width: '10em', height: '7em'}}
+        sx={{
+         marginLeft: '18em',
+
+         width: '10em',
+         height: '6em',
+        }}
         component='img'
         alt='Изображение неведомой детали'
         src={image6}
@@ -34,7 +33,11 @@ export default function RepairOfElectricHeatersPage() {
      </Stack>
      <Stack sx={{paddingLeft: '2em', marginRight: '2em'}}>
       <h2>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore',textAlign: 'left', fontSize: '20px'}}>
+       <Typography
+        variant='h4'
+        component='h4'
+        style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '20px'}}
+       >
         Виды поломок
        </Typography>
       </h2>

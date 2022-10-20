@@ -32,7 +32,6 @@ function App() {
        <div className='ees-main'>
         <div className='ees-main-row'>
          <TopMediaBlock />
-         <main className='ees-content'></main>
         </div>
        </div>
        <footer className='ees-footer'>

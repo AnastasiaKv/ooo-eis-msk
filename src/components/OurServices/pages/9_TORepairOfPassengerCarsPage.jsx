@@ -18,8 +18,7 @@ export default function TORepairOfPassengerCarsPage() {
      <Typography
       variant='h4'
       component='h4'
-      style={{fontSize: '20px'}}
-      sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '28px'}}
+      sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '20px'}}
      >
       ТО и ремонт электрооборудования пассажирских вагонов
      </Typography>
