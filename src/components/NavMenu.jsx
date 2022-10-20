@@ -79,7 +79,6 @@ export default function NavTabs() {
    <Tabs
     onChange={handleChange}
     sx={{
-   
      '.MuiTabs-indicator': {
       left: '0px',
       width: 'auto',

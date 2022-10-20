@@ -46,7 +46,8 @@ function Contact(props) {
    </div>
    <Button
     onClick={handleClickOpen}
-    style={{borderRadius: 3,
+    style={{
+     borderRadius: 3,
      textTransform: 'inherit',
      color: '#ffffff',
      backgroundColor: '#F12B29',

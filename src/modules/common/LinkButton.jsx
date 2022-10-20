@@ -17,7 +17,6 @@ export default function LinkButton(props) {
  console.log('ClickClick: ', this);
  return (
   <>
-
    <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
     <ButtonBase
      sx={{minWidth: '100px', minHeight: '25px'}}
@@ -28,7 +27,6 @@ export default function LinkButton(props) {
      {...props}
     />
    </Paper>
- 
   </>
  );
 }
