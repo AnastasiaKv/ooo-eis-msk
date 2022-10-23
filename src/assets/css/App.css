@@ -13,6 +13,14 @@ body,
  height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family: Furore;
+}
 /* COLORS and FONTS */
 body {
  text-align: center;
@@ -141,16 +149,9 @@ body {
 }
 
 @font-face {
- font-family: 'NeoSansPro';
- src: local('NeoSansPro'), local('../fonts/Furore.otf') format('otf'),
-  local('../fonts/NeoSansPro-Bold.otf') format('otf'),
-  local('../fonts/NeoSansPro-BoldItalic.otf') format('otf'),
-  local('../fonts/NeoSansPro-Italic.ttf') format('truetype'),
-  local('../fonts/NeoSansPro-Light.otf') format('otf'),
-  local('../fonts/NeoSansPro-LightItalic.ttf') format('truetype'),
-  local('../fonts/NeoSansPro-Medium.otf') format('otf'),
-  local('../fonts/NeoSansPro-Regular.otf') format('otf'),
-  local('../fonts/NeoSansPro-Ultra.otf') format('otf');
+ font-family: 'Furore';
+ src: local('Furore'),
+  url('../fonts/Furore.otf') format('opentype');
  font-weight: 400;
  font-style: normal;
  font-display: swap;

@@ -27,6 +27,6 @@
    "@images/*": ["src/assets/*"]
   }
  },
- "include": ["src"],
+ "include": ["src", "config-overrides.js"],
  "exclude": ["node_modules", "build"] //  *** Файлы, которые не нужно вводить, проверять ***
 }

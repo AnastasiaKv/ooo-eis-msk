@@ -10,8 +10,8 @@
 
 html {
  font-size: 16px;
- font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica,
-  ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+ font-family: -apple-system, BlinkMacSystemFont, 'Furore', 'avenir next', avenir, 'helvetica neue',
+  helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
  margin: 0;
  padding: 0;
  text-decoration-skip-ink: 'auto';
@@ -82,6 +82,7 @@ h6 {
  margin-bottom: 1rem;
  margin-top: 1em;
  font-weight: bold;
+ font-family: Furore;
 }
 
 h1 {
@@ -524,7 +525,7 @@ li {
 kbd {
  display: inline-block;
  padding: 0 0.328rem;
- font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Furore';
  font-size: 0.64rem;
  color: var(--gray-700);
  vertical-align: middle;
@@ -578,4 +579,11 @@ button[type='reset'] {
 button.secondary:hover,
 button[type='reset']:hover {
  background-color: var(--gray-400);
+}
+@font-face {
+ font-family: 'Furore';
+ src: local('Furore'), url('../fonts/Furore.otf') format('opentype');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
 }
