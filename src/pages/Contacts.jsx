@@ -85,7 +85,7 @@ export default function Contacts() {
         </Typography>
        </Stack>
        <br />
-
+       <Box sx={{height: '3em'}}></Box>
        <Stack direction='row' spacing={0} sx={{marginLeft: '6em'}}>
         <Formik
          initialValues={{
@@ -133,6 +133,8 @@ export default function Contacts() {
       </ul>
      </p>
     </div>
+
+    <Box sx={{height: '8em'}}></Box>
    </Box>
   </main>
  );

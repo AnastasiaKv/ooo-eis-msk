@@ -17,7 +17,7 @@ export default function About() {
       <Typography
        variant='body2'
        component='span'
-       sx={{textAlign: 'justify', flexGrow: 1, lineHeight: '1.80'}}
+       sx={{textAlign: 'justify', flexGrow: 1, lineHeight: '1.80',paddingBottom:'7em'}}
        style={{
         fontFamily: 'Roboto',
         fontSize: '15px',
@@ -34,7 +34,7 @@ export default function About() {
        <br /> и решили выйти на рынок железнодорожного бизнеса
       </Typography>
      </Stack>
-     <Stack direction='row' spacing={3} sx={{paddingLeft: '4em', paddingTop: '1em'}}>
+     <Stack direction='row' spacing={3} sx={{paddingLeft: '4em', paddingTop: '1em', }}>
       <Paper elevation={0}>
        <Box
         sx={{
@@ -63,6 +63,7 @@ export default function About() {
        />
       </Paper>
      </Stack>
+     <Box sx={{height:'10em'}}></Box>
 
      <Stack sx={{paddingTop: '3em'}}>
       <Typography
@@ -73,12 +74,13 @@ export default function About() {
         fontFamily: 'Furore',
         fontSize: '25px',
         color: '#292929',
+        paddingBottom:'2em'
        }}
       >
        <b>Наши партнеры:</b>
       </Typography>
       <br />
-      <Stack direction='row' spacing={12} sx={{paddingLeft: '3em'}}>
+      <Stack direction='row' spacing={12} sx={{paddingLeft: '4em'}}>
        <Paper elevation={0}>
         <Box
          sx={{

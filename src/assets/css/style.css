@@ -580,6 +580,7 @@ button.secondary:hover,
 button[type='reset']:hover {
  background-color: var(--gray-400);
 }
+
 @font-face {
  font-family: 'Furore';
  src: local('Furore'), url('../fonts/Furore.otf') format('opentype');

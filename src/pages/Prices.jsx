@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import {Stack} from '@mui/system';
 import SimpleTable from '../modules/common/SimpleTable';
 import JobsType from '../modules/pages/prices/JobsType';
-import JobsStepper from '../modules/pages/prices/JobsStepper';
+import JobsStepper from '../modules/pages/prices/stepper/JobsStepper';
 import TrustedBox from '../modules/pages/prices/TrustedBox';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
