@@ -33,7 +33,7 @@ export default function TrustedBox() {
       'linear-gradient(to left top, #F12B29 0%/*bottom-right color*/,rgba(207, 97, 97, 1) 50% /*middle color*/, #f12b29 100% /*top-left color*/)',
     }}
    >
-    <p style={{paddingTop: '33px'}}>
+    <p style={{paddingTop: '20px'}}>
      <ul
       style={{
        paddingLeft: '70px',
@@ -59,10 +59,15 @@ export default function TrustedBox() {
       <Stack direction='row' spacing={3}>
        <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7, color: '#FFFFFF'}} />
        <Typography style={textStyle} variant='caption' component='p'>
-        Поддержка и скидки
+        Бытовая техника
        </Typography>
       </Stack>
-
+      <Stack direction='row' spacing={3}>
+       <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7, color: '#FFFFFF'}} />
+       <Typography style={textStyle} variant='caption' component='p'>
+        Промышленное оборудование
+       </Typography>
+      </Stack>
       <Stack direction='row' spacing={3}>
        <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7, color: '#FFFFFF'}} />
        <Typography style={textStyle} variant='caption' component='p'>

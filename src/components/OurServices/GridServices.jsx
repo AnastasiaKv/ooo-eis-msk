@@ -244,9 +244,23 @@ export default function GridServices() {
       paddingTop: '20px',
       margin: '5px 0',
       width: '23cm',
+      paddingBottom: '2em',
      }}
      className='blocktext'
     >
+     <Typography
+      sx={{
+       paddingLeft: '4em',
+       textAlign: 'center',
+       flexGrow: 1,
+       paddingBottom: '18px',
+       fontFamily: 'Furore',
+       fontSize: '28px',
+       color: '#292929',
+      }}
+     >
+      Ваше электрооборудование перестало работать? Мы готовы вам помочь!
+     </Typography>
      <Typography
       variant='body2'
       component='span'
@@ -260,14 +274,13 @@ export default function GridServices() {
        color: '#292929',
       }}
      >
-      Также как перспективное планирование предоставляет широкие возможности для системы массового
-      участия. Следует отметить, что сложившаяся структура организации позволяет оценить значение
-      поставленных обществом задач. Каждый из нас понимает очевидную вещь: консультация с широким
-      активом позволяет выполнить важные задания по разработке распределения внутренних резервов и
-      ресурсов.
+      Наша компания занимается ремонтом электрооборудования всех типов, представленных в каталоге
+      ниже. Более десяти лет мы ремонтировали оборудование для пассажирских поездов и теперь готовы
+      помочь вам с ремонтом любой электронной техники! Не спешите приобретать новые устройства, ведь
+      ремонт старых обойдётся гораздо дешевле.
      </Typography>
     </p>
-    <div style={{paddingLeft: '63px'}}>
+    <div style={{paddingLeft: '63px', paddingBottom: '3em'}}>
      <Stack direction='column' sx={{textAlign: 'left'}}>
       <Typography
        variant='h4'
@@ -303,35 +316,47 @@ export default function GridServices() {
        <ItemsRow2 classes={classes} />
        <ItemsRow3 classes={classes} />
        <ItemsRow4 classes={classes} /> */}
-     <p
-      style={{
-       textAlign: 'left',
-       paddingLeft: '0px',
-       paddingTop: '20px',
-       margin: '0px 0',
-       width: '21cm',
-      }}
-      className='blocktext'
-     >
-      <Typography
-       variant='body2'
-       component='span'
-       sx={{flexGrow: 1}}
-       style={{
-        position: 'relative',
-        justifyContent: 'space-around',
-        fontSize: 12,
-        color: '#292929',
-       }}
-      >
-       Также как перспективное планирование предоставляет широкие возможности для системы массового
-       участия. Следует отметить, что сложившаяся структура организации позволяет оценить значение
-       поставленных обществом задач. Каждый из нас понимает очевидную вещь: консультация с широким
-       активом позволяет выполнить важные задания по разработке распределения внутренних резервов и
-       ресурсов.
-      </Typography>
-     </p>
     </div>
+    <p
+     style={{
+      textAlign: 'left',
+      paddingLeft: '0px',
+      paddingTop: '20px',
+      margin: '0px 0',
+      width: '23cm',
+      paddingBottom: '1em',
+     }}
+     className='blocktext'
+    >
+     <Typography
+      sx={{
+       paddingLeft: '4em',
+       textAlign: 'center',
+       flexGrow: 1,
+       paddingBottom: '18px',
+       fontFamily: 'Furore',
+       fontSize: '28px',
+       color: '#292929',
+      }}
+     >
+      РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ
+     </Typography>
+     <Typography
+      variant='body2'
+      component='span'
+      sx={{flexGrow: 1}}
+      style={{
+       position: 'relative',
+       justifyContent: 'space-around',
+       fontSize: 14,
+       color: '#292929',
+      }}
+     >
+      Качество нашего ремонта проверено годами непрерывной работы и вы получите гарантию на любое
+      устройство! Мы готовы работать как с единичными бытовыми устройствами физических лиц, так и с
+      промышленными объёмами юридических лиц!
+     </Typography>
+    </p>
    </div>
   </main>
  );
