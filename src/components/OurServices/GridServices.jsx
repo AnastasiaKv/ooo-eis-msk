@@ -198,7 +198,7 @@ function ItemsRow4() {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={1}>
+   <Stack direction='row' spacing={1} justifyContent='center'>
     {FourthRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -241,7 +241,7 @@ export default function GridServices() {
      style={{
       textAlign: 'left',
       paddingLeft: '0px',
-      paddingTop: '20px',
+      paddingTop: '2em',
       margin: '5px 0',
       width: '23cm',
       paddingBottom: '2em',
@@ -249,6 +249,7 @@ export default function GridServices() {
      className='blocktext'
     >
      <Typography
+      variant='h4'
       sx={{
        paddingLeft: '4em',
        textAlign: 'center',
@@ -259,15 +260,15 @@ export default function GridServices() {
        color: '#292929',
       }}
      >
-      Ваше электрооборудование перестало работать? Мы готовы вам помочь!
+      Ремонт электрооборудования
      </Typography>
      <Typography
-      variant='body2'
-      component='span'
-      sx={{flexGrow: 1}}
-      style={{
+      component='p'
+      sx={{
+       textIndent: '2ch',
+       lineHeight: '2.3em',
+       flexGrow: 1,
        fontFamily: 'Roboto',
-       fontSize: '14px',
        position: 'relative',
        justifyContent: 'space-around',
        textAlign: 'justify',
@@ -280,13 +281,12 @@ export default function GridServices() {
       ремонт старых обойдётся гораздо дешевле.
      </Typography>
     </p>
-    <div style={{paddingLeft: '63px', paddingBottom: '3em'}}>
+    <div style={{paddingLeft: '63px', paddingBottom: '5em'}}>
      <Stack direction='column' sx={{textAlign: 'left'}}>
       <Typography
        variant='h4'
-       component='h2'
-       sx={{flexGrow: 1}}
-       style={{
+       sx={{
+        flexGrow: 1,
         paddingLeft: '1.2em',
         paddingTop: '20px',
         paddingBottom: '18px',
@@ -299,7 +299,6 @@ export default function GridServices() {
       >
        Наши услуги
       </Typography>
-
       <Box sx={{flexGrow: 1}}>
        <Stack direction='column' spacing={0}>
         <ItemsRow1 classes={classes} />
@@ -322,13 +321,14 @@ export default function GridServices() {
       textAlign: 'left',
       paddingLeft: '0px',
       paddingTop: '20px',
-      margin: '0px 0',
+      margin: '5px 0',
       width: '23cm',
-      paddingBottom: '1em',
+      paddingBottom: '2em',
      }}
      className='blocktext'
     >
      <Typography
+      variant='h4'
       sx={{
        paddingLeft: '4em',
        textAlign: 'center',
@@ -342,13 +342,15 @@ export default function GridServices() {
       РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ
      </Typography>
      <Typography
-      variant='body2'
-      component='span'
-      sx={{flexGrow: 1}}
-      style={{
+      component='p'
+      sx={{
+       textIndent: '2ch',
+       lineHeight: '2.3em',
+       flexGrow: 1,
+       fontFamily: 'Roboto',
        position: 'relative',
        justifyContent: 'space-around',
-       fontSize: 14,
+       textAlign: 'justify',
        color: '#292929',
       }}
      >

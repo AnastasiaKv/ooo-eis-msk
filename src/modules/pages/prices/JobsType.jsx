@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Box from '@mui/material/Box';
+import {makeStyles} from '@material-ui/styles';
+import ButtonBase from '@mui/material/ButtonBase';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 const divStyle = {
@@ -21,104 +23,57 @@ const paperStyle = {
  height: '12rem',
  borderRadius: '2px',
 };
+
+const steps = [
+ {
+  id: 1,
+  name: 'Предварительная диагностика',
+ },
+ {
+  id: 2,
+  name: 'Разборка',
+ },
+ {
+  id: 3,
+  name: 'Заключительная дефектация',
+ },
+ {
+  id: 4,
+  name: 'Замена обмотки и пропитка',
+ },
+ {
+  id: 5,
+  name: 'Ремонт и сборка',
+ },
+ {
+  id: 6,
+  name: 'Испытательные мероприятия',
+ },
+];
 export default function JobsType() {
  return (
-  <div style={divStyle}>
-   <Stack style={stackStyle} direction={'row'} spacing={0}>
-    <Paper style={paperStyle} elevation={3}>
-     <p>
-      <h6>
-       <Typography variant='h6' component='h6'>
-        <strong>Диагностика</strong>
-       </Typography>
-      </h6>
-      <br />
-      <span>
-       <Typography variant='caption' component='span' style={{fontSize: '13px', lineHeight: 1}}>
-        Наш ремонт
-        <br />
-        прозрачен. После
-        <br />
-        получения двигателя
-        <br />
-        доводим его..
-       </Typography>
-      </span>
-     </p>
-    </Paper>
-    <Paper style={paperStyle} elevation={3}>
-     <p>
-      <h6>
-       <Typography variant='h6' component='h6' style={{fontSize: '18px'}}>
-        <strong>Демонтаж начинки двигателя</strong>
-       </Typography>
-      </h6>
-      <br />
-      <span>
-       <Typography variant='caption' component='span' style={{fontSize: '13px', lineHeight: 1}}>
-        Проводим демонтаж <br />с помошью..
-       </Typography>
-      </span>
-     </p>
-    </Paper>
-    <Paper style={paperStyle} elevation={3}>
-     <p>
-      <h6>
-       <Typography variant='h6' component='h6' style={{fontSize: '18px'}}>
-        <b>
-         Замена обмотки <br />и пропитка
-        </b>
-       </Typography>
-      </h6>
-      <br />
-      <span>
-       <Typography variant='caption' component='span' style={{fontSize: '13px', lineHeight: 1}}>
-        Производим <br />
-        намотку провода в..
-       </Typography>
-      </span>
-     </p>
-    </Paper>
-    <Paper style={paperStyle} elevation={3}>
-     <p>
-      <h6>
-       <Typography variant='h6' component='h6' style={{fontSize: '18px'}}>
-        <strong>Испытания</strong>
-       </Typography>
-      </h6>
-      <br />
-      <span>
-       <Typography variant='caption' component='span' style={{fontSize: '13px', lineHeight: 1}}>
-        Для удаления влаги из <br />
-        изоляции обмоток
-        <br /> и повышения <br />
-        сопротивления до...
-       </Typography>
-      </span>
-     </p>
-    </Paper>
-    <Paper style={paperStyle} elevation={3}>
-     <p>
-      <h6>
-       <Typography variant='h6' component='h6' style={{fontSize: '18px'}}>
-        <strong>
-         Выдача
-         <br /> двигателя
-        </strong>
-       </Typography>
-      </h6>
-      <br />
-      <span>
-       <Typography variant='caption' component='span' style={{fontSize: '13px', lineHeight: 1}}>
-        Вы получаете его
-        <br /> после проведения
-        <br /> нами <br />
-        испытаний на...
-       </Typography>
-      </span>
-     </p>
-    </Paper>
-   </Stack>
-  </div>
+  <Stack direction='row' spacing={14}>
+   {steps.map((i) => (
+    <>
+     <Paper
+      sx={{
+       width: '2.4em',
+       height: '2.4em',
+       textAlign: 'center',
+       borderRadius: 10,
+       bgcolor: '#e53e3e',
+       boxShadow: 'none',
+      }}
+     >
+      <Typography variant='h5' sx={{color: 'white', paddingTop: '0.6em', paddingBottom: '1em'}}>
+       <b>{i.id}</b>
+      </Typography>
+      <Typography sx={{paddingTop: '0.5em', fontSize: '16px', margin: '0 0 0 -10px'}}>
+       <i>{i.name}</i>
+      </Typography>
+     </Paper>
+    </>
+   ))}
+  </Stack>
  );
 }

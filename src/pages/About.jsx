@@ -12,15 +12,15 @@ export default function About() {
  return (
   <>
    <main className='ees-content'>
-    <Paper elevation={0} sx={{marginBottom: 5}}>
-     <Stack>
+    <Paper elevation={0} sx={{paddingTop: '4.5em', marginBottom: 5}}>
+     <Stack sx={{width: '37em'}}>
       <Typography
-       variant='body2'
-       component='span'
-       sx={{textAlign: 'justify', flexGrow: 1, lineHeight: '1.80',paddingBottom:'7em'}}
-       style={{
+       component='p'
+       sx={{
+        textIndent: '2ch',
+        lineHeight: '2.3em',
+        flexGrow: 1,
         fontFamily: 'Roboto',
-        fontSize: '15px',
         position: 'relative',
         justifyContent: 'space-around',
         textAlign: 'justify',
@@ -28,13 +28,11 @@ export default function About() {
        }}
       >
        Мы являемся компанией, производящей ремонт, подвагонного оборудования для нужд ООО "РЖД" и
-       ООО "ФПК" с 2007 года.
-       <br />В 2022 году мы освоили большую часть направлений, ремонта любых электрических и
-       механических устройств,
-       <br /> и решили выйти на рынок железнодорожного бизнеса
+       ООО "ФПК" с 2007 года. В 2022 году мы освоили большую часть направлений, ремонта любых
+       электрических и механических устройств, и решили выйти на рынок железнодорожного бизнеса
       </Typography>
      </Stack>
-     <Stack direction='row' spacing={3} sx={{paddingLeft: '4em', paddingTop: '1em', }}>
+     <Stack direction='row' spacing={3} sx={{paddingLeft: '4em', paddingTop: '1em'}}>
       <Paper elevation={0}>
        <Box
         sx={{
@@ -63,21 +61,21 @@ export default function About() {
        />
       </Paper>
      </Stack>
-     <Box sx={{height:'10em'}}></Box>
+     <Box sx={{height: '10em'}}></Box>
 
      <Stack sx={{paddingTop: '3em'}}>
       <Typography
        variant='h4'
-       component='h4'
+       component='h2'
        sx={{textAlign: 'center', flexGrow: 1}}
        style={{
         fontFamily: 'Furore',
-        fontSize: '25px',
+        fontSize: '28px',
         color: '#292929',
-        paddingBottom:'2em'
+        paddingBottom: '2em',
        }}
       >
-       <b>Наши партнеры:</b>
+       Наши партнеры:
       </Typography>
       <br />
       <Stack direction='row' spacing={12} sx={{paddingLeft: '4em'}}>

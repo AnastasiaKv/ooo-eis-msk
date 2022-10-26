@@ -16,13 +16,12 @@ export default function CustomizedTables() {
    <Stack>
     <Typography
      variant='h4'
-     component='h4'
      style={{
       marginRight: '1em',
       paddingRight: '6em',
       paddingBottom: '1em',
       fontFamily: 'Furore',
-      fontSize: '25px',
+      fontSize: '28px',
      }}
     >
      Перемотка электродвигателей цены

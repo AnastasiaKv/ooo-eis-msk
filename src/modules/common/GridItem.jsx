@@ -10,24 +10,35 @@ export default function GridItem({image}) {
  return (
   <Grid item>
    <ButtonBase>
-    <Paper sx={{width: 225}}>
+    <Paper elevation={10} sx={{height: '38.6em', width: '56em'}}>
      <Box
       sx={{
        marginRight: 0,
-       height: '140px',
+       height: '32em',
        paddingTop: '23px',
-       width: '225px',
+       width: '56em',
       }}
       component='img'
       alt='Company logo.'
       src={image}
      />
 
-     <Box sx={{p: 1}}>
-      <Typography variant='subtitle1'>
-       <b>Пример названия</b>
+     <Box sx={{p: '1.7px'}}>
+      <Typography variant='h6' sx={{fontFamily: 'Furore', paddingTop: '1em'}}>
+       Пример названия
       </Typography>
-      <Typography variant='caption' style={{lineHeight: 1}}>
+      <Typography
+       variant='subtitle1'
+       component='p'
+       sx={{
+        paddingLeft: '1em',
+        paddingRight: '1em',
+        fontFamily: 'Roboto',
+        textAlign: 'justify',
+        color: '#292929',
+        lineHeight: '1.4em',
+       }}
+      >
        Пример первого абзаца статьи для визуализации визуализации объёма и демонстрации. Пример
        абзаца.
       </Typography>

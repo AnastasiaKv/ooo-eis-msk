@@ -66,7 +66,7 @@ const data = [
 
 const componentStyle = {
  color: '#3c3c3c',
- paddingTop: '15px',
+ paddingTop: '1.4em',
  paddingRight: '18em',
  paddingLeft: '0px',
  paddingBottom: '2em',
@@ -89,13 +89,18 @@ export default function Prices() {
      <TrustedBox />
      <p>
       <Typography
-       variant='body2'
        component='p'
-       style={{fontSize: '15px', paddingLeft: '40px', textAlign: 'justify'}}
        sx={{
-lineHeight:'2.3em',
-       }
-       }
+          textIndent: '2ch',
+          lineHeight: '2.6em',
+          flexGrow: 1,
+          fontFamily: 'Roboto',
+          position: 'relative',
+          justifyContent: 'space-around',
+          textAlign: 'justify',
+          paddingLeft: '0px', 
+          color: '#292929',
+       }}
       >
        В таблицах с ценами представлены минимальные стоимости заказов по каждой позиции. При этом,
        окончательная стоимость будет сформирована после первичной дефектации. У нас действует гибкая
@@ -107,17 +112,16 @@ lineHeight:'2.3em',
     <div className='block2' style={{paddingLeft: '1em'}}>
      <h2>
       <Typography
-       variant='h4'
-       component='h2'
-       style={{fontFamily: 'Furore', fontSize: '30px', paddingRight: '376px'}}
+          variant='h4'
+          component='h2'
+       sx={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '376px'}}
       >
        Этапы работ
       </Typography>
      </h2>
      <br />
-     <br />
      <div style={{paddingLeft: '0em', paddingRight: '4em'}}>
-      <JobsStepper />
+      <JobsType />
      </div>
     </div>
     <br /> <br /> <br />
@@ -127,7 +131,7 @@ lineHeight:'2.3em',
       <Typography
        variant='h4'
        component='h2'
-       sx={{paddingRight: '343px', textAlign: 'center', fontFamily: 'Furore', fontSize: '30px'}}
+       sx={{paddingRight: '343px', textAlign: 'center', fontFamily: 'Furore', fontSize: '28px'}}
       >
        Прейскурант цен
       </Typography>
@@ -139,7 +143,7 @@ lineHeight:'2.3em',
          aria-controls='panel1a-content'
          id='panel1a-header'
         >
-         <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         <Typography variant='h4' component='h2' style={{fontSize: '28px'}}>
           Ремонт генераторов
          </Typography>
         </AccordionSummary>
@@ -154,7 +158,7 @@ lineHeight:'2.3em',
          id='panel2a-header'
          expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
         >
-         <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         <Typography variant='h4' component='h2' style={{fontSize: '28px'}}>
           Ремонт электродвигателей
          </Typography>
         </AccordionSummary>
@@ -169,7 +173,7 @@ lineHeight:'2.3em',
          id='panel2a-header'
          expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
         >
-         <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         <Typography variant='h4' component='h2' style={{fontSize: '28px'}}>
           Ремонт трансформаторов
          </Typography>
         </AccordionSummary>
@@ -184,7 +188,7 @@ lineHeight:'2.3em',
          id='panel2a-header'
          expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
         >
-         <Typography variant='h4' component='h4' style={{fontSize: '28px'}}>
+         <Typography variant='h4' component='h2' style={{fontSize: '28px'}}>
           Перемотка электродвигателей
          </Typography>
         </AccordionSummary>

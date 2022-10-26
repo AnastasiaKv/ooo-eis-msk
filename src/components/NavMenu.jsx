@@ -11,6 +11,7 @@ import About from '../pages/About';
 import Contacts from '../pages/Contacts';
 import Prices from '../pages/Prices';
 import News from '../pages/News';
+import Gallery from '../pages/Gallery';
 import Main from '../pages/Main';
 
 import Page1 from './OurServices/pages/1_RepairMotorsPage';
@@ -110,8 +111,8 @@ export default function NavTabs() {
      />
      <LinkTab
       onClick={value}
-      label='Статьи'
-      to='news'
+      label='Галерея'
+      to='gallery'
       className={classes.button}
       style={buttonStyle}
      />
@@ -142,7 +143,7 @@ export default function NavTabs() {
     </Route>
     <Route path='/about' element={<About />} />
     <Route path='/prices' element={<Prices />} />
-    <Route path='/news' element={<News />} />
+    <Route path='/gallery' element={<Gallery />} />
     <Route path='/contacts' element={<Contacts />} />
     <Route path='*' element={<Error404 />} />
    </Routes>

@@ -19,9 +19,8 @@ import InputLabel from '@mui/material/InputLabel';
 import TextField from '@mui/material/TextField';
 const textStyle = {
  fontFamily: 'Roboto',
- display: 'block',
+
  textAlign: 'justify',
- fontSize: '14px',
  lineHeight: '1.7',
  marginLeft: 0,
 };
@@ -44,6 +43,7 @@ export default function Contacts() {
    <Box
     component='form'
     sx={{
+      paddingTop: '2em',
      '& .MuiTextField-root': {m: 1, width: '25ch'},
      paddingBottom: '1em',
     }}
@@ -59,34 +59,41 @@ export default function Contacts() {
         listStyle: 'none',
        }}
       >
-       <Typography style={{fontFamily: 'Furore', fontSize: '25px'}} component='h4'>
-        <b>Контактная информация</b>
+       <Typography style={{fontFamily: 'Furore', fontSize: '28px'}} variant='h4'>
+        Контактная информация
        </Typography>
        <br />
-       <Typography sx={{paddingLeft: '30px'}} style={textStyle} variant='caption' component='p'>
+       <Typography 
+       sx={{  
+        fontFamily: 'Roboto',
+          color: '#292929',paddingLeft: '30px'}} style={textStyle} component='p'>
         <p>В случае, если Вы хотите обсудить какие-либо вопросы, свяжитесь с нами:</p>
        </Typography>
-       <Stack direction='row' spacing={3} sx={{paddingLeft: '30px'}}>
+       <Stack direction='row' spacing={3} sx={{ fontFamily: 'Roboto',
+          color: '#292929',paddingLeft: '30px'}}>
         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
-        <Typography style={textStyle} variant='caption' component='p'>
+        <Typography style={textStyle}  component='p'>
          по телефону: <strong>+7 (495) 135 82 88</strong>
         </Typography>
        </Stack>
-       <Stack direction='row' spacing={3} sx={{paddingLeft: '30px'}}>
+       <Stack direction='row' spacing={3} sx={{fontFamily: 'Roboto',
+          color: '#292929',paddingLeft: '30px'}}>
         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
-        <Typography style={textStyle} variant='caption' component='p'>
+        <Typography style={textStyle}  component='p'>
          по электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
         </Typography>
        </Stack>
-       <Stack direction='row' spacing={3} sx={{paddingLeft: '30px'}}>
+       <Stack direction='row' spacing={3} sx={{fontFamily: 'Roboto',
+          color: '#292929',paddingLeft: '30px'}}>
         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
-        <Typography style={textStyle} variant='caption' component='p'>
+        <Typography style={textStyle}  component='p'>
          заполнив форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
         </Typography>
        </Stack>
        <br />
        <Box sx={{height: '3em'}}></Box>
-       <Stack direction='row' spacing={0} sx={{marginLeft: '6em'}}>
+       <Stack direction='row' spacing={0} sx={{ fontFamily: 'Roboto',
+          color: '#292929',marginLeft: '6em'}}>
         <Formik
          initialValues={{
           firstName: '',

@@ -38,14 +38,14 @@ export default function RewindingMotorsPage() {
        src={image5}
       />
       <h4 style={{paddingTop: '10px'}}>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+       <Typography variant='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт и перемотка двигателей
        </Typography>
       </h4>
      </p>
      <br />
      <ul style={{color: '#1a202c', paddingLeft: '25px', textAlign: 'left', listStyle: 'none'}}>
-      <Typography variant='h6' component='h6' sx={{paddingRight: '20px'}}>
+      <Typography variant='h6' sx={{paddingRight: '20px'}}>
        При выходе из строя электрообмоток производятся
        <br /> следующие работы:
       </Typography>
