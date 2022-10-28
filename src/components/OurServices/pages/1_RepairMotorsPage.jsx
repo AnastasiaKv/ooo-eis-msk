@@ -9,6 +9,7 @@ import {width} from '@mui/system';
 
 import Paper from '@mui/material/Paper';
 import {Outlet} from 'react-router-dom';
+import SEO from '../../SEO';
 
 const data = [
  {
@@ -60,6 +61,11 @@ const data = [
 export default function RepairMotorsPage() {
  return (
   <>
+   <SEO
+    title='Ремонт электродвигателя'
+    description='Ремонт электродвигателя от 500 руб.'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p

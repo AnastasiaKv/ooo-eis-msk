@@ -41,6 +41,8 @@ export default function Footer() {
    {/* <RedLine /> */}
    {/* Витя, AppBar генерит тег <header>, а тебе нужен тут просто <div> */}
    <BottomNavigation
+    elev
+    disableFocusRipple={true}
     style={{paddingRight: '250px', height: '90px'}}
     sx={{bgcolor: 'transparent'}}
     showLabels
@@ -49,7 +51,7 @@ export default function Footer() {
      setValue(newValue);
     }}
    >
-    <BottomNavigationAction style={color} label='©Copyright' />
+    <BottomNavigationAction disableRipple style={color} label='©Copyright' />
     <BottomNavigationAction style={spacing_10cm} label='Карта сайта' />
     <BottomNavigationAction style={spacing_40px} label='Политика' />
     <BottomNavigationAction style={spacing_40px} label='Конфеденциальность' />

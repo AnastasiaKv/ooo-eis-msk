@@ -9,10 +9,16 @@ import Paper from '@mui/material/Paper';
 import BoltIcon from '@mui/icons-material/Bolt';
 import Bolt from '@mui/icons-material/Bolt';
 import {lineHeight} from '@mui/system';
+import SEO from '../../SEO';
 
 export default function RewindingMotorsPage() {
  return (
   <>
+   <SEO
+    title='Ремонт и перемотка двигателей'
+    description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p

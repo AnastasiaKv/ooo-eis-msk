@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
 import Paper from '@mui/material/Paper';
 import image3 from '../../../assets/img/services/Ремонт трансформаторов1.png';
+import SEO from '../../SEO';
 
 const data = [
  {
@@ -76,6 +77,11 @@ const data = [
 const RepairTransformersPage = () => {
  return (
   <>
+   <SEO
+    title='Перемотка трансформаторов'
+    description='Цены на перемотку трансформаторов от 9000 руб.'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p

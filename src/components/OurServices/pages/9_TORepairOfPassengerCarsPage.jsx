@@ -5,10 +5,16 @@ import Typography from '@mui/material/Typography';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
 import image9 from '../../../assets/img/services/ТО2.png';
 import Paper from '@mui/material/Paper';
+import SEO from '../../SEO';
 
 export default function TORepairOfPassengerCarsPage() {
  return (
   <>
+   <SEO
+    title='ТО и ремонт электрооборудования пассажирских вагонов'
+    description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack
      direction='column'

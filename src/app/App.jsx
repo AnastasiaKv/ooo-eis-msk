@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import {HelmetProvider, Helmet} from 'react-helmet-async';
 import '../assets/css/App.css';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -18,30 +19,39 @@ import SurfacingOfShaftsAndShields from '../components/OurServices/pages/10_Surf
 
 import Prices from '../pages/Prices';
 import News from '../pages/News';
+import SEO from '../components/SEO';
 
+const helmetContext = {};
 function App() {
  return (
-  <Router>
-   <div className='ees-parent'>
-    <div className='ees-container'>
-     <div className='ees-container-helper'>
-      <div className='ees-pillar'>
-       <header className='ees-header'>
-        <Header />
-       </header>
-       <div className='ees-main'>
-        <div className='ees-main-row'>
-         <TopMediaBlock />
+  <HelmetProvider context={helmetContext}>
+   <Router>
+    <SEO
+     title='ООО ЭИС'
+     description='РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ'
+     name='ООО ЭИС'
+    />
+    <div className='ees-parent'>
+     <div className='ees-container'>
+      <div className='ees-container-helper'>
+       <div className='ees-pillar'>
+        <header className='ees-header'>
+         <Header />
+        </header>
+        <div className='ees-main'>
+         <div className='ees-main-row'>
+          <TopMediaBlock />
+         </div>
         </div>
+        <footer className='ees-footer'>
+         <Footer />
+        </footer>
        </div>
-       <footer className='ees-footer'>
-        <Footer />
-       </footer>
       </div>
      </div>
     </div>
-   </div>
-  </Router>
+   </Router>
+  </HelmetProvider>
  );
 }
 

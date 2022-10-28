@@ -5,10 +5,16 @@ import Typography from '@mui/material/Typography';
 import CurrencyRubleRoundedIcon from '@mui/icons-material/CurrencyRubleRounded';
 import image7 from '../../../assets/img/services/Продажа компонентов1.png';
 import Paper from '@mui/material/Paper';
+import SEO from '../../SEO';
 
 export default function SaleOfElectricalComponentsPage() {
  return (
   <>
+   <SEO
+    title='Продажа электрокомпонентов'
+    description='Розничная продажа  электрокомпонетов по очень выгодным ценам!'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' sx={{paddingBottom: '2em'}}>
      <Typography

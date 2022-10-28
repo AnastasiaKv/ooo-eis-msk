@@ -5,10 +5,16 @@ import Typography from '@mui/material/Typography';
 import Handyman from '@mui/icons-material/Handyman';
 import image10 from '../../../assets/img/services/Наплавка2.png';
 import Paper from '@mui/material/Paper';
+import SEO from '../../SEO';
 
 export default function SurfacingOfShaftsAndShieldsPage() {
  return (
   <>
+   <SEO
+    title='Наплавка валов и щитов'
+    description='Наплавка валов и щитов от 4000 руб.'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack
      direction='column'

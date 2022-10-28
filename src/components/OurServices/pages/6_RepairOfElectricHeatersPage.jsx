@@ -5,10 +5,16 @@ import Typography from '@mui/material/Typography';
 import image6 from '../../../assets/img/services/Ремонт электронагревателей1.png';
 import ReportProblemRoundedIcon from '@mui/icons-material/ReportProblemRounded';
 import Paper from '@mui/material/Paper';
+import SEO from '../../SEO';
 
 export default function RepairOfElectricHeatersPage() {
  return (
   <>
+  <SEO
+     title='Ремонт электронагревателей'
+     description='Ремонт электронагревателей от 500 руб.'
+     name='ООО ЭИС'
+    />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '2em', paddingTop: '1em'}}>
      <Stack direction='row' spacing={10}>

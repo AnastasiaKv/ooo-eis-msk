@@ -3,10 +3,16 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
+import SEO from '../../SEO';
 
 export default function RepairOfBoardsAndBlocksPage() {
  return (
   <>
+  <SEO
+     title='Ремонт плат и электронных блоков'
+     description='Ремонт плат от автомобильной электроники'
+     name='ООО ЭИС'
+    />
    <Paper
     elevation={4}
     sx={{bgcolor: '#f7f7f7', marginBottom: 5, paddingLeft: '2em', paddingBottom: '2em'}}

@@ -31,6 +31,7 @@ import ServiceItem from '../../modules/common/ServiceItem';
 import decorTop from '../../assets/img/Decor/decorTop.png';
 import decorBottom from '../../assets/img/Decor/decorBottom.png';
 import '../../assets/css/styles-custom.css';
+import SEO from '../SEO';
 
 const useStyles = styled((theme) => ({
  flexGrow: {
@@ -237,6 +238,11 @@ export default function GridServices() {
  return (
   <main className='ees-content'>
    <div>
+    <SEO
+     title='Ремонт электрооборудования'
+     description='РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ'
+     name='ООО ЭИС'
+    />
     <p
      style={{
       textAlign: 'left',
