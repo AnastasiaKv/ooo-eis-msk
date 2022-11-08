@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@material-ui/core/Grid';
 import {Stack} from '@mui/system';
+import Paper from '@mui/material/Paper';
 
 import image1 from '../assets/img/gallery/Gallery_ASIG.png';
 import image3 from '../assets/img/gallery/Gallery_Frezer.png';
@@ -20,18 +21,17 @@ import image9 from '../assets/img/gallery/Gallery_Stend_peremotki.png';
 import image10 from '../assets/img/gallery/Gallery_Stol_electronika.png';
 import image12 from '../assets/img/gallery/Gallery_Takarniy_stanok.png';
 
-const itemData = [
+const itemData1 = [
  {
   id: 1,
   image: image1,
-  title: 'Послеремонтные испытания на универсальном стендовом оборудовании',
+  title: 'Послеремонтные испытания',
   featured: true,
  },
-
  {
   id: 2,
   image: image3,
-  title: 'Обработка металлических деталей на фрезерном станке',
+  title: 'Фрезерный станок',
   featured: true,
  },
  {
@@ -40,40 +40,46 @@ const itemData = [
   title: 'Предремонтные испытания',
   featured: true,
  },
+];
+
+const itemData2 = [
  {
-  id: 4,
+  id: 1,
   image: image6,
-  title: 'Работа с высокоточным измерительным оборудованием',
+  title: 'Высокоточные измерения',
   featured: true,
  },
  {
-  id: 5,
+  id: 2,
   image: image7,
-  title: 'Ремонт производиться профессионалами',
+  title: 'Холодильный цех',
   featured: true,
  },
  {
-  id: 6,
+  id: 3,
   image: image8,
-  title: 'Балансировка роторов электрических машин',
+  title: 'Балансировка роторов',
   featured: true,
  },
+];
+
+const itemData3 = [
  {
-  id: 7,
+  id: 1,
   image: image9,
-  title: 'Замена обмоток в ручную',
+  title: 'Замена обмоток',
   featured: true,
  },
  {
-  id: 8,
+  id: 2,
   image: image10,
-  title: 'Ремонт плат, процессоров и электронных блоков',
+  title: 'Ремонт электронники',
   featured: true,
  },
  {
-  id: 9,
+  id: 3,
   image: image12,
-  title: 'Обработка деталей на токарном станке',
+  title: 'Токарный станок',
   featured: true,
  },
 ];
@@ -81,49 +87,62 @@ const itemData = [
 export default function Gallery() {
  return (
   <main className='ees-content'>
-   {/* <Stack
-    spacing={1}
-    sx={{
-     textAlign: 'justify',
-     width: '46em',
-     paddingTop: '1em',
-     paddingBottom: '1em',
-     paddingRight: '7.8em',
-    }}
-   >
-    <ImageList
-     sx={{
-      width: 500,
-      height: 450,
-
-      transform: 'translateZ(0)',
-     }}
-     style={{whiteSpace: 'pre-line'}}
-     rowHeight={200}
-     gap={2}
-    >
-     {itemData.map((item) => {
-      const cols = item.featured ? 1 : 1;
-      const rows = item.featured ? 3 : 1;
-
-      return (
-       <ImageListItem key={item.image} cols={cols} rows={rows} whiteSpace='pre-line'>
-        <img {...srcset(item.image, 250, 200, rows, cols)} alt={item.title} loading='lazy' />
-        <ImageListItemBar
-         style={{}}
-         sx={{
-          background:
-           'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-           'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-         }}
-         title={item.title}
-         position='top'
-        />
-       </ImageListItem>
-      );
-     })}
-    </ImageList>
-   </Stack> */}
+   <Stack direction='column' spacing={4} sx={{paddingTop: '3em', paddingBottom: '3em'}}>
+    <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
+     {itemData1.map((service) => (
+      <Paper
+       key={service.id}
+       elevation={8}
+       sx={{bgcolor: '#f7f7f7', borderRadius: '12px', boxShadow: '-moz-initial'}}
+      >
+       <Typography sx={{paddingBottom: '5px'}}>{service.title}</Typography>
+       <Box
+        borderRadius={1}
+        sx={{height: '290px', width: '290px'}}
+        component='img'
+        alt='button'
+        src={service.image}
+       />
+      </Paper>
+     ))}
+    </Stack>
+    <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
+     {itemData2.map((service) => (
+      <Paper
+       key={service.id}
+       elevation={8}
+       sx={{bgcolor: '#f7f7f7', borderRadius: '12px', boxShadow: '-moz-initial'}}
+      >
+       <Typography sx={{paddingBottom: '5px'}}>{service.title}</Typography>
+       <Box
+        borderRadius={1}
+        sx={{height: '290px', width: '290px'}}
+        component='img'
+        alt='button'
+        src={service.image}
+       />
+      </Paper>
+     ))}
+    </Stack>
+    <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
+     {itemData3.map((service) => (
+      <Paper
+       key={service.id}
+       elevation={8}
+       sx={{bgcolor: '#f7f7f7', borderRadius: '12px', boxShadow: '-moz-initial'}}
+      >
+       <Typography sx={{paddingBottom: '5px'}}>{service.title}</Typography>
+       <Box
+        borderRadius={1}
+        sx={{height: '290px', width: '290px'}}
+        component='img'
+        alt='button'
+        src={service.image}
+       />
+      </Paper>
+     ))}
+    </Stack>
+   </Stack>
   </main>
  );
 }
