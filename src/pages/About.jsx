@@ -34,41 +34,44 @@ export default function About() {
        позволяют ремонтировать оборудование и устройства для различных отраслей промышленности.
       </Typography>
 
-      <Stack direction='row' spacing={1} sx={{paddingLeft: '1em', paddingTop: '1em'}}>
-       <Paper elevation={0}>
-        <Box
-         sx={{
-          borderRadius: 3,
-          height: '10em',
-          width: '12.5em',
-         }}
-         component='img'
-         src={image1}
-        />
-       </Paper>
-
-       <Paper elevation={0}>
-        <Box
-         sx={{
-          borderRadius: 3,
-          height: '10em',
-          width: '12.5em',
-         }}
-         component='img'
-         src={image2}
-        />
-       </Paper>
-       <Paper elevation={0}>
-        <Box
-         sx={{
-          borderRadius: 3,
-          height: '10em',
-          width: '12.5em',
-         }}
-         component='img'
-         src={image3}
-        />
-       </Paper>
+      <Stack direction='column' spacing={0} sx={{paddingLeft: '1.5em', paddingTop: '1em'}}>
+       <Stack>
+        <Paper elevation={0}>
+         <Box
+          sx={{
+           borderRadius: 3,
+           height: '36em',
+           width: '36em',
+          }}
+          component='img'
+          src={image1}
+         />
+        </Paper>
+       </Stack>
+       <Stack direction='row' spacing={1}>
+        <Paper elevation={0}>
+         <Box
+          sx={{
+           borderRadius: 3,
+           height: '17.9em',
+           width: '17.9em',
+          }}
+          component='img'
+          src={image2}
+         />
+        </Paper>
+        <Paper elevation={0}>
+         <Box
+          sx={{
+           borderRadius: 3,
+           height: '17.9em',
+           width: '17.9em',
+          }}
+          component='img'
+          src={image3}
+         />
+        </Paper>
+       </Stack>
       </Stack>
       <Box sx={{height: '1em'}}></Box>
      </Stack>
@@ -81,6 +84,7 @@ export default function About() {
         fontFamily: 'Furore',
         fontSize: '28px',
         color: '#292929',
+        paddingTop: '3em',
         paddingBottom: '2em',
        }}
       >
