@@ -5,10 +5,9 @@ import PaginationDot from './PaginationDot';
 const styles = {
  root: {
   position: 'relative',
-  bottom: 220,
-  paddingRight: 175,
-  display: 'flex',
-  flexDirection: 'row',
+  bottom: 230,
+  paddingRight: '47em',
+
   justifyContent: 'center',
  },
 };

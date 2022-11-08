@@ -57,11 +57,7 @@ const data = [
 const GeneratorRepairPage = () => {
  return (
   <>
-  <SEO
-     title='Ремонт генератора'
-     description='Ремонт генератора от 500 руб.'
-     name='ООО ЭИС'
-    />
+   <SEO title='Ремонт генератора' description='Ремонт генератора от 500 руб.' name='ООО ЭИС' />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p

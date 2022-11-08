@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+ <head>
   <meta charset="UTF-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -24,18 +23,40 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>ООО "Электронные Инженерные Системы"</title>
-</head>
+ </head>
 
-<body>
+ <body>
   <noscript>
-    You need to enable JavaScript to run this app.
-    <div id="splash" class="splash">
-      <span>Loading ...</span>
-    </div>
+   You need to enable JavaScript to run this app.
+   <div id="splash" class="splash">
+    <span>Loading ...</span>
+   </div>
   </noscript>
   <div id="root" class="d-flex flex-column flex-root"></div>
 
   <script></script>
-</body>
-
+  <script
+   src="https://api-maps.yandex.ru/2.1/?apikey=1c73e38e-792b-4130-bab8-5f1712072ec1&lang=en_US"
+   type="text/javascript"
+  ></script>
+  <!-- <div id="map" style="width: 600px; height: 400px"></div>
+  <script type="text/javascript">
+    // The ymaps.ready() function will be called when
+    // all the API components are loaded and the DOM tree is generated.
+    ymaps.ready(init);
+    function init() {
+      // Creating the map.    
+      var myMap = new ymaps.Map("map", {
+        // The map center coordinates.
+        // Default order: “latitude, longitude”.
+        // To not manually determine the map center coordinates,
+        // use the Coordinate detection tool.
+        center: [55.77174746890191, 37.65286099864115],
+        // Zoom level. Acceptable values:
+        // from 0 (the entire world) to 19.
+        zoom: 7
+      });
+    }
+  </script> -->
+ </body>
 </html>

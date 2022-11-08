@@ -8,11 +8,11 @@ import SEO from '../../SEO';
 export default function RepairOfBoardsAndBlocksPage() {
  return (
   <>
-  <SEO
-     title='Ремонт плат и электронных блоков'
-     description='Ремонт плат от автомобильной электроники'
-     name='ООО ЭИС'
-    />
+   <SEO
+    title='Ремонт плат и электронных блоков'
+    description='Ремонт плат от автомобильной электроники'
+    name='ООО ЭИС'
+   />
    <Paper
     elevation={4}
     sx={{bgcolor: '#f7f7f7', marginBottom: 5, paddingLeft: '2em', paddingBottom: '2em'}}
@@ -27,14 +27,11 @@ export default function RepairOfBoardsAndBlocksPage() {
     <br />
     <br />
     <h2>
-     <Typography
-      variant='caption'
-      style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '20px'}}
-     >
+     <Typography variant='h6' sx={{paddingRight: '20px'}}>
       Список ремонтируемой электроники:
      </Typography>
     </h2>
-    <ul>
+    <ul style={{fontFamily: 'Roboto', fontSize: '16px', marginLeft: 0}}>
      <li>Ремонт плат от бытовой техники </li>
      <li>Ремонт плат от автомобильной электроники</li>
      <li>Ремонт электронных блоков управления</li>

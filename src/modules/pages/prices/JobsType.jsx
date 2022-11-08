@@ -39,14 +39,10 @@ const steps = [
  },
  {
   id: 4,
-  name: 'Замена обмотки и пропитка',
- },
- {
-  id: 5,
   name: 'Ремонт и сборка',
  },
  {
-  id: 6,
+  id: 5,
   name: 'Испытательные мероприятия',
  },
 ];
@@ -57,7 +53,7 @@ export default function JobsType() {
     <>
      <Paper
       sx={{
-       width: '2.4em',
+       width: '2.3em',
        height: '2.4em',
        textAlign: 'center',
        borderRadius: 10,

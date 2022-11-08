@@ -10,11 +10,11 @@ import SEO from '../../SEO';
 export default function RepairOfElectricHeatersPage() {
  return (
   <>
-  <SEO
-     title='Ремонт электронагревателей'
-     description='Ремонт электронагревателей от 500 руб.'
-     name='ООО ЭИС'
-    />
+   <SEO
+    title='Ремонт электронагревателей'
+    description='Ремонт электронагревателей от 500 руб.'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '2em', paddingTop: '1em'}}>
      <Stack direction='row' spacing={10}>
@@ -39,11 +39,7 @@ export default function RepairOfElectricHeatersPage() {
      </Stack>
      <Stack sx={{paddingLeft: '2em', marginRight: '2em'}}>
       <h2>
-       <Typography
-        variant='h4'
-        component='h4'
-        style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '20px'}}
-       >
+       <Typography variant='h6' sx={{paddingRight: '20px'}}>
         Виды поломок
        </Typography>
       </h2>

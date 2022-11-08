@@ -66,10 +66,10 @@ const data = [
 
 const componentStyle = {
  color: '#3c3c3c',
- paddingTop: '1.4em',
- paddingRight: '18em',
- paddingLeft: '0px',
- paddingBottom: '2em',
+ paddingTop: '0.4em',
+ paddingRight: '36.3em',
+ paddingBottom: '3em',
+ paddingLeft: '0em',
 };
 
 const textStyle = {
@@ -91,15 +91,15 @@ export default function Prices() {
       <Typography
        component='p'
        sx={{
-          textIndent: '2ch',
-          lineHeight: '2.6em',
-          flexGrow: 1,
-          fontFamily: 'Roboto',
-          position: 'relative',
-          justifyContent: 'space-around',
-          textAlign: 'justify',
-          paddingLeft: '0px', 
-          color: '#292929',
+        textIndent: '2ch',
+        lineHeight: '2.6em',
+        flexGrow: 1,
+        fontFamily: 'Roboto',
+        position: 'relative',
+        justifyContent: 'space-around',
+        textAlign: 'justify',
+        paddingLeft: '0px',
+        color: '#292929',
        }}
       >
        В таблицах с ценами представлены минимальные стоимости заказов по каждой позиции. При этом,
@@ -112,15 +112,15 @@ export default function Prices() {
     <div className='block2' style={{paddingLeft: '1em'}}>
      <h2>
       <Typography
-          variant='h4'
-          component='h2'
-       sx={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '376px'}}
+       variant='h4'
+       component='h2'
+       sx={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '31em'}}
       >
        Этапы работ
       </Typography>
      </h2>
      <br />
-     <div style={{paddingLeft: '0em', paddingRight: '4em'}}>
+     <div style={{paddingLeft: '3em', paddingRight: '5em', paddingBottom: '2em'}}>
       <JobsType />
      </div>
     </div>
@@ -131,7 +131,7 @@ export default function Prices() {
       <Typography
        variant='h4'
        component='h2'
-       sx={{paddingRight: '343px', textAlign: 'center', fontFamily: 'Furore', fontSize: '28px'}}
+       sx={{paddingRight: '31em', textAlign: 'center', fontFamily: 'Furore', fontSize: '28px'}}
       >
        Прейскурант цен
       </Typography>

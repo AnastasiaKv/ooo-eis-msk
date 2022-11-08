@@ -11,11 +11,11 @@ import SEO from '../../SEO';
 export default function RefrigerationMachineRepairPage() {
  return (
   <>
-  <SEO
-     title='Ремонт холодильных машин и компрессоров'
-     description='Ремонт холодильных машин и компрессоров от 4000 руб.'
-     name='ООО ЭИС'
-    />
+   <SEO
+    title='Ремонт холодильных машин и компрессоров'
+    description='Ремонт холодильных машин и компрессоров от 4000 руб.'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack
      direction='column'

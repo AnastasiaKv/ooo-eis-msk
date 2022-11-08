@@ -29,7 +29,7 @@ import Error404 from '../app/core/errors/Error404';
 import GridServices from './OurServices/GridServices';
 
 const buttonStyle = {
- borderRadius: '1px',
+ borderRadius: 2,
  width: '151.5px',
  height: '30px',
 };

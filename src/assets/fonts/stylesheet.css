@@ -1,120 +1,110 @@
 @font-face {
-    font-family: 'Naftera';
-    src: url('NafteraBlack.eot');
-    src: local('Naftera Black'), local('NafteraBlack'),
-        url('NafteraBlack.eot?#iefix') format('embedded-opentype'),
-        url('NafteraBlack.woff2') format('woff2'),
-        url('NafteraBlack.woff') format('woff'),
-        url('NafteraBlack.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
+ font-family: 'Naftera';
+ src: url('NafteraBlack.eot');
+ src: local('Naftera Black'), local('NafteraBlack'),
+  url('NafteraBlack.eot?#iefix') format('embedded-opentype'),
+  url('NafteraBlack.woff2') format('woff2'), url('NafteraBlack.woff') format('woff'),
+  url('NafteraBlack.ttf') format('truetype');
+ font-weight: 900;
+ font-style: normal;
 }
 
 @font-face {
-    font-family: 'Naftera';
-    src: url('NafteraLightItalic.eot');
-    src: local('Naftera Light Italic'), local('NafteraLightItalic'),
-        url('NafteraLightItalic.eot?#iefix') format('embedded-opentype'),
-        url('NafteraLightItalic.woff2') format('woff2'),
-        url('NafteraLightItalic.woff') format('woff'),
-        url('NafteraLightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
+ font-family: 'Naftera';
+ src: url('NafteraLightItalic.eot');
+ src: local('Naftera Light Italic'), local('NafteraLightItalic'),
+  url('NafteraLightItalic.eot?#iefix') format('embedded-opentype'),
+  url('NafteraLightItalic.woff2') format('woff2'), url('NafteraLightItalic.woff') format('woff'),
+  url('NafteraLightItalic.ttf') format('truetype');
+ font-weight: 300;
+ font-style: italic;
 }
 
 @font-face {
-    font-family: 'Naftera Regular';
-    src: url('NafteraRegularItalic.eot');
-    src: local('Naftera Regular Italic'), local('NafteraRegularItalic'),
-        url('NafteraRegularItalic.eot?#iefix') format('embedded-opentype'),
-        url('NafteraRegularItalic.woff2') format('woff2'),
-        url('NafteraRegularItalic.woff') format('woff'),
-        url('NafteraRegularItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+ font-family: 'Naftera Regular';
+ src: url('NafteraRegularItalic.eot');
+ src: local('Naftera Regular Italic'), local('NafteraRegularItalic'),
+  url('NafteraRegularItalic.eot?#iefix') format('embedded-opentype'),
+  url('NafteraRegularItalic.woff2') format('woff2'), url('NafteraRegularItalic.woff') format('woff'),
+  url('NafteraRegularItalic.ttf') format('truetype');
+ font-weight: normal;
+ font-style: italic;
 }
 
 @font-face {
-    font-family: 'Naftera';
-    src: url('NafteraRegular.eot');
-    src: local('Naftera Regular'), local('NafteraRegular'),
-        url('NafteraRegular.eot?#iefix') format('embedded-opentype'),
-        url('NafteraRegular.woff2') format('woff2'),
-        url('NafteraRegular.woff') format('woff'),
-        url('NafteraRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+ font-family: 'Naftera';
+ src: url('NafteraRegular.eot');
+ src: local('Naftera Regular'), local('NafteraRegular'),
+  url('NafteraRegular.eot?#iefix') format('embedded-opentype'),
+  url('NafteraRegular.woff2') format('woff2'), url('NafteraRegular.woff') format('woff'),
+  url('NafteraRegular.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
 }
 
 @font-face {
-    font-family: 'Naftera Display Stencil';
-    src: url('NafteraDisplayStencil.eot');
-    src: local('Naftera Display Stencil'), local('NafteraDisplayStencil'),
-        url('NafteraDisplayStencil.eot?#iefix') format('embedded-opentype'),
-        url('NafteraDisplayStencil.woff2') format('woff2'),
-        url('NafteraDisplayStencil.woff') format('woff'),
-        url('NafteraDisplayStencil.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+ font-family: 'Naftera Display Stencil';
+ src: url('NafteraDisplayStencil.eot');
+ src: local('Naftera Display Stencil'), local('NafteraDisplayStencil'),
+  url('NafteraDisplayStencil.eot?#iefix') format('embedded-opentype'),
+  url('NafteraDisplayStencil.woff2') format('woff2'),
+  url('NafteraDisplayStencil.woff') format('woff'),
+  url('NafteraDisplayStencil.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
 }
 
 @font-face {
-    font-family: 'Naftera';
-    src: url('NafteraLight.eot');
-    src: local('Naftera Light'), local('NafteraLight'),
-        url('NafteraLight.eot?#iefix') format('embedded-opentype'),
-        url('NafteraLight.woff2') format('woff2'),
-        url('NafteraLight.woff') format('woff'),
-        url('NafteraLight.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+ font-family: 'Naftera';
+ src: url('NafteraLight.eot');
+ src: local('Naftera Light'), local('NafteraLight'),
+  url('NafteraLight.eot?#iefix') format('embedded-opentype'),
+  url('NafteraLight.woff2') format('woff2'), url('NafteraLight.woff') format('woff'),
+  url('NafteraLight.ttf') format('truetype');
+ font-weight: 300;
+ font-style: normal;
 }
 
 @font-face {
-    font-family: 'Naftera';
-    src: url('NafteraBoldItalic.eot');
-    src: local('Naftera Bold Italic'), local('NafteraBoldItalic'),
-        url('NafteraBoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('NafteraBoldItalic.woff2') format('woff2'),
-        url('NafteraBoldItalic.woff') format('woff'),
-        url('NafteraBoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
+ font-family: 'Naftera';
+ src: url('NafteraBoldItalic.eot');
+ src: local('Naftera Bold Italic'), local('NafteraBoldItalic'),
+  url('NafteraBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('NafteraBoldItalic.woff2') format('woff2'), url('NafteraBoldItalic.woff') format('woff'),
+  url('NafteraBoldItalic.ttf') format('truetype');
+ font-weight: bold;
+ font-style: italic;
 }
 
 @font-face {
-    font-family: 'Naftera';
-    src: url('NafteraBlackItalic.eot');
-    src: local('Naftera Black Italic'), local('NafteraBlackItalic'),
-        url('NafteraBlackItalic.eot?#iefix') format('embedded-opentype'),
-        url('NafteraBlackItalic.woff2') format('woff2'),
-        url('NafteraBlackItalic.woff') format('woff'),
-        url('NafteraBlackItalic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
+ font-family: 'Naftera';
+ src: url('NafteraBlackItalic.eot');
+ src: local('Naftera Black Italic'), local('NafteraBlackItalic'),
+  url('NafteraBlackItalic.eot?#iefix') format('embedded-opentype'),
+  url('NafteraBlackItalic.woff2') format('woff2'), url('NafteraBlackItalic.woff') format('woff'),
+  url('NafteraBlackItalic.ttf') format('truetype');
+ font-weight: 900;
+ font-style: italic;
 }
 
 @font-face {
-    font-family: 'Naftera Display Solid';
-    src: url('NafteraDisplaySolid.eot');
-    src: local('Naftera Display Solid'), local('NafteraDisplaySolid'),
-        url('NafteraDisplaySolid.eot?#iefix') format('embedded-opentype'),
-        url('NafteraDisplaySolid.woff2') format('woff2'),
-        url('NafteraDisplaySolid.woff') format('woff'),
-        url('NafteraDisplaySolid.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+ font-family: 'Naftera Display Solid';
+ src: url('NafteraDisplaySolid.eot');
+ src: local('Naftera Display Solid'), local('NafteraDisplaySolid'),
+  url('NafteraDisplaySolid.eot?#iefix') format('embedded-opentype'),
+  url('NafteraDisplaySolid.woff2') format('woff2'), url('NafteraDisplaySolid.woff') format('woff'),
+  url('NafteraDisplaySolid.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
 }
 
 @font-face {
-    font-family: 'Naftera';
-    src: url('NafteraBold.eot');
-    src: local('Naftera Bold'), local('NafteraBold'),
-        url('NafteraBold.eot?#iefix') format('embedded-opentype'),
-        url('NafteraBold.woff2') format('woff2'),
-        url('NafteraBold.woff') format('woff'),
-        url('NafteraBold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+ font-family: 'Naftera';
+ src: url('NafteraBold.eot');
+ src: local('Naftera Bold'), local('NafteraBold'),
+  url('NafteraBold.eot?#iefix') format('embedded-opentype'),
+  url('NafteraBold.woff2') format('woff2'), url('NafteraBold.woff') format('woff'),
+  url('NafteraBold.ttf') format('truetype');
+ font-weight: bold;
+ font-style: normal;
 }
-

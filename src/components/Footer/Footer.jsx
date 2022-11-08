@@ -16,7 +16,7 @@ import MapIcon from '@mui/icons-material/Map';
 
 const color = {
  color: 'white',
- paddingRight: '260px',
+ paddingRight: '40em',
 };
 const spacing_10cm = {
  color: 'white',
@@ -52,9 +52,9 @@ export default function Footer() {
     }}
    >
     <BottomNavigationAction disableRipple style={color} label='©Copyright' />
-    <BottomNavigationAction style={spacing_10cm} label='Карта сайта' />
+    {/* <BottomNavigationAction style={spacing_10cm} label='Карта сайта' />
     <BottomNavigationAction style={spacing_40px} label='Политика' />
-    <BottomNavigationAction style={spacing_40px} label='Конфеденциальность' />
+    <BottomNavigationAction style={spacing_40px} label='Конфеденциальность' /> */}
    </BottomNavigation>
   </div>
  );
