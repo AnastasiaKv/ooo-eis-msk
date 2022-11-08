@@ -4,6 +4,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
+import image6 from '../../../assets/img/services/Ремонт плат1.png';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function RepairOfBoardsAndBlocksPage() {
  return (
@@ -17,29 +19,112 @@ export default function RepairOfBoardsAndBlocksPage() {
     elevation={4}
     sx={{bgcolor: '#f7f7f7', marginBottom: 5, paddingLeft: '2em', paddingBottom: '2em'}}
    >
-    <Typography
-     variant='h4'
-     component='h4'
-     style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '25px', paddingTop: '1em'}}
-    >
-     Ремонт плат и электронных блоков
-    </Typography>
-    <br />
-    <br />
-    <h2>
-     <Typography variant='h6' sx={{paddingRight: '20px'}}>
-      Список ремонтируемой электроники:
+    <Stack>
+     <Typography
+      variant='h4'
+      component='h4'
+      style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '25px', paddingTop: '1em'}}
+     >
+      Ремонт плат и электронных блоков
      </Typography>
-    </h2>
+     <Box
+      sx={{
+       marginLeft: '14em',
+
+       width: '10em',
+       height: '9em',
+      }}
+      component='img'
+      alt='Изображение неведомой детали'
+      src={image6}
+     />
+    </Stack>
+
+    <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '1em'}}>
+     Список ремонтируемой электроники:
+    </Typography>
     <ul style={{fontFamily: 'Roboto', fontSize: '16px', marginLeft: 0}}>
-     <li>Ремонт плат от бытовой техники </li>
-     <li>Ремонт плат от автомобильной электроники</li>
-     <li>Ремонт электронных блоков управления</li>
-     <li>Ремонт микропроцессорных печатных плат</li>
-     <li>Ремонт микроэлектроники специального назначения</li>
-     <li>Ремонт электронных модулей</li>
-     <li>Ремонт компьютеризованных панелей управления</li>
-     <li>Ремонт различных источников питания (в т.ч. специального назначения)</li>
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт плат от бытовой техники
+      </Typography>
+     </Stack>
+
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт плат от автомобильной электроники
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт электронных блоков управления
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт микропроцессорных печатных плат
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт микроэлектроники специального назначения
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт электронных модулей
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт компьютеризованных панелей управления
+      </Typography>
+     </Stack>
+     <Stack direction='row' spacing={3}>
+      <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
+      <Typography
+       variant='caption'
+       component='span'
+       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+      >
+       Ремонт различных источников питания (в т.ч. специального назначения)
+      </Typography>
+     </Stack>
     </ul>
    </Paper>
   </>

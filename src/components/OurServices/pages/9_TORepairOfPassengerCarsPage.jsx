@@ -79,6 +79,7 @@ export default function TORepairOfPassengerCarsPage() {
            paddingLeft: '3px',
            fontSize: '18px',
            marginLeft: '11px',
+           textAlign: '-webkit-auto',
           }}
          >
           Наша фирма занимается обслуживанием всех видов ватного электрооборудования.
@@ -96,7 +97,12 @@ export default function TORepairOfPassengerCarsPage() {
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '18px', marginLeft: '11px'}}
+          style={{
+           paddingLeft: '3px',
+           fontSize: '18px',
+           marginLeft: '11px',
+           textAlign: '-webkit-auto',
+          }}
          >
           Являемся подрядчиками 000 РЖД и 000 ФПК.
          </Typography>
@@ -113,7 +119,12 @@ export default function TORepairOfPassengerCarsPage() {
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '18px', marginLeft: '11px'}}
+          style={{
+           paddingLeft: '3px',
+           fontSize: '18px',
+           marginLeft: '11px',
+           textAlign: '-webkit-auto',
+          }}
          >
           Мы можем ремантировать все узлы и агрегаты на вагонах поездов.
          </Typography>

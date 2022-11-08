@@ -26,10 +26,10 @@ export default function RepairOfElectricHeatersPage() {
        </h4>
        <Box
         sx={{
-         marginLeft: '18em',
+         marginLeft: '20em',
 
-         width: '10em',
-         height: '6em',
+         width: '9em',
+         height: '8em',
         }}
         component='img'
         alt='Изображение неведомой детали'

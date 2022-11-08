@@ -199,7 +199,7 @@ function ItemsRow4() {
  const classes = useStyles();
  return (
   <>
-   <Stack direction='row' spacing={1} justifyContent='center'>
+   <Stack direction='row' sx={{paddingRight: '1.7em'}} spacing={1} justifyContent='center'>
     {FourthRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -260,7 +260,7 @@ export default function GridServices() {
        paddingLeft: '4em',
        textAlign: 'center',
        flexGrow: 1,
-       paddingBottom: '18px',
+       paddingBottom: '2em',
        fontFamily: 'Furore',
        fontSize: '28px',
        color: '#292929',
@@ -282,8 +282,8 @@ export default function GridServices() {
       }}
      >
       Наша компания занимается ремонтом электрооборудования всех типов, представленных в каталоге
-      ниже. Более десяти лет мы ремонтировали оборудование для пассажирских поездов и теперь готовы
-      помочь вам с ремонтом любой электронной техники! Не спешите приобретать новые устройства, ведь
+      ниже. Более десяти лет мы ремонтируем оборудование для пассажирских поездов и теперь готовы
+      помочь вам с ремонтом любой электронной техники. Не спешите приобретать новые устройства, ведь
       ремонт старых обойдётся гораздо дешевле.
      </Typography>
     </p>
@@ -295,7 +295,7 @@ export default function GridServices() {
         flexGrow: 1,
         paddingLeft: '1.2em',
         paddingTop: '20px',
-        paddingBottom: '18px',
+        paddingBottom: '2em',
         fontFamily: 'Furore',
         fontSize: '28px',
 
@@ -339,7 +339,7 @@ export default function GridServices() {
        paddingLeft: '4em',
        textAlign: 'center',
        flexGrow: 1,
-       paddingBottom: '18px',
+       paddingBottom: '2em',
        fontFamily: 'Furore',
        fontSize: '28px',
        color: '#292929',
@@ -360,9 +360,9 @@ export default function GridServices() {
        color: '#292929',
       }}
      >
-      Качество нашего ремонта проверено годами непрерывной работы и вы получите гарантию на любое
-      устройство! Мы готовы работать как с единичными бытовыми устройствами физических лиц, так и с
-      промышленными объёмами юридических лиц!
+      Качество нашего ремонта проверено годами непрерывной работы, и вы получите гарантию на
+      устройство после ремонта. Мы готовы работать как с бытовыми устройствами , так и с
+      промышленным оборудованием.
      </Typography>
     </p>
    </div>

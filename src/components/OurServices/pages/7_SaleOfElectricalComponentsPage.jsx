@@ -71,6 +71,7 @@ export default function SaleOfElectricalComponentsPage() {
            paddingLeft: '3px',
            fontSize: '17px',
            marginLeft: '11px',
+           textAlign: '-webkit-auto',
           }}
          >
           Осуществляем розничную продажу электрокомпонетов по очень выгодным ценам!
@@ -88,7 +89,12 @@ export default function SaleOfElectricalComponentsPage() {
          <Typography
           variant='caption'
           component='span'
-          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
+          style={{
+           paddingLeft: '3px',
+           fontSize: '17px',
+           marginLeft: '11px',
+           textAlign: '-webkit-auto',
+          }}
          >
           Перечень деталей в наличии.
          </Typography>
@@ -105,7 +111,12 @@ export default function SaleOfElectricalComponentsPage() {
          <Typography
           variant='caption'
           component='span'
-          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
+          style={{
+           paddingLeft: '3px',
+           fontSize: '17px',
+           marginLeft: '11px',
+           textAlign: '-webkit-auto',
+          }}
          >
           Проффесиональная консультация по подбору.
          </Typography>

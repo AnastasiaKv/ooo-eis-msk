@@ -39,9 +39,9 @@ function Contact(props) {
     <Typography
      variant='h6'
      component='div'
-     sx={{flexGrow: 1, paddingLeft: '49px', color: '#292929'}}
+     sx={{flexGrow: 1, paddingLeft: '44px', color: '#292929'}}
     >
-     8-800-232-32-22
+     8 (495)-135-82-88
     </Typography>
    </div>
    <Button

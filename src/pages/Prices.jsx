@@ -16,6 +16,7 @@ import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router
 import RepairMotorsPage from '../components/OurServices/pages/1_RepairMotorsPage';
 import GeneratorRepairPage from '../components/OurServices/pages/2_GeneratorRepairPage';
 import RepairTransformersPage from '../components/OurServices/pages/3_RepairTransformersPage';
+import RewindingMotorsPage from '../components/OurServices/pages/5_RewindingMotorsPage';
 
 const data = [
  {
@@ -102,10 +103,10 @@ export default function Prices() {
         color: '#292929',
        }}
       >
-       В таблицах с ценами представлены минимальные стоимости заказов по каждой позиции. При этом,
-       окончательная стоимость будет сформирована после первичной дефектации. У нас действует гибкая
-       система оценки ремонта, при которой вы платите только за произведённые работы без лишних
-       затрат.
+       В таблицах с ценами представлена минимальная стоимость заказа по каждой позиции,
+       окончательная стоимость будет сформирована после первичной дефектации. Действует гибкая
+       система оценки стоимости ремонта, при которой вы платите только за произведённые работы без
+       лишних затрат.
       </Typography>
      </p>
     </div>
@@ -114,7 +115,7 @@ export default function Prices() {
       <Typography
        variant='h4'
        component='h2'
-       sx={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '31em'}}
+       sx={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '31em', paddingBottom: '2em'}}
       >
        Этапы работ
       </Typography>
@@ -131,7 +132,13 @@ export default function Prices() {
       <Typography
        variant='h4'
        component='h2'
-       sx={{paddingRight: '31em', textAlign: 'center', fontFamily: 'Furore', fontSize: '28px'}}
+       sx={{
+        paddingRight: '31em',
+        paddingBottom: '2em',
+        textAlign: 'center',
+        fontFamily: 'Furore',
+        fontSize: '28px',
+       }}
       >
        Прейскурант цен
       </Typography>
@@ -178,7 +185,7 @@ export default function Prices() {
          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-         <RepairMotorsPage />
+         <RepairTransformersPage />
         </AccordionDetails>
        </Accordion>
        <br />
@@ -193,7 +200,7 @@ export default function Prices() {
          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-         <RepairMotorsPage />
+         <RewindingMotorsPage />
         </AccordionDetails>
        </Accordion>
       </div>

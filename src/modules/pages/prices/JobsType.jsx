@@ -48,7 +48,7 @@ const steps = [
 ];
 export default function JobsType() {
  return (
-  <Stack direction='row' spacing={14}>
+  <Stack direction='row' spacing={15}>
    {steps.map((i) => (
     <>
      <Paper
@@ -64,7 +64,14 @@ export default function JobsType() {
       <Typography variant='h5' sx={{color: 'white', paddingTop: '0.6em', paddingBottom: '1em'}}>
        <b>{i.id}</b>
       </Typography>
-      <Typography sx={{paddingTop: '0.5em', fontSize: '16px', margin: '0 0 0 -10px'}}>
+      <Typography
+       sx={{
+        paddingTop: '0.2em',
+        fontSize: '15px',
+        margin: '0 0 0 -10px',
+        textAlign: '-webkit-auto',
+       }}
+      >
        <i>{i.name}</i>
       </Typography>
      </Paper>

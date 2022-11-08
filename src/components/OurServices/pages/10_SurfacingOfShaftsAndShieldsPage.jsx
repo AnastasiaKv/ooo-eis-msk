@@ -80,7 +80,8 @@ export default function SurfacingOfShaftsAndShieldsPage() {
           fontSize='medium'
           color='action'
           style={{
-           margin: '4px 0px 0px 0px',
+           margin: '3px 0px 0px 0px',
+           height: '19px'
           }}
          />
          <Typography
@@ -89,7 +90,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
           style={{
            fontFamily: 'Roboto',
            paddingLeft: '3px',
-           fontSize: '20px',
+           fontSize: '17px',
            marginLeft: '11px',
           }}
          >
@@ -101,13 +102,14 @@ export default function SurfacingOfShaftsAndShieldsPage() {
           fontSize='medium'
           color='action'
           style={{
-           margin: '4px 0px 0px 0px',
+           margin: '3px 0px 0px 0px',
+           height: '19px'
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '20px', marginLeft: '11px'}}
+          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
          >
           Восстановление шлицов
          </Typography>
@@ -117,13 +119,14 @@ export default function SurfacingOfShaftsAndShieldsPage() {
           fontSize='medium'
           color='action'
           style={{
-           margin: '4px 0px 0px 0px',
+           margin: '3px 0px 0px 0px',
+           height: '19px'
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '20px', marginLeft: '11px'}}
+          style={{fontSize: '17px', paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
          >
           Восстановление шпоночного паза
          </Typography>
@@ -133,13 +136,15 @@ export default function SurfacingOfShaftsAndShieldsPage() {
           fontSize='medium'
           color='action'
           style={{
-           margin: '4px 0px 0px 0px',
+           margin: '3px 0px 0px 0px',
+           height: '19px'
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '20px', marginLeft: '11px'}}
+          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px',
+          height: '19px'}}
          >
           Наплавка валов
          </Typography>
@@ -149,13 +154,15 @@ export default function SurfacingOfShaftsAndShieldsPage() {
           fontSize='medium'
           color='action'
           style={{
-           margin: '4px 0px 0px 0px',
+           margin: '3px 0px 0px 0px',
+           height: '19px'
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '20px', marginLeft: '11px'}}
+          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px',
+          height: '19px'}}
          >
           Ремонт вала
          </Typography>
