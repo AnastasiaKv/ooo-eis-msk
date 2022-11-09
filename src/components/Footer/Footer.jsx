@@ -14,15 +14,10 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import PolicyIcon from '@mui/icons-material/Policy';
 import MapIcon from '@mui/icons-material/Map';
 
-const color = {
+const copyrightStyle = {
  color: 'white',
- paddingRight: '40em',
-};
-const spacing_10cm = {
- color: 'white',
-};
-const spacing_40px = {
- color: 'white',
+ paddingRight: '25em',
+ paddingTop: '2em',
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -51,7 +46,8 @@ export default function Footer() {
      setValue(newValue);
     }}
    >
-    <BottomNavigationAction disableRipple style={color} label='©Copyright' />
+    <Typography style={copyrightStyle}>©Copyright</Typography>
+
     {/* <BottomNavigationAction style={spacing_10cm} label='Карта сайта' />
     <BottomNavigationAction style={spacing_40px} label='Политика' />
     <BottomNavigationAction style={spacing_40px} label='Конфеденциальность' /> */}

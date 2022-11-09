@@ -27,6 +27,11 @@
    "@images/*": ["src/assets/*"]
   }
  },
- "include": ["src", "config-overrides.js"],
+ "include": [
+  "src",
+  "config-overrides.js",
+  "sitemap.js",
+  "public/requestAnimationFrame-polyfill.js"
+ ],
  "exclude": ["node_modules", "build"] //  *** Файлы, которые не нужно вводить, проверять ***
 }
