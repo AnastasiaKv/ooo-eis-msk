@@ -24,8 +24,7 @@ input[type='number'],
 textarea,
 select {
  padding-left: 10px;
- width: 300px;
- border-radius: 3;
+ width: 400px;
 }
 .MuiInput-underline:after {
 }

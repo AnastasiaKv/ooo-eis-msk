@@ -67,7 +67,7 @@ function Contact(props) {
     Обратный звонок
    </Button>
    <Dialog
-    sx={{width: '900px'}}
+    sx={{width: '1000px'}}
     open={open}
     onClose={handleClose}
     aria-labelledby='form-dialog-title'
@@ -79,7 +79,7 @@ function Contact(props) {
        <DialogContent>
         {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
         <Formik
-         initialValues={{email: '', name: '', tel: 'ddd'}}
+         initialValues={{email: '', name: '', tel: ''}}
          onSubmit={(values, {setSubmitting}) => {
           setSubmitting(true);
           axios
@@ -116,7 +116,7 @@ function Contact(props) {
             <Stack
              sx={{
               overflow: 'hidden',
-              padding: '10px 0px',
+              padding: '10px 10em 10px 0px',
               flexDirection: 'column',
               alignItems: 'baseline',
              }}
