@@ -89,26 +89,16 @@ export default function Gallery() {
   <main className='ees-content'>
    <Stack
     direction='column'
-    spacing={4}
+    spacing={3}
     sx={{paddingTop: '3em', paddingBottom: '3em', transform: 'translateZ(0)'}}
    >
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData1.map((service) => (
-      <Paper
-       key={service.id}
-       elevation={8}
-       sx={{
-        color: 'whitesmoke',
-        background:
-         'linear-gradient(to bottom, rgba(96,125,139,0.8) 100%, ' +
-         'rgba(0,0,0,0) 70%,  rgba(96,125,139,0.8) 100%)',
-        borderRadius: '12px',
-        boxShadow: '-moz-initial',
-       }}
-      >
-       <Typography sx={{paddingBottom: '0px'}}>{service.title}</Typography>
+      <Paper key={service.id} sx={{boxShadow: 'none'}}>
+       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+        {service.title}
+       </Typography>
        <Box
-        borderRadius={1}
         sx={{height: '290px', width: '290px'}}
         component='img'
         alt='button'
@@ -119,14 +109,11 @@ export default function Gallery() {
     </Stack>
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData2.map((service) => (
-      <Paper
-       key={service.id}
-       elevation={8}
-       sx={{bgcolor: '#f7f7f7', borderRadius: '12px', boxShadow: '-moz-initial'}}
-      >
-       <Typography sx={{paddingBottom: '0px'}}>{service.title}</Typography>
+      <Paper key={service.id} sx={{boxShadow: 'none'}}>
+       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+        {service.title}
+       </Typography>
        <Box
-        borderRadius={1}
         sx={{height: '290px', width: '290px'}}
         component='img'
         alt='button'
@@ -137,21 +124,11 @@ export default function Gallery() {
     </Stack>
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData3.map((service) => (
-      <Paper
-       key={service.id}
-       elevation={8}
-       sx={{
-        color: 'whitesmoke',
-        background:
-         'linear-gradient(to bottom, rgba(96,125,139,0.8) 100%, ' +
-         'rgba(0,0,0,0) 70%,  rgba(96,125,139,0.8) 100%)',
-        borderRadius: '12px',
-        boxShadow: '-moz-initial',
-       }}
-      >
-       <Typography sx={{paddingBottom: '0px'}}>{service.title}</Typography>
+      <Paper key={service.id} sx={{boxShadow: 'none'}}>
+       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+        {service.title}
+       </Typography>
        <Box
-        borderRadius={1}
         sx={{height: '290px', width: '290px'}}
         component='img'
         alt='button'
