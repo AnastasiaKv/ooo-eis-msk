@@ -105,21 +105,21 @@ export default function NavTabs() {
      <LinkTab
       onClick={value}
       label='Стоимость'
-      to='prices'
+      to='/prices'
       className={classes.button}
       style={buttonStyle}
      />
      <LinkTab
       onClick={value}
       label='Галерея'
-      to='gallery'
+      to='/gallery'
       className={classes.button}
       style={buttonStyle}
      />
      <LinkTab
       onClick={value}
       label='Контакты'
-      to='contacts'
+      to='/contacts'
       className={classes.button}
       style={buttonStyle}
      />
