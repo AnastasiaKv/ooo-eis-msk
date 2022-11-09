@@ -35,7 +35,12 @@ module.exports = {
  },
  module: {
   loaders: [
-   {
+   ...{
+    test: /\.(woff|woff2|eot|ttf|svg)$/,
+    loader: 'file-loader',
+    options: {name: '[name].[ext]', outputPath: 'fonts/'},
+   },
+   ...{
     test: /\.css$/,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
    },

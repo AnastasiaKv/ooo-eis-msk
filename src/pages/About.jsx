@@ -27,6 +27,7 @@ export default function About() {
         justifyContent: 'space-around',
         textAlign: 'justify',
         color: '#292929',
+        marginRight: '1.4em'
        }}
       >
        Мы осуществляем ремонт электронного, электрического и механического оборудования для нужд АО

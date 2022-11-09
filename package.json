@@ -44,6 +44,7 @@
   "eslint-import-resolver-typescript": "^3.5.1",
   "eslint-plugin-jsx-a11y": "^6.6.1",
   "eslint-plugin-typescript": "^0.14.0",
+  "file-loader": "^6.2.0",
   "flow": "^0.2.3",
   "formik": "^2.2.9",
   "material-react-table": "^1.1.1",

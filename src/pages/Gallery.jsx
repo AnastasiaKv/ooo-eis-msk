@@ -87,15 +87,26 @@ const itemData3 = [
 export default function Gallery() {
  return (
   <main className='ees-content'>
-   <Stack direction='column' spacing={4} sx={{paddingTop: '3em', paddingBottom: '3em'}}>
+   <Stack
+    direction='column'
+    spacing={4}
+    sx={{paddingTop: '3em', paddingBottom: '3em', transform: 'translateZ(0)'}}
+   >
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData1.map((service) => (
       <Paper
        key={service.id}
        elevation={8}
-       sx={{bgcolor: '#f7f7f7', borderRadius: '12px', boxShadow: '-moz-initial'}}
+       sx={{
+        color: 'whitesmoke',
+        background:
+         'linear-gradient(to bottom, rgba(96,125,139,0.8) 100%, ' +
+         'rgba(0,0,0,0) 70%,  rgba(96,125,139,0.8) 100%)',
+        borderRadius: '12px',
+        boxShadow: '-moz-initial',
+       }}
       >
-       <Typography sx={{paddingBottom: '5px'}}>{service.title}</Typography>
+       <Typography sx={{paddingBottom: '0px'}}>{service.title}</Typography>
        <Box
         borderRadius={1}
         sx={{height: '290px', width: '290px'}}
@@ -113,7 +124,7 @@ export default function Gallery() {
        elevation={8}
        sx={{bgcolor: '#f7f7f7', borderRadius: '12px', boxShadow: '-moz-initial'}}
       >
-       <Typography sx={{paddingBottom: '5px'}}>{service.title}</Typography>
+       <Typography sx={{paddingBottom: '0px'}}>{service.title}</Typography>
        <Box
         borderRadius={1}
         sx={{height: '290px', width: '290px'}}
@@ -129,9 +140,16 @@ export default function Gallery() {
       <Paper
        key={service.id}
        elevation={8}
-       sx={{bgcolor: '#f7f7f7', borderRadius: '12px', boxShadow: '-moz-initial'}}
+       sx={{
+        color: 'whitesmoke',
+        background:
+         'linear-gradient(to bottom, rgba(96,125,139,0.8) 100%, ' +
+         'rgba(0,0,0,0) 70%,  rgba(96,125,139,0.8) 100%)',
+        borderRadius: '12px',
+        boxShadow: '-moz-initial',
+       }}
       >
-       <Typography sx={{paddingBottom: '5px'}}>{service.title}</Typography>
+       <Typography sx={{paddingBottom: '0px'}}>{service.title}</Typography>
        <Box
         borderRadius={1}
         sx={{height: '290px', width: '290px'}}

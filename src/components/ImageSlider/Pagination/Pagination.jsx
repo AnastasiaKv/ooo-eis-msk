@@ -6,7 +6,7 @@ const styles = {
  root: {
   position: 'relative',
   bottom: 230,
-  paddingRight: '47em',
+  paddingRight: '45em',
 
   justifyContent: 'center',
  },
