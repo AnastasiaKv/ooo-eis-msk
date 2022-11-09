@@ -98,12 +98,7 @@ export default function Gallery() {
        <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
-       <Box
-        sx={{height: '290px', width: '290px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
+       <Box sx={{height: '290px', width: '290px'}} component='img' src={service.image} />
       </Paper>
      ))}
     </Stack>
@@ -113,12 +108,7 @@ export default function Gallery() {
        <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
-       <Box
-        sx={{height: '290px', width: '290px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
+       <Box sx={{height: '290px', width: '290px'}} component='img' src={service.image} />
       </Paper>
      ))}
     </Stack>
@@ -128,12 +118,7 @@ export default function Gallery() {
        <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
-       <Box
-        sx={{height: '290px', width: '290px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
+       <Box sx={{height: '290px', width: '290px'}} component='img' src={service.image} />
       </Paper>
      ))}
     </Stack>

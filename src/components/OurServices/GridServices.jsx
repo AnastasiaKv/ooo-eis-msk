@@ -74,12 +74,7 @@ function ItemsRow1() {
     {FirstRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box
-        sx={{height: '250px', width: '250px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
+       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
       </Paper>
      </LinkButton>
     ))}
@@ -110,12 +105,7 @@ function ItemsRow2() {
     {SecondRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box
-        sx={{height: '250px', width: '250px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
+       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
       </Paper>
      </LinkButton>
     ))}
@@ -154,12 +144,7 @@ function ItemsRow3() {
     {ThirdRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box
-        sx={{height: '250px', width: '250px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
+       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
       </Paper>
      </LinkButton>
     ))}
@@ -203,12 +188,7 @@ function ItemsRow4() {
     {FourthRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box
-        sx={{height: '250px', width: '250px'}}
-        component='img'
-        alt='button'
-        src={service.image}
-       />
+       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
       </Paper>
      </LinkButton>
     ))}

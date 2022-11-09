@@ -212,13 +212,6 @@ input[type='number'] {
  }
 }
 
-input[type='email'],
-input[type='text'],
-input[type='number'],
-textarea,
-select {
- width: 400px;
-}
 
 select {
  margin: 0;
