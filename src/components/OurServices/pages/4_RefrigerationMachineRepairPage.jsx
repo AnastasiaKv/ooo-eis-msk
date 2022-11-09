@@ -51,11 +51,7 @@ export default function RefrigerationMachineRepairPage() {
       </h4>
      </p>
      <br />
-     <Typography
-      variant='caption'
-      component='span'
-      style={{textAlign: 'left', fontSize: '19px', paddingRight: '5em', paddingBottom: '15px'}}
-     >
+     <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '1em'}}>
       Выполняем следующие технологические операции:
      </Typography>
 

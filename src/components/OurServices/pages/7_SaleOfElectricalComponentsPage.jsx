@@ -60,7 +60,7 @@ export default function SaleOfElectricalComponentsPage() {
           style={{
            margin: '5px 0px 0px 0px',
            width: '25px',
-           height: '26px',
+           height: '22px',
            color: '#f12b21',
           }}
          />
@@ -69,7 +69,7 @@ export default function SaleOfElectricalComponentsPage() {
           component='span'
           style={{
            paddingLeft: '3px',
-           fontSize: '17px',
+           fontSize: '16px',
            marginLeft: '11px',
            textAlign: '-webkit-auto',
           }}
@@ -82,8 +82,8 @@ export default function SaleOfElectricalComponentsPage() {
           style={{
            margin: '5px 0px 0px 0px',
            width: '25px',
-           height: '26px',
-           color: '#f12b29',
+           height: '22px',
+           color: '#f44336',
           }}
          />
          <Typography
@@ -91,7 +91,7 @@ export default function SaleOfElectricalComponentsPage() {
           component='span'
           style={{
            paddingLeft: '3px',
-           fontSize: '17px',
+           fontSize: '16px',
            marginLeft: '11px',
            textAlign: '-webkit-auto',
           }}
@@ -104,8 +104,8 @@ export default function SaleOfElectricalComponentsPage() {
           style={{
            margin: '5px 0px 0px 0px',
            width: '25px',
-           height: '26px',
-           color: '#f12b29',
+           height: '22px',
+           color: '#f44336',
           }}
          />
          <Typography
@@ -113,7 +113,7 @@ export default function SaleOfElectricalComponentsPage() {
           component='span'
           style={{
            paddingLeft: '3px',
-           fontSize: '17px',
+           fontSize: '16px',
            marginLeft: '11px',
            textAlign: '-webkit-auto',
           }}

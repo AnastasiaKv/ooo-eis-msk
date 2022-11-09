@@ -51,9 +51,8 @@ export default function RewindingMotorsPage() {
      </p>
      <br />
      <ul style={{color: '#1a202c', paddingLeft: '25px', textAlign: 'left', listStyle: 'none'}}>
-      <Typography variant='h6' sx={{paddingRight: '20px'}}>
-       При выходе из строя электрообмоток производятся
-       <br /> следующие работы:
+      <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '0px'}}>
+       При выходе из строя электрообмоток производятся следующие работы:
       </Typography>
       <Stack direction='row' spacing={3} sx={{paddingTop: '1em'}}>
        <Bolt

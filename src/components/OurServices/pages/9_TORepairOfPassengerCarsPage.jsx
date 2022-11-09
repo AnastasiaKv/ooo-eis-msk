@@ -24,7 +24,7 @@ export default function TORepairOfPassengerCarsPage() {
      <Typography
       variant='h4'
       component='h4'
-      sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '20px'}}
+      sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
      >
       ТО и ремонт электрооборудования пассажирских вагонов
      </Typography>
@@ -77,7 +77,7 @@ export default function TORepairOfPassengerCarsPage() {
           style={{
            fontFamily: 'Roboto',
            paddingLeft: '3px',
-           fontSize: '18px',
+           fontSize: '16px',
            marginLeft: '11px',
            textAlign: '-webkit-auto',
           }}
@@ -99,7 +99,7 @@ export default function TORepairOfPassengerCarsPage() {
           component='p'
           style={{
            paddingLeft: '3px',
-           fontSize: '18px',
+           fontSize: '16px',
            marginLeft: '11px',
            textAlign: '-webkit-auto',
           }}
@@ -121,7 +121,7 @@ export default function TORepairOfPassengerCarsPage() {
           component='p'
           style={{
            paddingLeft: '3px',
-           fontSize: '18px',
+           fontSize: '16px',
            marginLeft: '11px',
            textAlign: '-webkit-auto',
           }}

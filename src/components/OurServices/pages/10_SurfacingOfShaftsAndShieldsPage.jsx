@@ -50,7 +50,6 @@ export default function SurfacingOfShaftsAndShieldsPage() {
        alignItems: 'center',
        maxWidth: '800px',
        fontSize: 15,
-       lineHeight: '1.5',
        color: '#292929',
       }}
      >
@@ -75,13 +74,13 @@ export default function SurfacingOfShaftsAndShieldsPage() {
          color: '#1a202c',
         }}
        >
-        <Stack direction='row' sx={{paddingTop: '2em', paddingBottom: '1.6em'}}>
+        <Stack direction='row' sx={{paddingTop: '0.6em', paddingBottom: '2em'}}>
          <Handyman
           fontSize='medium'
           color='action'
           style={{
            margin: '3px 0px 0px 0px',
-           height: '19px'
+           height: '19px',
           }}
          />
          <Typography
@@ -90,79 +89,77 @@ export default function SurfacingOfShaftsAndShieldsPage() {
           style={{
            fontFamily: 'Roboto',
            paddingLeft: '3px',
-           fontSize: '17px',
+           fontSize: '16px',
            marginLeft: '11px',
           }}
          >
           Восстановление вала
          </Typography>
         </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '1.6em'}}>
+        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
          <Handyman
           fontSize='medium'
           color='action'
           style={{
            margin: '3px 0px 0px 0px',
-           height: '19px'
+           height: '19px',
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
+          style={{paddingLeft: '3px', fontSize: '16px', marginLeft: '11px'}}
          >
           Восстановление шлицов
          </Typography>
         </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '1.6em'}}>
+        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
          <Handyman
           fontSize='medium'
           color='action'
           style={{
            margin: '3px 0px 0px 0px',
-           height: '19px'
+           height: '19px',
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{fontSize: '17px', paddingLeft: '3px', fontSize: '17px', marginLeft: '11px'}}
+          style={{fontSize: '16px', paddingLeft: '3px', fontSize: '16px', marginLeft: '11px'}}
          >
           Восстановление шпоночного паза
          </Typography>
         </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '1.6em'}}>
+        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
          <Handyman
           fontSize='medium'
           color='action'
           style={{
            margin: '3px 0px 0px 0px',
-           height: '19px'
+           height: '19px',
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px',
-          height: '19px'}}
+          style={{paddingLeft: '3px', fontSize: '16px', marginLeft: '11px', height: '19px'}}
          >
           Наплавка валов
          </Typography>
         </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '1.6em'}}>
+        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
          <Handyman
           fontSize='medium'
           color='action'
           style={{
            margin: '3px 0px 0px 0px',
-           height: '19px'
+           height: '19px',
           }}
          />
          <Typography
           variant='body2'
           component='p'
-          style={{paddingLeft: '3px', fontSize: '17px', marginLeft: '11px',
-          height: '19px'}}
+          style={{paddingLeft: '3px', fontSize: '16px', marginLeft: '11px', height: '19px'}}
          >
           Ремонт вала
          </Typography>
