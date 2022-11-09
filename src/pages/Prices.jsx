@@ -17,6 +17,7 @@ import RepairMotorsPage from '../components/OurServices/pages/1_RepairMotorsPage
 import GeneratorRepairPage from '../components/OurServices/pages/2_GeneratorRepairPage';
 import RepairTransformersPage from '../components/OurServices/pages/3_RepairTransformersPage';
 import RewindingMotorsPage from '../components/OurServices/pages/5_RewindingMotorsPage';
+import SEO from '../components/SEO';
 
 const data = [
  {
@@ -84,6 +85,12 @@ const textStyle = {
 export default function Prices() {
  return (
   <main className='ees-content'>
+   <SEO
+    title='Стоимость'
+    description='В таблицах с ценами представлена минимальная стоимость заказа по каждой позиции,
+          окончательная стоимость будет сформирована после первичной дефектации.'
+    name='ООО "ЭИС"'
+   />
    <div style={componentStyle}>
     <div className='block1' style={componentStyle}>
      <br />

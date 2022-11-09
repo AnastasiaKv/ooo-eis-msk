@@ -10,10 +10,17 @@ import vrmLogo from '../assets/img/companiesLogos/vrm/logo4.png';
 import image1 from '../assets/img/gallery/Gallery_Crew_gang_bang.png';
 import image2 from '../assets/img/gallery/Gallery_Naplavka.png';
 import image3 from '../assets/img/gallery/Gallery_Svarka.png';
+import SEO from '../components/SEO';
+
 export default function About() {
  return (
   <>
    <main className='ees-content'>
+    <SEO
+     title='О нас'
+     description='Мы осуществляем ремонт электронного, электрического и механического оборудования для нужд АО "РЖД" и АО "ФПК" с 2007 года.'
+     name='ООО "ЭИС"'
+    />
     <Paper elevation={0} sx={{paddingTop: '4.5em', marginBottom: 5}}>
      <Stack sx={{width: '37em'}}>
       <Typography

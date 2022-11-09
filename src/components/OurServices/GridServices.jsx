@@ -218,11 +218,6 @@ export default function GridServices() {
  return (
   <main className='ees-content'>
    <div>
-    <SEO
-     title='Ремонт электрооборудования'
-     description='РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ'
-     name='ООО ЭИС'
-    />
     <p
      style={{
       textAlign: 'left',
