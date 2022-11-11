@@ -25,7 +25,13 @@ const helmetContext = {};
 function App() {
  return (
   <HelmetProvider context={helmetContext}>
-   <SEO title='ООО "ЭИС"' description='ООО "Электронные Инженерные Системы"' name='ООО "ЭИС"' />
+   <SEO
+    title='ООО "Электронные Инженерные Системы"'
+    description='Качество нашего ремонта проверено годами непрерывной работы, и вы получите гарантию на
+      устройство после ремонта. Мы готовы работать как с бытовыми устройствами , так и с
+      промышленным оборудованием.'
+    name='ООО "ЭИС"'
+   />
    <Router>
     <div className='ees-parent'>
      <div className='ees-container'>

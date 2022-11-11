@@ -7,12 +7,13 @@ import {makeStyles} from '@material-ui/styles';
 import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
+import App from '../app/App';
 import About from '../pages/About';
 import Contacts from '../pages/Contacts';
 import Prices from '../pages/Prices';
 import News from '../pages/News';
 import Gallery from '../pages/Gallery';
-import Main from '../pages/Main';
+import Home from '../pages/Home';
 
 import Page1 from './OurServices/pages/1_RepairMotorsPage';
 import Page2 from './OurServices/pages/2_GeneratorRepairPage';
@@ -91,7 +92,7 @@ export default function NavTabs() {
      <LinkTab
       onClick={value}
       label='Главная'
-      to='/'
+      to='/eis'
       className={classes.button}
       style={buttonStyle}
      />
@@ -126,9 +127,9 @@ export default function NavTabs() {
     </Stack>
    </Tabs>
    <Routes>
-    <Route path='/' element={<Main />} />
-    <Route path='/*' element={<Main />}>
-     <Route index element={<Main />} />
+    <Route path='/' element={<Home />} />
+    <Route path='/eis' element={<Home />}>
+     <Route index element={<GridServices />} />
      <Route path='services/repair-motors-page' element={<Page1 />} />
      <Route path='services/generator-repair-page' element={<Page2 />} />
      <Route path='services/repair-transformers-page' element={<Page3 />} />

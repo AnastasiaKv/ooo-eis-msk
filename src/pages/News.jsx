@@ -42,7 +42,7 @@ const body2Style = {
 
 export default function News() {
  return (
-  <main className='ees-content'>
+  <main className ='ees-content'>
    <div>
     <p
      style={{

@@ -6,7 +6,7 @@ import GServices from '../components/OurServices/GServices3';
 import {Stack} from '@mui/system';
 import SEO from '../components/SEO';
 
-export default function Main() {
+export default function Home() {
  return (
   <>
    <SEO
