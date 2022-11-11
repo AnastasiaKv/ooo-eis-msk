@@ -121,7 +121,7 @@ export default function Prices() {
      <h2>
       <Typography
        variant='h4'
-       component='h2'
+       component='h1'
        sx={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '31em', paddingBottom: '2em'}}
       >
        Этапы работ
@@ -138,7 +138,7 @@ export default function Prices() {
      <Stack sx={{}}>
       <Typography
        variant='h4'
-       component='h2'
+       component='h1'
        sx={{
         paddingRight: '31em',
         paddingBottom: '2em',
@@ -172,7 +172,7 @@ export default function Prices() {
          id='panel2a-header'
          expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
         >
-         <Typography variant='h4' component='h2' style={{fontSize: '28px'}}>
+         <Typography variant='h4' component='h1' style={{fontSize: '28px'}}>
           Ремонт электродвигателей
          </Typography>
         </AccordionSummary>
@@ -187,7 +187,7 @@ export default function Prices() {
          id='panel2a-header'
          expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
         >
-         <Typography variant='h4' component='h2' style={{fontSize: '28px'}}>
+         <Typography variant='h4' component='h1' style={{fontSize: '28px'}}>
           Ремонт трансформаторов
          </Typography>
         </AccordionSummary>
@@ -202,7 +202,7 @@ export default function Prices() {
          id='panel2a-header'
          expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
         >
-         <Typography variant='h4' component='h2' style={{fontSize: '28px'}}>
+         <Typography variant='h4' component='h1' style={{fontSize: '28px'}}>
           Перемотка электродвигателей
          </Typography>
         </AccordionSummary>

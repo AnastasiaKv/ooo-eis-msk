@@ -71,6 +71,7 @@ export default function Contacts() {
         <Typography
          style={{paddingLeft: '8.5em', fontFamily: 'Furore', fontSize: '28px'}}
          variant='h4'
+         component='h1'
         >
          Контактная информация
         </Typography>

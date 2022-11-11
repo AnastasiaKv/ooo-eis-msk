@@ -230,7 +230,7 @@ export default function GridServices() {
      className='blocktext'
     >
      <Typography
-      variant='h4'
+      variant='h1'
       sx={{
        paddingLeft: '4em',
        textAlign: 'center',
@@ -265,7 +265,7 @@ export default function GridServices() {
     <div style={{paddingLeft: '63px', paddingBottom: '5em'}}>
      <Stack direction='column' sx={{textAlign: 'left'}}>
       <Typography
-       variant='h4'
+       variant='h1'
        sx={{
         flexGrow: 1,
         paddingLeft: '1.2em',
@@ -309,7 +309,7 @@ export default function GridServices() {
      className='blocktext'
     >
      <Typography
-      variant='h4'
+      variant='h1'
       sx={{
        paddingLeft: '4em',
        textAlign: 'center',

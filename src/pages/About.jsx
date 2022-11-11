@@ -86,7 +86,7 @@ export default function About() {
      <Stack>
       <Typography
        variant='h4'
-       component='h2'
+       component='h1'
        sx={{textAlign: 'center', flexGrow: 1}}
        style={{
         fontFamily: 'Furore',
