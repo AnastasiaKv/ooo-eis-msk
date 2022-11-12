@@ -91,11 +91,11 @@ export default function RepairMotorsPage() {
        alt='Изображение неведомой детали'
        src={image1}
       />
-      <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h2' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+      <h1 style={{paddingTop: '20px'}}>
+       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт электродвигателя от 500 руб.
        </Typography>
-      </h4>
+      </h1>
      </p>
 
      <SimpleTable data={data} />

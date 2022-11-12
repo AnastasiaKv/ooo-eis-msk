@@ -17,14 +17,15 @@ export default function SaleOfElectricalComponentsPage() {
    />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' sx={{paddingBottom: '2em'}}>
-     <Typography
-      variant='h4'
-      component='h4'
-      sx={{fontFamily: 'Furore', paddingTop: '2em', textAlign: 'center', fontSize: '28px'}}
-     >
-      Продажа электрокомпонентов
-     </Typography>
-
+     <h1>
+      <Typography
+       variant='h4'
+       component='h4'
+       sx={{fontFamily: 'Furore', paddingTop: '2em', textAlign: 'center', fontSize: '28px'}}
+      >
+       Продажа электрокомпонентов
+      </Typography>
+     </h1>
      <Stack
       direction='row-reverse'
       sx={{

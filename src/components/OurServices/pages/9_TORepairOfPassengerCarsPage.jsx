@@ -21,13 +21,15 @@ export default function TORepairOfPassengerCarsPage() {
      spacing={0}
      sx={{paddingLeft: '1em', paddingTop: '2em', paddingBottom: '1em'}}
     >
-     <Typography
-      variant='h4'
-      component='h4'
-      sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
-     >
-      ТО и ремонт электрооборудования пассажирских вагонов
-     </Typography>
+     <h1>
+      <Typography
+       variant='h4'
+       component='h4'
+       sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
+      >
+       ТО и ремонт электрооборудования пассажирских вагонов
+      </Typography>
+     </h1>
      <Stack
       direction='row-reverse'
       sx={{

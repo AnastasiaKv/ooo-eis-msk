@@ -19,12 +19,14 @@ export default function RewindingMotorsPage() {
     description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
+   <Paper
+    elevation={4}
+    sx={{bgcolor: '#f7f7f7', marginLeft: '2em', marginBottom: 5, width: '31em'}}
+   >
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
       style={{
        paddingTop: '45px',
-       paddingLeft: '2rem',
        width: '646px',
        height: '211px',
        textAlign: 'left',
@@ -43,17 +45,19 @@ export default function RewindingMotorsPage() {
        alt='Изображение неведомой детали'
        src={image5}
       />
-      <h4 style={{paddingTop: '10px'}}>
+      <h1 style={{paddingTop: '10px'}}>
        <Typography variant='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт и перемотка двигателей
        </Typography>
-      </h4>
+      </h1>
      </p>
      <br />
-     <ul style={{color: '#1a202c', paddingLeft: '25px', textAlign: 'left', listStyle: 'none'}}>
-      <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '0px'}}>
-       При выходе из строя электрообмоток производятся следующие работы:
-      </Typography>
+     <ul style={{color: '#1a202c', textAlign: 'left', listStyle: 'none'}}>
+      <h4>
+       <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '0px'}}>
+        При выходе из строя электрообмоток производятся следующие работы:
+       </Typography>
+      </h4>
       <Stack direction='row' spacing={3} sx={{paddingTop: '1em'}}>
        <Bolt
         style={{

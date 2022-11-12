@@ -21,27 +21,31 @@ export default function SurfacingOfShaftsAndShieldsPage() {
      spacing={0}
      sx={{color: '#1a202c', paddingTop: '1em', paddingLeft: '1em', paddingBottom: '1.6em'}}
     >
-     <Typography
-      variant='h4'
-      component='h4'
-      style={{textAlign: 'left', fontFamily: 'Furore', fontSize: '28px'}}
-     >
-      Наплавка валов и щитов от 4000 руб.
-     </Typography>
+     <h1>
+      <Typography
+       variant='h4'
+       component='h4'
+       style={{textAlign: 'left', fontFamily: 'Furore', fontSize: '28px'}}
+      >
+       Наплавка валов и щитов от 4000 руб.
+      </Typography>
+     </h1>
      <br />
-     <Typography
-      variant='h5'
-      component='p'
-      style={{
-       textAlign: 'left',
-       color: '#1a202c',
-       paddingTop: '1em',
-       paddingRight: '15em',
-       paddingBottom: '15px',
-      }}
-     >
-      Примеры наших работ:
-     </Typography>
+     <h3>
+      <Typography
+       variant='h5'
+       component='p'
+       style={{
+        textAlign: 'left',
+        color: '#1a202c',
+        paddingTop: '1em',
+        paddingRight: '15em',
+        paddingBottom: '15px',
+       }}
+      >
+       Примеры наших работ:
+      </Typography>
+     </h3>
      <Stack
       direction='row-reverse'
       sx={{

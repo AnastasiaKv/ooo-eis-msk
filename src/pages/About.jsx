@@ -84,20 +84,22 @@ export default function About() {
       <Box sx={{height: '1em'}}></Box>
      </Stack>
      <Stack>
-      <Typography
-       variant='h4'
-       component='h1'
-       sx={{textAlign: 'center', flexGrow: 1}}
-       style={{
-        fontFamily: 'Furore',
-        fontSize: '28px',
-        color: '#292929',
-        paddingTop: '3em',
-        paddingBottom: '2em',
-       }}
-      >
-       Наши партнеры:
-      </Typography>
+      <h1>
+       <Typography
+        variant='h4'
+        component='h1'
+        sx={{textAlign: 'center', flexGrow: 1}}
+        style={{
+         fontFamily: 'Furore',
+         fontSize: '28px',
+         color: '#292929',
+         paddingTop: '3em',
+         paddingBottom: '2em',
+        }}
+       >
+        Наши партнеры:
+       </Typography>
+      </h1>
       <br />
       <Stack direction='row' spacing={12} sx={{paddingLeft: '4em'}}>
        <Paper elevation={0}>

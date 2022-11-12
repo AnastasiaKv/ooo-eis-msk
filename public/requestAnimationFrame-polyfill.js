@@ -8,23 +8,36 @@
 // Added high resolution timing. This window.performance.now() polyfill can be used: https://gist.github.com/jalbam/cc805ac3cfe14004ecdf323159ecf40e
 // MIT license
 // Gist: https://gist.github.com/jalbam/5fe05443270fa6d8136238ec72accbc0
-(function() {
-	var vendors = ['webkit', 'moz', 'ms', 'o'], vp = null;
-	for (var x = 0; x < vendors.length && !window.requestAnimationFrame && !window.cancelAnimationFrame; x++)
-	{
-		vp = vendors[x];
-		window.requestAnimationFrame = window.requestAnimationFrame || window[vp + 'RequestAnimationFrame'];
-		window.cancelAnimationFrame = window.cancelAnimationFrame || window[vp + 'CancelAnimationFrame'] || window[vp + 'CancelRequestAnimationFrame'];
-	}
-	if (/iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) || !window.requestAnimationFrame || !window.cancelAnimationFrame) //iOS6 is buggy.
-	{
-		var lastTime = 0;
-		window.requestAnimationFrame = function(callback, element)
-		{
-			var now = window.performance.now();
-			var nextTime = Math.max(lastTime + 16, now); //First time will execute it immediately but barely noticeable and performance is gained.
-			return setTimeout(function() { callback(lastTime = nextTime); }, nextTime - now);
-		};
-		window.cancelAnimationFrame = clearTimeout;
-	}
-}());
+(function () {
+ var vendors = ['webkit', 'moz', 'ms', 'o'],
+  vp = null;
+ for (
+  var x = 0;
+  x < vendors.length && !window.requestAnimationFrame && !window.cancelAnimationFrame;
+  x++
+ ) {
+  vp = vendors[x];
+  window.requestAnimationFrame =
+   window.requestAnimationFrame || window[vp + 'RequestAnimationFrame'];
+  window.cancelAnimationFrame =
+   window.cancelAnimationFrame ||
+   window[vp + 'CancelAnimationFrame'] ||
+   window[vp + 'CancelRequestAnimationFrame'];
+ }
+ if (
+  /iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) ||
+  !window.requestAnimationFrame ||
+  !window.cancelAnimationFrame
+ ) {
+  //iOS6 is buggy.
+  var lastTime = 0;
+  window.requestAnimationFrame = function (callback, element) {
+   var now = window.performance.now();
+   var nextTime = Math.max(lastTime + 16, now); //First time will execute it immediately but barely noticeable and performance is gained.
+   return setTimeout(function () {
+    callback((lastTime = nextTime));
+   }, nextTime - now);
+  };
+  window.cancelAnimationFrame = clearTimeout;
+ }
+})();

@@ -68,13 +68,15 @@ export default function Contacts() {
          listStyle: 'none',
         }}
        >
-        <Typography
-         style={{paddingLeft: '8.5em', fontFamily: 'Furore', fontSize: '28px'}}
-         variant='h4'
-         component='h1'
-        >
-         Контактная информация
-        </Typography>
+        <h1>
+         <Typography
+          style={{paddingLeft: '8.5em', fontFamily: 'Furore', fontSize: '28px'}}
+          variant='h4'
+          component='h1'
+         >
+          Контактная информация
+         </Typography>
+        </h1>
         <br />
         <Typography
          sx={{

@@ -17,16 +17,25 @@ export default function RepairOfBoardsAndBlocksPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginBottom: 5, paddingLeft: '2em', paddingBottom: '2em'}}
+    sx={{
+     bgcolor: '#f7f7f7',
+     marginLeft: '2.7em',
+     marginBottom: 5,
+     paddingLeft: '2em',
+     paddingBottom: '2em',
+     width: '30em',
+    }}
    >
     <Stack>
-     <Typography
-      variant='h4'
-      component='h4'
-      style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '25px', paddingTop: '1em'}}
-     >
-      Ремонт плат и электронных блоков
-     </Typography>
+     <h1>
+      <Typography
+       variant='h4'
+       component='h4'
+       style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '25px', paddingTop: '1em'}}
+      >
+       Ремонт плат и электронных блоков
+      </Typography>
+     </h1>
      <Box
       sx={{
        marginLeft: '14em',
@@ -39,10 +48,11 @@ export default function RepairOfBoardsAndBlocksPage() {
       src={image6}
      />
     </Stack>
-
-    <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '1em'}}>
-     Список ремонтируемой электроники:
-    </Typography>
+    <h3>
+     <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '1em'}}>
+      Список ремонтируемой электроники:
+     </Typography>
+    </h3>
     <ul style={{fontFamily: 'Roboto', fontSize: '16px', marginLeft: 0}}>
      <Stack direction='row' spacing={3}>
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />

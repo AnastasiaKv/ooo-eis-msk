@@ -14,18 +14,20 @@ export default function CustomizedTables() {
  return (
   <>
    <Stack>
-    <Typography
-     variant='h4'
-     style={{
-      marginRight: '1em',
-      paddingRight: '6em',
-      paddingBottom: '1em',
-      fontFamily: 'Furore',
-      fontSize: '28px',
-     }}
-    >
-     Перемотка электродвигателей цены
-    </Typography>
+    <h1>
+     <Typography
+      variant='h4'
+      style={{
+       marginRight: '1em',
+       paddingRight: '6em',
+       paddingBottom: '1em',
+       fontFamily: 'Furore',
+       fontSize: '28px',
+      }}
+     >
+      Перемотка электродвигателей цены
+     </Typography>
+    </h1>
    </Stack>
    <Stack spacing={0} style={{}}>
     <Paper elevation={8} sx={{maxWidth: '670px'}}>

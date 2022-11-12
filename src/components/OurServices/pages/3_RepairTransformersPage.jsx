@@ -106,11 +106,11 @@ const RepairTransformersPage = () => {
        alt='Изображение неведомой детали'
        src={image3}
       />
-      <h4 style={{paddingTop: '10px'}}>
-       <Typography variant='h4' component='h2' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+      <h1 style={{paddingTop: '10px'}}>
+       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Цены на перемотку трансформаторов от 9000 руб.
        </Typography>
-      </h4>
+      </h1>
      </p>
 
      <SimpleTable data={data} />

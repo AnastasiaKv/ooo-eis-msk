@@ -44,11 +44,11 @@ export default function RefrigerationMachineRepairPage() {
        alt='Изображение неведомой детали'
        src={image4}
       />
-      <h4 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h2' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+      <h1 style={{paddingTop: '20px'}}>
+       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
         Ремонт холодильных машин и компрессоров от 4000 руб.
        </Typography>
-      </h4>
+      </h1>
      </p>
      <br />
      <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '1em'}}>

@@ -212,7 +212,6 @@ input[type='number'] {
  }
 }
 
-
 select {
  margin: 0;
  -webkit-appearance: none;
@@ -581,3 +580,10 @@ button[type='reset']:hover {
  font-style: normal;
  font-display: swap;
 }
+/* width: '480px', padding: '0.65rem 0.5rem'
+    <IconTextField
+     style={{left: '-27px', borderRadius: '0', top: '16px'}}
+     size='small'
+     label=''
+     iconEnd={<SearchIcon />}
+    /> */

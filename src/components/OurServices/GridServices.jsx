@@ -229,20 +229,22 @@ export default function GridServices() {
      }}
      className='blocktext'
     >
-     <Typography
-      variant='h1'
-      sx={{
-       paddingLeft: '4em',
-       textAlign: 'center',
-       flexGrow: 1,
-       paddingBottom: '2em',
-       fontFamily: 'Furore',
-       fontSize: '28px',
-       color: '#292929',
-      }}
-     >
-      Ремонт электрооборудования
-     </Typography>
+     <h1>
+      <Typography
+       variant='h1'
+       sx={{
+        paddingLeft: '4em',
+        textAlign: 'center',
+        flexGrow: 1,
+        paddingBottom: '2em',
+        fontFamily: 'Furore',
+        fontSize: '28px',
+        color: '#292929',
+       }}
+      >
+       Ремонт электрооборудования
+      </Typography>
+     </h1>
      <Typography
       component='p'
       sx={{
@@ -264,22 +266,24 @@ export default function GridServices() {
     </p>
     <div style={{paddingLeft: '63px', paddingBottom: '5em'}}>
      <Stack direction='column' sx={{textAlign: 'left'}}>
-      <Typography
-       variant='h1'
-       sx={{
-        flexGrow: 1,
-        paddingLeft: '1.2em',
-        paddingTop: '20px',
-        paddingBottom: '2em',
-        fontFamily: 'Furore',
-        fontSize: '28px',
+      <h1>
+       <Typography
+        variant='h1'
+        sx={{
+         flexGrow: 1,
+         paddingLeft: '1.2em',
+         paddingTop: '20px',
+         paddingBottom: '2em',
+         fontFamily: 'Furore',
+         fontSize: '28px',
 
-        textAlign: 'center',
-        color: '#292929',
-       }}
-      >
-       Наши услуги
-      </Typography>
+         textAlign: 'center',
+         color: '#292929',
+        }}
+       >
+        Наши услуги
+       </Typography>
+      </h1>
       <Box sx={{flexGrow: 1}}>
        <Stack direction='column' spacing={0}>
         <ItemsRow1 classes={classes} />
@@ -308,20 +312,22 @@ export default function GridServices() {
      }}
      className='blocktext'
     >
-     <Typography
-      variant='h1'
-      sx={{
-       paddingLeft: '4em',
-       textAlign: 'center',
-       flexGrow: 1,
-       paddingBottom: '2em',
-       fontFamily: 'Furore',
-       fontSize: '28px',
-       color: '#292929',
-      }}
-     >
-      РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ
-     </Typography>
+     <h1>
+      <Typography
+       variant='h1'
+       sx={{
+        paddingLeft: '4em',
+        textAlign: 'center',
+        flexGrow: 1,
+        paddingBottom: '2em',
+        fontFamily: 'Furore',
+        fontSize: '28px',
+        color: '#292929',
+       }}
+      >
+       РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ
+      </Typography>
+     </h1>
      <Typography
       component='p'
       sx={{

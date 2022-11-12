@@ -7,8 +7,7 @@ import {Stack} from '@mui/system';
 
 import SEO from '../components/SEO';
 
-
-export default function Home() {
+export default function Index() {
  return (
   <>
    <SEO

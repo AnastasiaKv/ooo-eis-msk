@@ -118,7 +118,7 @@ export default function Prices() {
      </p>
     </div>
     <div className='block2' style={{paddingLeft: '1em'}}>
-     <h2>
+     <h1>
       <Typography
        variant='h4'
        component='h1'
@@ -126,7 +126,8 @@ export default function Prices() {
       >
        Этапы работ
       </Typography>
-     </h2>
+     </h1>
+
      <br />
      <div style={{paddingLeft: '3em', paddingRight: '5em', paddingBottom: '2em'}}>
       <JobsType />
@@ -136,19 +137,21 @@ export default function Prices() {
     <br />
     <div className='block3' style={{paddingLeft: '0em'}}>
      <Stack sx={{}}>
-      <Typography
-       variant='h4'
-       component='h1'
-       sx={{
-        paddingRight: '31em',
-        paddingBottom: '2em',
-        textAlign: 'center',
-        fontFamily: 'Furore',
-        fontSize: '28px',
-       }}
-      >
-       Прейскурант цен
-      </Typography>
+      <h1>
+       <Typography
+        variant='h4'
+        component='h1'
+        sx={{
+         paddingRight: '31em',
+         paddingBottom: '2em',
+         textAlign: 'center',
+         fontFamily: 'Furore',
+         fontSize: '28px',
+        }}
+       >
+        Прейскурант цен
+       </Typography>
+      </h1>
       <br /> <br />
       <div style={{paddingLeft: '3em', paddingBottom: '20px'}}>
        <Accordion sx={{borderRadius: 3, width: '33em'}}>

@@ -19,9 +19,11 @@ export default function RepairOfElectricHeatersPage() {
     <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '1em', paddingTop: '1em'}}>
      <Stack direction='row' spacing={10}>
       <Stack direction='column' sx={{paddingLeft: '2em', textAlign: 'left'}}>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-        Ремонт электронагревателей от 500 руб.
-       </Typography>
+       <h1>
+        <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+         Ремонт электронагревателей от 500 руб.
+        </Typography>
+       </h1>
        <Box
         sx={{
          marginLeft: '20em',
@@ -35,12 +37,14 @@ export default function RepairOfElectricHeatersPage() {
       </Stack>
      </Stack>
      <Stack sx={{paddingLeft: '2em', marginRight: '2em'}}>
-      <Typography
-       variant='h6'
-       sx={{textAlign: 'center', paddingRight: '20px', paddingBottom: '1em'}}
-      >
-       Виды поломок
-      </Typography>
+      <h4>
+       <Typography
+        variant='h6'
+        sx={{textAlign: 'center', paddingRight: '20px', paddingBottom: '1em'}}
+       >
+        Виды поломок
+       </Typography>
+      </h4>
       <Stack direction='column' spacing={0} alignItems='flex-start'>
        <Typography
         variant='caption'

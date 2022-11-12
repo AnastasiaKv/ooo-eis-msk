@@ -43,7 +43,7 @@ function name(params) {}
 
 export default function Header() {
  const theme = useTheme();
- const [open, setOpen] = React.useState(false);
+ const [isShown, setOpen] = React.useState(false);
  const [fullWidth, setFullWidth] = React.useState(true);
  const [maxWidth, setMaxWidth] = React.useState('sm');
  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
@@ -85,14 +85,12 @@ export default function Header() {
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      </Button>
     </div>
-
     <IconTextField
      style={{left: '-27px', borderRadius: '0', top: '16px'}}
      size='small'
      label=''
      iconEnd={<SearchIcon />}
     />
-
     <div style={{display: 'flex', flexWrap: 'wrap'}}>
      <ContactUsButton />
     </div>

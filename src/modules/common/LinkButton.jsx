@@ -13,8 +13,6 @@ const useStyles = makeStyles({
 
 export default function LinkButton(props) {
  const classes = useStyles();
-
- console.log('ClickClick: ', this);
  return (
   <>
    <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
