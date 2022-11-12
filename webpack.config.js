@@ -22,44 +22,18 @@ module.exports = {
  ],
  output: {
   path: path.resolve(__dirname, './public'), // путь к каталогу выходных файлов - папка public
-  publicPath: '/',
-  filename: jsName, // название создаваемого файла
+  publicPath: '/public/',
+  filename: 'bundle.js', // название создаваемого файла
  },
  devServer: {
+  headers: {'Access-Control-Allow-Origin': '*'},
+
   historyApiFallback: true,
   static: {
    directory: path.join(__dirname, '/'),
   },
   port: 3000,
   open: true,
- },
- module: {
-  loaders: [
-   ...{
-    test: /\.(woff|woff2|eot|ttf|svg)$/,
-    loader: 'file-loader',
-    options: {name: '[name].[ext]', outputPath: 'fonts/'},
-   },
-   ...{
-    test: /\.css$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
-   },
-   {
-    test: /\.less$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader'),
-   },
-   {test: /\.gif$/, loader: 'url-loader?limit=10000&mimetype=image/gif'},
-   {test: /\.jpg$/, loader: 'url-loader?limit=10000&mimetype=image/jpg'},
-   {test: /\.png$/, loader: 'url-loader?limit=10000&mimetype=image/png'},
-   {test: /\.svg/, loader: 'url-loader?limit=26000&mimetype=image/svg+xml'},
-   {test: /\.(woff|woff2|ttf|eot)/, loader: 'url-loader?limit=1'},
-   {test: /\.jsx?$/, loader: 'babel', exclude: [/node_modules/, /public/]},
-   {test: /\.json$/, loader: 'json-loader'},
-  ],
- },
- devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
- devServer: {
-  headers: {'Access-Control-Allow-Origin': '*'},
  },
  module: {
   rules: [
@@ -121,5 +95,28 @@ module.exports = {
     filename: 'index.html',
    }),
   ],
+  loaders: [
+   ...{
+    test: /\.(woff|woff2|eot|ttf|svg)$/,
+    loader: 'file-loader',
+    options: {name: '[name].[ext]', outputPath: 'fonts/'},
+   },
+   ...{
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
+   },
+   {
+    test: /\.less$/,
+    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader'),
+   },
+   {test: /\.gif$/, loader: 'url-loader?limit=10000&mimetype=image/gif'},
+   {test: /\.jpg$/, loader: 'url-loader?limit=10000&mimetype=image/jpg'},
+   {test: /\.png$/, loader: 'url-loader?limit=10000&mimetype=image/png'},
+   {test: /\.svg/, loader: 'url-loader?limit=26000&mimetype=image/svg+xml'},
+   {test: /\.(woff|woff2|ttf|eot)/, loader: 'url-loader?limit=1'},
+   {test: /\.jsx?$/, loader: 'babel', exclude: [/node_modules/, /public/]},
+   {test: /\.json$/, loader: 'json-loader'},
+  ],
  },
+ devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
 };
