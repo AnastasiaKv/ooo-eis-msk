@@ -43,7 +43,7 @@ function YMap() {
  );
 }
 
-function MapButton(props) {
+function YMapButton(props) {
  const {classes} = props;
  const [open, setOpen] = useState(false);
  const [isSubmitionCompleted, setSubmitionCompleted] = useState(false);
@@ -177,4 +177,4 @@ function MapButton(props) {
   </React.Fragment>
  );
 }
-export default MapButton;
+export default YMapButton;

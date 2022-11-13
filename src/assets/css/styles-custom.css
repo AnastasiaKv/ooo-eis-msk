@@ -26,8 +26,6 @@ select {
  padding-left: 10px;
  width: 400px;
 }
-.MuiInput-underline:after {
-}
 
 label {
  margin-top: 1em;

@@ -16,24 +16,10 @@ import {Stack, width} from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {useTheme} from '@mui/material/styles';
 import ContactUsButton from './components/ContactUsButton';
-import MapButton from './components/MapButton';
+import YMapButton from './components/YMapButton';
+import LiveSearch from './components/LiveSearch';
 
-const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
- return (
-  <TextField
-   type='search'
-   sx={{width: '480px', padding: '0.65rem 0.5rem'}}
-   {...props}
-   InputProps={{
-    ...InputProps,
-    startAdornment: iconStart ? (
-     <InputAdornment position='start'>{iconStart}</InputAdornment>
-    ) : null,
-    endAdornment: iconEnd ? <InputAdornment position='end'>{iconEnd}</InputAdornment> : null,
-   }}
-  />
- );
-};
+
 
 export default function Header() {
  const theme = useTheme();
@@ -65,19 +51,9 @@ export default function Header() {
      alt='Company logo.'
      src={Logo}
     />
-
-  
-     <MapButton />
- 
-    <IconTextField
-     style={{left: '-27px', borderRadius: '0', top: '16px'}}
-     size='small'
-     label=''
-     iconEnd={<SearchIcon />}
-    />
-    <div style={{display: 'flex', flexWrap: 'wrap'}}>
-     <ContactUsButton />
-    </div>
+    <YMapButton />
+    <LiveSearch  iconEnd={<SearchIcon />}/>
+    <ContactUsButton />
    </Toolbar>
   </AppBar>
  );

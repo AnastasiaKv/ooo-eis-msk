@@ -43,163 +43,165 @@ function Contact(props) {
 
  return (
   <React.Fragment>
-   <div>
-    <Typography
-     variant='h6'
-     component='div'
-     sx={{flexGrow: 1, paddingLeft: '44px', color: '#292929'}}
+   <div style={{display: 'flex', flexWrap: 'wrap'}}>
+    <div>
+     <Typography
+      variant='h6'
+      component='div'
+      sx={{flexGrow: 1, paddingLeft: '44px', color: '#292929'}}
+     >
+      8 (495)-135-82-88
+     </Typography>
+    </div>
+    <Button
+     onClick={handleClickOpen}
+     style={{
+      borderRadius: 3,
+      textTransform: 'inherit',
+      color: '#ffffff',
+      backgroundColor: '#F12B29',
+      height: '37.1px',
+     }}
+     variant='contained'
+     startIcon={<HeadsetMicIcon />}
     >
-     8 (495)-135-82-88
-    </Typography>
-   </div>
-   <Button
-    onClick={handleClickOpen}
-    style={{
-     borderRadius: 3,
-     textTransform: 'inherit',
-     color: '#ffffff',
-     backgroundColor: '#F12B29',
-     height: '37.1px',
-    }}
-    variant='contained'
-    startIcon={<HeadsetMicIcon />}
-   >
-    Обратный звонок
-   </Button>
-   <Dialog
-    sx={{width: '1000px'}}
-    open={open}
-    onClose={handleClose}
-    aria-labelledby='form-dialog-title'
-   >
-    {!isSubmitionCompleted && (
-     <React.Fragment>
-      <DialogTitle id='form-dialog-title'>Оставьте свои данные - и мы Вам перезвоним!</DialogTitle>
-      <ThemeProvider theme={theme}>
+     Обратный звонок
+    </Button>
+    <Dialog
+     sx={{width: '1000px'}}
+     open={open}
+     onClose={handleClose}
+     aria-labelledby='form-dialog-title'
+    >
+     {!isSubmitionCompleted && (
+      <React.Fragment>
+       <DialogTitle id='form-dialog-title'>Оставьте свои данные - и мы Вам перезвоним!</DialogTitle>
+       <ThemeProvider theme={theme}>
+        <DialogContent>
+         {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
+         <Formik
+          initialValues={{email: '', name: '', tel: ''}}
+          onSubmit={(values, {setSubmitting}) => {
+           setSubmitting(true);
+           axios
+            .post(contactFormEndpoint, values, {
+             headers: {
+              'Access-Control-Allow-Origin': '*',
+              'Content-Type': 'application/json',
+             },
+            })
+            .then((resp) => {
+             setSubmitionCompleted(true);
+            });
+          }}
+          validationSchema={Yup.object().shape({
+           email: Yup.string().email().required('Required'),
+           name: Yup.string().required('Required'),
+           tel: Yup.string().required('Required'),
+          })}
+         >
+          {(props) => {
+           const {
+            values,
+            touched,
+            errors,
+            dirty,
+            isSubmitting,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            handleReset,
+           } = props;
+           return (
+            <form onSubmit={handleSubmit}>
+             <Stack
+              sx={{
+               overflow: 'hidden',
+               padding: '10px 10em 10px 0px',
+               flexDirection: 'column',
+               alignItems: 'baseline',
+              }}
+              direction='row'
+              spacing={2}
+              noValidate
+              component='form'
+             >
+              <TextField
+               InputLabelProps={{shrink: true}}
+               label='Имя'
+               name='name'
+               className={classes.textField}
+               value={values.name}
+               onChange={handleChange}
+               onBlur={handleBlur}
+               helperText={errors.name && touched.name && errors.name}
+              />
+
+              <TextField
+               InputLabelProps={{shrink: true}}
+               error={errors.email && touched.email}
+               label='E-mail'
+               name='email'
+               className={classes.textField}
+               value={values.email}
+               onChange={handleChange}
+               onBlur={handleBlur}
+               helperText={errors.email && touched.email && errors.email}
+              />
+
+              <TextField
+               InputLabelProps={{shrink: true}}
+               label='Телефон'
+               name='tel'
+               className={classes.textField}
+               value={values.tel}
+               onChange={handleChange}
+               onBlur={handleBlur}
+               helperText={errors.tel && touched.tel && errors.tel}
+              />
+             </Stack>
+             <DialogActions>
+              <div style={{paddingBottom: '20px', paddingRight: '8.8em'}}>
+               <Button
+                onClick={handleClose}
+                style={{
+                 width: '12em',
+                 height: '45px',
+                 borderRadius: '1',
+                 color: '#F1F1F1F1',
+                 backgroundColor: '#292929',
+                }}
+                variant='contained'
+               >
+                Отправить
+               </Button>
+              </div>
+              {/* <DisplayFormikState {...props} /> */}
+             </DialogActions>
+            </form>
+           );
+          }}
+         </Formik>
+        </DialogContent>
+       </ThemeProvider>
+      </React.Fragment>
+     )}
+     {isSubmitionCompleted && (
+      <React.Fragment>
+       <DialogTitle id='form-dialog-title'>Thanks!</DialogTitle>
        <DialogContent>
-        {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
-        <Formik
-         initialValues={{email: '', name: '', tel: ''}}
-         onSubmit={(values, {setSubmitting}) => {
-          setSubmitting(true);
-          axios
-           .post(contactFormEndpoint, values, {
-            headers: {
-             'Access-Control-Allow-Origin': '*',
-             'Content-Type': 'application/json',
-            },
-           })
-           .then((resp) => {
-            setSubmitionCompleted(true);
-           });
-         }}
-         validationSchema={Yup.object().shape({
-          email: Yup.string().email().required('Required'),
-          name: Yup.string().required('Required'),
-          tel: Yup.string().required('Required'),
-         })}
-        >
-         {(props) => {
-          const {
-           values,
-           touched,
-           errors,
-           dirty,
-           isSubmitting,
-           handleChange,
-           handleBlur,
-           handleSubmit,
-           handleReset,
-          } = props;
-          return (
-           <form onSubmit={handleSubmit}>
-            <Stack
-             sx={{
-              overflow: 'hidden',
-              padding: '10px 10em 10px 0px',
-              flexDirection: 'column',
-              alignItems: 'baseline',
-             }}
-             direction='row'
-             spacing={2}
-             noValidate
-             component='form'
-            >
-             <TextField
-              InputLabelProps={{shrink: true}}
-              label='Имя'
-              name='name'
-              className={classes.textField}
-              value={values.name}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={errors.name && touched.name && errors.name}
-             />
-
-             <TextField
-              InputLabelProps={{shrink: true}}
-              error={errors.email && touched.email}
-              label='E-mail'
-              name='email'
-              className={classes.textField}
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={errors.email && touched.email && errors.email}
-             />
-
-             <TextField
-              InputLabelProps={{shrink: true}}
-              label='Телефон'
-              name='tel'
-              className={classes.textField}
-              value={values.tel}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={errors.tel && touched.tel && errors.tel}
-             />
-            </Stack>
-            <DialogActions>
-             <div style={{paddingBottom: '20px', paddingRight: '8.8em'}}>
-              <Button
-               onClick={handleClose}
-               style={{
-                width: '12em',
-                height: '45px',
-                borderRadius: '1',
-                color: '#F1F1F1F1',
-                backgroundColor: '#292929',
-               }}
-               variant='contained'
-              >
-               Отправить
-              </Button>
-             </div>
-             {/* <DisplayFormikState {...props} /> */}
-            </DialogActions>
-           </form>
-          );
-         }}
-        </Formik>
+        <DialogContentText>Thanks</DialogContentText>
+        <DialogActions>
+         <Button type='button' className='outline' onClick={handleClose}>
+          Back to app
+         </Button>
+         {/* <DisplayFormikState {...props} /> */}
+        </DialogActions>
        </DialogContent>
-      </ThemeProvider>
-     </React.Fragment>
-    )}
-    {isSubmitionCompleted && (
-     <React.Fragment>
-      <DialogTitle id='form-dialog-title'>Thanks!</DialogTitle>
-      <DialogContent>
-       <DialogContentText>Thanks</DialogContentText>
-       <DialogActions>
-        <Button type='button' className='outline' onClick={handleClose}>
-         Back to app
-        </Button>
-        {/* <DisplayFormikState {...props} /> */}
-       </DialogActions>
-      </DialogContent>
-     </React.Fragment>
-    )}
-   </Dialog>
+      </React.Fragment>
+     )}
+    </Dialog>
+   </div>
   </React.Fragment>
  );
 }

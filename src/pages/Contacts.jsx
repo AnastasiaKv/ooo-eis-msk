@@ -12,16 +12,10 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
-import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import TextField from '@mui/material/TextField';
 import SEO from '../components/SEO';
 
 const textStyle = {
  fontFamily: 'Roboto',
-
  textAlign: 'justify',
  lineHeight: '1.7',
  marginLeft: 0,

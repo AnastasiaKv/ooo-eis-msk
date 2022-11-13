@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
  {
-  PowerKBr: 'To 1,5',
+  PowerKBr: 'Дo 1,5',
 
   col13000: 2740,
   col21500: 2806,
