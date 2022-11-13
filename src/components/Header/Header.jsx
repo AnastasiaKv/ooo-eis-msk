@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // importing material UI components
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,16 +11,12 @@ import Logo from '../../assets/img/logo.svg';
 import MapIcon from '@mui/icons-material/Map';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-import Dialog from '@mui/material/Dialog';
 import {func} from 'prop-types';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import {Stack, width} from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {useTheme} from '@mui/material/styles';
-import ContactUsButton from '../../modules/header/ContactUsButton';
+import ContactUsButton from './components/ContactUsButton';
+import MapButton from './components/MapButton';
 
 const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
  return (
@@ -39,22 +35,25 @@ const IconTextField = ({iconStart, iconEnd, InputProps, ...props}) => {
  );
 };
 
-function name(params) {}
-
 export default function Header() {
  const theme = useTheme();
- const [isShown, setOpen] = React.useState(false);
- const [fullWidth, setFullWidth] = React.useState(true);
- const [maxWidth, setMaxWidth] = React.useState('sm');
+
+ const [isShown, setIsShown] = useState(false);
+ const [fullWidth, setFullWidth] = useState(true);
+ const [maxWidth, setMaxWidth] = useState('sm');
  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
- const handleClickOpen = (event) => {
-  setOpen(true);
+ const handleClick = (event) => {
+  // 👇️ toggle shown state
+
+  setIsShown((current) => !current);
+  // 👇️ or simply set it to true
+  //setIsShown(true);
   setFullWidth(event.target.checked);
  };
 
  const handleClose = () => {
-  setOpen(false);
+  setIsShown(false);
  };
 
  return (
@@ -67,24 +66,9 @@ export default function Header() {
      src={Logo}
     />
 
-    <div style={{display: 'flex', flexWrap: 'wrap'}}>
-     <Typography
-      variant='h6'
-      component='div'
-      sx={{flexGrow: 1}}
-      style={{paddingLeft: '20px', color: '#292929'}}
-     >
-      info@eis-msk.ru
-     </Typography>
-     <Button
-      component='div'
-      style={{borderRadius: 3, backgroundColor: '#292929', textTransform: 'inherit'}}
-      variant='contained'
-      startIcon={<MapIcon />}
-     >
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     </Button>
-    </div>
+  
+     <MapButton />
+ 
     <IconTextField
      style={{left: '-27px', borderRadius: '0', top: '16px'}}
      size='small'
