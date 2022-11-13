@@ -19,8 +19,6 @@ import ContactUsButton from './components/ContactUsButton';
 import YMapButton from './components/YMapButton';
 import LiveSearch from './components/LiveSearch';
 
-
-
 export default function Header() {
  const theme = useTheme();
 
@@ -52,7 +50,7 @@ export default function Header() {
      src={Logo}
     />
     <YMapButton />
-    <LiveSearch  iconEnd={<SearchIcon />}/>
+    <LiveSearch iconEnd={<SearchIcon />} />
     <ContactUsButton />
    </Toolbar>
   </AppBar>
