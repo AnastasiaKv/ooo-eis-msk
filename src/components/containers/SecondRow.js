@@ -8,15 +8,18 @@ export default [
   id: 4,
   image: image4,
   path: 'services/refrigeration-machine-repair-page',
+  title: 'Ремонт холодильных машин',
  },
  {
   id: 5,
   image: image5,
   path: 'services/rewinding-motors-page',
+  title: 'Перемотка',
  },
  {
   id: 6,
   image: image6,
   path: 'services/repair-of-electric-heaters-page',
+  title: 'Ремонт электронагревателей',
  },
 ];

@@ -6,5 +6,6 @@ export default [
   id: 10,
   image: image10,
   path: 'services/surfacing-of-shafts-and-shields-page',
+  title: 'Наплавка',
  },
 ];

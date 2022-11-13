@@ -43,8 +43,9 @@ export default function RepairOfBoardsAndBlocksPage() {
        width: '10em',
        height: '9em',
       }}
+      loading='lazy'
       component='img'
-      alt='Изображение неведомой детали'
+      alt='Ремонт плат и электронных блоков'
       src={image6}
      />
     </Stack>

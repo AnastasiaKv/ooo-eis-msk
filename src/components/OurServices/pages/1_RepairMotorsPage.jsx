@@ -87,8 +87,9 @@ export default function RepairMotorsPage() {
         float: 'right' /* Выравнивание по правому краю  */,
         margin: '0px -95px 13px 0px',
        }}
+       loading='lazy'
        component='img'
-       alt='Изображение неведомой детали'
+       alt='Ремонт электродвигателя'
        src={image1}
       />
       <h1 style={{paddingTop: '20px'}}>

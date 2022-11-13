@@ -52,8 +52,9 @@ export default function TORepairOfPassengerCarsPage() {
          float: 'right' /* Выравнивание по правому краю  */,
          margin: '0px -22px 29px 9px' /* Отступы вокруг картинки */,
         }}
+        loading='lazy'
         component='img'
-        alt='Изображение неведомой детали'
+        alt='ТО и ремонт электрооборудования пассажирских вагонов'
         src={image9}
        />
       </Stack>

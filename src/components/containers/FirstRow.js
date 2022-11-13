@@ -8,15 +8,18 @@ export default [
   id: 1,
   image: image1,
   path: 'services/repair-motors-page',
+  title: 'Ремонт электродвигателей',
  },
  {
   id: 2,
   image: image2,
   path: 'services/generator-repair-page',
+  title: 'Ремонт генераторов',
  },
  {
   id: 3,
   image: image3,
   path: 'services/repair-transformers-page',
+  title: 'Ремонт трансформаторов',
  },
 ];

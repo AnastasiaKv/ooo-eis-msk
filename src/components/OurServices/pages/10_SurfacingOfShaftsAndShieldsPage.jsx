@@ -66,8 +66,9 @@ export default function SurfacingOfShaftsAndShieldsPage() {
          float: 'right' /* Выравнивание по правому краю  */,
          margin: '0px -35px 0px 1px' /* Отступы вокруг картинки */,
         }}
+        loading='lazy'
         component='img'
-        alt='Изображение неведомой детали'
+        alt='Наплавка валов и щитов'
         src={image10}
        />
       </Stack>

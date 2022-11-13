@@ -102,8 +102,9 @@ const RepairTransformersPage = () => {
         float: 'right' /* Выравнивание по правому краю  */,
         margin: '0px -95px 13px 0px',
        }}
+       loading='lazy'
        component='img'
-       alt='Изображение неведомой детали'
+       alt='Цены на перемотку трансформаторов'
        src={image3}
       />
       <h1 style={{paddingTop: '10px'}}>

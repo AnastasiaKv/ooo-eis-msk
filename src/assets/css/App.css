@@ -13,6 +13,9 @@ body,
  height: 100%;
 }
 
+@media only screen and (min-device-width: 300px) and (max-device-width: 1280px) {
+}
+
 h1,
 h2,
 h3,
@@ -162,8 +165,7 @@ body {
  font-display: swap;
 }
 
-@media only screen and (min-width: 309px) and (max-width: 1281px) {
- /* for 10 inches tablet screens */
+@media screen and (min-width: 300px) and (max-width: 1281px) {
 }
 
 @media (min-width: 320px) {

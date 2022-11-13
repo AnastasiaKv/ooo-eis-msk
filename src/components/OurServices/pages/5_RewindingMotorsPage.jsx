@@ -41,8 +41,9 @@ export default function RewindingMotorsPage() {
         height: '7em',
         float: 'right' /* Выравнивание по правому краю  */,
        }}
+       loading='lazy'
        component='img'
-       alt='Изображение неведомой детали'
+       alt='Ремонт и перемотка двигателей'
        src={image5}
       />
       <h1 style={{paddingTop: '10px'}}>

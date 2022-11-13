@@ -40,8 +40,9 @@ export default function RefrigerationMachineRepairPage() {
         float: 'right' /* Выравнивание по правому краю  */,
         margin: '0px -129px 13px 0px',
        }}
+       loading='lazy'
        component='img'
-       alt='Изображение неведомой детали'
+       alt='Ремонт холодильных машин и компрессоров'
        src={image4}
       />
       <h1 style={{paddingTop: '20px'}}>

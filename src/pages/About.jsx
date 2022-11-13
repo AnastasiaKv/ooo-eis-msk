@@ -51,7 +51,9 @@ export default function About() {
            height: '36em',
            width: '36em',
           }}
+          loading='lazy'
           component='img'
+          alt='Team'
           src={image1}
          />
         </Paper>
@@ -64,7 +66,9 @@ export default function About() {
            height: '17.9em',
            width: '17.9em',
           }}
+          loading='lazy'
           component='img'
+          alt='WorkProcess1'
           src={image2}
          />
         </Paper>
@@ -75,7 +79,9 @@ export default function About() {
            height: '17.9em',
            width: '17.9em',
           }}
+          loading='lazy'
           component='img'
+          alt='WorkProcess2'
           src={image3}
          />
         </Paper>

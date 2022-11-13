@@ -6,7 +6,6 @@ import sliderimg2 from '../../assets/img/Sliders/slider_img_2.png';
 import sliderimg3 from '../../assets/img/Sliders/WhatsApp Image 2022-10-28 at 08.05.25.png';
 import Pagination from './Pagination/Pagination';
 import Box from '@mui/material/Box';
-import {Stack} from '@mui/system';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -65,13 +64,13 @@ class Slider extends React.Component {
     <div style={styles.root}>
      <AutoPlaySwipeableViews autoplay index={index} onChangeIndex={this.handleChangeIndex}>
       <div style={Object.assign({}, styles.slide)}>
-       <img style={styles.image1} src={sliderimg1} alt='поезд' />
+       <img style={styles.image1} src={sliderimg1} alt='Поезд' loading='lazy' />
       </div>
       <div style={Object.assign({}, styles.slide)}>
-       <img style={styles.image2} src={sliderimg2} alt='деталь' />
+       <img style={styles.image2} src={sliderimg2} alt='Деталь' loading='lazy' />
       </div>
       <div style={Object.assign({}, styles.slide)}>
-       <img style={styles.image1} src={sliderimg3} alt='производство' />
+       <img style={styles.image1} src={sliderimg3} alt='Производство' loading='lazy' />
       </div>
      </AutoPlaySwipeableViews>
      <div style={styles.dots}>

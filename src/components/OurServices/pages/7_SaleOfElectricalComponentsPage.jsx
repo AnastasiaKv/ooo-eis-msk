@@ -49,8 +49,9 @@ export default function SaleOfElectricalComponentsPage() {
          float: 'right' /* Выравнивание по правому краю  */,
          margin: '0px 0px 29px 9px' /* Отступы вокруг картинки */,
         }}
+        loading='lazy'
         component='img'
-        alt='Изображение неведомой детали'
+        alt='Продажа электрокомпонентов'
         src={image7}
        />
       </Stack>

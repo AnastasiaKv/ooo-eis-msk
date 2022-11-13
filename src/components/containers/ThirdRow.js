@@ -8,15 +8,18 @@ export default [
   id: 7,
   image: image7,
   path: 'services/sale-of-electrical-components-page',
+  title: 'Продажа компонентов',
  },
  {
   id: 8,
   image: image8,
   path: 'services/repair-of-boards-and-blocks-page',
+  title: 'Ремонт плат',
  },
  {
   id: 9,
   image: image9,
   path: 'services/maintenance-and-repair-of-passenger-cars-page',
+  title: 'ТО',
  },
 ];

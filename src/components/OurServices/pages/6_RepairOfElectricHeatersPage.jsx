@@ -30,8 +30,9 @@ export default function RepairOfElectricHeatersPage() {
          width: '9em',
          height: '8em',
         }}
+        loading='lazy'
         component='img'
-        alt='Изображение неведомой детали'
+        alt='Ремонт электронагревателей'
         src={image6}
        />
       </Stack>

@@ -3,7 +3,6 @@ import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import ServiceData from '../containers/ServicesData';
 import FirstRow from '../containers/FirstRow';
 import SecondRow from '../containers/SecondRow';
 import ThirdRow from '../containers/ThirdRow';
@@ -27,7 +26,7 @@ import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
 import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
 
 import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
-import ServiceItem from '../../modules/common/ServiceItem';
+
 import decorTop from '../../assets/img/Decor/decorTop.png';
 import decorBottom from '../../assets/img/Decor/decorBottom.png';
 import '../../assets/css/styles-custom.css';
@@ -74,7 +73,13 @@ function ItemsRow1() {
     {FirstRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        loading='lazy'
+        alt={service.title}
+        component='img'
+        src={service.image}
+       />
       </Paper>
      </LinkButton>
     ))}
@@ -105,7 +110,13 @@ function ItemsRow2() {
     {SecondRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        loading='lazy'
+        alt={service.title}
+        component='img'
+        src={service.image}
+       />
       </Paper>
      </LinkButton>
     ))}
@@ -144,7 +155,13 @@ function ItemsRow3() {
     {ThirdRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        loading='lazy'
+        alt={service.title}
+        component='img'
+        src={service.image}
+       />
       </Paper>
      </LinkButton>
     ))}
@@ -188,7 +205,13 @@ function ItemsRow4() {
     {FourthRow.map((service) => (
      <LinkButton key={service.id} onClick={handleClick} to={service.path}>
       <Paper key={service.id} sx={{boxShadow: 'none'}} className={classes.Item}>
-       <Box sx={{height: '250px', width: '250px'}} component='img' src={service.image} />
+       <Box
+        sx={{height: '250px', width: '250px'}}
+        loading='lazy'
+        alt={service.title}
+        component='img'
+        src={service.image}
+       />
       </Paper>
      </LinkButton>
     ))}
