@@ -74,7 +74,7 @@ export default function Header() {
       sx={{flexGrow: 1}}
       style={{paddingLeft: '20px', color: '#292929'}}
      >
-      info@ers.msk.ru
+      info@eis-msk.ru
      </Typography>
      <Button
       component='div'
