@@ -8,7 +8,7 @@ import image2 from '../assets/img/actions/PaperPage/paper_page.png';
 import image3 from '../assets/img/actions/PaperPage/Статья1.png';
 import image4 from '../assets/img/actions/PaperPage/Статья2.png';
 import image5 from '../assets/img/actions/PaperPage/Статья3.png';
-import GridItem from '../modules/common/GridItem';
+import GridItem from '../app/modules/common/GridItem';
 import CircleIcon from '@mui/icons-material/Circle';
 
 const componentStyle = {

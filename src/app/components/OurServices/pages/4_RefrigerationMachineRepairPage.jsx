@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import image4 from '../../../assets/img/services/Ремонт холодильных машин1.png';
+import image4 from '../../../../assets/img/services/Ремонт холодильных машин1.png';
 
 import Paper from '@mui/material/Paper';
 import DoneIcon from '@mui/icons-material/AcUnit';

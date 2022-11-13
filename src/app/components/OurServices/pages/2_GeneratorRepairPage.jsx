@@ -3,12 +3,8 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
-import Grid from '@mui/material/Unstable_Grid2';
-import image1 from '../../../assets/img/services/Ремонт электродвигателей1.png';
-import {width} from '@mui/system';
-
 import Paper from '@mui/material/Paper';
-import {Outlet} from 'react-router-dom';
+import image2 from '../../../../assets/img/services/Ремонт генераторов1.png';
 import SEO from '../../SEO';
 
 const data = [
@@ -46,7 +42,7 @@ const data = [
  },
  {
   name: 'Замена проставок под подшипники — только работа',
-  price: 'от 500 руб.',
+  price: '500 руб.',
  },
  {
   name: 'Замена шкива',
@@ -58,14 +54,10 @@ const data = [
  },
 ];
 
-export default function RepairMotorsPage() {
+const GeneratorRepairPage = () => {
  return (
   <>
-   <SEO
-    title='Ремонт электродвигателя'
-    description='Ремонт электродвигателя от 500 руб.'
-    name='ООО ЭИС'
-   />
+   <SEO title='Ремонт генератора' description='Ремонт генератора от 500 руб.' name='ООО ЭИС' />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
@@ -80,21 +72,19 @@ export default function RepairMotorsPage() {
      >
       <Box
        sx={{
-        color: 'transparent',
-        paddingTop: '18px',
-        width: '8em',
-        height: '7em',
+        width: '9em',
+        height: '6em',
         float: 'right' /* Выравнивание по правому краю  */,
         margin: '0px -95px 13px 0px',
        }}
        loading='lazy'
        component='img'
-       alt='Ремонт электродвигателя'
-       src={image1}
+       alt='Ремонт генератора'
+       src={image2}
       />
       <h1 style={{paddingTop: '20px'}}>
        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-        Ремонт электродвигателя от 500 руб.
+        Ремонт генератора от 500 руб.
        </Typography>
       </h1>
      </p>
@@ -104,4 +94,6 @@ export default function RepairMotorsPage() {
    </Paper>
   </>
  );
-}
+};
+
+export default GeneratorRepairPage;

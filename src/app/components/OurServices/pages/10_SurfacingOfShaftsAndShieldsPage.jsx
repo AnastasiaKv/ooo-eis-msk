@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Handyman from '@mui/icons-material/Handyman';
-import image10 from '../../../assets/img/services/Наплавка2.png';
+import image10 from '../../../../assets/img/services/Наплавка2.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
@@ -130,7 +130,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
          <Typography
           variant='body2'
           component='p'
-          style={{fontSize: '16px', paddingLeft: '3px', fontSize: '16px', marginLeft: '11px'}}
+          style={{fontSize: '16px', paddingLeft: '3px', marginLeft: '11px'}}
          >
           Восстановление шпоночного паза
          </Typography>

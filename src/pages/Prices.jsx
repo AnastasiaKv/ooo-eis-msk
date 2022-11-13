@@ -4,67 +4,16 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Box from '@mui/material/Box';
-import Grid from '@material-ui/core/Grid';
 import {Stack} from '@mui/system';
-import SimpleTable from '../modules/common/SimpleTable';
-import JobsType from '../modules/pages/prices/JobsType';
-import JobsStepper from '../modules/pages/prices/stepper/JobsStepper';
-import TrustedBox from '../modules/pages/prices/TrustedBox';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import JobsType from '../app/components/Prices/JobsType';
+import JobsStepper from '../app/components/Prices/stepper/JobsStepper';
+import TrustedBox from '../app/components/Prices/TrustedBox';
 
-import RepairMotorsPage from '../components/OurServices/pages/1_RepairMotorsPage';
-import GeneratorRepairPage from '../components/OurServices/pages/2_GeneratorRepairPage';
-import RepairTransformersPage from '../components/OurServices/pages/3_RepairTransformersPage';
-import RewindingMotorsPage from '../components/OurServices/pages/5_RewindingMotorsPage';
-import SEO from '../components/SEO';
-
-const data = [
- {
-  name: 'Замена щеточного узла (для некоторых моделей)',
-  price: 'от 900 руб.',
- },
- {
-  name: 'Замена реле-регулятора напряжения',
-  price: 'от 1300 руб.',
- },
- {
-  name: 'Замена диодного моста',
-  price: 'от 1600 руб.',
- },
- {
-  name: 'Замена диодов',
-  price: 'от 550 руб.',
- },
- {
-  name: 'Замена роторных колец',
-  price: 'от 900 руб.',
- },
- {
-  name: 'Замена подшипников',
-  price: 'от 700 руб.',
- },
- {
-  name: 'Замена или ремонт ротора',
-  price: 'от 2000 руб.',
- },
- {
-  name: 'Замена статорной обмотки',
-  price: 'от 1800 руб.',
- },
- {
-  name: 'Замена проставок под подшипники — только работа',
-  price: 'от 500 руб.',
- },
- {
-  name: 'Замена шкива',
-  price: 'от 700 руб.',
- },
- {
-  name: 'Замена обгонной муфты (для некоторых моделей)',
-  price: 'от 2300 руб.',
- },
-];
+import RepairMotorsPage from '../app/components/OurServices/pages/1_RepairMotorsPage';
+import GeneratorRepairPage from '../app/components/OurServices/pages/2_GeneratorRepairPage';
+import RepairTransformersPage from '../app/components/OurServices/pages/3_RepairTransformersPage';
+import RewindingMotorsPage from '../app/components/OurServices/pages/5_RewindingMotorsPage';
+import SEO from '../app/components/SEO';
 
 const componentStyle = {
  color: '#3c3c3c',
@@ -74,14 +23,6 @@ const componentStyle = {
  paddingLeft: '0em',
 };
 
-const textStyle = {
- fontFamily: 'NeoSansPro',
- display: 'block',
- textAlign: 'justify',
- maxWidth: '1000px',
- fontSize: 13,
- lineHeight: '1.5',
-};
 export default function Prices() {
  return (
   <main className='ees-content'>

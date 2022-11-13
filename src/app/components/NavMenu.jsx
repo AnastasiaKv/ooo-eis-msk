@@ -7,13 +7,13 @@ import {makeStyles} from '@material-ui/styles';
 import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
-import App from '../app/App';
-import About from '../pages/About';
-import Contacts from '../pages/Contacts';
-import Prices from '../pages/Prices';
-import News from '../pages/News';
-import Gallery from '../pages/Gallery';
-import Index from '../pages/Index';
+import App from '../App';
+import About from '../../pages/About';
+import Contacts from '../../pages/Contacts';
+import Prices from '../../pages/Prices';
+import News from '../../pages/News';
+import Gallery from '../../pages/Gallery';
+import Index from '../../pages/Index';
 
 import Page1 from './OurServices/pages/1_RepairMotorsPage';
 import Page2 from './OurServices/pages/2_GeneratorRepairPage';
@@ -26,7 +26,7 @@ import Page8 from './OurServices/pages/8_RepairOfBoardsAndBlocksPage';
 import Page9 from './OurServices/pages/9_TORepairOfPassengerCarsPage';
 import Page10 from './OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
 
-import Error404 from '../app/core/errors/Error404';
+import Error404 from '../core/errors/Error404';
 import GridServices from './OurServices/GridServices';
 
 const buttonStyle = {

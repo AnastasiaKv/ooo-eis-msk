@@ -3,8 +3,9 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
+import image1 from '../../../../assets/img/services/Ремонт электродвигателей1.png';
 import Paper from '@mui/material/Paper';
-import image2 from '../../../assets/img/services/Ремонт генераторов1.png';
+import {Outlet} from 'react-router-dom';
 import SEO from '../../SEO';
 
 const data = [
@@ -42,7 +43,7 @@ const data = [
  },
  {
   name: 'Замена проставок под подшипники — только работа',
-  price: '500 руб.',
+  price: 'от 500 руб.',
  },
  {
   name: 'Замена шкива',
@@ -54,10 +55,14 @@ const data = [
  },
 ];
 
-const GeneratorRepairPage = () => {
+export default function RepairMotorsPage() {
  return (
   <>
-   <SEO title='Ремонт генератора' description='Ремонт генератора от 500 руб.' name='ООО ЭИС' />
+   <SEO
+    title='Ремонт электродвигателя'
+    description='Ремонт электродвигателя от 500 руб.'
+    name='ООО ЭИС'
+   />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
@@ -72,19 +77,21 @@ const GeneratorRepairPage = () => {
      >
       <Box
        sx={{
-        width: '9em',
-        height: '6em',
+        color: 'transparent',
+        paddingTop: '18px',
+        width: '8em',
+        height: '7em',
         float: 'right' /* Выравнивание по правому краю  */,
         margin: '0px -95px 13px 0px',
        }}
        loading='lazy'
        component='img'
-       alt='Ремонт генератора'
-       src={image2}
+       alt='Ремонт электродвигателя'
+       src={image1}
       />
       <h1 style={{paddingTop: '20px'}}>
        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-        Ремонт генератора от 500 руб.
+        Ремонт электродвигателя от 500 руб.
        </Typography>
       </h1>
      </p>
@@ -94,6 +101,4 @@ const GeneratorRepairPage = () => {
    </Paper>
   </>
  );
-};
-
-export default GeneratorRepairPage;
+}

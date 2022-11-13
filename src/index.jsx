@@ -7,7 +7,7 @@ import './assets/fonts/Furore.otf';
 import './assets/css/index.css';
 import {StyledEngineProvider} from '@mui/material/styles';
 import ServerModal from './app/core/errors/ServerModal';
-import LayoutProvider from './layouts/LayoutProvider';
+import LayoutProvider from './app/layouts/LayoutProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

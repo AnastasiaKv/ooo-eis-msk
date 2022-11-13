@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
-import image6 from '../../../assets/img/services/Ремонт плат1.png';
+import image6 from '../../../../assets/img/services/Ремонт плат1.png';
 import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function RepairOfBoardsAndBlocksPage() {

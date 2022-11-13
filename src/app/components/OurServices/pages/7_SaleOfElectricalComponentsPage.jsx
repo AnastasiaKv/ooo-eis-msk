@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import CurrencyRubleRoundedIcon from '@mui/icons-material/CurrencyRubleRounded';
-import image7 from '../../../assets/img/services/Продажа компонентов1.png';
+import image7 from '../../../../assets/img/services/Продажа компонентов1.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 

@@ -3,34 +3,33 @@ import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import ServiceData from '../containers/ServicesData';
-import FirstRow from '../containers/FirstRow';
-import SecondRow from '../containers/SecondRow';
-import ThirdRow from '../containers/ThirdRow';
-import FourthRow from '../containers/FourthRow';
+import FirstRow from '../../app/containers/FirstRow';
+import SecondRow from '../../app/containers/SecondRow';
+import ThirdRow from '../../app/containers/ThirdRow';
+import FourthRow from '../../app/containers/FourthRow';
 import {Stack} from '@mui/system';
 import ButtonBase from '@mui/material/ButtonBase';
 import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import LinkButton from '../../modules/common/LinkButton';
-import RepairMotorsPage from './pages/1_RepairMotorsPage';
-import GeneratorRepairPage from './pages/2_GeneratorRepairPage';
-import RepairTransformersPage from './pages/3_RepairTransformersPage';
+import LinkButton from '../../../modules/common/LinkButton';
+import RepairMotorsPage from '../../components/OurServices/pages/1_RepairMotorsPage';
+import GeneratorRepairPage from '../../components/OurServices/pages/2_GeneratorRepairPage';
+import RepairTransformersPage from '../../components/OurServices/pages/3_RepairTransformersPage';
 
-import RefrigerationMachineRepair from './pages/4_RefrigerationMachineRepairPage';
-import RewindingMotorsPage from './pages/5_RewindingMotorsPage';
-import RepairOfElectricHeatersPage from './pages/6_RepairOfElectricHeatersPage';
+import RefrigerationMachineRepair from '../../components/OurServices/pages/4_RefrigerationMachineRepairPage';
+import RewindingMotorsPage from '../../components/OurServices/pages/5_RewindingMotorsPage';
+import RepairOfElectricHeatersPage from '../../components/OurServices/pages/6_RepairOfElectricHeatersPage';
 
-import SaleOfElectricalComponentsPage from './pages/7_SaleOfElectricalComponentsPage';
-import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
-import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
+import SaleOfElectricalComponentsPage from '../../components/OurServices/pages/7_SaleOfElectricalComponentsPage';
+import RepairOfBoardsAndBlocksPage from '../../components/OurServices/pages/8_RepairOfBoardsAndBlocksPage';
+import TORepairOfPassengerCarsPage from '../../components/OurServices/pages/9_TORepairOfPassengerCarsPage';
 
-import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
-import ServiceItem from '../../modules/common/ServiceItem';
-import decorTop from '../../assets/img/Decor/decorTop.png';
-import decorBottom from '../../assets/img/Decor/decorBottom.png';
-import '../../assets/css/styles-custom.css';
+import SurfacingOfShaftsAndShieldsPage from '../../components/OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
+import ServiceItem from '../../../modules/common/ServiceItem';
+import decorTop from '../../../assets/img/Decor/decorTop.png';
+import decorBottom from '../../../assets/img/Decor/decorBottom.png';
+import '../../../assets/css/styles-custom.css';
 
 const data = [FirstRow, SecondRow, ThirdRow, FirstRow];
 

@@ -10,7 +10,7 @@ import vrmLogo from '../assets/img/companiesLogos/vrm/logo4.png';
 import image1 from '../assets/img/gallery/Gallery_Crew_gang_bang.png';
 import image2 from '../assets/img/gallery/Gallery_Naplavka.png';
 import image3 from '../assets/img/gallery/Gallery_Svarka.png';
-import SEO from '../components/SEO';
+import SEO from '../app/components/SEO';
 
 export default function About() {
  return (

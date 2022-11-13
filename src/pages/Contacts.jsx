@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import ReactDOM from 'react-dom';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
 import styled from '@emotion/styled';
@@ -12,7 +11,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
-import SEO from '../components/SEO';
+import SEO from '../app/components/SEO';
 
 const textStyle = {
  fontFamily: 'Roboto',

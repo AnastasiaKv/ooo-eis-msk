@@ -3,15 +3,12 @@ import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import FirstRow from '../containers/FirstRow';
-import SecondRow from '../containers/SecondRow';
-import ThirdRow from '../containers/ThirdRow';
-import FourthRow from '../containers/FourthRow';
+import FirstRow from '../../containers/FirstRow';
+import SecondRow from '../../containers/SecondRow';
+import ThirdRow from '../../containers/ThirdRow';
+import FourthRow from '../../containers/FourthRow';
 import {Stack} from '@mui/system';
-import ButtonBase from '@mui/material/ButtonBase';
-import PropTypes from 'prop-types';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
-import Grid from '@material-ui/core/Grid';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import LinkButton from '../../modules/common/LinkButton';
 import RepairMotorsPage from './pages/1_RepairMotorsPage';
 import GeneratorRepairPage from './pages/2_GeneratorRepairPage';
@@ -27,9 +24,9 @@ import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
 
 import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
 
-import decorTop from '../../assets/img/Decor/decorTop.png';
-import decorBottom from '../../assets/img/Decor/decorBottom.png';
-import '../../assets/css/styles-custom.css';
+import decorTop from '../../../assets/img/Decor/decorTop.png';
+import decorBottom from '../../../assets/img/Decor/decorBottom.png';
+import '../../../assets/css/styles-custom.css';
 import SEO from '../SEO';
 
 const useStyles = styled((theme) => ({

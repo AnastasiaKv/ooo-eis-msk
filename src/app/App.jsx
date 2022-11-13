@@ -1,11 +1,11 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import {HelmetProvider, Helmet} from 'react-helmet-async';
 import '../assets/css/App.css';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import TopMediaBlock from '../layouts/TopMediaBlockLayout';
-import SEO from '../components/SEO';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import TopMediaBlock from './layouts/TopMediaBlockLayout';
+import SEO from './components/SEO';
 
 const helmetContext = {};
 function App() {

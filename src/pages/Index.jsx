@@ -1,11 +1,7 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import GridServices from '../components/OurServices/GridServices';
-import GServices from '../components/OurServices/GServices3';
-import {Stack} from '@mui/system';
+import GridServices from '../app/components/OurServices/GridServices';
 
-import SEO from '../components/SEO';
+import SEO from '../app/components/SEO';
 
 export default function Index() {
  return (

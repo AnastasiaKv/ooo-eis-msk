@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '././../../../assets/img/Decor/left.png';
+import image from '../../../../assets/img/Decor/left.png';
 import styled from 'styled-components';
 import './DecorLeft.css';
 

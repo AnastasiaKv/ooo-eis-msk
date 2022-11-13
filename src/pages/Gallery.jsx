@@ -1,13 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import ImageList from '@material-ui/core/ImageList';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Grid from '@material-ui/core/Grid';
 import {Stack} from '@mui/system';
 import Paper from '@mui/material/Paper';
 
@@ -20,7 +14,7 @@ import image8 from '../assets/img/gallery/Gallery_SBS.png';
 import image9 from '../assets/img/gallery/Gallery_Stend_peremotki.png';
 import image10 from '../assets/img/gallery/Gallery_Stol_electronika.png';
 import image12 from '../assets/img/gallery/Gallery_Takarniy_stanok.png';
-import SEO from '../components/SEO';
+import SEO from '../app/components/SEO';
 
 const itemData1 = [
  {

@@ -1,9 +1,9 @@
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import {autoPlay} from 'react-swipeable-views-utils';
-import sliderimg1 from '../../assets/img/Sliders/slider_img_1.png';
-import sliderimg2 from '../../assets/img/Sliders/slider_img_2.png';
-import sliderimg3 from '../../assets/img/Sliders/WhatsApp Image 2022-10-28 at 08.05.25.png';
+import sliderimg1 from '../../../assets/img/Sliders/slider_img_1.png';
+import sliderimg2 from '../../../assets/img/Sliders/slider_img_2.png';
+import sliderimg3 from '../../../assets/img/Sliders/WhatsApp Image 2022-10-28 at 08.05.25.png';
 import Pagination from './Pagination/Pagination';
 import Box from '@mui/material/Box';
 
