@@ -9,33 +9,43 @@ import SEO from '../../SEO';
 
 export default function RepairOfElectricHeatersPage() {
  return (
-  <>
+  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
    <SEO
     title='Ремонт электронагревателей'
     description='Ремонт электронагревателей от 500 руб.'
     name='ООО ЭИС'
    />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
-    <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '1em', paddingTop: '1em'}}>
-     <Stack direction='row' spacing={10}>
-      <Stack direction='column' sx={{paddingLeft: '2em', textAlign: 'left'}}>
-       <h1>
-        <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-         Ремонт электронагревателей от 500 руб.
-        </Typography>
-       </h1>
+    <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '1em', paddingTop: '0em'}}>
+     <Stack direction='row' sx={{paddingLeft: '2em', textAlign: 'left'}}>
+      <p
+       style={{
+        paddingTop: '45px',
+        width: '26em',
+        height: '211px',
+        textAlign: 'left',
+        paddingBottom: '0',
+       }}
+      >
        <Box
         sx={{
-         marginLeft: '20em',
-         width: '9em',
-         height: '8em',
+         paddingTop: '18px',
+         width: '8em',
+         height: '7em',
+         float: 'right' /* Выравнивание по правому краю  */,
+         margin: '1em -83px 13px 0px',
         }}
         loading='lazy'
         component='img'
         alt='Ремонт электронагревателей'
         src={image6}
        />
-      </Stack>
+       <h1>
+        <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+         Ремонт электронагревателей от 500 руб.
+        </Typography>
+       </h1>
+      </p>
      </Stack>
      <Stack sx={{paddingLeft: '2em', marginRight: '2em'}}>
       <h4>
@@ -150,6 +160,6 @@ export default function RepairOfElectricHeatersPage() {
      </Stack>
     </Stack>
    </Paper>
-  </>
+  </form>
  );
 }

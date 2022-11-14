@@ -56,43 +56,44 @@ const data = [
 
 const GeneratorRepairPage = () => {
  return (
-  <>
+  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
    <SEO title='Ремонт генератора' description='Ремонт генератора от 500 руб.' name='ООО ЭИС' />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
-     <p
-      style={{
-       paddingTop: '45px',
-       paddingLeft: '2rem',
-       width: '600px',
-       height: '211px',
-       textAlign: 'left',
-       paddingBottom: '0',
-      }}
-     >
-      <Box
-       sx={{
-        width: '9em',
-        height: '6em',
-        float: 'right' /* Выравнивание по правому краю  */,
-        margin: '0px -95px 13px 0px',
+     <Stack direction='row' style={{paddingTop: '0em'}}>
+      <p
+       style={{
+        paddingTop: '1em',
+        paddingLeft: '2rem',
+        width: '600px',
+        height: '211px',
+        textAlign: 'left',
+        paddingBottom: '0',
        }}
-       loading='lazy'
-       component='img'
-       alt='Ремонт генератора'
-       src={image2}
-      />
-      <h1 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-        Ремонт генератора от 500 руб.
-       </Typography>
-      </h1>
-     </p>
-
+      >
+       <Box
+        sx={{
+         width: '9em',
+         height: '6em',
+         float: 'right' /* Выравнивание по правому краю  */,
+         margin: '2em -95px 13px 0px',
+        }}
+        loading='lazy'
+        component='img'
+        alt='Ремонт генератора'
+        src={image2}
+       />
+       <h1 style={{paddingTop: '1em'}}>
+        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+         Ремонт генератора от 500 руб.
+        </Typography>
+       </h1>
+      </p>
+     </Stack>
      <SimpleTable data={data} />
     </Stack>
    </Paper>
-  </>
+  </form>
  );
 };
 

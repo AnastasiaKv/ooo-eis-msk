@@ -8,7 +8,6 @@ import {Stack} from '@mui/system';
 import JobsType from '../app/components/Prices/JobsType';
 import JobsStepper from '../app/components/Prices/stepper/JobsStepper';
 import TrustedBox from '../app/components/Prices/TrustedBox';
-
 import RepairMotorsPage from '../app/components/OurServices/pages/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/components/OurServices/pages/2_GeneratorRepairPage';
 import RepairTransformersPage from '../app/components/OurServices/pages/3_RepairTransformersPage';
@@ -94,10 +93,12 @@ export default function Prices() {
        </Typography>
       </h1>
       <br /> <br />
-      <div style={{paddingLeft: '3em', paddingBottom: '20px'}}>
-       <Accordion sx={{borderRadius: 3, width: '33em'}}>
+      <div style={{paddingLeft: '1em', paddingBottom: '0em'}}>
+       <Accordion sx={{borderRadius: 3, width: '35em'}}>
         <AccordionSummary
-         expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+         expandIcon={
+          <ExpandMoreIcon sx={{width: '4em', marginRight: '2em', transform: 'rotate(359deg)'}} />
+         }
          aria-controls='panel1a-content'
          id='panel1a-header'
         >
@@ -110,11 +111,13 @@ export default function Prices() {
         </AccordionDetails>
        </Accordion>
        <br />
-       <Accordion sx={{borderRadius: 3, width: '33em'}}>
+       <Accordion sx={{borderRadius: 3, width: '35em'}}>
         <AccordionSummary
          aria-controls='panel2a-content'
          id='panel2a-header'
-         expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+         expandIcon={
+          <ExpandMoreIcon sx={{width: '4em', marginRight: '2em', transform: 'rotate(359deg)'}} />
+         }
         >
          <Typography variant='h4' component='h1' style={{fontSize: '28px'}}>
           Ремонт электродвигателей
@@ -125,11 +128,13 @@ export default function Prices() {
         </AccordionDetails>
        </Accordion>
        <br />
-       <Accordion sx={{borderRadius: 3, width: '33em'}}>
+       <Accordion sx={{borderRadius: 3, width: '35em'}}>
         <AccordionSummary
          aria-controls='panel2a-content'
          id='panel2a-header'
-         expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+         expandIcon={
+          <ExpandMoreIcon sx={{width: '4em', marginRight: '2em', transform: 'rotate(359deg)'}} />
+         }
         >
          <Typography variant='h4' component='h1' style={{fontSize: '28px'}}>
           Ремонт трансформаторов
@@ -140,11 +145,13 @@ export default function Prices() {
         </AccordionDetails>
        </Accordion>
        <br />
-       <Accordion sx={{borderRadius: 3, width: '33em'}}>
+       <Accordion sx={{borderRadius: 3, width: '35em'}}>
         <AccordionSummary
          aria-controls='panel2a-content'
          id='panel2a-header'
-         expandIcon={<ExpandMoreIcon style={{marginRight: '2em'}} />}
+         expandIcon={
+          <ExpandMoreIcon sx={{width: '4em', marginRight: '2em', transform: 'rotate(359deg)'}} />
+         }
         >
          <Typography variant='h4' component='h1' style={{fontSize: '28px'}}>
           Перемотка электродвигателей

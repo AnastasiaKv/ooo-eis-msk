@@ -57,7 +57,7 @@ const data = [
 
 export default function RepairMotorsPage() {
  return (
-  <>
+  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
    <SEO
     title='Ремонт электродвигателя'
     description='Ремонт электродвигателя от 500 руб.'
@@ -65,40 +65,41 @@ export default function RepairMotorsPage() {
    />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
-     <p
-      style={{
-       paddingTop: '45px',
-       paddingLeft: '2rem',
-       width: '600px',
-       height: '211px',
-       textAlign: 'left',
-       paddingBottom: '0',
-      }}
-     >
-      <Box
-       sx={{
-        color: 'transparent',
-        paddingTop: '18px',
-        width: '8em',
-        height: '7em',
-        float: 'right' /* Выравнивание по правому краю  */,
-        margin: '0px -95px 13px 0px',
+     <Stack direction='row' style={{paddingTop: '0em'}}>
+      <p
+       style={{
+        paddingTop: '0em',
+        paddingLeft: '2rem',
+        width: '600px',
+        height: '211px',
+        textAlign: 'left',
+        paddingBottom: '0',
        }}
-       loading='lazy'
-       component='img'
-       alt='Ремонт электродвигателя'
-       src={image1}
-      />
-      <h1 style={{paddingTop: '20px'}}>
-       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-        Ремонт электродвигателя от 500 руб.
-       </Typography>
-      </h1>
-     </p>
-
+      >
+       <Box
+        sx={{
+         color: 'transparent',
+         paddingTop: '18px',
+         width: '8em',
+         height: '7em',
+         float: 'right' /* Выравнивание по правому краю  */,
+         margin: '2em -95px 13px 0px',
+        }}
+        loading='lazy'
+        component='img'
+        alt='Ремонт электродвигателя'
+        src={image1}
+       />
+       <h1 style={{paddingTop: '1em'}}>
+        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+         Ремонт электродвигателя от 500 руб.
+        </Typography>
+       </h1>
+      </p>
+     </Stack>
      <SimpleTable data={data} />
     </Stack>
    </Paper>
-  </>
+  </form>
  );
 }

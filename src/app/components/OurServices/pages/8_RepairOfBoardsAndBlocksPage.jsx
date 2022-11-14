@@ -9,7 +9,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function RepairOfBoardsAndBlocksPage() {
  return (
-  <>
+  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
    <SEO
     title='Ремонт плат и электронных блоков'
     description='Ремонт плат от автомобильной электроники'
@@ -22,32 +22,43 @@ export default function RepairOfBoardsAndBlocksPage() {
      marginLeft: '2.7em',
      marginBottom: 5,
      paddingLeft: '2em',
-     paddingBottom: '2em',
+     paddingBottom: '0.6em',
      width: '30em',
     }}
    >
-    <Stack>
-     <h1>
-      <Typography
-       variant='h4'
-       component='h4'
-       style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '25px', paddingTop: '1em'}}
-      >
-       Ремонт плат и электронных блоков
-      </Typography>
-     </h1>
-     <Box
-      sx={{
-       marginLeft: '14em',
-
-       width: '10em',
-       height: '9em',
+    <Stack direction='row' sx={{paddingLeft: '0em', textAlign: 'left'}}>
+     <p
+      style={{
+       paddingTop: '0em',
+       width: '23em',
+       height: '211px',
+       textAlign: 'left',
+       paddingBottom: '0',
       }}
-      loading='lazy'
-      component='img'
-      alt='Ремонт плат и электронных блоков'
-      src={image6}
-     />
+     >
+      <Box
+       sx={{
+        paddingTop: '18px',
+        width: '8em',
+        height: '7em',
+        float: 'right' /* Выравнивание по правому краю  */,
+        margin: '1em -83px 13px 0px',
+       }}
+       loading='lazy'
+       component='img'
+       alt='Ремонт плат и электронных блоков'
+       src={image6}
+      />
+      <h1>
+       <Typography
+        variant='h4'
+        component='h4'
+        style={{fontFamily: 'Furore', textAlign: 'left', fontSize: '25px', paddingTop: '1em'}}
+       >
+        Ремонт плат и электронных блоков
+       </Typography>
+      </h1>
+     </p>
     </Stack>
     <h3>
      <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '1em'}}>
@@ -138,6 +149,6 @@ export default function RepairOfBoardsAndBlocksPage() {
      </Stack>
     </ul>
    </Paper>
-  </>
+  </form>
  );
 }

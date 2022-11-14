@@ -76,7 +76,7 @@ const data = [
 
 const RepairTransformersPage = () => {
  return (
-  <>
+  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
    <SEO
     title='Перемотка трансформаторов'
     description='Цены на перемотку трансформаторов от 9000 руб.'
@@ -84,40 +84,41 @@ const RepairTransformersPage = () => {
    />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
-     <p
-      style={{
-       paddingTop: '45px',
-       paddingLeft: '2rem',
-       width: '600px',
-       height: '211px',
-       textAlign: 'left',
-       paddingBottom: '0',
-      }}
-     >
-      <Box
-       sx={{
-        paddingTop: '18px',
-        width: '6em',
-        height: '6em',
-        float: 'right' /* Выравнивание по правому краю  */,
-        margin: '0px -95px 13px 0px',
+     <Stack direction='row' style={{paddingTop: '0em'}}>
+      <p
+       style={{
+        paddingTop: '45px',
+        paddingLeft: '2rem',
+        width: '600px',
+        height: '211px',
+        textAlign: 'left',
+        paddingBottom: '0',
        }}
-       loading='lazy'
-       component='img'
-       alt='Цены на перемотку трансформаторов'
-       src={image3}
-      />
-      <h1 style={{paddingTop: '10px'}}>
-       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-        Цены на перемотку трансформаторов от 9000 руб.
-       </Typography>
-      </h1>
-     </p>
-
+      >
+       <Box
+        sx={{
+         paddingTop: '18px',
+         width: '6em',
+         height: '6em',
+         float: 'right' /* Выравнивание по правому краю  */,
+         margin: '1em -95px 13px 0px',
+        }}
+        loading='lazy'
+        component='img'
+        alt='Цены на перемотку трансформаторов'
+        src={image3}
+       />
+       <h1 style={{paddingTop: '10px'}}>
+        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+         Цены на перемотку трансформаторов от 9000 руб.
+        </Typography>
+       </h1>
+      </p>
+     </Stack>
      <SimpleTable data={data} />
     </Stack>
    </Paper>
-  </>
+  </form>
  );
 };
 export default RepairTransformersPage;

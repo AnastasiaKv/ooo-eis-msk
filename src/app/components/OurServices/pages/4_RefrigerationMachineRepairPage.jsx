@@ -10,7 +10,7 @@ import SEO from '../../SEO';
 
 export default function RefrigerationMachineRepairPage() {
  return (
-  <>
+  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
    <SEO
     title='Ремонт холодильных машин и компрессоров'
     description='Ремонт холодильных машин и компрессоров от 4000 руб.'
@@ -124,6 +124,6 @@ export default function RefrigerationMachineRepairPage() {
      </ul>
     </Stack>
    </Paper>
-  </>
+  </form>
  );
 }

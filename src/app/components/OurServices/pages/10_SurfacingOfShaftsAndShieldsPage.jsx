@@ -9,7 +9,7 @@ import SEO from '../../SEO';
 
 export default function SurfacingOfShaftsAndShieldsPage() {
  return (
-  <>
+  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
    <SEO
     title='Наплавка валов и щитов'
     description='Наплавка валов и щитов от 4000 руб.'
@@ -19,7 +19,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
     <Stack
      direction='column'
      spacing={0}
-     sx={{color: '#1a202c', paddingTop: '1em', paddingLeft: '1em', paddingBottom: '1.6em'}}
+     sx={{color: '#1a202c', paddingTop: '0em', paddingLeft: '1em', paddingBottom: '1em'}}
     >
      <h1>
       <Typography
@@ -30,7 +30,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
        Наплавка валов и щитов от 4000 руб.
       </Typography>
      </h1>
-     <br />
+
      <h3>
       <Typography
        variant='h5'
@@ -38,7 +38,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
        style={{
         textAlign: 'left',
         color: '#1a202c',
-        paddingTop: '1em',
+        paddingTop: '0em',
         paddingRight: '15em',
         paddingBottom: '15px',
        }}
@@ -61,10 +61,10 @@ export default function SurfacingOfShaftsAndShieldsPage() {
        <Box
         sx={{
          borderRadius: '7px',
-         height: '21em',
-         width: '32em',
+         height: '19em',
+         width: '27em',
          float: 'right' /* Выравнивание по правому краю  */,
-         margin: '0px -35px 0px 1px' /* Отступы вокруг картинки */,
+         margin: '-49px -4px 0px 2px' /* Отступы вокруг картинки */,
         }}
         loading='lazy'
         component='img'
@@ -130,7 +130,12 @@ export default function SurfacingOfShaftsAndShieldsPage() {
          <Typography
           variant='body2'
           component='p'
-          style={{fontSize: '16px', paddingLeft: '3px', marginLeft: '11px'}}
+          style={{
+           fontSize: '16px',
+           paddingLeft: '3px',
+           marginLeft: '11px',
+           textAlign: '-webkit-auto',
+          }}
          >
           Восстановление шпоночного паза
          </Typography>
@@ -174,6 +179,6 @@ export default function SurfacingOfShaftsAndShieldsPage() {
      </Stack>
     </Stack>
    </Paper>
-  </>
+  </form>
  );
 }
