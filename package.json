@@ -64,6 +64,7 @@
   "react-router-dom": "^6.4.3",
   "react-router-sitemap": "^1.2.0",
   "react-scripts": "^5.0.1",
+  "react-snap": "^1.23.0",
   "react-snapshot": "^1.3.0",
   "react-swipeable-views": "^0.14.0",
   "react-swipeable-views-core": "^0.14.0",
@@ -79,7 +80,7 @@
  "scripts": {
   "start": "react-scripts start",
   "build": "react-scripts build && react-snapshot",
-  "sitemap": "babel-node ./sitemap-builder.js",
+  "postbuild": "react-snap",
   "test": "react-scripts test",
   "eject": "react-scripts eject",
   "flow": "flow",

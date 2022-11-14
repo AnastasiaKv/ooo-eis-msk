@@ -12,6 +12,7 @@ import {Formik, Form, Field, ErrorMessage} from 'formik';
 import {Stack, width} from '@mui/system';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {YMaps, Map, Placemark, GeolocationControl, RouteButton} from '@pbe/react-yandex-maps';
+import {Paper} from '@mui/material';
 
 const theme = createTheme({
  components: {
@@ -91,86 +92,68 @@ function YMapButton(props) {
     </Button>
     <Dialog maxWidth='md' open={open} onClose={handleClose} aria-labelledby='form-dialog-title'>
      {!isShown && (
-      <Stack>
-       <DialogTitle id='form-dialog-title'>Наш офис в Москве</DialogTitle>
-       <ThemeProvider theme={theme}>
-        <DialogContent>
-         {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
-         <Formik
-          onSubmit={(values, {setSubmitting}) => {
-           setSubmitting(true);
-           axios
-            .post(contactFormEndpoint, values, {
-             headers: {
-              'Access-Control-Allow-Origin': '*',
-              'Content-Type': 'application/json',
-             },
-            })
-            .then((resp) => {
-             setSubmitionCompleted(true);
-            });
-          }}
-         >
-          {(props) => {
-           const {
-            values,
-            touched,
-            errors,
-            dirty,
-            isSubmitting,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            handleReset,
-           } = props;
-           return (
-            <Form onSubmit={handleSubmit}>
-             <Stack
-              sx={{
-               overflow: 'hidden',
-               marginTop: '-15px',
-               marginLeft: '-5.3em',
-               marginRight: '-23px',
-               marginBottom: '-13px',
-               padding: '0px 0em 10px 0em',
-               flexDirection: 'column',
-               alignItems: 'baseline',
-              }}
-              direction='row'
-              spacing={0}
-              noValidate
-              component='form'
-             >
-              <YMap />
-             </Stack>
-
-             <DialogActions style={{}}>
-              <div style={{width: '25em', paddingRight: '12.7em'}}>
-               <Button
-                onClick={handleClose}
-                style={{
-                 marginTop: '-15px',
-                 marginBottom: '-20px',
-                 width: '12em',
-                 height: '45px',
-                 borderRadius: '1',
-                 color: '#FFFFFFFF',
-                 backgroundColor: '#F12B29',
-                }}
-                variant='contained'
-               >
-                Закрыть
-               </Button>
-              </div>
-              {/* <DisplayFormikState {...props} /> */}
-             </DialogActions>
-            </Form>
-           );
-          }}
-         </Formik>
-        </DialogContent>
-       </ThemeProvider>
-      </Stack>
+       <Stack style={{fontFamily: 'Furore'}}>
+        <DialogTitle style={{marginTop: '-0.5em', marginBottom: '-0.5em'}} id='form-dialog-title'>
+         Наш офис в Москве
+        </DialogTitle>
+        <ThemeProvider theme={theme}>
+         <DialogContent>
+          {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
+          <Formik
+           onSubmit={(values, {setSubmitting}) => {
+            setSubmitting(true);
+            axios
+             .post(contactFormEndpoint, values, {
+              headers: {
+               'Access-Control-Allow-Origin': '*',
+               'Content-Type': 'application/json',
+              },
+             })
+             .then((resp) => {
+              setSubmitionCompleted(true);
+             });
+           }}
+          >
+           {(props) => {
+            const {
+             values,
+             touched,
+             errors,
+             dirty,
+             isSubmitting,
+             handleChange,
+             handleBlur,
+             handleSubmit,
+             handleReset,
+            } = props;
+            return (
+             <Form onSubmit={handleSubmit}>
+              <Stack
+               sx={{
+                overflow: 'hidden',
+                marginTop: '-15px',
+                marginLeft: '-5.3em',
+                marginRight: '-23px',
+                marginBottom: '-13px',
+                padding: '0px 0em 10px 0em',
+                flexDirection: 'column',
+                alignItems: 'baseline',
+               }}
+               direction='row'
+               spacing={0}
+               noValidate
+               component='form'
+              >
+               <YMap />
+              </Stack>
+              <DialogActions style={{}}>{/* <DisplayFormikState {...props} /> */}</DialogActions>
+             </Form>
+            );
+           }}
+          </Formik>
+         </DialogContent>
+        </ThemeProvider>
+       </Stack>
      )}
     </Dialog>
    </div>

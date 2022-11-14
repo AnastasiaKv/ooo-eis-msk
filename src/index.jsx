@@ -8,14 +8,24 @@ import './assets/css/index.css';
 import {StyledEngineProvider} from '@mui/material/styles';
 import ServerModal from './app/core/errors/ServerModal';
 import LayoutProvider from './app/layouts/LayoutProvider';
+import {hydrate, render} from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
- <LayoutProvider>
-  <App />
- </LayoutProvider>
-);
-
+const rootElement = document.getElementById('root');
+if (rootElement.hasChildNodes()) {
+ hydrate(
+  <LayoutProvider>
+   <App />
+  </LayoutProvider>,
+  rootElement
+ );
+} else {
+ render(
+  <LayoutProvider>
+   <App />
+  </LayoutProvider>,
+  rootElement
+ );
+}
 console.log(process.env);
 reportWebVitals(console.log);
-serviceWorker.unregister();
+serviceWorker.register();
