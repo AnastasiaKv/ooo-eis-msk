@@ -8,10 +8,7 @@ import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import CopyrightIcon from '@mui/icons-material/Copyright';
-import VpnKeyIcon from '@mui/icons-material/VpnKey';
-import PolicyIcon from '@mui/icons-material/Policy';
-import MapIcon from '@mui/icons-material/Map';
+import FooterLogo from '../../../assets/img/Footer/Footer_1017x1017.svg';
 
 const copyrightStyle = {
  color: 'white',
@@ -32,8 +29,6 @@ export default function Footer() {
   <div className='ees-footer-content' style={{height: '91px'}}>
    <LeftDecor />
    <RightDecor />
-   {/* <RedLine /> */}
-   {/* Витя, AppBar генерит тег <header>, а тебе нужен тут просто <div> */}
    <BottomNavigation
     elev
     disableFocusRipple={true}
@@ -46,10 +41,6 @@ export default function Footer() {
     }}
    >
     <Typography style={copyrightStyle}>©Copyright</Typography>
-
-    {/* <BottomNavigationAction style={spacing_10cm} label='Карта сайта' />
-    <BottomNavigationAction style={spacing_40px} label='Политика' />
-    <BottomNavigationAction style={spacing_40px} label='Конфеденциальность' /> */}
    </BottomNavigation>
   </div>
  );
