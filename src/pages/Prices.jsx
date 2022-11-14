@@ -58,7 +58,7 @@ export default function Prices() {
      </p>
     </div>
     <div className='block2' style={{paddingLeft: '1em'}}>
-     <h1>
+     <h3>
       <Typography
        variant='h4'
        component='h1'
@@ -66,7 +66,7 @@ export default function Prices() {
       >
        Этапы работ
       </Typography>
-     </h1>
+     </h3>
 
      <br />
      <div style={{paddingLeft: '3em', paddingRight: '5em', paddingBottom: '2em'}}>

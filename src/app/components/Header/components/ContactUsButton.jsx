@@ -48,7 +48,7 @@ function Contact(props) {
      <Typography
       variant='h6'
       component='div'
-      sx={{flexGrow: 1, paddingLeft: '44px', color: '#292929'}}
+      sx={{flexGrow: 1, paddingLeft: '44px', color: '#2d3748'}}
      >
       8 (495)-135-82-88
      </Typography>
@@ -169,7 +169,7 @@ function Contact(props) {
                  height: '45px',
                  borderRadius: '1',
                  color: '#F1F1F1F1',
-                 backgroundColor: '#292929',
+                 backgroundColor: '#2d3748',
                 }}
                 variant='contained'
                >

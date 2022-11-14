@@ -259,7 +259,7 @@ export default function GridServices() {
         paddingBottom: '2em',
         fontFamily: 'Furore',
         fontSize: '28px',
-        color: '#292929',
+        color: '#2d3748',
        }}
       >
        Ремонт электрооборудования
@@ -286,7 +286,7 @@ export default function GridServices() {
     </p>
     <div style={{paddingLeft: '63px', paddingBottom: '5em'}}>
      <Stack direction='column' sx={{textAlign: 'left'}}>
-      <h1>
+      <h2>
        <Typography
         variant='h1'
         sx={{
@@ -303,7 +303,7 @@ export default function GridServices() {
        >
         Наши услуги
        </Typography>
-      </h1>
+      </h2>
       <Box sx={{flexGrow: 1}}>
        <Stack direction='column' spacing={0}>
         <ItemsRow1 classes={classes} />
@@ -332,7 +332,7 @@ export default function GridServices() {
      }}
      className='blocktext'
     >
-     <h1>
+     <h3>
       <Typography
        variant='h1'
        sx={{
@@ -347,7 +347,7 @@ export default function GridServices() {
       >
        РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ
       </Typography>
-     </h1>
+     </h3>
      <Typography
       component='p'
       sx={{
