@@ -19,11 +19,11 @@ export default function RepairOfBoardsAndBlocksPage() {
     elevation={4}
     sx={{
      bgcolor: '#f7f7f7',
-     marginLeft: '2.7em',
+     marginLeft: '1.8em',
      marginBottom: 5,
      paddingLeft: '2em',
      paddingBottom: '0.6em',
-     width: '30em',
+     width: '31.2em',
     }}
    >
     <Stack direction='row' sx={{paddingLeft: '0em', textAlign: 'left'}}>

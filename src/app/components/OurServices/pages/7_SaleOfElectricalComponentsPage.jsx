@@ -15,7 +15,7 @@ export default function SaleOfElectricalComponentsPage() {
     description='Розничная продажа  электрокомпонетов по очень выгодным ценам!'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}>
     <Stack direction='column' sx={{paddingBottom: '2em'}}>
      <h1>
       <Typography

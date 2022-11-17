@@ -15,7 +15,7 @@ export default function RepairOfElectricHeatersPage() {
     description='Ремонт электронагревателей от 500 руб.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginBottom: 5}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}>
     <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '1em', paddingTop: '0em'}}>
      <Stack direction='row' sx={{paddingLeft: '2em', textAlign: 'left'}}>
       <p
