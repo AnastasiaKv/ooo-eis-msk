@@ -7,6 +7,9 @@
  height: 54px;
  z-index: 32;
 }
+.decor-top-hidden {
+ visibility: hidden;
+}
 
 .decor-bottom {
  float: right;
@@ -18,6 +21,9 @@
  z-index: 32;
 }
 
+.decor-bottom-hidden {
+ visibility: hidden;
+}
 input[type='email'],
 input[type='text'],
 input[type='number'],

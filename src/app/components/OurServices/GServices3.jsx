@@ -55,411 +55,440 @@ const useStyles = styled((theme) => ({
  },
 }));
 
-function DecorTop() {
- return <Box component='img' width='90' className='decor-top' src={decorTop} alt='DecorTop' />;
-}
-function DecorBottom() {
- return <Box component='img' className='decor-bottom' src={decorBottom} alt='DecorBottom' />;
-}
-
-function ItemsRow1() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
- const classes = useStyles();
+function DecorTop({visability}) {
  return (
-  <Box
-   sx={{
-    display: 'inline-block',
-   }}
-  >
-   <LinkButton onClick={handleClick} to='services/repair-motors-page'>
-    {isShown && <DecorTop />}
-    <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-     <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image1} />
-    </Paper>
-    {isShown && <DecorBottom />}
-   </LinkButton>
-   <Routes>
-    {isShown && <Route path='services/repair-motors-page' element={<RepairMotorsPage />} />}
-   </Routes>
-  </Box>
+  <>
+   {!visability ? (
+    <Box component='img' width='90' className='decor-top' src={decorTop} alt='DecorTop' />
+   ) : (
+    <Box component='img' width='90' className='decor-top-hidden' src={decorTop} alt='DecorTop' />
+   )}
+  </>
+ );
+}
+function DecorBottom({visability}) {
+ return (
+  <>
+   {!visability ? (
+    <Box component='img' className='decor-bottom' src={decorBottom} alt='DecorBottom' />
+   ) : (
+    <Box component='img' className='decor-bottom-hidden' src={decorBottom} alt='DecorBottom' />
+   )}
+  </>
  );
 }
 
-function ItemsRow2() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page1({title, children, isActive, onShow, visability}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/generator-repair-page'>
-    {isShown && <DecorTop />}
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='/services/repair-motors-page'>
+    {isActive && <DecorTop />}
+    <Paper sx={{boxShadow: 'none', maxWidth: '250px'}} className={classes.Item}>
+     <Box
+      sx={{height: '250px', width: '250px'}}
+      loading='lazy'
+      component='img'
+      alt='button'
+      src={image1}
+     />
+    </Paper>
+    {isActive && <DecorBottom />}
+   </LinkButton>
+   <Routes>
+    {isActive ? (
+     <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
+    ) : (
+     <></>
+    )}
+   </Routes>
+  </Stack>
+ );
+}
+
+function Page2({title, children, isActive, onShow}) {
+ const classes = useStyles();
+ return (
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='/services/generator-repair-page'>
+    {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image2} />
     </Paper>
-    {isShown && <DecorBottom />}
+    {isActive && <DecorBottom />}
    </LinkButton>
    <Routes>
-    {isShown && <Route path='services/generator-repair-page' element={<GeneratorRepairPage />} />}
+    {isActive && <Route path='/services/generator-repair-page' element={<GeneratorRepairPage />} />}
    </Routes>
-  </Box>
+  </Stack>
  );
 }
 
-function ItemsRow3() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page3({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/repair-transformers-page'>
-    {isShown && <DecorTop />}
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='services/repair-transformers-page'>
+    {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image3} />
     </Paper>
-    {isShown && <DecorBottom />}
+    {isActive && <DecorBottom />}
    </LinkButton>
    <Routes>
-    {isShown && (
+    {isActive && (
      <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
     )}
    </Routes>
-  </Box>
+  </Stack>
  );
 }
 
-function ItemsRow4() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page4({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/refrigeration-machine-repair-page'>
-    {isShown && <DecorTop />}
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='/services/refrigeration-machine-repair-page'>
+    {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image4} />
     </Paper>
-    {isShown && <DecorBottom />}
+    {isActive && <DecorBottom />}
    </LinkButton>
    <Routes>
-    {isShown && (
+    {isActive && (
      <Route
-      path='services/refrigeration-machine-repair-page'
+      path='/services/refrigeration-machine-repair-page'
       element={<RefrigerationMachineRepair />}
      />
     )}
    </Routes>
-  </Box>
+  </Stack>
  );
 }
-function ItemsRow5() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page5({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/rewinding-motors-page'>
-    {isShown && <DecorTop />}
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='/services/rewinding-motors-page'>
+    {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image5} />
     </Paper>
-    {isShown && <DecorBottom />}
+    {isActive && <DecorBottom />}
    </LinkButton>
    <Routes>
-    {isShown && <Route path='services/rewinding-motors-page' element={<RewindingMotorsPage />} />}
+    {isActive && <Route path='/services/rewinding-motors-page' element={<RewindingMotorsPage />} />}
    </Routes>
-  </Box>
+  </Stack>
  );
 }
-function ItemsRow6() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page6({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/repair-of-electric-heaters-page'>
-    {isShown && <DecorTop />}
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='/services/repair-of-electric-heaters-page'>
+    {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image6} />
     </Paper>
-    {isShown && <DecorBottom />}
+    {isActive && <DecorBottom />}
    </LinkButton>
    <Routes>
-    {isShown && (
+    {isActive && (
      <Route
-      path='services/repair-of-electric-heaters-page'
+      exact
+      path='/services/repair-of-electric-heaters-page'
       element={<RepairOfElectricHeatersPage />}
      />
     )}
    </Routes>
-  </Box>
+  </Stack>
  );
 }
-function ItemsRow7() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page7({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/sale-of-electrical-components-page'>
-    {isShown && <DecorTop />}
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='/services/sale-of-electrical-components-page'>
+    {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image7} />
     </Paper>
-    {isShown && <DecorBottom />}
+    {isActive && <DecorBottom />}
    </LinkButton>
    <Routes>
-    {isShown && (
+    {isActive && (
      <Route
-      path='services/sale-of-electrical-components-page'
+      path='/services/sale-of-electrical-components-page'
       element={<SaleOfElectricalComponentsPage />}
      />
     )}
    </Routes>
-  </Box>
+  </Stack>
  );
 }
-function ItemsRow8() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page8({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/repair-of-boards-and-blocks-page'>
-    {isShown && <DecorTop />}
+  <Stack sx={{flexGrow: 1}}>
+   <LinkButton onClick={onShow} to='/services/repair-of-boards-and-blocks-page'>
+    {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image8} />
     </Paper>
-    {isShown && <DecorBottom />}
+    {isActive && <DecorBottom />}
    </LinkButton>
    <Routes>
-    {isShown && (
+    {isActive && (
      <Route
-      path='services/repair-of-boards-and-blocks-page'
+      path='/services/repair-of-boards-and-blocks-page'
       element={<RepairOfBoardsAndBlocksPage />}
      />
     )}
    </Routes>
-  </Box>
+  </Stack>
  );
 }
-function ItemsRow9() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page9({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   <LinkButton onClick={handleClick} to='services/maintenance-and-repair-of-passenger-cars-page'>
-    {isShown && <DecorTop />}
-    <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-     <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image9} />
-    </Paper>
-    {isShown && <DecorBottom />}
-   </LinkButton>
-   <Routes>
-    {isShown && (
-     <Route
-      path='services/maintenance-and-repair-of-passenger-cars-page'
-      element={<TORepairOfPassengerCarsPage />}
-     />
-    )}
-   </Routes>
-  </Box>
+  <>
+   <Stack sx={{flexGrow: 1}}>
+    <LinkButton onClick={onShow} to='/services/maintenance-and-repair-of-passenger-cars-page'>
+     {isActive && <DecorTop />}
+     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
+      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image9} />
+     </Paper>
+     {isActive && <DecorBottom />}
+    </LinkButton>
+    <Routes>
+     {isActive && (
+      <Route
+       exact
+       path='/services/maintenance-and-repair-of-passenger-cars-page'
+       element={<TORepairOfPassengerCarsPage />}
+      />
+     )}
+    </Routes>
+   </Stack>
+  </>
  );
 }
-function ItemsRow10() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = useState(0);
-
- const handleClick = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
- };
-
+function Page10({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Box sx={{flexGrow: 1}}>
-   {isShown && <DecorTop />}
-   <LinkButton onClick={handleClick} to='services/surfacing-of-shafts-and-shields-page'>
-    <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-     <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image10} />
-    </Paper>
-   </LinkButton>
-   {isShown && <DecorBottom />}
-   <Routes>
-    {isShown && (
-     <Route
-      path='services/surfacing-of-shafts-and-shields-page'
-      element={<SurfacingOfShaftsAndShieldsPage />}
-     />
-    )}
-   </Routes>
-  </Box>
+  <>
+   <Stack sx={{flexGrow: 1}}>
+    <LinkButton onClick={onShow} to='/services/surfacing-of-shafts-and-shields-page'>
+     {isActive && <DecorTop />}
+     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
+      <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image10} />
+     </Paper>
+     {isActive && <DecorBottom />}
+    </LinkButton>
+    <Routes>
+     {isActive && (
+      <Route
+       exact
+       path='/services/surfacing-of-shafts-and-shields-page'
+       element={<SurfacingOfShaftsAndShieldsPage />}
+      />
+     )}
+    </Routes>
+   </Stack>
+  </>
  );
 }
 
 export default function GridServices() {
- const [isShown, setIsShown] = useState(false);
- const [value, setValue] = React.useState(0);
-
- const handleChange = (event, newValue) => {
-  setValue(newValue);
-  setIsShown((current) => !current);
-  event.preventDefault();
- };
+ const [activeIndex, setActiveIndex] = useState(10);
+ const [visability, setVisability] = useState(false);
  const classes = useStyles();
 
  return (
-  <main className='ees-content'>
-   <div>
-    <p
-     style={{
-      textAlign: 'left',
-      paddingLeft: '0px',
-      paddingTop: '20px',
-      margin: '5px 0',
-      width: '23cm',
-     }}
-     className='blocktext'
-    >
+  <div>
+   <p
+    style={{
+     textAlign: 'left',
+     paddingLeft: '0px',
+     paddingTop: '2em',
+     margin: '5px 0',
+     width: '23cm',
+     paddingBottom: '2em',
+    }}
+    className='blocktext'
+   >
+    <h1>
      <Typography
-      variant='body2'
-      component='span'
-      sx={{flexGrow: 1}}
-      style={{
-       fontFamily: 'Roboto',
-       fontSize: '14px',
-       position: 'relative',
-       justifyContent: 'space-around',
-       textAlign: 'justify',
-       color: '#292929',
+      variant='h1'
+      sx={{
+       paddingLeft: '4em',
+       textAlign: 'center',
+       flexGrow: 1,
+       paddingBottom: '2em',
+       fontFamily: 'Furore',
+       fontSize: '28px',
+       color: '#2d3748',
       }}
      >
-      Также как перспективное планирование предоставляет широкие возможности для системы массового
-      участия. Следует отметить, что сложившаяся структура организации позволяет оценить значение
-      поставленных обществом задач. Каждый из нас понимает очевидную вещь: консультация с широким
-      активом позволяет выполнить важные задания по разработке распределения внутренних резервов и
-      ресурсов.
+      Ремонт электрооборудования
      </Typography>
-    </p>
-
+    </h1>
     <Typography
-     variant='h4'
-     component='h2'
-     sx={{flexGrow: 1}}
-     style={{
-      paddingRight: '1.8em',
-      paddingTop: '20px',
-      paddingBottom: '18px',
-      fontFamily: 'Furore',
-      fontSize: '28px',
-
-      textAlign: 'center',
+     component='p'
+     sx={{
+      textIndent: '2ch',
+      lineHeight: '2.3em',
+      flexGrow: 1,
+      fontFamily: 'Roboto',
+      position: 'relative',
+      justifyContent: 'space-around',
+      textAlign: 'justify',
       color: '#292929',
      }}
     >
-     Наши услуги
+     Наша компания занимается ремонтом электрооборудования всех типов, представленных в каталоге
+     ниже. Более десяти лет мы ремонтируем оборудование для пассажирских поездов и теперь готовы
+     помочь вам с ремонтом любой электронной техники. Не спешите приобретать новые устройства, ведь
+     ремонт старых обойдётся гораздо дешевле.
     </Typography>
+   </p>
 
-    <Stack direction='row'>
-     <ItemsRow1 classes={classes} />
-     <ItemsRow2 classes={classes} />
-     <ItemsRow3 classes={classes} />
-    </Stack>
-    <Stack direction='row'>
-     <ItemsRow4 classes={classes} />
-     <ItemsRow5 classes={classes} />
-     <ItemsRow6 classes={classes} />
-    </Stack>
-    <Stack direction='row'>
-     <ItemsRow7 classes={classes} />
-     <ItemsRow8 classes={classes} />
-     <ItemsRow9 classes={classes} />
-    </Stack>
-    <ItemsRow10 classes={classes} />
-    <p
-     style={{
-      textAlign: 'left',
-      paddingLeft: '0px',
-      paddingTop: '20px',
-      margin: '0px 0',
-      width: '21cm',
-     }}
-     className='blocktext'
-    >
+   <Stack direction='column' sx={{paddingBottom: '5em'}}>
+    <h2>
      <Typography
-      variant='body2'
-      component='span'
-      sx={{flexGrow: 1}}
-      style={{
-       position: 'relative',
-       justifyContent: 'space-around',
-       fontSize: 12,
+      variant='h1'
+      sx={{
+       flexGrow: 1,
+       paddingLeft: '1.2em',
+       paddingTop: '20px',
+       paddingBottom: '2em',
+       fontFamily: 'Furore',
+       fontSize: '28px',
+
+       textAlign: 'center',
        color: '#292929',
       }}
      >
-      Также как перспективное планирование предоставляет широкие возможности для системы массового
-      участия. Следует отметить, что сложившаяся структура организации позволяет оценить значение
-      поставленных обществом задач. Каждый из нас понимает очевидную вещь: консультация с широким
-      активом позволяет выполнить важные задания по разработке распределения внутренних резервов и
-      ресурсов.
+      Наши услуги
      </Typography>
-    </p>
-   </div>
-  </main>
+    </h2>
+    <Box sx={{flexGrow: 1}}>
+     <Stack direction='row'>
+      <Page1
+       title='Etymology'
+       isActive={activeIndex === 0}
+       onShow={() => setActiveIndex(0)}
+       visability={() => setVisability(true)}
+       classes={classes}
+      />
+      <Page2
+       title='Etymology'
+       isActive={activeIndex === 1}
+       onShow={() => setActiveIndex(1)}
+       classes={classes}
+      />
+      <Page3
+       title='Etymology'
+       isActive={activeIndex === 2}
+       onShow={() => setActiveIndex(2)}
+       classes={classes}
+      />
+     </Stack>
+     <Stack direction='row'>
+      <Page4
+       title='Etymology'
+       isActive={activeIndex === 3}
+       onShow={() => setActiveIndex(3)}
+       classes={classes}
+      />
+      <Page5
+       title='Etymology'
+       isActive={activeIndex === 4}
+       onShow={() => setActiveIndex(4)}
+       classes={classes}
+      />
+      <Page6
+       title='Etymology'
+       isActive={activeIndex === 5}
+       onShow={() => setActiveIndex(5)}
+       classes={classes}
+      />
+     </Stack>
+     <Stack direction='row'>
+      <Page7
+       title='Etymology'
+       isActive={activeIndex === 6}
+       onShow={() => setActiveIndex(6)}
+       classes={classes}
+      />
+      <Page8
+       title='Etymology'
+       isActive={activeIndex === 7}
+       onShow={() => setActiveIndex(7)}
+       classes={classes}
+      />
+      <Page9
+       title='Etymology'
+       isActive={activeIndex === 8}
+       onShow={() => setActiveIndex(8)}
+       classes={classes}
+      />
+     </Stack>
+     <Page10
+      title='Etymology'
+      isActive={activeIndex === 9}
+      onShow={() => setActiveIndex(9)}
+      classes={classes}
+     />
+    </Box>
+   </Stack>
+   <p
+    style={{
+     textAlign: 'left',
+     paddingLeft: '0px',
+     paddingTop: '20px',
+     margin: '5px 0',
+     width: '23cm',
+     paddingBottom: '2em',
+    }}
+    className='blocktext'
+   >
+    <h3>
+     <Typography
+      variant='h1'
+      sx={{
+       paddingLeft: '4em',
+       textAlign: 'center',
+       flexGrow: 1,
+       paddingBottom: '2em',
+       fontFamily: 'Furore',
+       fontSize: '28px',
+       color: '#292929',
+      }}
+     >
+      РЕМОНТ БЫТОВОГО И ПРОМЫШЛЕННОГО ЭЛЕКТРООБОРУДОВАНИЯ
+     </Typography>
+    </h3>
+    <Typography
+     component='p'
+     sx={{
+      textIndent: '2ch',
+      lineHeight: '2.3em',
+      flexGrow: 1,
+      fontFamily: 'Roboto',
+      position: 'relative',
+      justifyContent: 'space-around',
+      textAlign: 'justify',
+      color: '#292929',
+     }}
+    >
+     Качество нашего ремонта проверено годами непрерывной работы, и вы получите гарантию на
+     устройство после ремонта. Мы готовы работать как с бытовыми устройствами , так и с промышленным
+     оборудованием.
+    </Typography>
+   </p>
+  </div>
  );
 }

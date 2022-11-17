@@ -6,7 +6,7 @@ import SEO from '../app/components/SEO';
 
 export default function services() {
  return (
-  <>
+  <div className='ees-content-card'>
    <SEO
     title='Главная'
     description='Качество нашего ремонта проверено годами непрерывной работы, 
@@ -14,6 +14,6 @@ export default function services() {
     name='ООО "ЭИС"'
    />
    <GridServices />
-  </>
+  </div>
  );
 }
