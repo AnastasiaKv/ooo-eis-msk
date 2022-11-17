@@ -13,7 +13,7 @@ export default function services() {
     и вы получите гарантию на устройство после ремонта'
     name='ООО "ЭИС"'
    />
-   <GridServices />
+   <GServices3 />
   </div>
  );
 }
