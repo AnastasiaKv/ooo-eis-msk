@@ -81,10 +81,9 @@ function DecorBottom({visability}) {
 function Page1({title, children, isActive, onShow, visability}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='/services/repair-motors-page'>
     {isActive && <DecorTop />}
-    <Paper sx={{boxShadow: 'none', maxWidth: '250px'}} className={classes.Item}>
+    <Paper sx={{boxShadow: 'none', width: '250px'}} className={classes.Item}>
      <Box
       sx={{height: '250px', width: '250px'}}
       loading='lazy'
@@ -95,21 +94,12 @@ function Page1({title, children, isActive, onShow, visability}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive ? (
-     <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
-    ) : (
-     <></>
-    )}
-   </Routes>
-  </Stack>
  );
 }
 
 function Page2({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='/services/generator-repair-page'>
     {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -117,17 +107,12 @@ function Page2({title, children, isActive, onShow}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive && <Route path='/services/generator-repair-page' element={<GeneratorRepairPage />} />}
-   </Routes>
-  </Stack>
  );
 }
 
 function Page3({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='services/repair-transformers-page'>
     {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -135,19 +120,12 @@ function Page3({title, children, isActive, onShow}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive && (
-     <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
-    )}
-   </Routes>
-  </Stack>
  );
 }
 
 function Page4({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='/services/refrigeration-machine-repair-page'>
     {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -155,21 +133,11 @@ function Page4({title, children, isActive, onShow}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive && (
-     <Route
-      path='/services/refrigeration-machine-repair-page'
-      element={<RefrigerationMachineRepair />}
-     />
-    )}
-   </Routes>
-  </Stack>
  );
 }
 function Page5({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='/services/rewinding-motors-page'>
     {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -177,16 +145,11 @@ function Page5({title, children, isActive, onShow}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive && <Route path='/services/rewinding-motors-page' element={<RewindingMotorsPage />} />}
-   </Routes>
-  </Stack>
  );
 }
 function Page6({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='/services/repair-of-electric-heaters-page'>
     {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -194,22 +157,11 @@ function Page6({title, children, isActive, onShow}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive && (
-     <Route
-      exact
-      path='/services/repair-of-electric-heaters-page'
-      element={<RepairOfElectricHeatersPage />}
-     />
-    )}
-   </Routes>
-  </Stack>
  );
 }
 function Page7({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='/services/sale-of-electrical-components-page'>
     {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -217,21 +169,11 @@ function Page7({title, children, isActive, onShow}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive && (
-     <Route
-      path='/services/sale-of-electrical-components-page'
-      element={<SaleOfElectricalComponentsPage />}
-     />
-    )}
-   </Routes>
-  </Stack>
  );
 }
 function Page8({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <Stack sx={{flexGrow: 1}}>
    <LinkButton onClick={onShow} to='/services/repair-of-boards-and-blocks-page'>
     {isActive && <DecorTop />}
     <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -239,22 +181,11 @@ function Page8({title, children, isActive, onShow}) {
     </Paper>
     {isActive && <DecorBottom />}
    </LinkButton>
-   <Routes>
-    {isActive && (
-     <Route
-      path='/services/repair-of-boards-and-blocks-page'
-      element={<RepairOfBoardsAndBlocksPage />}
-     />
-    )}
-   </Routes>
-  </Stack>
  );
 }
 function Page9({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <>
-   <Stack sx={{flexGrow: 1}}>
     <LinkButton onClick={onShow} to='/services/maintenance-and-repair-of-passenger-cars-page'>
      {isActive && <DecorTop />}
      <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -262,24 +193,11 @@ function Page9({title, children, isActive, onShow}) {
      </Paper>
      {isActive && <DecorBottom />}
     </LinkButton>
-    <Routes>
-     {isActive && (
-      <Route
-       exact
-       path='/services/maintenance-and-repair-of-passenger-cars-page'
-       element={<TORepairOfPassengerCarsPage />}
-      />
-     )}
-    </Routes>
-   </Stack>
-  </>
  );
 }
 function Page10({title, children, isActive, onShow}) {
  const classes = useStyles();
  return (
-  <>
-   <Stack sx={{flexGrow: 1}}>
     <LinkButton onClick={onShow} to='/services/surfacing-of-shafts-and-shields-page'>
      {isActive && <DecorTop />}
      <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
@@ -287,17 +205,6 @@ function Page10({title, children, isActive, onShow}) {
      </Paper>
      {isActive && <DecorBottom />}
     </LinkButton>
-    <Routes>
-     {isActive && (
-      <Route
-       exact
-       path='/services/surfacing-of-shafts-and-shields-page'
-       element={<SurfacingOfShaftsAndShieldsPage />}
-      />
-     )}
-    </Routes>
-   </Stack>
-  </>
  );
 }
 
@@ -375,7 +282,7 @@ export default function GridServices() {
      </Typography>
     </h2>
     <Box sx={{flexGrow: 1}}>
-     <Stack direction='row'>
+     <Stack direction='row' spacing={1}>
       <Page1
        title='Etymology'
        isActive={activeIndex === 0}
@@ -394,9 +301,14 @@ export default function GridServices() {
        isActive={activeIndex === 2}
        onShow={() => (activeIndex === 2 ? setActiveIndex(10) : setActiveIndex(2))}
        classes={classes}
-      />
+      />\
      </Stack>
-     <Stack direction='row'>
+     <Routes>
+       {activeIndex === 0 ? (<Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />) : (<></>)}
+       {activeIndex === 1 ? (<Route path='/services/generator-repair-page' element={<GeneratorRepairPage />} />) : (<></>)}
+       {activeIndex === 2 ? (<Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />) : (<></>)}
+     </Routes>
+     <Stack direction='row' spacing={1}>
       <Page4
        title='Etymology'
        isActive={activeIndex === 3}
@@ -416,7 +328,15 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
-     <Stack direction='row'>
+     <Routes>
+       {activeIndex === 3 ? 
+         (<Route path='/services/refrigeration-machine-repair-page' element={<RefrigerationMachineRepair />} />) : (<></>)}
+       {activeIndex === 4 ? 
+         (<Route path='/services/rewinding-motors-page' element={<RewindingMotorsPage />} />) : (<></>)}
+       {activeIndex === 5 ? 
+         (<Route path='/services/repair-of-electric-heaters-page' element={<RepairOfElectricHeatersPage />} />) : (<></>)}
+     </Routes>
+     <Stack direction='row' spacing={1}>
       <Page7
        title='Etymology'
        isActive={activeIndex === 6}
@@ -436,12 +356,26 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
+     <Routes>
+       {activeIndex === 6 ? 
+         (<Route path='/services/sale-of-electrical-components-page' element={<SaleOfElectricalComponentsPage />} />) : (<></>)}
+       {activeIndex === 7 ? 
+         (<Route path='/services/repair-of-boards-and-blocks-page' element={<RepairOfBoardsAndBlocksPage />} />) : (<></>)}
+       {activeIndex === 8 ? 
+         (<Route path='/services/maintenance-and-repair-of-passenger-cars-page' element={<TORepairOfPassengerCarsPage />} />) : (<></>)}
+     </Routes>
+     <Stack direction='row' sx={{paddingRight: '1.7em'}} spacing={1} justifyContent='center'>
      <Page10
       title='Etymology'
       isActive={activeIndex === 9}
       onShow={() => (activeIndex === 9 ? setActiveIndex(10) : setActiveIndex(9))}
       classes={classes}
      />
+     </Stack>
+     <Routes>
+       {activeIndex === 9 ? 
+     <Route path='/services/surfacing-of-shafts-and-shields-page' element={<SurfacingOfShaftsAndShieldsPage />} />: (<></>)}
+     </Routes>
     </Box>
    </Stack>
    <p
