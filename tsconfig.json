@@ -20,6 +20,7 @@
    "@src/*": ["src/*"],
    "@app/*": ["app/*"],
    "@assets/*": ["src/assets/*"],
+   "@dist/*": ["dist/*"],
    "@config/*": ["app/*"],
    "@environment/*": ["environments/*"],
    "@shared/*": ["app/_shared/*"],
@@ -29,9 +30,7 @@
  },
  "include": [
   "src",
-  "config-overrides.js",
-  "sitemap.js",
-  "public/requestAnimationFrame-polyfill.js"
+  "dist",
  ],
  "exclude": ["node_modules", "build"] //  *** Файлы, которые не нужно вводить, проверять ***
 }

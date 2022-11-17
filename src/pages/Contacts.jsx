@@ -12,12 +12,15 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
+import {Button} from '@material-ui/core';
 
 const textStyle = {
  fontFamily: 'Roboto',
- textAlign: 'justify',
+
  lineHeight: '1.7',
+ width: '40em',
  marginLeft: 0,
+ textAlign: '-webkit-auto',
 };
 const MyTextInput = ({label, ...props}) => {
  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -32,38 +35,43 @@ const MyTextInput = ({label, ...props}) => {
  );
 };
 
-export default function Contacts() {
+export default function contacts() {
  return (
   <main className='ees-content-card'>
-   <div>
-    <SEO
-     title='Контакты'
-     description='В случае, если Вы хотите обсудить какие-либо вопросы, 
+   <SEO
+    title='Контакты'
+    description='В случае, если Вы хотите обсудить какие-либо вопросы, 
     свяжитесь с нами: по телефону: +7 (495) 135 82 88'
-     name='ООО "ЭИС"'
-    />
-    <Box
-     component='form'
-     sx={{
-      paddingTop: '2em',
-      '& .MuiTextField-root': {m: 1, width: '25ch'},
-      paddingBottom: '1em',
-     }}
-     noValidate
-     autoComplete='off'
-    >
-     <div>
+    name='ООО "ЭИС"'
+   />
+   <Box
+    component='form'
+    sx={{
+     paddingTop: '1em',
+     '& .MuiTextField-root': {m: 1, width: '25ch'},
+     paddingBottom: '1em',
+    }}
+    noValidate
+    autoComplete='off'
+   >
+    <div>
+     <Stack>
       <p style={{paddingTop: '20px'}}>
        <ul
         style={{
-         paddingLeft: '30px',
+         paddingLeft: '2em',
          textAlign: 'justify',
          listStyle: 'none',
         }}
        >
         <h1>
          <Typography
-          style={{paddingLeft: '8.5em', fontFamily: 'Furore', fontSize: '28px'}}
+          style={{
+           color: '#292929',
+           paddingLeft: '7.8em',
+           fontFamily: 'Furore',
+           fontSize: '28px',
+          }}
           variant='h4'
           component='h1'
          >
@@ -71,46 +79,55 @@ export default function Contacts() {
          </Typography>
         </h1>
         <br />
-        <Typography
-         sx={{
-          fontFamily: 'Roboto',
-          color: '#292929',
-          paddingLeft: '9em',
-         }}
-         style={textStyle}
-         component='p'
-        >
-         <p>В случае, если Вы хотите обсудить какие-либо вопросы, свяжитесь с нами:</p>
-        </Typography>
-        <Stack
-         direction='row'
-         spacing={3}
-         sx={{fontFamily: 'Roboto', color: '#292929', paddingLeft: '6em'}}
-        >
-         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
-         <Typography style={textStyle} component='p'>
-          по телефону: <strong>+7 (495) 135 82 88</strong>
+        <Stack style={{paddingLeft: '3em', width: '29em', paddingRight: '2em'}}>
+         <Typography
+          sx={{
+           fontFamily: 'Roboto',
+           color: '#292929',
+           paddingLeft: '7em',
+          }}
+          style={textStyle}
+          component='p'
+         >
+          <p>
+           В случае, если Вы хотите обсудить какие-либо вопросы,
+           <br /> свяжитесь с нами:
+          </p>
+          <br />
          </Typography>
-        </Stack>
-        <Stack
-         direction='row'
-         spacing={3}
-         sx={{fontFamily: 'Roboto', color: '#292929', paddingLeft: '6em'}}
-        >
-         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
-         <Typography style={textStyle} component='p'>
-          по электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
-         </Typography>
-        </Stack>
-        <Stack
-         direction='row'
-         spacing={3}
-         sx={{fontFamily: 'Roboto', color: '#292929', paddingLeft: '6em'}}
-        >
-         <CircleIcon style={{margin: '8px 0px 0px 0px', height: 7}} />
-         <Typography style={textStyle} component='p'>
-          заполнив форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
-         </Typography>
+
+         <Stack style={{width: '29em', paddingRight: '5em'}}>
+          <Stack
+           direction='row'
+           spacing={3}
+           sx={{fontFamily: 'Roboto', color: '#292929', paddingLeft: '5.3em'}}
+          >
+           <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
+           <Typography style={textStyle} component='p'>
+            по телефону: <strong>+7 (495) 135 82 88</strong>
+           </Typography>
+          </Stack>
+          <Stack
+           direction='row'
+           spacing={3}
+           sx={{fontFamily: 'Roboto', color: '#292929', paddingLeft: '5.3em'}}
+          >
+           <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
+           <Typography style={textStyle} component='p'>
+            по электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
+           </Typography>
+          </Stack>
+          <Stack
+           direction='row'
+           spacing={3}
+           sx={{fontFamily: 'Roboto', color: '#292929', paddingLeft: '5.3em'}}
+          >
+           <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
+           <Typography style={textStyle} component='p'>
+            заполнив форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
+           </Typography>
+          </Stack>
+         </Stack>
         </Stack>
         <br />
         <Box sx={{height: '1em'}}></Box>
@@ -145,9 +162,9 @@ export default function Contacts() {
            setSubmitting(false);
           }}
          >
-          <Paper elevation={4} sx={{width: '-webkit-fill-available'}}>
-           <Form>
-            <Stack sx={{paddingLeft: '60px', paddingBottom: '20px'}} direction='column'>
+          <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
+           <Form style={{width: '22em', height: '24em'}}>
+            <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
              <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
              <MyTextInput label='Номер' name='tel' type='text' placeholder='' />
              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
@@ -164,11 +181,10 @@ export default function Contacts() {
         </Stack>
        </ul>
       </p>
-     </div>
-
-     <Box sx={{height: '8em'}}></Box>
-    </Box>
-   </div>
+     </Stack>
+    </div>
+    <Box sx={{height: '2em'}}/>
+   </Box>
   </main>
  );
 }

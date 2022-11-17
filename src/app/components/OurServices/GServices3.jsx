@@ -8,7 +8,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import LinkButton from '../../../modules/common/LinkButton';
+import LinkButton from '../../modules/common/LinkButton';
 import RepairMotorsPage from './pages/1_RepairMotorsPage';
 import GeneratorRepairPage from './pages/2_GeneratorRepairPage';
 import RepairTransformersPage from './pages/3_RepairTransformersPage';

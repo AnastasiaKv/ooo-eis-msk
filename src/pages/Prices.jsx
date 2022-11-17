@@ -22,13 +22,12 @@ const componentStyle = {
  paddingLeft: '0em',
 };
 
-export default function Prices() {
+export default function prices() {
  return (
   <main className='ees-content'>
    <SEO
     title='Стоимость'
-    description='В таблицах с ценами представлена минимальная стоимость заказа по каждой позиции,
-          окончательная стоимость будет сформирована после первичной дефектации.'
+    description='В таблицах с ценами представлена минимальная стоимость заказа'
     name='ООО "ЭИС"'
    />
    <div style={componentStyle}>

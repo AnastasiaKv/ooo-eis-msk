@@ -8,12 +8,12 @@ import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
 import App from '../App';
-import About from '../../pages/About';
-import Contacts from '../../pages/Contacts';
-import Prices from '../../pages/Prices';
-import News from '../../pages/News';
-import Gallery from '../../pages/Gallery';
-import Index from '../../pages/Index';
+import About from '../../pages/about';
+import Contacts from '../../pages/contacts';
+import Prices from '../../pages/prices';
+import Gallery from '../../pages/gallery';
+import Services from '../../pages/services';
+import ServerModal from '../core/errors/ServerModal';
 
 import Page1 from './OurServices/pages/1_RepairMotorsPage';
 import Page2 from './OurServices/pages/2_GeneratorRepairPage';
@@ -127,19 +127,19 @@ export default function NavTabs() {
     </Stack>
    </Tabs>
    <Routes>
-    <Route exact path='/' element={<Index />}>
-     <Route index element={<GridServices />} />
-     <Route exact path='services/repair-motors-page' element={<Page1 />} />
-     <Route exact path='services/generator-repair-page' element={<Page2 />} />
-     <Route exact path='services/repair-transformers-page' element={<Page3 />} />
-     <Route exact path='services/refrigeration-machine-repair-page' element={<Page4 />} />
-     <Route exact path='services/rewinding-motors-page' element={<Page5 />} />
-     <Route exact path='services/repair-of-electric-heaters-page' element={<Page6 />} />
-     <Route exact path='services/sale-of-electrical-components-page' element={<Page7 />} />
-     <Route exact path='services/repair-of-boards-and-blocks-page' element={<Page8 />} />
+    <Route exact path='/' element={<Services />}>
+     <Route index path='/' element={<Services />} />
+     <Route exact path='/services/repair-motors-page' element={<Page1 />} />
+     <Route exact path='/services/generator-repair-page' element={<Page2 />} />
+     <Route exact path='/services/repair-transformers-page' element={<Page3 />} />
+     <Route exact path='/services/refrigeration-machine-repair-page' element={<Page4 />} />
+     <Route exact path='/services/rewinding-motors-page' element={<Page5 />} />
+     <Route exact path='/services/repair-of-electric-heaters-page' element={<Page6 />} />
+     <Route exact path='/services/sale-of-electrical-components-page' element={<Page7 />} />
+     <Route exact path='/services/repair-of-boards-and-blocks-page' element={<Page8 />} />
      <Route
       exact
-      path='services/maintenance-and-repair-of-passenger-cars-page'
+      path='/services/maintenance-and-repair-of-passenger-cars-page'
       element={<Page9 />}
      />
      <Route exact path='services/surfacing-of-shafts-and-shields-page' element={<Page10 />} />

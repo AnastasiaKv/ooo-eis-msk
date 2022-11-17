@@ -1,9 +1,10 @@
 import React from 'react';
 import GridServices from '../app/components/OurServices/GridServices';
 
+import GServices3 from '../app/components/OurServices/GServices3';
 import SEO from '../app/components/SEO';
 
-export default function Index() {
+export default function services() {
  return (
   <>
    <SEO

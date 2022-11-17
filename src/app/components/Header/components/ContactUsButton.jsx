@@ -9,12 +9,14 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import axios from 'axios';
-import {Formik, Form, Field, ErrorMessage} from 'formik';
+import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
 import {Stack, width} from '@mui/system';
 import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 // import { DisplayFormikState } from './formikHelper';
+import '../../../../assets/css/style.css';
+import '../../../../assets/css/styles-custom.css';
 const styles = {};
 
 const theme = createTheme({
@@ -26,7 +28,18 @@ const theme = createTheme({
  },
 });
 const contactFormEndpoint = process.env.REACT_APP_CONTACT_ENDPOINT;
-
+const MyTextInput = ({label, ...props}) => {
+ // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+ // which we can spread on <input> and alse replace ErrorMessage entirely.
+ const [field, meta] = useField(props);
+ return (
+  <>
+   <label htmlFor={props.id || props.name}>{label}</label>
+   <input className='text-input' {...field} {...props} />
+   {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
+  </>
+ );
+};
 function Contact(props) {
  const {classes} = props;
  const [open, setOpen] = useState(false);
@@ -75,9 +88,11 @@ function Contact(props) {
     >
      {!isSubmitionCompleted && (
       <React.Fragment>
-       <DialogTitle id='form-dialog-title'>Оставьте свои данные - и мы Вам перезвоним!</DialogTitle>
+       <DialogTitle style={{ paddingLeft: '1em'}} id='form-dialog-title'>
+        Оставьте свои данные - и мы Вам перезвоним!
+       </DialogTitle>
        <ThemeProvider theme={theme}>
-        <DialogContent>
+        <DialogContent sx={{overflow: 'hidden'}}>
          {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
          <Formik
           initialValues={{email: '', name: '', tel: ''}}
@@ -113,55 +128,24 @@ function Contact(props) {
             handleReset,
            } = props;
            return (
-            <form onSubmit={handleSubmit}>
+            <Form style={{width: '19em', height: '19.5em'}} onSubmit={handleSubmit}>
              <Stack
               sx={{
                overflow: 'hidden',
-               padding: '10px 10em 10px 0px',
+               padding: '0px 10em 10px 10px',
                flexDirection: 'column',
                alignItems: 'baseline',
               }}
               direction='row'
               spacing={2}
               noValidate
-              component='form'
              >
-              <TextField
-               InputLabelProps={{shrink: true}}
-               label='Имя'
-               name='name'
-               className={classes.textField}
-               value={values.name}
-               onChange={handleChange}
-               onBlur={handleBlur}
-               helperText={errors.name && touched.name && errors.name}
-              />
-
-              <TextField
-               InputLabelProps={{shrink: true}}
-               error={errors.email && touched.email}
-               label='E-mail'
-               name='email'
-               className={classes.textField}
-               value={values.email}
-               onChange={handleChange}
-               onBlur={handleBlur}
-               helperText={errors.email && touched.email && errors.email}
-              />
-
-              <TextField
-               InputLabelProps={{shrink: true}}
-               label='Телефон'
-               name='tel'
-               className={classes.textField}
-               value={values.tel}
-               onChange={handleChange}
-               onBlur={handleBlur}
-               helperText={errors.tel && touched.tel && errors.tel}
-              />
+              <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
+              <MyTextInput label='Номер' name='tel' type='text' placeholder='' />
+              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
              </Stack>
              <DialogActions>
-              <div style={{paddingBottom: '20px', paddingRight: '8.8em'}}>
+              <div style={{paddingTop: '1.8em', paddingRight: '7.5em'}}>
                <Button
                 onClick={handleClose}
                 style={{
@@ -178,7 +162,7 @@ function Contact(props) {
               </div>
               {/* <DisplayFormikState {...props} /> */}
              </DialogActions>
-            </form>
+            </Form>
            );
           }}
          </Formik>

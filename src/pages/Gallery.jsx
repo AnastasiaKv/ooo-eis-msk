@@ -82,63 +82,61 @@ const itemData3 = [
 export default function Gallery() {
  return (
   <main className='ees-content'>
-   <div>
-    <SEO title='Галерея' description='Сотрудники, цеха, аппаратура' name='ООО "ЭИС"' />
-    <Stack
-     direction='column'
-     spacing={3}
-     sx={{paddingTop: '3em', paddingBottom: '3em', transform: 'translateZ(0)'}}
-    >
-     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
-      {itemData1.map((service) => (
-       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-        <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
-         {service.title}
-        </Typography>
-        <Box
-         sx={{height: '290px', width: '290px'}}
-         loading='lazy'
-         alt={service.title}
-         component='img'
-         src={service.image}
-        />
-       </Paper>
-      ))}
-     </Stack>
-     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
-      {itemData2.map((service) => (
-       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-        <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
-         {service.title}
-        </Typography>
-        <Box
-         sx={{height: '290px', width: '290px'}}
-         loading='lazy'
-         alt={service.title}
-         component='img'
-         src={service.image}
-        />
-       </Paper>
-      ))}
-     </Stack>
-     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
-      {itemData3.map((service) => (
-       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-        <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
-         {service.title}
-        </Typography>
-        <Box
-         sx={{height: '290px', width: '290px'}}
-         loading='lazy'
-         alt={service.title}
-         component='img'
-         src={service.image}
-        />
-       </Paper>
-      ))}
-     </Stack>
+   <SEO title='Галерея' description='Сотрудники, цеха, аппаратура' name='ООО "ЭИС"' />
+   <Stack
+    direction='column'
+    spacing={3}
+    sx={{paddingTop: '3em', paddingBottom: '2em', transform: 'translateZ(0)'}}
+   >
+    <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
+     {itemData1.map((service) => (
+      <Paper key={service.id} sx={{boxShadow: 'none'}}>
+       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+        {service.title}
+       </Typography>
+       <Box
+        sx={{height: '290px', width: '290px'}}
+        loading='lazy'
+        alt={service.title}
+        component='img'
+        src={service.image}
+       />
+      </Paper>
+     ))}
     </Stack>
-   </div>
+    <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
+     {itemData2.map((service) => (
+      <Paper key={service.id} sx={{boxShadow: 'none'}}>
+       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+        {service.title}
+       </Typography>
+       <Box
+        sx={{height: '290px', width: '290px'}}
+        loading='lazy'
+        alt={service.title}
+        component='img'
+        src={service.image}
+       />
+      </Paper>
+     ))}
+    </Stack>
+    <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
+     {itemData3.map((service) => (
+      <Paper key={service.id} sx={{boxShadow: 'none'}}>
+       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+        {service.title}
+       </Typography>
+       <Box
+        sx={{height: '290px', width: '290px'}}
+        loading='lazy'
+        alt={service.title}
+        component='img'
+        src={service.image}
+       />
+      </Paper>
+     ))}
+    </Stack>
+   </Stack>
   </main>
  );
 }

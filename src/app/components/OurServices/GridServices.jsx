@@ -236,7 +236,7 @@ export default function GridServices() {
  const classes = useStyles();
 
  return (
-  <main className='ees-content'>
+  <main className='ees-content-card'>
    <div>
     <p
      style={{

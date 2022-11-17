@@ -12,7 +12,7 @@ import image2 from '../assets/img/gallery/Gallery_Naplavka.png';
 import image3 from '../assets/img/gallery/Gallery_Svarka.png';
 import SEO from '../app/components/SEO';
 
-export default function About() {
+export default function about() {
  return (
   <>
    <main className='ees-content'>
