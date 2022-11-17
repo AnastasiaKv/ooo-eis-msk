@@ -379,20 +379,20 @@ export default function GridServices() {
       <Page1
        title='Etymology'
        isActive={activeIndex === 0}
-       onShow={() => setActiveIndex(0)}
+       onShow={() => (activeIndex === 0 ? setActiveIndex(10) : setActiveIndex(0))}
        visability={() => setVisability(true)}
        classes={classes}
       />
       <Page2
        title='Etymology'
        isActive={activeIndex === 1}
-       onShow={() => setActiveIndex(1)}
+       onShow={() => (activeIndex === 1 ? setActiveIndex(10) : setActiveIndex(1))}
        classes={classes}
       />
       <Page3
        title='Etymology'
        isActive={activeIndex === 2}
-       onShow={() => setActiveIndex(2)}
+       onShow={() => (activeIndex === 2 ? setActiveIndex(10) : setActiveIndex(2))}
        classes={classes}
       />
      </Stack>
@@ -400,19 +400,19 @@ export default function GridServices() {
       <Page4
        title='Etymology'
        isActive={activeIndex === 3}
-       onShow={() => setActiveIndex(3)}
+       onShow={() => (activeIndex === 3 ? setActiveIndex(10) : setActiveIndex(3))}
        classes={classes}
       />
       <Page5
        title='Etymology'
        isActive={activeIndex === 4}
-       onShow={() => setActiveIndex(4)}
+       onShow={() => (activeIndex === 4 ? setActiveIndex(10) : setActiveIndex(4))}
        classes={classes}
       />
       <Page6
        title='Etymology'
        isActive={activeIndex === 5}
-       onShow={() => setActiveIndex(5)}
+       onShow={() => (activeIndex === 5 ? setActiveIndex(10) : setActiveIndex(5))}
        classes={classes}
       />
      </Stack>
@@ -420,26 +420,26 @@ export default function GridServices() {
       <Page7
        title='Etymology'
        isActive={activeIndex === 6}
-       onShow={() => setActiveIndex(6)}
+       onShow={() => (activeIndex === 6 ? setActiveIndex(10) : setActiveIndex(6))}
        classes={classes}
       />
       <Page8
        title='Etymology'
        isActive={activeIndex === 7}
-       onShow={() => setActiveIndex(7)}
+       onShow={() => (activeIndex === 7 ? setActiveIndex(10) : setActiveIndex(7))}
        classes={classes}
       />
       <Page9
        title='Etymology'
        isActive={activeIndex === 8}
-       onShow={() => setActiveIndex(8)}
+       onShow={() => (activeIndex === 8 ? setActiveIndex(10) : setActiveIndex(8))}
        classes={classes}
       />
      </Stack>
      <Page10
       title='Etymology'
       isActive={activeIndex === 9}
-      onShow={() => setActiveIndex(9)}
+      onShow={() => (activeIndex === 9 ? setActiveIndex(10) : setActiveIndex(9))}
       classes={classes}
      />
     </Box>
