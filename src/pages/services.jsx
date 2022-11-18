@@ -1,7 +1,5 @@
 import React from 'react';
-import GridServices from '../app/components/OurServices/GridServices';
-
-import GServices3 from '../app/components/OurServices/GServices3';
+import GServices3 from '../app/components/OurServices/Services';
 import SEO from '../app/components/SEO';
 
 export default function services() {

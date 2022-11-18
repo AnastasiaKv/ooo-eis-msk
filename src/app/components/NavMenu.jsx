@@ -27,7 +27,6 @@ import Page9 from './OurServices/pages/9_TORepairOfPassengerCarsPage';
 import Page10 from './OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
 
 import Error404 from '../core/errors/Error404';
-import GridServices from './OurServices/GridServices';
 
 const buttonStyle = {
  borderRadius: 2,
