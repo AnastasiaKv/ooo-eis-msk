@@ -5,6 +5,9 @@ export default function SEO({title, description, siteTitle}) {
  return (
   <Helmet
    title={title}
+   link
+   rel='canonical'
+   href='https://eis-msk.ru/'
    titleTemplate={siteTitle ? `%s | ${siteTitle}` : null}
    meta={[
     {
@@ -23,22 +26,6 @@ export default function SEO({title, description, siteTitle}) {
      property: `og:type`,
      content: `website`,
     },
-    //     {
-    //      name: `twitter:card`,
-    //      content: `summary`,
-    //     },
-    //     {
-    //      name: `twitter:creator`,
-    //      content: twitter,
-    //     },
-    //     {
-    //      name: `twitter:title`,
-    //      content: title,
-    //     },
-    //     {
-    //      name: `twitter:description`,
-    //      content: description,
-    //     },
    ]}
   />
  );

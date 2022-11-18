@@ -15,7 +15,10 @@ export default function TORepairOfPassengerCarsPage() {
     description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}>
+   <Paper
+    elevation={4}
+    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+   >
     <Stack
      direction='column'
      spacing={0}
@@ -107,7 +110,7 @@ export default function TORepairOfPassengerCarsPage() {
            textAlign: '-webkit-auto',
           }}
          >
-          Являемся подрядчиками 000 РЖД и 000 ФПК.
+          Являемся подрядчиками ООО РЖД и ООО ФПК.
          </Typography>
         </Stack>
         <Stack direction='row' spacing={3} sx={{}}>
