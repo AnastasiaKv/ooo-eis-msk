@@ -46,6 +46,7 @@
   "build:stage": "env-cmd -f .env.staging npm run build",
   "build:dev": "env-cmd -f .env.development npm run build",
   "build": "react-scripts build",
+  "postbuild": "react-snap",
   "test": "react-scripts test",
   "lint": "prettier --check .",
   "format": "prettier --write ."
