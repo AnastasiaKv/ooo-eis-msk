@@ -1,0 +1,13 @@
+.decor-bottom {
+ float: right;
+ position: absolute;
+ left: 8.3em;
+ bottom: 17px;
+ width: 44px;
+ height: 82px;
+ z-index: 32;
+}
+
+.decor-bottom-hidden {
+ visibility: hidden;
+}

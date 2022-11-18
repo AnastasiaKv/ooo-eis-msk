@@ -16,7 +16,10 @@ export default function RefrigerationMachineRepairPage() {
     description='Ремонт холодильных машин и компрессоров от 4000 руб.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}>
+   <Paper
+    elevation={4}
+    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+   >
     <Stack
      direction='column'
      spacing={0}
@@ -52,7 +55,7 @@ export default function RefrigerationMachineRepairPage() {
       </h1>
      </p>
      <br />
-     <Typography variant='h6' sx={{paddingRight: '20px', paddingBottom: '1em'}}>
+     <Typography variant='h6' sx={{paddingRight: '9em', paddingBottom: '1em'}}>
       Выполняем следующие технологические операции:
      </Typography>
 

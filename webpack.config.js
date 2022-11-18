@@ -48,7 +48,7 @@ module.exports = {
    },
    {
     test: /\.(png|woff|woff2|eot|ttf|otf|svg)$/,
-    type: 'src/assets/',
+    type: 'src/assets/css',
     loader: '`url-loader`?limit=100000',
    },
 
