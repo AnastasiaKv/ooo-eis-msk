@@ -42,12 +42,9 @@
  },
  "scripts": {
   "start": "react-scripts start",
-  "build": "react-scripts build",
-  "dev": "webpack serve",
-  "build:production": "NODE_ENV=production webpack serve",
-  "build:STAGE": "env-cmd -f .env.staging npm run build",
-  "build:PROD": "env-cmd -f .env npm run build",
-  "postbuild": "react-snap",
+  "build:prod": "env-cmd -f .env npm run build",
+  "build:stage": "env-cmd -f .env.staging npm run build",
+  "build:dev": "env-cmd -f .env.development npm run build",
   "test": "react-scripts test",
   "lint": "prettier --check .",
   "format": "prettier --write ."
