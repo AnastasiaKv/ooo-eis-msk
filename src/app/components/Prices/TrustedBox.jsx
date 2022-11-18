@@ -33,7 +33,7 @@ export default function TrustedBox() {
       'linear-gradient(to left top, #F12B29 0%/*bottom-right color*/,rgba(207, 97, 97, 1) 50% /*middle color*/, #f12b29 100% /*top-left color*/)',
     }}
    >
-    <p style={{paddingTop: '20px'}}>
+    <p style={{paddingTop: '24px'}}>
      <ul
       style={{
        paddingLeft: '70px',
