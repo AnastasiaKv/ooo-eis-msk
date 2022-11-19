@@ -21,7 +21,16 @@ import Page8 from '../../OurServices/pages/8_RepairOfBoardsAndBlocksPage';
 import Page9 from '../../OurServices/pages/9_TORepairOfPassengerCarsPage';
 import Page10 from '../../OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
 
+import {useNavigate} from 'react-router-dom';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+
 import Error404 from '../../../core/errors/Error404';
+
 const useStyles = makeStyles({
  flexGrow: {
   flex: '1',
@@ -36,34 +45,43 @@ const useStyles = makeStyles({
  },
 });
 const filterData = (query, itemList) => {
- if (!query) {
+ if (query === '') {
   return itemList;
  } else {
-  return itemList.filter((item) => item.toLowerCase().includes(query));
+  return itemList.filter((item) => item.title.toLowerCase().includes(query));
  }
 };
 
 const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props}) => {
  const classes = useStyles();
-
- const [value, setValue] = React.useState(0);
-
+ const navigate = useNavigate();
  const [isShown, setIsShown] = useState(false);
- const [searchQuery, setSearchQuery] = useState('');
- const handleClick = (event, newValue) => {
-  // 👇️ toggle shown state
-  setValue(newValue);
+ const [searchedService, setSearchedService] = useState({});
+ const [openModal, setOpenModal] = useState(false);
+ const handleOpenModal = () => {
+   setOpenModal(true);
  };
+ const handleCloseModal = () => {
+   setOpenModal(false);
+ };
+ const handleClickAway = () => {
+  setIsShown(false);
+ };
+ const [dataFiltered, setDataFiltered] = useState(services);
 
- const dataFiltered = filterData(searchQuery, services);
  return (
   <React.Fragment>
    <div style={{display: 'flex', flexWrap: 'wrap'}}>
     <TextField
      style={{left: '-27px', borderRadius: '0', top: '16px'}}
-     onInput={(e) => {
-      //       setSearchQuery(e.target.value);
-      //setIsShown(true);
+     onClick={() => setIsShown(true)}/**/
+     onChange={(e) => {
+      //console.log("\""+e.target.value+"\"");
+      //setSearchQuery(e.target.value);
+      setDataFiltered(filterData(e.target.value, services));
+      //console.log('dataFiltered');
+      //console.log(dataFiltered);
+      setIsShown(true);
      }}
      variant='outlined'
      placeholder='Поиск...'
@@ -81,6 +99,7 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
     />
 
     {isShown && (
+    <ClickAwayListener onClickAway={handleClickAway}>
      <div style={{justifyContent: 'left', marginBottom: '-34em', marginRight: '-27em'}}>
       <Paper
        sx={{textAlign: 'left'}}
@@ -93,21 +112,33 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
        }}
       >
        {dataFiltered.map((item) => (
-        <Stack direction='column'>
+        <Stack direction='row'>
          <LinkButton
-          onClick={value}
+          onClick={() => {setSearchedService(item); handleOpenModal()}}//{value}
           label={item.title}
-          to={item.path}
+          //to={item.path}
           key={item.id}
           className={classes.button}
          />
-         <Routes>
-          <Route exact path={item.path} element={item.page} />
-         </Routes>
+          <Dialog
+          fullWidth='false'
+          maxWidth='md'
+          open={openModal}
+          onClose={handleCloseModal}
+          scroll='body'
+          aria-labelledby="scroll-dialog-title"
+          aria-describedby="scroll-dialog-description"
+          >
+            <DialogTitle></DialogTitle>
+            {searchedService.page}
+            <Button onClick={handleCloseModal}>Закрыть</Button>
+            <DialogTitle> </DialogTitle>
+          </Dialog>
         </Stack>
        ))}
       </Paper>
      </div>
+     </ClickAwayListener>
     )}
    </div>
   </React.Fragment>
@@ -126,11 +157,6 @@ function LinkButton(props) {
     minHeight: '25px',
    }}
    component={Link}
-   onClick={(event) => {
-    event.preventDefault();
-    console.log(event.target);
-    console.log(event.preventDefault());
-   }}
    {...props}
   >
    <Typography>{props.label}</Typography>
@@ -138,71 +164,65 @@ function LinkButton(props) {
  );
 }
 
-function ListProvidedServices(dataFiltered) {
- const [value, setValue] = React.useState(services);
-
- return <></>;
-}
-
 const services = [
  {
   id: 1,
-  path: 'services/repair-motors-page',
-  title: 'Ремонт электродвигателей',
+  path: '/services/repair-motors-page',
+  title: 'ремонт электродвигателей',
   page: <Page1 />,
  },
  {
   id: 2,
-  path: 'services/generator-repair-page',
-  title: 'Ремонт генераторов',
+  path: '/services/generator-repair-page',
+  title: 'ремонт генераторов',
   page: <Page2 />,
  },
  {
   id: 3,
-  path: 'services/repair-transformers-page',
-  title: 'Ремонт трансформаторов',
+  path: '/services/repair-transformers-page',
+  title: 'ремонт трансформаторов',
   page: <Page3 />,
  },
  {
   id: 4,
-  path: 'services/refrigeration-machine-repair-page',
-  title: 'Ремонт холодильных машин и компрессоров',
+  path: '/services/refrigeration-machine-repair-page',
+  title: 'ремонт холодильных машин и компрессоров',
   page: <Page4 />,
  },
  {
   id: 5,
-  path: 'services/rewinding-motors-page',
-  title: 'Ремонт и перемотка двигателей',
+  path: '/services/rewinding-motors-page',
+  title: 'ремонт и перемотка двигателей',
   page: <Page5 />,
  },
  {
   id: 6,
-  path: 'services/repair-of-electric-heaters-page',
-  title: 'Ремонт электронагревателей',
+  path: '/services/repair-of-electric-heaters-page',
+  title: 'ремонт электронагревателей',
   page: <Page6 />,
  },
  {
   id: 7,
-  path: 'services/sale-of-electrical-components-page',
-  title: 'Продажа электрокомпонентов',
+  path: '/services/sale-of-electrical-components-page',
+  title: 'продажа электрокомпонентов',
   page: <Page7 />,
  },
  {
   id: 8,
-  path: 'services/repair-of-boards-and-blocks-page',
-  title: 'Ремонт плат и электронных блоков',
+  path: '/services/repair-of-boards-and-blocks-page',
+  title: 'ремонт плат и электронных блоков',
   page: <Page8 />,
  },
  {
   id: 9,
-  path: 'services/maintenance-and-repair-of-passenger-cars-page',
-  title: 'ТО и ремонт электрооборудования пассажирских вагонов',
+  path: '/services/maintenance-and-repair-of-passenger-cars-page',
+  title: 'то и ремонт электрооборудования пассажирских вагонов',
   page: <Page9 />,
  },
  {
   id: 10,
-  path: 'services/surfacing-of-shafts-and-shields-page',
-  title: 'Наплавка валов и щитов',
+  path: '/services/surfacing-of-shafts-and-shields-page',
+  title: 'наплавка валов и щитов',
   page: <Page10 />,
  },
 ];
