@@ -411,7 +411,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
-     <Stack direction='row' sx={{paddingRight: '1.7em'}} spacing={1} justifyContent='center'>
+     <Stack direction='row' sx={{paddingRight: '2.7em'}} spacing={1} justifyContent='center'>
       <Page10
        title='Etymology'
        isActive={activeIndex === 9}
