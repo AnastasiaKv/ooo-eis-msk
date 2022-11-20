@@ -166,8 +166,9 @@ export default function contacts() {
            <Form style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
              <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
-             <MyTextInput label='Номер' name='tel' type='text' placeholder='' />
              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+             <MyTextInput label='Телефон' name='tel' type='text' placeholder='' />
+
              <button
               style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
               type='submit'
@@ -183,7 +184,7 @@ export default function contacts() {
       </p>
      </Stack>
     </div>
-    <Box sx={{height: '2em'}}/>
+    <Box sx={{height: '2em'}} />
    </Box>
   </main>
  );
