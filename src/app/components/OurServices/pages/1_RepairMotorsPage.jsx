@@ -67,7 +67,7 @@ export default function RepairMotorsPage() {
     elevation={4}
     sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
    >
-    <Stack direction='column' spacing={0} sx={{paddingLeft: '1em', paddingBottom: '2em'}}>
+    <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
      <Stack direction='row' style={{paddingTop: '0em'}}>
       <p
        style={{

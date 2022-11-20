@@ -36,6 +36,7 @@ const useStyles = makeStyles({
   flex: '1',
  },
  button: {
+  height: 'fit-content',
   backgroundColor: '#FFFFFFFF',
   color: '#292929',
   '&:hover': {
@@ -59,10 +60,10 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
  const [searchedService, setSearchedService] = useState({});
  const [openModal, setOpenModal] = useState(false);
  const handleOpenModal = () => {
-   setOpenModal(true);
+  setOpenModal(true);
  };
  const handleCloseModal = () => {
-   setOpenModal(false);
+  setOpenModal(false);
  };
  const handleClickAway = () => {
   setIsShown(false);
@@ -74,7 +75,7 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
    <div style={{display: 'flex', flexWrap: 'wrap'}}>
     <TextField
      style={{left: '-27px', borderRadius: '0', top: '16px'}}
-     onClick={() => setIsShown(true)}/**/
+     onClick={() => setIsShown(true)} /**/
      onChange={(e) => {
       //console.log("\""+e.target.value+"\"");
       //setSearchQuery(e.target.value);
@@ -99,45 +100,51 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
     />
 
     {isShown && (
-    <ClickAwayListener onClickAway={handleClickAway}>
-     <div style={{justifyContent: 'left', marginBottom: '-34em', marginRight: '-27em'}}>
-      <Paper
-       sx={{textAlign: 'left'}}
-       style={{
-        margin: '3em 0em -19em -16em',
-        width: '400px',
-        padding: 3,
-        background: '#FFFFFFFF',
-        color: 'black',
-       }}
-      >
-       {dataFiltered.map((item) => (
-        <Stack direction='row'>
-         <LinkButton
-          onClick={() => {setSearchedService(item); handleOpenModal()}}//{value}
-          label={item.title}
-          //to={item.path}
-          key={item.id}
-          className={classes.button}
-         />
+     <ClickAwayListener onClickAway={handleClickAway}>
+      <div style={{justifyContent: 'left', marginBottom: '-34em', marginRight: '-27em'}}>
+       <Paper
+        elevation={20}
+        sx={{textAlign: 'left'}}
+        style={{
+         margin: '3em 0em -19em -16em',
+         width: '25em',
+         height: '19em',
+         padding: 3,
+         background: '#FFFFFFFF',
+         color: 'black',
+        }}
+       >
+        {dataFiltered.map((item) => (
+         <Stack sx={{height: '1.9em'}} direction='row'>
+          <LinkButton
+           onClick={() => {
+            setSearchedService(item);
+            handleOpenModal();
+           }} //{value}
+           label={item.title}
+           //to={item.path}
+           key={item.id}
+           className={classes.button}
+          />
           <Dialog
-          fullWidth='false'
-          maxWidth='md'
-          open={openModal}
-          onClose={handleCloseModal}
-          scroll='body'
-          aria-labelledby="scroll-dialog-title"
-          aria-describedby="scroll-dialog-description"
+           fullWidth='false'
+           maxWidth='md'
+           open={openModal}
+           onClose={handleCloseModal}
+           scroll='body'
+
+           //  aria-labelledby='scroll-dialog-title'
+           //  aria-describedby='scroll-dialog-description'
           >
-            <DialogTitle></DialogTitle>
-            {searchedService.page}
-            <Button onClick={handleCloseModal}>Закрыть</Button>
-            <DialogTitle> </DialogTitle>
+           {/* <DialogTitle></DialogTitle> */}
+           {searchedService.page}
+           {/* <Button onClick={handleCloseModal}>Закрыть</Button>
+           <DialogTitle> </DialogTitle> */}
           </Dialog>
-        </Stack>
-       ))}
-      </Paper>
-     </div>
+         </Stack>
+        ))}
+       </Paper>
+      </div>
      </ClickAwayListener>
     )}
    </div>
