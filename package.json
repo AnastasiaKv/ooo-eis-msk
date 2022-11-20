@@ -4,6 +4,7 @@
  "private": true,
  "homepage": "/",
  "dependencies": {
+  "@emailjs/browser": "^3.9.1",
   "@loadable/component": "^5.15.2",
   "awesome-typescript-loader": "^5.2.1",
   "axios": "^1.1.3",

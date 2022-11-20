@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
+import emailjs, {init, SMTPClient} from '@emailjs/browser';
 import {withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -14,6 +15,7 @@ import * as Yup from 'yup';
 import {Stack, width} from '@mui/system';
 import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
+
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
@@ -41,9 +43,26 @@ const MyTextInput = ({label, ...props}) => {
  );
 };
 function Contact(props) {
+ init('user_xxxxxxxxxxxxxxxxxxx');
+ const form = useRef();
+
  const {classes} = props;
  const [open, setOpen] = useState(false);
  const [isSubmitionCompleted, setSubmitionCompleted] = useState(false);
+
+ const handleSubmit = (e) => {
+  e.preventDefault();
+  emailjs.sendForm('SERVICE_D', 'TEMPLAE_ID', form.current, 'USER_ID').then(
+   (result) => {
+    alert('Message Sent Successfully');
+    console.log(result.text);
+   },
+   (error) => {
+    console.log(error.text);
+   }
+  );
+  setOpen(false);
+ };
 
  function handleClose() {
   setOpen(false);
@@ -88,7 +107,7 @@ function Contact(props) {
     >
      {!isSubmitionCompleted && (
       <React.Fragment>
-       <DialogTitle style={{ paddingLeft: '1em'}} id='form-dialog-title'>
+       <DialogTitle style={{paddingLeft: '1em'}} id='form-dialog-title'>
         Оставьте свои данные - и мы Вам перезвоним!
        </DialogTitle>
        <ThemeProvider theme={theme}>
@@ -147,7 +166,7 @@ function Contact(props) {
              <DialogActions>
               <div style={{paddingTop: '1.8em', paddingRight: '7.5em'}}>
                <Button
-                onClick={handleClose}
+                onClick={handleSubmit}
                 style={{
                  width: '12em',
                  height: '45px',
@@ -155,6 +174,8 @@ function Contact(props) {
                  color: '#F1F1F1F1',
                  backgroundColor: '#2d3748',
                 }}
+                type='submit'
+                className='btn btn-primary'
                 variant='contained'
                >
                 Отправить
