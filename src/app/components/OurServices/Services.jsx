@@ -266,7 +266,7 @@ export default function GridServices() {
    <Stack direction='column' sx={{paddingLeft: '1.6em', paddingBottom: '5em'}}>
     <h2>
      <Typography
-      variant='h1'
+      variant='h2'
       sx={{
        flexGrow: 1,
        paddingRight: '0.5em',
