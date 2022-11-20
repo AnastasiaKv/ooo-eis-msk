@@ -28,7 +28,7 @@ export default function RefrigerationMachineRepairPage() {
      <p
       style={{
        paddingTop: '45px',
-       paddingLeft: '1rem',
+       paddingLeft: '0.5em',
        width: '600px',
        height: '211px',
        textAlign: 'left',
@@ -41,7 +41,7 @@ export default function RefrigerationMachineRepairPage() {
         width: '8em',
         height: '7em',
         float: 'right' /* Выравнивание по правому краю  */,
-        margin: '0px -129px 13px 0px',
+        margin: '19px -109px 13px 0px',
        }}
        loading='lazy'
        component='img'

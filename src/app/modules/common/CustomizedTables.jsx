@@ -19,7 +19,7 @@ export default function CustomizedTables() {
       variant='h4'
       style={{
        marginRight: '1em',
-       paddingRight: '6em',
+       paddingRight: '0em',
        paddingBottom: '1em',
        fontFamily: 'Furore',
        fontSize: '28px',
