@@ -25,16 +25,21 @@ const theme = createTheme({
 const contactFormEndpoint = process.env.REACT_APP_CONTACT_ENDPOINT;
 
 function YMap() {
- const defaultState = {
-  center: [55.758154, 37.733284],
-  zoom: 16,
-  controls: [],
- };
+  const defaultState = {
+   center: [55.758154, 37.733284],
+   zoom: 16,
+   controls: [],
+  };
  //style={{width: '16em', height: '15em'}}
  return (
   <YMaps>
    <Map width='1000px' height='500px' defaultState={defaultState}>
-    <Placemark geometry={[55.758154, 37.733284]} />
+    <Placemark 
+      geometry={[55.758154, 37.733284]}
+      options={{
+        preset: 'islands#redRepairShopIcon',    
+      }}
+    />
     <GeolocationControl options={{float: 'left'}} />
     {/* <RouteButton
      options={{adjustMapMargin: 'true', popupWidth: '300px', float: 'left', size: 'small'}}
