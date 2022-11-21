@@ -43,6 +43,24 @@ export default function about() {
       </Typography>
 
       <Stack direction='column' spacing={0} sx={{paddingLeft: '1.5em', paddingTop: '1em'}}>
+       <h2>
+        <Typography
+         variant='h2'
+         sx={{
+          flexGrow: 1,
+          paddingRight: '0.5em',
+          paddingTop: '20px',
+          paddingBottom: '2em',
+          fontFamily: 'Furore',
+          fontSize: '28px',
+
+          textAlign: 'center',
+          color: '#292929',
+         }}
+        >
+         Наш коллектив
+        </Typography>
+       </h2>
        <Stack>
         <Paper elevation={0}>
          <Box

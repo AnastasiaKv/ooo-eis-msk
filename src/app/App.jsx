@@ -9,10 +9,12 @@ import TopMediaBlock from './layouts/TopMediaBlockLayout';
 import SEO from './components/SEO';
 
 const helmetContext = {};
+
 function App() {
  return (
   <React.StrictMode>
-   <LayoutProvider>
+   <resize />
+   <LayoutProvider children={React.Children}>
     <HelmetProvider context={helmetContext}>
      <SEO
       title='ООО "Электронные Инженерные Системы"'

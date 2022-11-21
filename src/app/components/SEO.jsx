@@ -4,6 +4,7 @@ import {Helmet} from 'react-helmet-async';
 export default function SEO({title, description, siteTitle}) {
  return (
   <Helmet
+   htmlAttributes={{lang: 'en'}}
    title={title}
    link
    rel='canonical'
