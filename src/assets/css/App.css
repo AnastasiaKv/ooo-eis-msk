@@ -164,7 +164,10 @@ body {
  font-style: normal;
  font-display: swap;
 }
-
+@font-face {
+ font-family: 'Roboto';
+ src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 @media screen and (min-width: 300px) and (max-width: 1281px) {
 }
 

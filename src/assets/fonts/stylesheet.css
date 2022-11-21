@@ -108,3 +108,15 @@
  font-weight: bold;
  font-style: normal;
 }
+
+
+@font-face {
+          font-family: 'Roboto';
+          src: url('Roboto.ttf');
+          src: local('Naftera Bold'), local('NafteraBold'),
+           url('NafteraBold.eot?#iefix') format('embedded-opentype'),
+           url('NafteraBold.woff2') format('woff2'), url('NafteraBold.woff') format('woff'),
+           url('NafteraBold.ttf') format('truetype');
+          font-weight: bold;
+          font-style: normal;
+         }

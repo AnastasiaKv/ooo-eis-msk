@@ -147,24 +147,22 @@ function Contact(props) {
             handleReset,
            } = props;
            return (
-            <Form style={{width: '19em', height: '19.5em'}} onSubmit={handleSubmit}>
+            <Form style={{width: '22em', height: '24em'}} onSubmit={handleSubmit}>
              <Stack
               sx={{
-               overflow: 'hidden',
-               padding: '0px 10em 10px 10px',
-               flexDirection: 'column',
-               alignItems: 'baseline',
+               paddingLeft: '60px',
+               paddingBottom: '2.3em',
               }}
-              direction='row'
+              direction='column'
               spacing={2}
               noValidate
              >
               <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
-              <MyTextInput label='Номер' name='tel' type='text' placeholder='' />
               <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+              <MyTextInput label='Телефон' name='tel' type='text' placeholder='' />
              </Stack>
              <DialogActions>
-              <div style={{paddingTop: '1.8em', paddingRight: '7.5em'}}>
+              <div style={{paddingRight: '8.5em'}}>
                <Button
                 onClick={handleSubmit}
                 style={{
