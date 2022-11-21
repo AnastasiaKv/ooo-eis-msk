@@ -76,7 +76,7 @@ const data = [
 
 const RepairTransformersPage = () => {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Перемотка трансформаторов'
     description='Цены на перемотку трансформаторов от 9000 руб.'
@@ -84,7 +84,7 @@ const RepairTransformersPage = () => {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
      <Stack direction='row' style={{paddingTop: '0em'}}>

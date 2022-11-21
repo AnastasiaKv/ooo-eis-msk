@@ -9,7 +9,7 @@ import SEO from '../../SEO';
 
 export default function SurfacingOfShaftsAndShieldsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Наплавка валов и щитов'
     description='Наплавка валов и щитов от 4000 руб.'
@@ -17,7 +17,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack
      direction='column'

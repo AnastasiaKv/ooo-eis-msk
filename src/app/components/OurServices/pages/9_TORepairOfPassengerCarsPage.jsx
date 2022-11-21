@@ -9,7 +9,7 @@ import SEO from '../../SEO';
 
 export default function TORepairOfPassengerCarsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='ТО и ремонт электрооборудования пассажирских вагонов'
     description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
@@ -17,7 +17,7 @@ export default function TORepairOfPassengerCarsPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack
      direction='column'

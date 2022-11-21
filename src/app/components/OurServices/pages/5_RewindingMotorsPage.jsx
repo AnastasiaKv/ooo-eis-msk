@@ -10,7 +10,7 @@ import SEO from '../../SEO';
 
 export default function RewindingMotorsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Ремонт и перемотка двигателей'
     description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
@@ -18,7 +18,7 @@ export default function RewindingMotorsPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p

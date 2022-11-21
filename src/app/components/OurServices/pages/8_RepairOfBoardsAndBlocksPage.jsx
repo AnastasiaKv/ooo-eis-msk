@@ -9,7 +9,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function RepairOfBoardsAndBlocksPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Ремонт плат и электронных блоков'
     description='Ремонт плат от автомобильной электроники'
@@ -19,8 +19,6 @@ export default function RepairOfBoardsAndBlocksPage() {
     elevation={4}
     sx={{
      bgcolor: '#f7f7f7',
-     marginLeft: '1.8em',
-     marginBottom: 5,
      paddingLeft: '2em',
      paddingBottom: '0.6em',
      width: '31.2em',

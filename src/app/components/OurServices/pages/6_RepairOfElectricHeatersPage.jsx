@@ -9,7 +9,7 @@ import SEO from '../../SEO';
 
 export default function RepairOfElectricHeatersPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Ремонт электронагревателей'
     description='Ремонт электронагревателей от 500 руб.'
@@ -17,7 +17,7 @@ export default function RepairOfElectricHeatersPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack direction='column' sx={{color: '#1a202c', paddingBottom: '1em', paddingTop: '0em'}}>
      <Stack direction='row' sx={{paddingLeft: '2em', textAlign: 'left'}}>

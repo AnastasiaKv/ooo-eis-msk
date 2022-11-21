@@ -305,6 +305,7 @@ export default function GridServices() {
       />
       \
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 0 ? (
        <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
@@ -322,6 +323,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
      <Stack direction='row' spacing={1}>
       <Page4
        title='Etymology'
@@ -342,6 +344,7 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 3 ? (
        <Route
@@ -365,6 +368,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
      <Stack direction='row' spacing={1}>
       <Page7
        title='Etymology'
@@ -385,6 +389,7 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 6 ? (
        <Route
@@ -411,6 +416,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
      <Stack direction='row' sx={{paddingRight: '2.7em'}} spacing={1} justifyContent='center'>
       <Page10
        title='Etymology'
@@ -419,6 +425,7 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 9 ? (
        <Route
@@ -429,6 +436,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
     </Box>
    </Stack>
    <p
