@@ -18,4 +18,3 @@ if (rootElement.hasChildNodes()) {
 }
 console.log(process.env);
 reportWebVitals(console.log);
-registerServiceWorker();
