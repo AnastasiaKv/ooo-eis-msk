@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
 import Paper from '@mui/material/Paper';
-import image3 from '../../../../assets/img/Services/Ремонт трансформаторов1.png';
+import image3 from '../../../../assets/img/services/Ремонт трансформаторов1.png';
 import SEO from '../../SEO';
 
 const data = [

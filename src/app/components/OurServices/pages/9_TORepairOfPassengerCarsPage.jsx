@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
-import image9 from '../../../../assets/img/Services/ТО2.png';
+import image9 from '../../../../assets/img/services/ТО2.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 

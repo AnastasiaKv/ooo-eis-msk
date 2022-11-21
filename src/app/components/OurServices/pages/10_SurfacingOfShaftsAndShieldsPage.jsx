@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Handyman from '@mui/icons-material/Handyman';
-import image10 from '../../../../assets/img/Services/Наплавка2.png';
+import image10 from '../../../../assets/img/services/Наплавка2.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
@@ -15,10 +15,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
     description='Наплавка валов и щитов от 4000 руб.'
     name='ООО ЭИС'
    />
-   <Paper
-    elevation={4}
-    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
-   >
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
     <Stack
      direction='column'
      spacing={0}

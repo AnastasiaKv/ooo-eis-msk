@@ -26,16 +26,16 @@ import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
 import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
 import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
 
-import image1 from '../../../assets/img/Services/Ремонт электродвигателей.png';
-import image2 from '../../../assets/img/Services/Ремонт генераторов.png';
-import image3 from '../../../assets/img/Services/Ремонт трансформаторов.png';
-import image4 from '../../../assets/img/Services/Ремонт холодильных машин.png';
-import image5 from '../../../assets/img/Services/Перемотка.png';
-import image6 from '../../../assets/img/Services/Ремонт электронагревателей.png';
-import image7 from '../../../assets/img/Services/Продажа компонентов.png';
-import image8 from '../../../assets/img/Services/Ремонт плат.png';
-import image9 from '../../../assets/img/Services/ТО.png';
-import image10 from '../../../assets/img/Services/Наплавка.png';
+import image1 from '../../../assets/img/services/Ремонт электродвигателей.png';
+import image2 from '../../../assets/img/services/Ремонт генераторов.png';
+import image3 from '../../../assets/img/services/Ремонт трансформаторов.png';
+import image4 from '../../../assets/img/services/Ремонт холодильных машин.png';
+import image5 from '../../../assets/img/services/Перемотка.png';
+import image6 from '../../../assets/img/services/Ремонт электронагревателей.png';
+import image7 from '../../../assets/img/services/Продажа компонентов.png';
+import image8 from '../../../assets/img/services/Ремонт плат.png';
+import image9 from '../../../assets/img/services/ТО.png';
+import image10 from '../../../assets/img/services/Наплавка.png';
 
 const useStyles = styled((theme) => ({
  flexGrow: {
@@ -209,7 +209,7 @@ function Page10({title, children, isActive, onShow}) {
  );
 }
 
-export default function GridServices() {
+export default function Gridservices() {
  const [activeIndex, setActiveIndex] = useState(10);
  const [visability, setVisability] = useState(false);
  const classes = useStyles();
@@ -306,23 +306,23 @@ export default function GridServices() {
       \
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
-     <Routes>
-      {activeIndex === 0 ? (
-       <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
-      ) : (
-       <></>
-      )}
-      {activeIndex === 1 ? (
-       <Route path='/services/generator-repair-page' element={<GeneratorRepairPage />} />
-      ) : (
-       <></>
-      )}
-      {activeIndex === 2 ? (
-       <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
-      ) : (
-       <></>
-      )}
-     </Routes>
+      <Routes>
+       {activeIndex === 0 ? (
+        <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
+       ) : (
+        <></>
+       )}
+       {activeIndex === 1 ? (
+        <Route path='/services/generator-repair-page' element={<GeneratorRepairPage />} />
+       ) : (
+        <></>
+       )}
+       {activeIndex === 2 ? (
+        <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
+       ) : (
+        <></>
+       )}
+      </Routes>
      </div>
      <Stack direction='row' spacing={1}>
       <Page4
@@ -345,29 +345,29 @@ export default function GridServices() {
       />
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
-     <Routes>
-      {activeIndex === 3 ? (
-       <Route
-        path='/services/refrigeration-machine-repair-page'
-        element={<RefrigerationMachineRepair />}
-       />
-      ) : (
-       <></>
-      )}
-      {activeIndex === 4 ? (
-       <Route path='/services/rewinding-motors-page' element={<RewindingMotorsPage />} />
-      ) : (
-       <></>
-      )}
-      {activeIndex === 5 ? (
-       <Route
-        path='/services/repair-of-electric-heaters-page'
-        element={<RepairOfElectricHeatersPage />}
-       />
-      ) : (
-       <></>
-      )}
-     </Routes>
+      <Routes>
+       {activeIndex === 3 ? (
+        <Route
+         path='/services/refrigeration-machine-repair-page'
+         element={<RefrigerationMachineRepair />}
+        />
+       ) : (
+        <></>
+       )}
+       {activeIndex === 4 ? (
+        <Route path='/services/rewinding-motors-page' element={<RewindingMotorsPage />} />
+       ) : (
+        <></>
+       )}
+       {activeIndex === 5 ? (
+        <Route
+         path='/services/repair-of-electric-heaters-page'
+         element={<RepairOfElectricHeatersPage />}
+        />
+       ) : (
+        <></>
+       )}
+      </Routes>
      </div>
      <Stack direction='row' spacing={1}>
       <Page7
@@ -390,32 +390,32 @@ export default function GridServices() {
       />
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
-     <Routes>
-      {activeIndex === 6 ? (
-       <Route
-        path='/services/sale-of-electrical-components-page'
-        element={<SaleOfElectricalComponentsPage />}
-       />
-      ) : (
-       <></>
-      )}
-      {activeIndex === 7 ? (
-       <Route
-        path='/services/repair-of-boards-and-blocks-page'
-        element={<RepairOfBoardsAndBlocksPage />}
-       />
-      ) : (
-       <></>
-      )}
-      {activeIndex === 8 ? (
-       <Route
-        path='/services/maintenance-and-repair-of-passenger-cars-page'
-        element={<TORepairOfPassengerCarsPage />}
-       />
-      ) : (
-       <></>
-      )}
-     </Routes>
+      <Routes>
+       {activeIndex === 6 ? (
+        <Route
+         path='/services/sale-of-electrical-components-page'
+         element={<SaleOfElectricalComponentsPage />}
+        />
+       ) : (
+        <></>
+       )}
+       {activeIndex === 7 ? (
+        <Route
+         path='/services/repair-of-boards-and-blocks-page'
+         element={<RepairOfBoardsAndBlocksPage />}
+        />
+       ) : (
+        <></>
+       )}
+       {activeIndex === 8 ? (
+        <Route
+         path='/services/maintenance-and-repair-of-passenger-cars-page'
+         element={<TORepairOfPassengerCarsPage />}
+        />
+       ) : (
+        <></>
+       )}
+      </Routes>
      </div>
      <Stack direction='row' sx={{paddingRight: '2.7em'}} spacing={1} justifyContent='center'>
       <Page10
@@ -426,16 +426,16 @@ export default function GridServices() {
       />
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
-     <Routes>
-      {activeIndex === 9 ? (
-       <Route
-        path='/services/surfacing-of-shafts-and-shields-page'
-        element={<SurfacingOfShaftsAndShieldsPage />}
-       />
-      ) : (
-       <></>
-      )}
-     </Routes>
+      <Routes>
+       {activeIndex === 9 ? (
+        <Route
+         path='/services/surfacing-of-shafts-and-shields-page'
+         element={<SurfacingOfShaftsAndShieldsPage />}
+        />
+       ) : (
+        <></>
+       )}
+      </Routes>
      </div>
     </Box>
    </Stack>

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
-import image1 from '../../../../assets/img/Services/Ремонт электродвигателей1.png';
+import image1 from '../../../../assets/img/services/Ремонт электродвигателей1.png';
 import Paper from '@mui/material/Paper';
 import {Outlet} from 'react-router-dom';
 import SEO from '../../SEO';
