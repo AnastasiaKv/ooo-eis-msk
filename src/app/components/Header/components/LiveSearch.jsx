@@ -50,7 +50,7 @@ const filterData = (query, itemList) => {
  if (query === '') {
   return itemList;
  } else {
-  return itemList.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()));
+  return itemList.filter((item) => item.title.toLowerCase().startsWith(query.toLowerCase()));
  }
 };
 
