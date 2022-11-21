@@ -58,10 +58,7 @@ const GeneratorRepairPage = () => {
  return (
   <form style={{height: '100%'}}>
    <SEO title='Ремонт генератора' description='Ремонт генератора от 500 руб.' name='ООО ЭИС' />
-   <Paper
-    elevation={4}
-    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
-   >
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
      <Stack direction='row' style={{paddingTop: '0em'}}>
       <p

@@ -28,9 +28,6 @@
    "@images/*": ["src/assets/*"]
   }
  },
- "include": [
-  "src",
-  "dist",
- ],
+ "include": ["src", "dist"],
  "exclude": ["node_modules", "build"] //  *** Файлы, которые не нужно вводить, проверять ***
 }

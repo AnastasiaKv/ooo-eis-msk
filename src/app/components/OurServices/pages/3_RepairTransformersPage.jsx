@@ -82,10 +82,7 @@ const RepairTransformersPage = () => {
     description='Цены на перемотку трансформаторов от 9000 руб.'
     name='ООО ЭИС'
    />
-   <Paper
-    elevation={4}
-    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
-   >
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
      <Stack direction='row' style={{paddingTop: '0em'}}>
       <p

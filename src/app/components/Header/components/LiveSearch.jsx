@@ -30,7 +30,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 import Error404 from '../../../core/errors/Error404';
-import { padding } from '@mui/system';
+import {padding} from '@mui/system';
 
 const useStyles = makeStyles({
  flexGrow: {
@@ -77,7 +77,7 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
     <TextField
      style={{left: '-27px', borderRadius: '0', top: '16px'}}
      onClick={(e) => {
-        setIsShown(e.target.value !== '')
+      setIsShown(e.target.value !== '');
      }}
      onChange={(e) => {
       setDataFiltered(filterData(e.target.value, services));
@@ -131,7 +131,7 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
      </ClickAwayListener>
     )}
    </div>
-   
+
    <Dialog
     maxWidth={false}
     open={openModal}
@@ -141,15 +141,15 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
      style: {
       //backgroundColor: "transparentt",
       //boxShadow: "none",
-      overflow: 'hidden'
-      },
+      overflow: 'hidden',
+     },
     }}
     //  aria-labelledby='scroll-dialog-title'
     //  aria-describedby='scroll-dialog-description'
    >
-     {searchedService.page}
-     {/*<Button onClick={handleCloseModal}>Закрыть</Button>*/}
-    </Dialog>
+    {searchedService.page}
+    {/*<Button onClick={handleCloseModal}>Закрыть</Button>*/}
+   </Dialog>
   </React.Fragment>
  );
 };

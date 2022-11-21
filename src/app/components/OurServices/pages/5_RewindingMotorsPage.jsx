@@ -16,10 +16,7 @@ export default function RewindingMotorsPage() {
     description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
     name='ООО ЭИС'
    />
-   <Paper
-    elevation={4}
-    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
-   >
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
       style={{
