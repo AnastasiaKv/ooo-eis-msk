@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SimpleTable from '../../../modules/common/SimpleTable';
-import image1 from '../../../../assets/img/services/Ремонт электродвигателей1.png';
+import image1 from '../../../../assets/img/Services/Ремонт электродвигателей1.png';
 import Paper from '@mui/material/Paper';
 import {Outlet} from 'react-router-dom';
 import SEO from '../../SEO';
@@ -57,7 +57,7 @@ const data = [
 
 export default function RepairMotorsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Ремонт электродвигателя'
     description='Ремонт электродвигателя от 500 руб.'
@@ -65,7 +65,7 @@ export default function RepairMotorsPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
      <Stack direction='row' style={{paddingTop: '0em'}}>

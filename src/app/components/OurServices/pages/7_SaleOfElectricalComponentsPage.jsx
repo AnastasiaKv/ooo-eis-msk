@@ -3,19 +3,19 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import CurrencyRubleRoundedIcon from '@mui/icons-material/CurrencyRubleRounded';
-import image7 from '../../../../assets/img/services/Продажа компонентов1.png';
+import image7 from '../../../../assets/img/Services/Продажа компонентов1.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
 export default function SaleOfElectricalComponentsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Продажа электрокомпонентов'
     description='Розничная продажа  электрокомпонетов по очень выгодным ценам!'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}>
+   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
     <Stack direction='column' sx={{paddingBottom: '2em'}}>
      <h1>
       <Typography

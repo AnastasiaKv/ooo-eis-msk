@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import image4 from '../../../../assets/img/services/Ремонт холодильных машин1.png';
+import image4 from '../../../../assets/img/Services/Ремонт холодильных машин1.png';
 
 import Paper from '@mui/material/Paper';
 import DoneIcon from '@mui/icons-material/AcUnit';
@@ -10,7 +10,7 @@ import SEO from '../../SEO';
 
 export default function RefrigerationMachineRepairPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Ремонт холодильных машин и компрессоров'
     description='Ремонт холодильных машин и компрессоров от 4000 руб.'
@@ -18,7 +18,7 @@ export default function RefrigerationMachineRepairPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack
      direction='column'

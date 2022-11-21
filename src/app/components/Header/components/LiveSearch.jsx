@@ -30,6 +30,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 import Error404 from '../../../core/errors/Error404';
+import { padding } from '@mui/system';
 
 const useStyles = makeStyles({
  flexGrow: {
@@ -75,14 +76,12 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
    <div style={{display: 'flex', flexWrap: 'wrap'}}>
     <TextField
      style={{left: '-27px', borderRadius: '0', top: '16px'}}
-     onClick={() => setIsShown(true)} /**/
+     onClick={(e) => {
+        setIsShown(e.target.value !== '')
+     }}
      onChange={(e) => {
-      //console.log("\""+e.target.value+"\"");
-      //setSearchQuery(e.target.value);
       setDataFiltered(filterData(e.target.value, services));
-      //console.log('dataFiltered');
-      //console.log(dataFiltered);
-      setIsShown(true);
+      setIsShown(e.target.value !== '');
      }}
      variant='outlined'
      placeholder='Поиск...'
@@ -108,7 +107,6 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
         style={{
          margin: '3em 0em -19em -16em',
          width: '25em',
-         height: '19em',
          padding: 3,
          background: '#FFFFFFFF',
          color: 'black',
@@ -120,27 +118,12 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
            onClick={() => {
             setSearchedService(item);
             handleOpenModal();
-           }} //{value}
+           }}
            label={item.title}
            //to={item.path}
            key={item.id}
            className={classes.button}
           />
-          <Dialog
-           fullWidth='false'
-           maxWidth='md'
-           open={openModal}
-           onClose={handleCloseModal}
-           scroll='body'
-
-           //  aria-labelledby='scroll-dialog-title'
-           //  aria-describedby='scroll-dialog-description'
-          >
-           {/* <DialogTitle></DialogTitle> */}
-           {searchedService.page}
-           {/* <Button onClick={handleCloseModal}>Закрыть</Button>
-           <DialogTitle> </DialogTitle> */}
-          </Dialog>
          </Stack>
         ))}
        </Paper>
@@ -148,6 +131,25 @@ const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props})
      </ClickAwayListener>
     )}
    </div>
+   
+   <Dialog
+    maxWidth={false}
+    open={openModal}
+    onClose={handleCloseModal}
+    scroll='body'
+    PaperProps={{
+     style: {
+      //backgroundColor: "transparentt",
+      //boxShadow: "none",
+      overflow: 'hidden'
+      },
+    }}
+    //  aria-labelledby='scroll-dialog-title'
+    //  aria-describedby='scroll-dialog-description'
+   >
+     {searchedService.page}
+     {/*<Button onClick={handleCloseModal}>Закрыть</Button>*/}
+    </Dialog>
   </React.Fragment>
  );
 };

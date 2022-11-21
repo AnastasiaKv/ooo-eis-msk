@@ -3,14 +3,14 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import CustomizedTables from '../../../modules/common/CustomizedTables';
-import image5 from '../../../../assets/img/services/Перемотка1.png';
+import image5 from '../../../../assets/img/Services/Перемотка1.png';
 import Paper from '@mui/material/Paper';
 import Bolt from '@mui/icons-material/Bolt';
 import SEO from '../../SEO';
 
 export default function RewindingMotorsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Ремонт и перемотка двигателей'
     description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
@@ -18,7 +18,7 @@ export default function RewindingMotorsPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p

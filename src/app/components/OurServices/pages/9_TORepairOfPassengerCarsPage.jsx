@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
-import image9 from '../../../../assets/img/services/ТО2.png';
+import image9 from '../../../../assets/img/Services/ТО2.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
 export default function TORepairOfPassengerCarsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='ТО и ремонт электрооборудования пассажирских вагонов'
     description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
@@ -17,7 +17,7 @@ export default function TORepairOfPassengerCarsPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack
      direction='column'

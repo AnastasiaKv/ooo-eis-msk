@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Handyman from '@mui/icons-material/Handyman';
-import image10 from '../../../../assets/img/services/Наплавка2.png';
+import image10 from '../../../../assets/img/Services/Наплавка2.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
 export default function SurfacingOfShaftsAndShieldsPage() {
  return (
-  <form style={{height: '100%', width: '33.1em', marginTop: '0em', marginRight: '0em'}}>
+  <form style={{height: '100%'}}>
    <SEO
     title='Наплавка валов и щитов'
     description='Наплавка валов и щитов от 4000 руб.'
@@ -17,7 +17,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
    />
    <Paper
     elevation={4}
-    sx={{bgcolor: '#f7f7f7', marginLeft: '1.8em', marginBottom: 5, width: '31.2em'}}
+    sx={{bgcolor: '#f7f7f7', width: '31.2em'}}
    >
     <Stack
      direction='column'

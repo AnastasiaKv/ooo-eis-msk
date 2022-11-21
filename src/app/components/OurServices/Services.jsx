@@ -26,16 +26,16 @@ import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
 import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
 import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
 
-import image1 from '../../../assets/img/services/Ремонт электродвигателей.png';
-import image2 from '../../../assets/img/services/Ремонт генераторов.png';
-import image3 from '../../../assets/img/services/Ремонт трансформаторов.png';
-import image4 from '../../../assets/img/services/Ремонт холодильных машин.png';
-import image5 from '../../../assets/img/services/Перемотка.png';
-import image6 from '../../../assets/img/services/Ремонт электронагревателей.png';
-import image7 from '../../../assets/img/services/Продажа компонентов.png';
-import image8 from '../../../assets/img/services/Ремонт плат.png';
-import image9 from '../../../assets/img/services/ТО.png';
-import image10 from '../../../assets/img/services/Наплавка.png';
+import image1 from '../../../assets/img/Services/Ремонт электродвигателей.png';
+import image2 from '../../../assets/img/Services/Ремонт генераторов.png';
+import image3 from '../../../assets/img/Services/Ремонт трансформаторов.png';
+import image4 from '../../../assets/img/Services/Ремонт холодильных машин.png';
+import image5 from '../../../assets/img/Services/Перемотка.png';
+import image6 from '../../../assets/img/Services/Ремонт электронагревателей.png';
+import image7 from '../../../assets/img/Services/Продажа компонентов.png';
+import image8 from '../../../assets/img/Services/Ремонт плат.png';
+import image9 from '../../../assets/img/Services/ТО.png';
+import image10 from '../../../assets/img/Services/Наплавка.png';
 
 const useStyles = styled((theme) => ({
  flexGrow: {
@@ -305,6 +305,7 @@ export default function GridServices() {
       />
       \
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 0 ? (
        <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
@@ -322,6 +323,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
      <Stack direction='row' spacing={1}>
       <Page4
        title='Etymology'
@@ -342,6 +344,7 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 3 ? (
        <Route
@@ -365,6 +368,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
      <Stack direction='row' spacing={1}>
       <Page7
        title='Etymology'
@@ -385,6 +389,7 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 6 ? (
        <Route
@@ -411,6 +416,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
      <Stack direction='row' sx={{paddingRight: '2.7em'}} spacing={1} justifyContent='center'>
       <Page10
        title='Etymology'
@@ -419,6 +425,7 @@ export default function GridServices() {
        classes={classes}
       />
      </Stack>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
      <Routes>
       {activeIndex === 9 ? (
        <Route
@@ -429,6 +436,7 @@ export default function GridServices() {
        <></>
       )}
      </Routes>
+     </div>
     </Box>
    </Stack>
    <p
