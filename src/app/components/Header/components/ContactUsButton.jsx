@@ -43,36 +43,41 @@ const MyTextInput = ({label, ...props}) => {
  );
 };
 function Contact(props) {
- init('user_xxxxxxxxxxxxxxxxxxx');
- const form = useRef();
+ emailjs.init('GaqOI812E6KDw78sT');
 
+ const contactUsForm = useRef();
  const {classes} = props;
  const [open, setOpen] = useState(false);
- const [isSubmitionCompleted, setSubmitionCompleted] = useState(false);
+ const [isSubmitionFinished, setSubmitionFinished] = useState(false);
+ const [emailjsResponse, setEmailjsResponse] = useState({});
+ const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
 
- const handleSubmit = (e) => {
+ const handleSendEmail = (e) => {
   e.preventDefault();
-  emailjs.sendForm('SERVICE_D', 'TEMPLAE_ID', form.current, 'USER_ID').then(
+  console.log('Sending e-mail');
+  emailjs.sendForm('rudenko_es', 'contactUsForm', contactUsForm.current).then(
    (result) => {
-    alert('Message Sent Successfully');
-    console.log(result.text);
+    setIsSendedSuccessfully(true);
+    setEmailjsResponse(result);
    },
    (error) => {
-    console.log(error.text);
+    setIsSendedSuccessfully(false);
+    setEmailjsResponse(error);
+    console.log(error);
    }
   );
-  setOpen(false);
+  setSubmitionFinished(true);
  };
 
- function handleClose() {
+ function handleCloseGratitude() {
   setOpen(false);
  }
 
- function handleClickOpen() {
-  setSubmitionCompleted(false);
+ function handleOpenContactUs() {
+  setSubmitionFinished(false);
   setOpen(true);
  }
-
+ var enableDebugButtons = true;
  return (
   <React.Fragment>
    <div style={{display: 'flex', flexWrap: 'wrap'}}>
@@ -86,7 +91,7 @@ function Contact(props) {
      </Typography>
     </div>
     <Button
-     onClick={handleClickOpen}
+     onClick={handleOpenContactUs}
      style={{
       borderRadius: 3,
       textTransform: 'inherit',
@@ -102,10 +107,10 @@ function Contact(props) {
     <Dialog
      sx={{width: '1000px'}}
      open={open}
-     onClose={handleClose}
+     onClose={handleCloseGratitude}
      aria-labelledby='form-dialog-title'
     >
-     {!isSubmitionCompleted && (
+     {!isSubmitionFinished && (
       <React.Fragment>
        <DialogTitle style={{paddingLeft: '1em'}} id='form-dialog-title'>
         Оставьте свои данные - и мы Вам перезвоним!
@@ -114,8 +119,9 @@ function Contact(props) {
         <DialogContent sx={{overflow: 'hidden'}}>
          {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
          <Formik
-          initialValues={{email: '', name: '', tel: ''}}
-          onSubmit={(values, {setSubmitting}) => {
+          initialValues={{email: '', name: '', phone: ''}}
+          /* onSubmit={(values, {setSubmitting}) => {
+           setSubmitting(true);
            setSubmitting(true);
            axios
             .post(contactFormEndpoint, values, {
@@ -125,13 +131,15 @@ function Contact(props) {
              },
             })
             .then((resp) => {
-             setSubmitionCompleted(true);
+             setSubmitionFinished(true);
             });
-          }}
+          }} */
           validationSchema={Yup.object().shape({
-           email: Yup.string().email().required('Required'),
-           name: Yup.string().required('Required'),
-           tel: Yup.string().required('Required'),
+           email: Yup.string()
+            .email('Вы ввели некорректный адрес электронной почты')
+            .required('Поле обязательно для заполнения'),
+           name: Yup.string().required('Поле обязательно для заполнения'),
+           phone: Yup.string().required('Поле обязательно для заполнения'),
           })}
          >
           {(props) => {
@@ -147,7 +155,11 @@ function Contact(props) {
             handleReset,
            } = props;
            return (
-            <Form style={{width: '22em', height: '24em'}} onSubmit={handleSubmit}>
+            <Form
+             ref={contactUsForm}
+             onSubmit={handleSendEmail}
+             style={{width: '22em', height: '24em'}}
+            >
              <Stack
               sx={{
                paddingLeft: '60px',
@@ -157,14 +169,13 @@ function Contact(props) {
               spacing={2}
               noValidate
              >
-              <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
+              <MyTextInput label='Имя' name='name' type='text' placeholder='' />
               <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-              <MyTextInput label='Телефон' name='tel' type='text' placeholder='' />
+              <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
              </Stack>
              <DialogActions>
               <div style={{paddingRight: '8.5em'}}>
                <Button
-                onClick={handleSubmit}
                 style={{
                  width: '12em',
                  height: '45px',
@@ -178,6 +189,50 @@ function Contact(props) {
                >
                 Отправить
                </Button>
+
+               {/*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
+               enableDebugButtons = false}
+               {enableDebugButtons && (
+                <div>
+                 <Button
+                  style={{
+                   margin: '6px',
+                   width: '6em',
+                   color: '#F1F1F1F1',
+                   height: '20px',
+                   backgroundColor: '#2d3748',
+                  }}
+                  onClick={() => {
+                   setIsSendedSuccessfully(true);
+                   setEmailjsResponse({status: 200, text: ' OK '});
+                   console.log(emailjsResponse);
+                   setSubmitionFinished(true);
+                  }}
+                 >
+                  Test OK
+                 </Button>
+                 <Button
+                  style={{
+                   margin: '6px',
+                   width: '8em',
+                   color: '#F1F1F1F1',
+                   height: '20px',
+                   backgroundColor: '#2d3748',
+                  }}
+                  onClick={() => {
+                   setIsSendedSuccessfully(false);
+                   setEmailjsResponse({
+                    status: 412,
+                    text:
+                     "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <orozov@bk.ru>: Relay access denied",
+                   });
+                   setSubmitionFinished(true);
+                  }}
+                 >
+                  Test Error
+                 </Button>
+                </div>
+               )}
               </div>
               {/* <DisplayFormikState {...props} /> */}
              </DialogActions>
@@ -189,15 +244,38 @@ function Contact(props) {
        </ThemeProvider>
       </React.Fragment>
      )}
-     {isSubmitionCompleted && (
+     {isSubmitionFinished && (
       <React.Fragment>
-       <DialogTitle id='form-dialog-title'>Thanks!</DialogTitle>
+       <DialogTitle id='form-dialog-title'>
+        {isSendedSuccessfully
+         ? 'Ваша заявка зарегистрирована.'
+         : 'При отправке заявки произошла непредвиденная ошибка!'}
+       </DialogTitle>
        <DialogContent>
-        <DialogContentText>Thanks</DialogContentText>
+        <DialogContentText>
+         {isSendedSuccessfully && (
+          <div>
+           Спасибо за Ваше обращение!
+           <br />
+           Мы позвоним Вам в ближайшее время.
+          </div>
+         )}
+         {!isSendedSuccessfully && (
+          <div>
+           Код ответа: {emailjsResponse.status}
+           <br />
+           Ошибка: {emailjsResponse.text}
+           <br />
+           Пожалуйста попробуйте ещё раз или свяжитесь с нами другим способом.
+          </div>
+         )}
+        </DialogContentText>
         <DialogActions>
-         <Button type='button' className='outline' onClick={handleClose}>
-          Back to app
-         </Button>
+         <div style={{marginRight: '1em'}}>
+          <Button type='button' className='outline' onClick={handleCloseGratitude}>
+           Вернуться
+          </Button>
+         </div>
          {/* <DisplayFormikState {...props} /> */}
         </DialogActions>
        </DialogContent>
