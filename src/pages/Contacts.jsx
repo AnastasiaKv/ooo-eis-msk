@@ -143,8 +143,8 @@ export default function Contacts() {
         >
          <Formik
           initialValues={{
-           firstName: '',
-           tel: '',
+           name: '',
+           phone: '',
            email: '',
            acceptedTerms: false, // added for our checkbox
            jobType: '', // added for our select
@@ -174,9 +174,9 @@ export default function Contacts() {
            <Form 
              ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
-             <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
+             <MyTextInput label='Имя' name='name' type='text' placeholder='' />
              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-             <MyTextInput label='Телефон' name='tel' type='text' placeholder='' />
+             <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
 
              <button
               style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
