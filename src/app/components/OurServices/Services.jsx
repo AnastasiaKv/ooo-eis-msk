@@ -538,7 +538,7 @@ export default function Gridservices() {
      <Typography
       variant='h1'
       sx={{
-       paddingLeft: '2em',
+       paddingLeft: '3em',
        textAlign: 'center',
        flexGrow: 1,
        paddingBottom: '2em',
@@ -576,7 +576,7 @@ export default function Gridservices() {
       variant='h2'
       sx={{
        flexGrow: 1,
-       paddingLeft: '0.6em',
+       paddingLeft: '1em',
        paddingTop: '20px',
        paddingBottom: '2em',
        fontFamily: 'Furore',

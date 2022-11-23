@@ -55,7 +55,7 @@ function Contact(props) {
  const handleSendEmail = (e) => {
   e.preventDefault();
   console.log('Sending e-mail');
-  emailjs.sendForm('rudenko_es', 'contactUsForm', contactUsForm.current).then(
+  emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
    (result) => {
     setIsSendedSuccessfully(true);
     setEmailjsResponse(result);
