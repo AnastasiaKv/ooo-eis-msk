@@ -1,11 +1,9 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect} from 'react';
 import {Formik, Form, useField, useFormikContext} from 'formik';
-import emailjs, {init, SMTPClient} from '@emailjs/browser';
 import * as Yup from 'yup';
 import styled from '@emotion/styled';
 import '../assets/css/style.css';
 import '../assets/css/styles-custom.css';
-import { Alert } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import {Stack} from '@mui/system';
@@ -15,24 +13,10 @@ import Typography from '@mui/material/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
 import {Button} from '@material-ui/core';
-import {createTheme, ThemeProvider} from '@mui/material/styles';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-
-const theme = createTheme({
-  components: {
-   // todo: remove once the issue is addressed: https://github.com/mui/material-ui/issues/31185
-   MuiDialogContent: {
-    styleOverrides: {root: {paddingTop: `${20}px !important`}},
-   },
-  },
- });
 
 const textStyle = {
  fontFamily: 'Roboto',
+
  lineHeight: '1.7',
  width: '40em',
  marginLeft: 0,
@@ -51,39 +35,7 @@ const MyTextInput = ({label, ...props}) => {
  );
 };
 
-export default function Contacts() {
-  emailjs.init('GaqOI812E6KDw78sT');
-
- const contactUsForm = useRef();
- const [open, setOpen] = useState(false);
- const [isSubmitionFinished, setSubmitionFinished] = useState(false);
- const [emailjsResponse, setEmailjsResponse] = useState({});
- const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
-
- const handleSendEmail = (e) => {
-  e.preventDefault();
-  console.log('Sending e-mail');
-  emailjs.sendForm('rudenko_es', 'backCallForm', contactUsForm.current).then(
-   (result) => {
-    setOpen(true);
-    setIsSendedSuccessfully(true);
-    setEmailjsResponse(result);
-   },
-   (error) => {
-    setIsSendedSuccessfully(false);
-    setEmailjsResponse(error);
-    console.log(error);
-   }
-  );
-  setSubmitionFinished(true);
- };
-
- function handleCloseGratitude() {
-  setOpen(false);
- }
-
- var enableDebugButtons = true;
-
+export default function contacts() {
  return (
   <main className='ees-content-card'>
    <SEO
@@ -179,183 +131,61 @@ export default function Contacts() {
         </Stack>
         <br />
         <Box sx={{height: '1em'}}></Box>
-        
-        
-
-
-
-      <React.Fragment>
-        fdfds
-       <ThemeProvider theme={theme}>
-        <DialogContent sx={{overflow: 'hidden'}}>
-         {/* <DialogContentText>Оставьте свои данные - и мы Вам перезвоним!</DialogContentText> */}
+        <Stack
+         direction='row'
+         spacing={0}
+         sx={{fontFamily: 'Roboto', color: '#292929', marginLeft: '7em', paddingRight: '7em'}}
+        >
          <Formik
-          initialValues={{email: '', name: '', phone: ''}}
-          validationSchema={Yup.object().shape({
-           email: Yup.string()
-            .email('Вы ввели некорректный адрес электронной почты')
-            .required('Поле обязательно для заполнения'),
-           name: Yup.string().required('Поле обязательно для заполнения'),
-           phone: Yup.string().required('Поле обязательно для заполнения'),
-          })}
-         >
-          {(props) => {
-           const {
-            values,
-            touched,
-            errors,
-            dirty,
-            isSubmitting,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            handleReset,
-           } = props;
-           return (
-            <Form
-             ref={contactUsForm}
-             onSubmit={handleSendEmail}
-             style={{width: '22em', height: '24em'}}
-            >
-             <Stack
-              sx={{
-               paddingLeft: '60px',
-               paddingBottom: '1.5em',
-              }}
-              direction='column'
-              spacing={2}
-              noValidate
-             >
-              <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-              <MyTextInput label='Телефоsdн' name='phone' type='text' placeholder='' />
-             </Stack>
-             <DialogActions>
-              <div style={{paddingRight: '7.5em'}}>
-               <Button
-                style={{
-                 width: '12em',
-                 height: '45px',
-                 borderRadius: '1',
-                 color: '#F1F1F1F1',
-                 backgroundColor: '#2d3748',
-                }}
-                type='submit'
-                className='btn btn-primary'
-                variant='contained'
-               >
-                Отправить
-               </Button>
-
-               {/*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
-               enableDebugButtons = true}
-               {enableDebugButtons && (
-                <div>
-                 <Button
-                  style={{
-                   margin: '6px',
-                   width: '6em',
-                   color: '#F1F1F1F1',
-                   height: '20px',
-                   backgroundColor: '#2d3748',
-                  }}
-                  onClick={() => {
-                    
-    setOpen(true);
-                   setIsSendedSuccessfully(true);
-                   setEmailjsResponse({status: 200, text: ' OK '});
-                   console.log(emailjsResponse);
-                   setSubmitionFinished(true);
-                  }}
-                 >
-                  Test OK
-                 </Button>
-                 <Button
-                  style={{
-                   margin: '6px',
-                   width: '8em',
-                   color: '#F1F1F1F1',
-                   height: '20px',
-                   backgroundColor: '#2d3748',
-                  }}
-                  onClick={() => {
-                    
-    setOpen(true);
-                   setIsSendedSuccessfully(false);
-                   setEmailjsResponse({
-                    status: 412,
-                    text:
-                     "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <orozov@bk.ru>: Relay access denied",
-                   });
-                   setSubmitionFinished(true);
-                  }}
-                 >
-                  Test Error
-                 </Button>
-                </div>
-               )}
-              </div>
-              {/* <DisplayFormikState {...props} /> */}
-             </DialogActions>
-            </Form>
-           );
+          initialValues={{
+           firstName: '',
+           tel: '',
+           email: '',
+           acceptedTerms: false, // added for our checkbox
+           jobType: '', // added for our select
           }}
-         </Formik>
-        </DialogContent>
-       </ThemeProvider>
-      </React.Fragment>
-
-
-         
-     {isSubmitionFinished && (
-      <Dialog
-      sx={{width: '1000px'}}
-      open={open}
-      onClose={handleCloseGratitude}
-      aria-labelledby='form-dialog-title'
-     >
-       <DialogTitle id='form-dialog-title'>
-        {isSendedSuccessfully
-         ? 'Ваша заявка зарегистрирована.'
-         : <Alert 
-             variant="outlined" 
-             severity="error"
-             SX={{fontSize: '1.2em', fontWeight: '500'}}
-           >
-             При отправке заявки произошла непредвиденная ошибка!
-           </Alert>
+          validationSchema={Yup.object().shape({
+            email: Yup.string()
+             .email('Вы ввели некорректный адрес электронной почты')
+             .required('Поле обязательно для заполнения'),
+            name: Yup.string().required('Поле обязательно для заполнения'),
+            phone: Yup.string().required('Поле обязательно для заполнения'),
+           })}
+          onSubmit={async (values, {setSubmitting}) => {
+          
+          console.log('Sending e-mail');
+          /* emailjs.sendForm('rudenko_es', 'backCallForm', contactUsForm.current).then(
+          (result) => {
+            setIsSendedSuccessfully(true);
+            setEmailjsResponse(result);
+          },
+          (error) => {
+            setIsSendedSuccessfully(false);
+            setEmailjsResponse(error);
+            console.log(error);
           }
-       </DialogTitle>
-       <DialogContent>
-        <DialogContentText>
-         {isSendedSuccessfully && (
-          <div>
-           Спасибо за Ваше обращение!
-           <br />
-           Мы позвоним Вам в ближайшее время.
-          </div>
-         )}
-         {!isSendedSuccessfully && (
-          <div>
-           Код ответа: {emailjsResponse.status}
-           <br />
-           Ошибка: {emailjsResponse.text}
-           <br />
-           Пожалуйста попробуйте ещё раз или свяжитесь с нами другим способом.
-          </div>
-         )}
-        </DialogContentText>
-        <DialogActions>
-         <div style={{marginRight: '1em'}}>
-          <Button type='button' className='outline' onClick={handleCloseGratitude}>
-           Вернуться
-          </Button>
-         </div>
-         {/* <DisplayFormikState {...props} /> */}
-        </DialogActions>
-       </DialogContent>       
-     </Dialog>
-     )}
+          ); */
+           setSubmitting(false);
+          }}
+         >
+          <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
+           <Form style={{width: '22em', height: '24em'}}>
+            <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
+             <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
+             <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+             <MyTextInput label='Телефон' name='tel' type='text' placeholder='' />
+
+             <button
+              style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
+              type='submit'
+             >
+              Принять
+             </button>
+            </Stack>
+           </Form>
+          </Paper>
+         </Formik>
+        </Stack>
        </ul>
       </p>
      </Stack>
