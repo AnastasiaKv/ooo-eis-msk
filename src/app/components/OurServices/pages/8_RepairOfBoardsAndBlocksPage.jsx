@@ -59,7 +59,10 @@ export default function RepairOfBoardsAndBlocksPage() {
      </p>
     </Stack>
     <h3>
-     <Typography variant='h6' sx={{fontFamily: 'Roboto',paddingRight: '16.8em', paddingBottom: '1em'}}>
+     <Typography
+      variant='h6'
+      sx={{fontFamily: 'Roboto', paddingRight: '16.8em', paddingBottom: '1em'}}
+     >
       Список ремонтируемой электроники:
      </Typography>
     </h3>

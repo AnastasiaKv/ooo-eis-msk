@@ -190,8 +190,10 @@ function Contact(props) {
                 Отправить
                </Button>
 
-               {/*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
-               enableDebugButtons = false}
+               {
+                /*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
+                (enableDebugButtons = false)
+               }
                {enableDebugButtons && (
                 <div>
                  <Button

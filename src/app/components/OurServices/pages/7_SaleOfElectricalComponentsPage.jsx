@@ -56,7 +56,7 @@ export default function SaleOfElectricalComponentsPage() {
        />
       </Stack>
       <ul>
-       <Stack sx={{fontFamily: 'Roboto',paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
+       <Stack sx={{fontFamily: 'Roboto', paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
         <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '1.6em'}}>
          <CurrencyRubleRoundedIcon
           style={{
@@ -69,7 +69,8 @@ export default function SaleOfElectricalComponentsPage() {
          <Typography
           variant='caption'
           component='span'
-          style={{fontFamily: 'Roboto',
+          style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
@@ -91,7 +92,8 @@ export default function SaleOfElectricalComponentsPage() {
          <Typography
           variant='caption'
           component='span'
-          style={{fontFamily: 'Roboto',
+          style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
