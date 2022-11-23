@@ -9,6 +9,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { Alert } from '@mui/material';
 import axios from 'axios';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
@@ -35,11 +36,11 @@ const MyTextInput = ({label, ...props}) => {
  // which we can spread on <input> and alse replace ErrorMessage entirely.
  const [field, meta] = useField(props);
  return (
-  <>
+  <div style={{textAlign: 'left', marginTop: '1px'}}>
    <label htmlFor={props.id || props.name}>{label}</label>
    <input className='text-input' {...field} {...props} />
    {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
-  </>
+  </div>
  );
 };
 function Contact(props) {
@@ -55,7 +56,7 @@ function Contact(props) {
  const handleSendEmail = (e) => {
   e.preventDefault();
   console.log('Sending e-mail');
-  emailjs.sendForm('rudenko_es', 'contactUsForm', contactUsForm.current).then(
+  emailjs.sendForm('rudenko_es', 'backCallForm', contactUsForm.current).then(
    (result) => {
     setIsSendedSuccessfully(true);
     setEmailjsResponse(result);
@@ -163,7 +164,7 @@ function Contact(props) {
              <Stack
               sx={{
                paddingLeft: '60px',
-               paddingBottom: '2.3em',
+               paddingBottom: '1.5em',
               }}
               direction='column'
               spacing={2}
@@ -174,7 +175,7 @@ function Contact(props) {
               <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
              </Stack>
              <DialogActions>
-              <div style={{paddingRight: '8.5em'}}>
+              <div style={{paddingRight: '7.5em'}}>
                <Button
                 style={{
                  width: '12em',
@@ -191,7 +192,7 @@ function Contact(props) {
                </Button>
 
                {/*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
-               enableDebugButtons = false}
+               enableDebugButtons = true}
                {enableDebugButtons && (
                 <div>
                  <Button
@@ -249,7 +250,14 @@ function Contact(props) {
        <DialogTitle id='form-dialog-title'>
         {isSendedSuccessfully
          ? 'Ваша заявка зарегистрирована.'
-         : 'При отправке заявки произошла непредвиденная ошибка!'}
+         : <Alert 
+             variant="outlined" 
+             severity="error"
+             SX={{fontSize: '1.2em', fontWeight: '500'}}
+           >
+             При отправке заявки произошла непредвиденная ошибка!
+           </Alert>
+          }
        </DialogTitle>
        <DialogContent>
         <DialogContentText>
