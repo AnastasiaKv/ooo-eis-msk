@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
 import styled from '@emotion/styled';
@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
 import {Button} from '@material-ui/core';
+import emailjs, {init, SMTPClient} from '@emailjs/browser';
 
 const textStyle = {
  fontFamily: 'Roboto',
@@ -35,7 +36,11 @@ const MyTextInput = ({label, ...props}) => {
  );
 };
 
-export default function contacts() {
+export default function Contacts() {
+  const contactUsForm = useRef();
+ const [emailjsResponse, setEmailjsResponse] = useState({});
+ const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
+
  return (
   <main className='ees-content-card'>
    <SEO
@@ -145,16 +150,13 @@ export default function contacts() {
            jobType: '', // added for our select
           }}
           validationSchema={Yup.object().shape({
-            email: Yup.string()
-             .email('Вы ввели некорректный адрес электронной почты')
-             .required('Поле обязательно для заполнения'),
+            email: Yup.string().email('Вы ввели некорректный адрес электронной почты').required('Поле обязательно для заполнения'),
             name: Yup.string().required('Поле обязательно для заполнения'),
             phone: Yup.string().required('Поле обязательно для заполнения'),
            })}
           onSubmit={async (values, {setSubmitting}) => {
-          
           console.log('Sending e-mail');
-          /* emailjs.sendForm('rudenko_es', 'backCallForm', contactUsForm.current).then(
+          emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUsForm.current).then(
           (result) => {
             setIsSendedSuccessfully(true);
             setEmailjsResponse(result);
@@ -164,12 +166,13 @@ export default function contacts() {
             setEmailjsResponse(error);
             console.log(error);
           }
-          ); */
+          );
            setSubmitting(false);
           }}
          >
           <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
-           <Form style={{width: '22em', height: '24em'}}>
+           <Form 
+             ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
              <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
