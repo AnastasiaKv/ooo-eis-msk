@@ -86,7 +86,11 @@ export default function Gallery() {
    <Stack
     direction='column'
     spacing={3}
-    sx={{paddingTop: '3em', paddingBottom: '2em', transform: 'translateZ(0)'}}
+    sx={{
+     paddingTop: '3em',
+     paddingBottom: '2em',
+     transform: 'translateZ(0)',
+    }}
    >
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData1.map((service) => (

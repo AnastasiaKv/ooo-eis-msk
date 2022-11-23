@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
-import image6 from '../../../../assets/img/services/Ремонт плат1.png';
+import image6 from '../../../../assets/img/services/8.png';
 import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function RepairOfBoardsAndBlocksPage() {
@@ -13,7 +13,7 @@ export default function RepairOfBoardsAndBlocksPage() {
    <SEO
     title='Ремонт плат и электронных блоков'
     description='Ремонт плат от автомобильной электроники'
-    name='ООО ЭИС'
+    name='Ремонт плат и электронных блоков'
    />
    <Paper
     elevation={4}
@@ -59,7 +59,7 @@ export default function RepairOfBoardsAndBlocksPage() {
      </p>
     </Stack>
     <h3>
-     <Typography variant='h6' sx={{paddingRight: '16.8em', paddingBottom: '1em'}}>
+     <Typography variant='h6' sx={{fontFamily: 'Roboto',paddingRight: '16.8em', paddingBottom: '1em'}}>
       Список ремонтируемой электроники:
      </Typography>
     </h3>
@@ -69,7 +69,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт плат от бытовой техники
       </Typography>
@@ -80,7 +80,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт плат от автомобильной электроники
       </Typography>
@@ -90,7 +90,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт электронных блоков управления
       </Typography>
@@ -100,7 +100,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт микропроцессорных печатных плат
       </Typography>
@@ -110,7 +110,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт микроэлектроники специального назначения
       </Typography>
@@ -120,7 +120,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт электронных модулей
       </Typography>
@@ -130,7 +130,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт компьютеризованных панелей управления
       </Typography>
@@ -140,7 +140,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт различных источников питания (в т.ч. специального назначения)
       </Typography>

@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import image6 from '../../../../assets/img/services/Ремонт электронагревателей1.png';
+import image6 from '../../../../assets/img/services/6.png';
 import ReportProblemRoundedIcon from '@mui/icons-material/ReportProblemRounded';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';

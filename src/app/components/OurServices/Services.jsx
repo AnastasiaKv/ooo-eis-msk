@@ -26,23 +26,23 @@ import RepairOfBoardsAndBlocksPage from './pages/8_RepairOfBoardsAndBlocksPage';
 import TORepairOfPassengerCarsPage from './pages/9_TORepairOfPassengerCarsPage';
 import SurfacingOfShaftsAndShieldsPage from './pages/10_SurfacingOfShaftsAndShieldsPage';
 
-import image1 from '../../../assets/img/services/Ремонт электродвигателей.png';
-import image2 from '../../../assets/img/services/Ремонт генераторов.png';
-import image3 from '../../../assets/img/services/Ремонт трансформаторов.png';
-import image4 from '../../../assets/img/services/Ремонт холодильных машин.png';
-import image5 from '../../../assets/img/services/Перемотка.png';
-import image6 from '../../../assets/img/services/Ремонт электронагревателей.png';
-import image7 from '../../../assets/img/services/Продажа компонентов.png';
-import image8 from '../../../assets/img/services/Ремонт плат.png';
-import image9 from '../../../assets/img/services/ТО.png';
-import image10 from '../../../assets/img/services/Наплавка.png';
+import img1 from '../../../assets/img/services/1.png';
+import img2 from '../../../assets/img/services/2.png';
+import img3 from '../../../assets/img/services/3.png';
+import img4 from '../../../assets/img/services/4.png';
+import img5 from '../../../assets/img/services/5.png';
+import img6 from '../../../assets/img/services/6.png';
+import img7 from '../../../assets/img/services/7.png';
+import img8 from '../../../assets/img/services/8.png';
+import img9 from '../../../assets/img/services/9.png';
+import img10 from '../../../assets/img/services/10.png';
 
 const useStyles = styled((theme) => ({
  flexGrow: {
   flex: '1',
  },
  Item: {
-  padding: theme.spacing(1),
+  padding: theme.spacing(10),
   textAlign: 'center',
   color: theme.palette.text.secondary,
  },
@@ -84,14 +84,39 @@ function Page1({title, children, isActive, onShow, visability}) {
  return (
   <LinkButton onClick={onShow} to='/services/repair-motors-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none', width: '250px'}} className={classes.Item}>
-    <Box
-     sx={{height: '250px', width: '250px'}}
-     loading='lazy'
-     component='img'
-     alt='button'
-     src={image1}
-    />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Ремонт
+       <br />
+       электродвигателей
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '8em',
+       height: '5.7em' /* Выравнивание по правому краю  */,
+       margin: '-5px 0px 0px 9px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='Ремонт электродвигателя'
+      src={img1}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -103,8 +128,39 @@ function Page2({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/generator-repair-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image2} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.9em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Ремонт
+       <br />
+       генераторов
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '8.7em',
+       height: '5.2em' /* Выравнивание по правому краю  */,
+       margin: '-10px 0px 0px 1px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='Ремонт генераторов'
+      src={img2}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -116,8 +172,39 @@ function Page3({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='services/repair-transformers-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image3} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Ремонт
+       <br />
+       трансформаторов
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '7.5em',
+       height: '6em' /* Выравнивание по правому краю  */,
+       margin: '-9px 0px 0px 14px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='Ремонт трансформаторов'
+      src={img3}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -129,8 +216,39 @@ function Page4({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/refrigeration-machine-repair-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image4} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Ремонт
+       <br />
+       холодильных машин
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '10em',
+       height: '8em' /* Выравнивание по правому краю  */,
+       margin: '-15px 0px 10px -12px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='Ремонт холодильных машин'
+      src={img4}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -141,8 +259,39 @@ function Page5({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/rewinding-motors-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image5} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Перемотка
+       <br />
+       электродвигателей
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '6.5em',
+       height: '5em' /* Выравнивание по правому краю  */,
+       margin: '0px 0px 0px 25px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='Перемотка электродвигателей'
+      src={img5}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -153,8 +302,39 @@ function Page6({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/repair-of-electric-heaters-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image6} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Ремонт
+       <br />
+       электронагревателей
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '8em',
+       height: '5.8em' /* Выравнивание по правому краю  */,
+       margin: '-10px 0px 0px 4px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='Ремонт электронагревателей'
+      src={img6}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -165,8 +345,39 @@ function Page7({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/sale-of-electrical-components-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image7} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Продажа электронных
+       <br />
+       компонентов
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '8em',
+       height: '5.5em' /* Выравнивание по правому краю  */,
+       margin: '0px 0px 0px 10px',
+      }}
+      loading='lazy'
+      component='img'
+      alt=' Продажа электронных компонентов'
+      src={img7}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -177,8 +388,39 @@ function Page8({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/repair-of-boards-and-blocks-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image8} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Ремонт
+       <br />
+       электродвигателей
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '9.4em',
+       height: '7.2em' /* Выравнивание по правому краю  */,
+       margin: '-25px 0px 0px -9px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='Ремонт плат'
+      src={img8}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -189,8 +431,42 @@ function Page9({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/maintenance-and-repair-of-passenger-cars-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image9} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       ТО и ремонт
+       <br />
+       электрооборудования
+       <br />
+       пассажирских вагонов
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       color: 'transparent',
+       paddingLeft: '1.1em',
+       width: '8.4em',
+       height: '4.5em' /* Выравнивание по правому краю  */,
+       margin: '-2px 0px 0px 10px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='ТО и ремонт электрооборудования пассажирских вагонов'
+      src={img9}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -201,8 +477,39 @@ function Page10({title, children, isActive, onShow}) {
  return (
   <LinkButton onClick={onShow} to='/services/surfacing-of-shafts-and-shields-page'>
    {isActive && <DecorTop />}
-   <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image10} />
+   <Paper elevation={3} className={classes.Item}>
+    <Stack direction='column' sx={{height: '250px', width: '240px'}}>
+     <Typography
+      style={{paddingTop: '1.8em', paddingBottom: '1.5em'}}
+      sx={{
+       lineHeight: '1.1em',
+       fontFamily: 'Roboto',
+
+       fontSize: 'medium',
+       fontVariant: 'menu',
+       textAlign: 'center',
+      }}
+     >
+      <b>
+       Наплавка валов и щитов
+       <br />
+       электрических машин
+      </b>
+     </Typography>
+     <Box
+      style={{filter: 'grayscale(100%)'}}
+      sx={{
+       paddingLeft: '1.1em',
+       width: '8.7em',
+       height: '5.3em' /* Выравнивание по правому краю  */,
+       margin: '0px 0px 0px 1px',
+      }}
+      loading='lazy'
+      component='img'
+      alt='  Наплавка валов и щитов электрических машин'
+      src={img10}
+     />
+    </Stack>
    </Paper>
    {isActive && <DecorBottom />}
   </LinkButton>
@@ -231,7 +538,7 @@ export default function Gridservices() {
      <Typography
       variant='h1'
       sx={{
-       paddingLeft: '4em',
+       paddingLeft: '2em',
        textAlign: 'center',
        flexGrow: 1,
        paddingBottom: '2em',
@@ -269,7 +576,7 @@ export default function Gridservices() {
       variant='h2'
       sx={{
        flexGrow: 1,
-       paddingRight: '0.5em',
+       paddingLeft: '0.6em',
        paddingTop: '20px',
        paddingBottom: '2em',
        fontFamily: 'Furore',
@@ -282,30 +589,29 @@ export default function Gridservices() {
       Наши услуги
      </Typography>
     </h2>
-    <Box sx={{flexGrow: 1}}>
+    <Box sx={{flexGrow: 1, paddingLeft: '1em'}}>
      <Stack direction='row' spacing={1}>
       <Page1
-       title='Etymology'
+       title='Ремонт электродвигателей'
        isActive={activeIndex === 0}
        onShow={() => (activeIndex === 0 ? setActiveIndex(10) : setActiveIndex(0))}
        visability={() => setVisability(true)}
        classes={classes}
       />
       <Page2
-       title='Etymology'
+       title='Ремонт генераторов'
        isActive={activeIndex === 1}
        onShow={() => (activeIndex === 1 ? setActiveIndex(10) : setActiveIndex(1))}
        classes={classes}
       />
       <Page3
-       title='Etymology'
+       title='Ремонт трансформаторов'
        isActive={activeIndex === 2}
        onShow={() => (activeIndex === 2 ? setActiveIndex(10) : setActiveIndex(2))}
        classes={classes}
       />
-      \
      </Stack>
-     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
+     <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0.2em', marginRight: '0em'}}>
       <Routes>
        {activeIndex === 0 ? (
         <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
@@ -326,25 +632,25 @@ export default function Gridservices() {
      </div>
      <Stack direction='row' spacing={1}>
       <Page4
-       title='Etymology'
+       title='Ремонт холодильных машин и компрессоров'
        isActive={activeIndex === 3}
        onShow={() => (activeIndex === 3 ? setActiveIndex(10) : setActiveIndex(3))}
        classes={classes}
       />
       <Page5
-       title='Etymology'
+       title='Ремонт и перемотка двигателей'
        isActive={activeIndex === 4}
        onShow={() => (activeIndex === 4 ? setActiveIndex(10) : setActiveIndex(4))}
        classes={classes}
       />
       <Page6
-       title='Etymology'
+       title='Ремонт электронагревателей'
        isActive={activeIndex === 5}
        onShow={() => (activeIndex === 5 ? setActiveIndex(10) : setActiveIndex(5))}
        classes={classes}
       />
      </Stack>
-     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
+     <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
        {activeIndex === 3 ? (
         <Route
@@ -371,25 +677,25 @@ export default function Gridservices() {
      </div>
      <Stack direction='row' spacing={1}>
       <Page7
-       title='Etymology'
+       title='Продажа электрокомпонентов'
        isActive={activeIndex === 6}
        onShow={() => (activeIndex === 6 ? setActiveIndex(10) : setActiveIndex(6))}
        classes={classes}
       />
       <Page8
-       title='Etymology'
+       title='Ремонт плат и электронных блоков'
        isActive={activeIndex === 7}
        onShow={() => (activeIndex === 7 ? setActiveIndex(10) : setActiveIndex(7))}
        classes={classes}
       />
       <Page9
-       title='Etymology'
+       title='ТО и ремонт электрооборудования пассажирских вагонов'
        isActive={activeIndex === 8}
        onShow={() => (activeIndex === 8 ? setActiveIndex(10) : setActiveIndex(8))}
        classes={classes}
       />
      </Stack>
-     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
+     <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0.2em', marginRight: '0em'}}>
       <Routes>
        {activeIndex === 6 ? (
         <Route
@@ -417,15 +723,15 @@ export default function Gridservices() {
        )}
       </Routes>
      </div>
-     <Stack direction='row' sx={{paddingRight: '2.7em'}} spacing={1} justifyContent='center'>
+     <Stack direction='row' sx={{paddingRight: '2.9em'}} spacing={2} justifyContent='center'>
       <Page10
-       title='Etymology'
+       title='Наплавка валов и щитов'
        isActive={activeIndex === 9}
        onShow={() => (activeIndex === 9 ? setActiveIndex(10) : setActiveIndex(9))}
        classes={classes}
       />
      </Stack>
-     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
+     <div style={{marginLeft: '1.5em', marginBottom: 5, marginTop: '0.4em', marginRight: '0em'}}>
       <Routes>
        {activeIndex === 9 ? (
         <Route
@@ -454,7 +760,7 @@ export default function Gridservices() {
      <Typography
       variant='h1'
       sx={{
-       paddingLeft: '4em',
+       paddingLeft: '1em',
        textAlign: 'center',
        flexGrow: 1,
        paddingBottom: '2em',

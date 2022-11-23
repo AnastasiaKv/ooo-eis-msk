@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Handyman from '@mui/icons-material/Handyman';
-import image10 from '../../../../assets/img/services/Наплавка2.png';
+import image10 from '../../../../assets/img/services/10_1.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 

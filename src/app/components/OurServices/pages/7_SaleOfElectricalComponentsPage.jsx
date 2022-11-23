@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import CurrencyRubleRoundedIcon from '@mui/icons-material/CurrencyRubleRounded';
-import image7 from '../../../../assets/img/services/Продажа компонентов1.png';
+import image7 from '../../../../assets/img/services/7.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
@@ -56,7 +56,7 @@ export default function SaleOfElectricalComponentsPage() {
        />
       </Stack>
       <ul>
-       <Stack sx={{paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
+       <Stack sx={{fontFamily: 'Roboto',paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
         <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '1.6em'}}>
          <CurrencyRubleRoundedIcon
           style={{
@@ -69,7 +69,7 @@ export default function SaleOfElectricalComponentsPage() {
          <Typography
           variant='caption'
           component='span'
-          style={{
+          style={{fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
@@ -91,7 +91,7 @@ export default function SaleOfElectricalComponentsPage() {
          <Typography
           variant='caption'
           component='span'
-          style={{
+          style={{fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',

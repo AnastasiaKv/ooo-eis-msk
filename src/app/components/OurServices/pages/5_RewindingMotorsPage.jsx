@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import CustomizedTables from '../../../modules/common/CustomizedTables';
-import image5 from '../../../../assets/img/services/Перемотка1.png';
+import image5 from '../../../../assets/img/services/5.png';
 import Paper from '@mui/material/Paper';
 import Bolt from '@mui/icons-material/Bolt';
 import SEO from '../../SEO';

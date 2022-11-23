@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
-import image9 from '../../../../assets/img/services/ТО2.png';
+import image9 from '../../../../assets/img/services/9_1.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
@@ -65,7 +65,7 @@ export default function TORepairOfPassengerCarsPage() {
          color: '#1a202c',
         }}
        >
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '3em'}}>
+        <Stack direction='row' spacing={3} sx={{fontFamily: 'Roboto', paddingBottom: '3em'}}>
          <GppGoodRoundedIcon
           style={{
            margin: '0px 0px 0px 0px',
@@ -101,6 +101,7 @@ export default function TORepairOfPassengerCarsPage() {
           variant='body2'
           component='p'
           style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
@@ -123,6 +124,7 @@ export default function TORepairOfPassengerCarsPage() {
           variant='body2'
           component='p'
           style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
@@ -135,7 +137,7 @@ export default function TORepairOfPassengerCarsPage() {
        </Stack>
       </ul>
      </Stack>
-    </Stack>{' '}
+    </Stack>
    </Paper>
   </form>
  );
