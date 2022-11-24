@@ -23,14 +23,14 @@ const textStyle = {
  marginLeft: 0,
  textAlign: '-webkit-auto',
 };
-const MyTextInput = ({label, ...props}) => {
+const MyTextInput = ({labelText, inputName, ...props}) => {
  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
  // which we can spread on <input> and alse replace ErrorMessage entirely.
  const [field, meta] = useField(props);
  return (
   <>
-   <label htmlFor={props.id || props.name}>{label}</label>
-   <input className='text-input' {...field} {...props} />
+   <label for={inputName}>{labelText}</label>
+   <input className='text-input' id={inputName} name={inputName} {...field} {...props} />
    {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
   </>
  );
@@ -150,39 +150,37 @@ export default function Contacts() {
            jobType: '', // added for our select
           }}
           validationSchema={Yup.object().shape({
-            email: Yup.string().email('Вы ввели некорректный адрес электронной почты').required('Поле обязательно для заполнения'),
-            name: Yup.string().required('Поле обязательно для заполнения'),
-            phone: Yup.string().required('Поле обязательно для заполнения'),
-           })}
+           email: Yup.string()
+            .email('Вы ввели некорректный адрес электронной почты')
+            .required('Поле обязательно для заполнения'),
+           name: Yup.string().required('Поле обязательно для заполнения'),
+           phone: Yup.string().required('Поле обязательно для заполнения'),
+          })}
           onSubmit={async (values, {setSubmitting}) => {
-          console.log('Sending e-mail');
-          emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUsForm.current).then(
-          (result) => {
-            setIsSendedSuccessfully(true);
-            setEmailjsResponse(result);
-          },
-          (error) => {
-            setIsSendedSuccessfully(false);
-            setEmailjsResponse(error);
-            console.log(error);
-          }
-          );
+           console.log('Sending e-mail');
+           emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUsForm.current).then(
+            (result) => {
+             setIsSendedSuccessfully(true);
+             setEmailjsResponse(result);
+            },
+            (error) => {
+             setIsSendedSuccessfully(false);
+             setEmailjsResponse(error);
+             console.log(error);
+            }
+           );
            setSubmitting(false);
           }}
          >
           <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
-           <Form 
-             ref={contactUsForm} style={{width: '22em', height: '24em'}}>
+           <Form ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
              <MyTextInput label='Имя' name='name' type='text' placeholder='' />
              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
              <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
 
-             <button
-              style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
-              type='submit'
-             >
-              Принять
+             <button style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}} type='submit'>
+              Отправить
              </button>
             </Stack>
            </Form>
