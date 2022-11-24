@@ -2,7 +2,7 @@ const path = require('path');
 
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var {ExtractTextPlugin} = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -25,7 +25,7 @@ module.exports = {
 
  // выходные файлы и чанки
  output: {
-  filename: 'main.js',
+  filename: '[name].bundle.js',
   path: path.resolve(__dirname, 'dist'),
  },
 
@@ -48,31 +48,26 @@ module.exports = {
     },
    },
    {
-    test: /\.css$/,
-    use: [MiniCssExtractPlugin.loader, 'css-loader'],
+    test: /\.css$/i,
+    use: ['style-loader', 'css-loader'],
    },
    {
-    test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
+    test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/i,
     use: {
      loader: 'url-loader',
      options: {
       limit: 1000,
       name: '[hash].[ext]',
-      outputPath: '/dist/assets',
+      outputPath: '/assets/resource',
      },
     },
    },
 
    {
-    test: /\.scss$/,
-    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-   },
-
-   {
-    test: /\.(woff|woff2|eot|ttf|svg)$/,
+    test: /\.(woff|woff2|eot|ttf|otf)$/,
     use: {
      loader: 'file-loader',
-     options: {name: '[name].[ext]', outputPath: '/dist/assets/fonts/'},
+     options: {name: '[name].[ext]', outputPath: '/assets/fonts'},
     },
    },
   ],
@@ -80,7 +75,11 @@ module.exports = {
 
  // webpack плагины
  plugins: [
+  new CleanWebpackPlugin(),
   new webpack.ProgressPlugin(),
+  new HtmlWebpackPlugin({
+   title: 'Development',
+  }),
   new webpack.DefinePlugin({
    'process.env.NODE_ENV': JSON.stringify('production'),
   }),
@@ -102,8 +101,8 @@ module.exports = {
    filename: 'styles.css',
   }),
   new HtmlWebpackPlugin({
-   template: path.resolve(__dirname, '/public/index.html'),
-   favicon: path.resolve(__dirname, '/public/favicon.ico'),
+   template: path.resolve(__dirname, '/dist/index.html'),
+   favicon: path.resolve(__dirname, '/dist/favicon.ico'),
   }),
 
   // подготовка HTML файла с ресурсами
@@ -112,7 +111,6 @@ module.exports = {
    template: path.resolve(__dirname, DIST_DIR + '/index.html'),
    minify: false,
   }),
-  new CleanWebpackPlugin(),
  ],
 
  // настройка распознавания файлов
@@ -123,6 +121,7 @@ module.exports = {
 
  // webpack оптимизации
  optimization: {
+  runtimeChunk: 'single',
   minimizer: [new TerserJSPlugin(), new OptimizeCSSAssetsPlugin()],
  },
 
@@ -137,5 +136,5 @@ module.exports = {
  },
 
  // генерировать source map
- devtool: 'source-map',
+ devtool: 'inline-source-map',
 };
