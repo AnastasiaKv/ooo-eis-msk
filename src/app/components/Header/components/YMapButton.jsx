@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import MapIcon from '@mui/icons-material/Map';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import Button from '@mui/material/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -81,8 +81,7 @@ function YMapButton(props) {
     <Typography
      variant='h6'
      component='div'
-     sx={{flexGrow: 1}}
-     style={{paddingLeft: '20px', color: '#2d3748'}}
+     style={{flexGrow: 1, paddingLeft: '20px', color: '#2d3748'}}
     >
      info@eis-msk.ru
     </Typography>
@@ -102,7 +101,7 @@ function YMapButton(props) {
         <Typography
          variant='h4'
          component='h1'
-         sx={{
+         style={{
           fontFamily: 'Furore',
           color: '#FFFFFFFF',
           flexGrow: 1,

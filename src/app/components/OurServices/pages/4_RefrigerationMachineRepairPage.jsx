@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import image4 from '../../../../assets/img/services/4.png';
 
 import Paper from '@mui/material/Paper';
@@ -52,7 +52,7 @@ export default function RefrigerationMachineRepairPage() {
       </h1>
      </p>
      <br />
-     <Typography variant='h6' sx={{paddingRight: '9em', paddingBottom: '1em'}}>
+     <Typography variant='h6' style={{paddingRight: '9em', paddingBottom: '1em'}}>
       Выполняем следующие технологические операции:
      </Typography>
 

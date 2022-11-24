@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import CurrencyRubleRoundedIcon from '@mui/icons-material/CurrencyRubleRounded';
 import image7 from '../../../../assets/img/services/7.png';
 import Paper from '@mui/material/Paper';
@@ -21,7 +21,7 @@ export default function SaleOfElectricalComponentsPage() {
       <Typography
        variant='h4'
        component='h4'
-       sx={{fontFamily: 'Furore', paddingTop: '0em', textAlign: 'center', fontSize: '28px'}}
+       style={{fontFamily: 'Furore', paddingTop: '0em', textAlign: 'center', fontSize: '28px'}}
       >
        Продажа электрокомпонентов
       </Typography>

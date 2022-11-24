@@ -1,14 +1,12 @@
 import React, {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Paper from '@mui/material/Paper';
 import {useAutocomplete} from '@mui/base/AutocompleteUnstyled';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 import Page1 from '../../OurServices/pages/1_RepairMotorsPage';
 import Page2 from '../../OurServices/pages/2_GeneratorRepairPage';
@@ -24,10 +22,6 @@ import Page10 from '../../OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
 import {useNavigate} from 'react-router-dom';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 
 import Error404 from '../../../core/errors/Error404';
 import {padding} from '@mui/system';

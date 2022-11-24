@@ -21,15 +21,12 @@ module.exports = {
  // режим webpack оптимизации
  mode: 'development' === process.env.NODE_ENV ? 'development' : 'production',
 
- entry: {app: path.resolve(__dirname, './src/index.js')},
+ entry: './src/index.js',
 
  // выходные файлы и чанки
  output: {
-  filename: 'bundle.js',
-  publicPath: '/',
-  chunkFilename: 'js/[id].[chunkhash].js',
+  filename: 'main.js',
   path: path.resolve(__dirname, 'dist'),
-  
  },
 
  stats: {
@@ -51,8 +48,8 @@ module.exports = {
     },
    },
    {
-    test: /\.(s*)css$/,
-    use: [{loader: MiniCssExtractPlugin.loader}, 'css-loader'],
+    test: /\.css$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader'],
    },
    {
     test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
@@ -70,22 +67,6 @@ module.exports = {
     test: /\.scss$/,
     use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
    },
-   //img loader
-   {
-    test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-    type: './src/assets/img',
-    use: {
-     loader: 'file-loader',
-     options: {
-      name: '/src/assets/img/[name].[ext]',
-     },
-    },
-   },
-   // шрифты и SVG
-   {
-    test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-    type: '/src/assets/',
-   },
 
    {
     test: /\.(woff|woff2|eot|ttf|svg)$/,
@@ -93,22 +74,6 @@ module.exports = {
      loader: 'file-loader',
      options: {name: '[name].[ext]', outputPath: '/dist/assets/fonts/'},
     },
-   },
-   {
-    test: /\.css$/,
-    use: ExtractTextPlugin.extract({
-     fallback: 'style-loader',
-     use: 'css-loader',
-     publicPath: '/dist/css',
-    }),
-   },
-   {
-    test: /\.less$/,
-    use: ExtractTextPlugin.extract({
-     fallback: 'style-loader',
-     use: 'less-loader',
-     publicPath: '/dist/css',
-    }),
    },
   ],
  },
@@ -130,15 +95,11 @@ module.exports = {
     },
    ],
   }),
-  new MiniCssExtractPlugin({
-   filename: 'css/[name].[hash].css',
-   chunkFilename: 'css/[id].[hash].css',
-  }),
 
   // копирование статических файлов из `src` в `dist`
 
   new MiniCssExtractPlugin({
-   filename: 'dist/css/styles.css',
+   filename: 'styles.css',
   }),
   new HtmlWebpackPlugin({
    template: path.resolve(__dirname, '/public/index.html'),

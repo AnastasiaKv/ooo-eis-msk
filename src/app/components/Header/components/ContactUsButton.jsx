@@ -1,7 +1,6 @@
 import React, {useRef, useState} from 'react';
 import emailjs, {init, SMTPClient} from '@emailjs/browser';
 import {withStyles} from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import Dialog from '@material-ui/core/Dialog';
@@ -9,11 +8,10 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import axios from 'axios';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
 import {Stack, width} from '@mui/system';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 // import { DisplayFormikState } from './formikHelper';
@@ -85,7 +83,7 @@ function Contact(props) {
      <Typography
       variant='h6'
       component='div'
-      sx={{flexGrow: 1, paddingLeft: '44px', color: '#2d3748'}}
+      style={{flexGrow: 1, paddingLeft: '44px', color: '#2d3748'}}
      >
       8 (495)-135-82-88
      </Typography>

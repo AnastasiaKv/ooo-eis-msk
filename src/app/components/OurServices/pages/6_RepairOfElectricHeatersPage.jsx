@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import image6 from '../../../../assets/img/services/6.png';
 import ReportProblemRoundedIcon from '@mui/icons-material/ReportProblemRounded';
 import Paper from '@mui/material/Paper';
@@ -51,7 +51,7 @@ export default function RepairOfElectricHeatersPage() {
       <h4>
        <Typography
         variant='h6'
-        sx={{textAlign: 'center', paddingRight: '20px', paddingBottom: '1em'}}
+        style={{textAlign: 'center', paddingRight: '20px', paddingBottom: '1em'}}
        >
         Виды поломок
        </Typography>
@@ -60,7 +60,7 @@ export default function RepairOfElectricHeatersPage() {
        <Typography
         variant='caption'
         component='p'
-        sx={{textAlign: 'left', fontSize: '17px', color: '#1a202c'}}
+        style={{textAlign: 'left', fontSize: '17px', color: '#1a202c'}}
        >
         Несмотря на относительную простоту конструкции, ремонт электрических
         <br /> водонагревателей может потребоваться в нескольких случаях:
@@ -145,10 +145,10 @@ export default function RepairOfElectricHeatersPage() {
        <Typography
         variant='caption'
         component='p'
-        sx={{
+        style={{
          fontStyle: 'oblique',
          textAlign: 'justify',
-         fontSize: '17px',
+         fontSize: '16px',
          color: '#1a202c',
         }}
        >

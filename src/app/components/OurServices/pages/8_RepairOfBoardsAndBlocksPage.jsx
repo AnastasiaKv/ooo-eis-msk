@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 import image6 from '../../../../assets/img/services/8.png';
@@ -61,7 +61,7 @@ export default function RepairOfBoardsAndBlocksPage() {
     <h3>
      <Typography
       variant='h6'
-      sx={{fontFamily: 'Roboto', paddingRight: '16.8em', paddingBottom: '1em'}}
+      style={{fontFamily: 'Roboto', paddingRight: '16.8em', paddingBottom: '1em'}}
      >
       Список ремонтируемой электроники:
      </Typography>

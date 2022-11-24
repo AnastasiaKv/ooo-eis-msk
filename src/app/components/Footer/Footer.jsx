@@ -1,14 +1,9 @@
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import LeftDecor from './decor/left/DecorLeft';
 import RightDecor from './decor/right/DecorRight';
-import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
-import Box from '@mui/material/Box';
+import {makeStyles} from '@material-ui/core/styles';
 import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import FooterLogo from '../../../assets/img/Footer/Footer_1017x1017.svg';
 
 const copyrightStyle = {
  color: 'white',

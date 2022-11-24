@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
 import image9 from '../../../../assets/img/services/9_1.png';
 import Paper from '@mui/material/Paper';
@@ -25,7 +25,7 @@ export default function TORepairOfPassengerCarsPage() {
       <Typography
        variant='h4'
        component='h4'
-       sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
+       style={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
       >
        ТО и ремонт электрооборудования пассажирских вагонов
       </Typography>
