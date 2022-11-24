@@ -52,8 +52,9 @@
  },
  "scripts": {
   "start": "react-scripts start",
+  "webpack": "SET NODE_ENV='production' && webpack --watch",
+  "start-webpack": "webpack-dev-server",
   "dev": "webpack --mode development --watch",
-  "webpack": "webpack --watch",
   "build:prod": "env-cmd -f .env npm run build",
   "build:stage": "env-cmd -f .env.staging npm run build",
   "build:dev": "env-cmd -f .env.development npm run build",

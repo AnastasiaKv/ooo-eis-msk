@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 const SRC_DIR = path.resolve(__dirname, './src');
 const DIST_DIR = path.resolve(__dirname, './dist');
-const BUILD_DIR = path.resolve(__dirname, './build');
+const PUBLIC_DIR = path.resolve(__dirname, './public');
 
 //формируем настройки
 module.exports = {
@@ -75,7 +75,6 @@ module.exports = {
 
  // webpack плагины
  plugins: [
-  new CleanWebpackPlugin(),
   new webpack.ProgressPlugin(),
   new HtmlWebpackPlugin({
    title: 'Development',
@@ -101,22 +100,23 @@ module.exports = {
    filename: 'styles.css',
   }),
   new HtmlWebpackPlugin({
-   template: path.resolve(__dirname, '/dist/index.html'),
-   favicon: path.resolve(__dirname, '/dist/favicon.ico'),
+   template: path.resolve(__dirname, './public/index.html'),
+   favicon: path.resolve(__dirname, './public/favicon.ico'),
   }),
 
   // подготовка HTML файла с ресурсами
   new HTMLWebpackPlugin({
    filename: 'index.html',
-   template: path.resolve(__dirname, DIST_DIR + '/index.html'),
+   template: path.resolve(__dirname, './public/index.html'),
    minify: false,
   }),
+  new CleanWebpackPlugin(),
  ],
 
  // настройка распознавания файлов
  resolve: {
   // расширения файлов
-  extensions: ['.js', '.jsx', '.scss'],
+  extensions: ['.js', '.jsx'],
  },
 
  // webpack оптимизации

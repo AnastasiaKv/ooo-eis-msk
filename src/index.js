@@ -11,7 +11,6 @@ import {createStore} from 'react-redux';
 import {hydrate, render} from 'react-dom';
 
 async function getComponent() {
-          
  const element = document.createElement('div');
  const {default: _} = await import('lodash');
  const rootElement = document.getElementById('root');
