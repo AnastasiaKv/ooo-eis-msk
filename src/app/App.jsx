@@ -13,8 +13,7 @@ const helmetContext = {};
 function App() {
  return (
   <React.StrictMode>
-   <resize />
-   <LayoutProvider children={React.Children}>
+   <LayoutProvider>
     <HelmetProvider context={helmetContext}>
      <SEO
       title='ООО "Электронные Инженерные Системы"'

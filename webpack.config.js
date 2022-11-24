@@ -1,47 +1,65 @@
-//объявляем переменные
 const path = require('path');
 
 var webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const PORT = process.env.PORT || 3000;
 
 const SRC_DIR = path.resolve(__dirname, './src');
 const DIST_DIR = path.resolve(__dirname, './dist');
+const BUILD_DIR = path.resolve(__dirname, './build');
+
 //формируем настройки
 module.exports = {
  // режим webpack оптимизации
  mode: 'development' === process.env.NODE_ENV ? 'development' : 'production',
- entry: ['./src/index.js'],
+
+ entry: {app: path.resolve(__dirname, './src/index.js')},
 
  // выходные файлы и чанки
  output: {
-  path: path.resolve(__dirname, '.dist'),
   filename: 'bundle.[hash].js',
-  publicPath: './dist',
+  publicPath: '/dist',
+  chunkFilename: 'js/[id].[chunkhash].js',
+  path: path.resolve(process.cwd(), 'dist'),
  },
  // module/loaders configuration
  module: {
   rules: [
    {
-    test: /\.js$/,
-    enforce: 'pre',
-    loader: 'eslint-loader',
+    test: /\.worker\.js$/,
+    use: {loader: 'worker-loader'},
    },
-   //загрузчик для jsx
    {
-    test: /\.jsx?$/, // определяем тип файлов
-    exclude: /(node_modules)/, // исключаем из обработки папку node_modules
-    loader: 'babel-loader', // определяем загрузчик
-    use: ['babel-loader'],
-    options: {
-     presets: ['@babel/preset-react'], // используемые плагины
+    test: /\.(js|jsx)$/,
+    exclude: /node_modules/,
+    use: {
+     loader: 'babel-loader',
     },
    },
+   {
+    test: /\.(s*)css$/,
+    use: [{loader: MiniCssExtractPlugin.loader}, 'css-loader'],
+   },
+   {
+    test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
+    use: {
+     loader: 'url-loader',
+     options: {
+      limit: 1000,
+      name: '[hash].[ext]',
+      outputPath: '/dist/assets',
+     },
+    },
+   },
+
    {
     test: /\.scss$/,
     use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
@@ -49,13 +67,15 @@ module.exports = {
    {
     test: /\.(png|woff|woff2|eot|ttf|otf|svg)$/,
     type: 'src/assets/css',
-    loader: '`url-loader`?limit=100000',
+    use: {
+     loader: '`url-loader`?limit=100000',
+    },
    },
 
    //img loader
    {
     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-    type: './src/asset/img',
+    type: './src/assets/img',
     use: {
      loader: 'file-loader',
      options: {
@@ -63,22 +83,18 @@ module.exports = {
      },
     },
    },
-   new ExtractTextPlugin({
-    filename: 'bundle.css',
-    disable: false,
-    allChunks: true,
-   }),
-
    // шрифты и SVG
    {
     test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-    type: './src/asset/fonts',
+    type: './src/assets/fonts',
    },
 
    {
     test: /\.(woff|woff2|eot|ttf|svg)$/,
-    loader: 'file-loader',
-    options: {name: '[name].[ext]', outputPath: 'fonts/'},
+    use: {
+     loader: 'file-loader',
+     options: {name: '[name].[ext]', outputPath: 'fonts/'},
+    },
    },
    {
     test: /\.css$/,
@@ -96,41 +112,44 @@ module.exports = {
      publicPath: '/dist',
     }),
    },
-   {test: /\.gif$/, loader: 'url-loader?limit=10000&mimetype=image/gif'},
-   {test: /\.jpg$/, loader: 'url-loader?limit=10000&mimetype=image/jpg'},
-   {test: /\.png$/, loader: 'url-loader?limit=10000&mimetype=image/png'},
-   {test: /\.svg/, loader: 'url-loader?limit=26000&mimetype=image/svg+xml'},
-   {test: /\.(woff|woff2|ttf|eot)/, loader: 'url-loader?limit=1'},
-   {test: /\.jsx?$/, loader: 'babel', exclude: [/node_modules/, /public/]},
+   //    {test: /\.gif$/, loader: 'url-loader?limit=10000&mimetype=image/gif'},
+   //    {test: /\.jpg$/, loader: 'url-loader?limit=10000&mimetype=image/jpg'},
+   //    {test: /\.png$/, loader: 'url-loader?limit=10000&mimetype=image/png'},
+   //    {test: /\.svg/, loader: 'url-loader?limit=26000&mimetype=image/svg+xml'},
+   //    {test: /\.(woff|woff2|ttf|eot)/, loader: 'url-loader?limit=1'},
+   //    {test: /\.jsx?$/, loader: 'babel', exclude: [/node_modules/, /public/]},
   ],
  },
 
  // webpack плагины
  plugins: [
-  new webpack.UglifyJsPlugin({
-   sourceMap: true,
-  }),
+  new webpack.ProgressPlugin(),
+  new CleanWebpackPlugin(),
   new webpack.HotModuleReplacementPlugin(),
-  new HTMLWebpackPlugin({
-   template: 'public/index.html',
-   favicon: 'public/favicon.ico',
-  }),
-  new webpack.DefinePlugin({
-   'process.env': {
-    BROWSER: JSON.stringify(true),
-    NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-   },
-  }),
+  //     new MiniCssExtractPlugin({
+  //      filename: 'css/[name].[hash].css',
+  //      chunkFilename: 'css/[id].[hash].css',
+  //     }),
   // выделение css во внешний файл таблицы стилей
   new MiniCssExtractPlugin({
-   filename: 'build/styles.css',
+   filename: 'dist/styles.css',
   }),
 
-  // подготовка HTML файла с ресурсами
-  new HTMLWebpackPlugin({
-   filename: 'index.html',
-   template: path.resolve(__dirname, SRC_DIR + '/index.html'),
-   minify: false,
+  new HtmlWebpackPlugin({
+   template: path.resolve(__dirname, DIST_DIR + '/index.html'),
+   favicon: path.resolve(__dirname, 'dist/favicon.ico'),
+  }),
+
+  new webpack.DefinePlugin({
+   'process.env.NODE_ENV': JSON.stringify('production'),
+  }),
+  new CopyWebpackPlugin({
+   patterns: [
+    {
+     from: path.resolve(__dirname, './public/index.html'),
+     to: path.resolve(__dirname, DIST_DIR + '/index.html'),
+    },
+   ],
   }),
   // копирование статических файлов из `src` в `dist`
   new CopyWebpackPlugin({
@@ -140,6 +159,12 @@ module.exports = {
      to: path.resolve(__dirname, DIST_DIR + '/assets'),
     },
    ],
+  }),
+  // подготовка HTML файла с ресурсами
+  new HTMLWebpackPlugin({
+   filename: 'index.html',
+   template: path.resolve(__dirname, DIST_DIR + '/index.html'),
+   minify: false,
   }),
  ],
 
@@ -151,18 +176,7 @@ module.exports = {
 
  // webpack оптимизации
  optimization: {
-  splitChunks: {
-   cacheGroups: {
-    default: false,
-    vendors: false,
-
-    vendor: {
-     chunks: 'all', // both : consider sync + async chunks for evaluation
-     name: 'vendor', // имя чанк-файла
-     test: /node_modules/, // test regular expression
-    },
-   },
-  },
+  minimizer: [new TerserJSPlugin(), new OptimizeCSSAssetsPlugin()],
  },
 
  devServer: {
