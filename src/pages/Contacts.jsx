@@ -104,7 +104,7 @@ export default function contacts() {
           >
            <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
            <Typography style={textStyle} component='p'>
-            по телефону: <strong>+7 (495) 135 82 88</strong>
+            По телефону: <strong>+7 (495) 135 82 88</strong>
            </Typography>
           </Stack>
           <Stack
@@ -114,7 +114,7 @@ export default function contacts() {
           >
            <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
            <Typography style={textStyle} component='p'>
-            по электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
+            По электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
            </Typography>
           </Stack>
           <Stack
@@ -124,7 +124,7 @@ export default function contacts() {
           >
            <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
            <Typography style={textStyle} component='p'>
-            заполнив форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
+            Заполните форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
            </Typography>
           </Stack>
          </Stack>

@@ -68,7 +68,7 @@ const itemData3 = [
  {
   id: 2,
   image: image10,
-  title: 'Ремонт электронники',
+  title: 'Ремонт электроники',
   featured: true,
  },
  {
