@@ -51,8 +51,7 @@
  "scripts": {
   "start": "react-scripts start",
   "dev": "webpack --mode development --watch",
-  "build-webpack": "webpack --mode production",
-  "build:babel": "babel src -d lib",
+  "build-webpack": "webpack --mode production --watch",
   "build:prod": "env-cmd -f .env npm run build",
   "build:stage": "env-cmd -f .env.staging npm run build",
   "build:dev": "env-cmd -f .env.development npm run build",

@@ -25,11 +25,17 @@ module.exports = {
 
  // выходные файлы и чанки
  output: {
-  filename: 'bundle.[hash].js',
-  publicPath: '/dist',
+  filename: 'bundle.js',
+  publicPath: '/',
   chunkFilename: 'js/[id].[chunkhash].js',
-  path: path.resolve(process.cwd(), 'dist'),
+  path: path.resolve(__dirname, 'dist'),
+  
  },
+
+ stats: {
+  children: true,
+ },
+
  // module/loaders configuration
  module: {
   rules: [
@@ -64,14 +70,6 @@ module.exports = {
     test: /\.scss$/,
     use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
    },
-   {
-    test: /\.(png|woff|woff2|eot|ttf|otf|svg)$/,
-    type: 'src/assets/css',
-    use: {
-     loader: '`url-loader`?limit=100000',
-    },
-   },
-
    //img loader
    {
     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
@@ -79,21 +77,21 @@ module.exports = {
     use: {
      loader: 'file-loader',
      options: {
-      name: './src/assets/img/[name].[ext]',
+      name: '/src/assets/img/[name].[ext]',
      },
     },
    },
    // шрифты и SVG
    {
     test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-    type: './src/assets/fonts',
+    type: '/src/assets/',
    },
 
    {
     test: /\.(woff|woff2|eot|ttf|svg)$/,
     use: {
      loader: 'file-loader',
-     options: {name: '[name].[ext]', outputPath: 'fonts/'},
+     options: {name: '[name].[ext]', outputPath: '/dist/assets/fonts/'},
     },
    },
    {
@@ -101,7 +99,7 @@ module.exports = {
     use: ExtractTextPlugin.extract({
      fallback: 'style-loader',
      use: 'css-loader',
-     publicPath: '/dist',
+     publicPath: '/dist/css',
     }),
    },
    {
@@ -109,49 +107,21 @@ module.exports = {
     use: ExtractTextPlugin.extract({
      fallback: 'style-loader',
      use: 'less-loader',
-     publicPath: '/dist',
+     publicPath: '/dist/css',
     }),
    },
-   //    {test: /\.gif$/, loader: 'url-loader?limit=10000&mimetype=image/gif'},
-   //    {test: /\.jpg$/, loader: 'url-loader?limit=10000&mimetype=image/jpg'},
-   //    {test: /\.png$/, loader: 'url-loader?limit=10000&mimetype=image/png'},
-   //    {test: /\.svg/, loader: 'url-loader?limit=26000&mimetype=image/svg+xml'},
-   //    {test: /\.(woff|woff2|ttf|eot)/, loader: 'url-loader?limit=1'},
-   //    {test: /\.jsx?$/, loader: 'babel', exclude: [/node_modules/, /public/]},
   ],
  },
 
  // webpack плагины
  plugins: [
   new webpack.ProgressPlugin(),
-  new CleanWebpackPlugin(),
-  new webpack.HotModuleReplacementPlugin(),
-  //     new MiniCssExtractPlugin({
-  //      filename: 'css/[name].[hash].css',
-  //      chunkFilename: 'css/[id].[hash].css',
-  //     }),
-  // выделение css во внешний файл таблицы стилей
-  new MiniCssExtractPlugin({
-   filename: 'dist/styles.css',
-  }),
-
-  new HtmlWebpackPlugin({
-   template: path.resolve(__dirname, DIST_DIR + '/index.html'),
-   favicon: path.resolve(__dirname, 'dist/favicon.ico'),
-  }),
-
   new webpack.DefinePlugin({
    'process.env.NODE_ENV': JSON.stringify('production'),
   }),
-  new CopyWebpackPlugin({
-   patterns: [
-    {
-     from: path.resolve(__dirname, './public/index.html'),
-     to: path.resolve(__dirname, DIST_DIR + '/index.html'),
-    },
-   ],
-  }),
-  // копирование статических файлов из `src` в `dist`
+
+  // выделение css во внешний файл таблицы стилей
+
   new CopyWebpackPlugin({
    patterns: [
     {
@@ -160,12 +130,28 @@ module.exports = {
     },
    ],
   }),
+  new MiniCssExtractPlugin({
+   filename: 'css/[name].[hash].css',
+   chunkFilename: 'css/[id].[hash].css',
+  }),
+
+  // копирование статических файлов из `src` в `dist`
+
+  new MiniCssExtractPlugin({
+   filename: 'dist/css/styles.css',
+  }),
+  new HtmlWebpackPlugin({
+   template: path.resolve(__dirname, '/public/index.html'),
+   favicon: path.resolve(__dirname, '/public/favicon.ico'),
+  }),
+
   // подготовка HTML файла с ресурсами
   new HTMLWebpackPlugin({
    filename: 'index.html',
    template: path.resolve(__dirname, DIST_DIR + '/index.html'),
    minify: false,
   }),
+  new CleanWebpackPlugin(),
  ],
 
  // настройка распознавания файлов

@@ -4,7 +4,7 @@
   "development": {
    "plugins": [
     "@babel/plugin-proposal-class-properties",
-    "transform-react-jsx-source",
+    //     "transform-react-jsx-source",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-transform-runtime"
    ]

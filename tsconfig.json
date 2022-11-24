@@ -29,5 +29,5 @@
   }
  },
  "include": ["src", "dist"],
- "exclude": ["node_modules", "build"] //  *** Файлы, которые не нужно вводить, проверять ***
+ "exclude": ["node_modules", "build", "dist"] //  *** Файлы, которые не нужно вводить, проверять ***
 }
