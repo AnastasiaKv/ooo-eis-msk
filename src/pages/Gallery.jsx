@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import {Stack} from '@mui/system';
 import Paper from '@mui/material/Paper';
 
@@ -95,7 +95,7 @@ export default function Gallery() {
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData1.map((service) => (
       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+       <Typography style={{color: 'white', backgroundColor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
        <Box
@@ -111,7 +111,7 @@ export default function Gallery() {
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData2.map((service) => (
       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+       <Typography style={{color: 'white', backgroundColor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
        <Box
@@ -127,7 +127,7 @@ export default function Gallery() {
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData3.map((service) => (
       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+       <Typography style={{color: 'white', backgroundColor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
        <Box

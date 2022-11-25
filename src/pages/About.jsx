@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import {Stack} from '@mui/system';
 import Paper from '@mui/material/Paper';
-import trkLogo from '../assets/img/companiesLogos/trk/logo.svg';
+import trkLogo from '../assets/img/companiesLogos/trk/trkLogo.svg';
 import mlrzLogo from '../assets/img/companiesLogos/mlrz/MLRZ-logo.png';
 import vrmLogo from '../assets/img/companiesLogos/vrm/logo4.png';
 import image1 from '../assets/img/gallery/Gallery_Crew_gang_bang.png';
@@ -25,7 +25,7 @@ export default function about() {
      <Stack sx={{width: '37em'}}>
       <Typography
        component='p'
-       sx={{
+       style={{
         textIndent: '2ch',
         lineHeight: '2.3em',
         flexGrow: 1,
@@ -46,7 +46,7 @@ export default function about() {
        <h2>
         <Typography
          variant='h2'
-         sx={{
+         style={{
           flexGrow: 1,
           paddingRight: '0.5em',
           paddingTop: '20px',
@@ -112,8 +112,9 @@ export default function about() {
        <Typography
         variant='h4'
         component='h1'
-        sx={{textAlign: 'center', flexGrow: 1}}
         style={{
+         textAlign: 'center',
+         flexGrow: 1,
          fontFamily: 'Furore',
          fontSize: '28px',
          color: '#292929',

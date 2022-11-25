@@ -31,9 +31,9 @@ export default function SurfacingOfShaftsAndShieldsPage() {
       </Typography>
      </h1>
 
-     <h3>
+     <h6>
       <Typography
-       variant='h5'
+       variant='h6'
        component='p'
        style={{
         textAlign: 'left',
@@ -45,7 +45,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
       >
        Примеры наших работ:
       </Typography>
-     </h3>
+     </h6>
      <Stack
       direction='row-reverse'
       sx={{

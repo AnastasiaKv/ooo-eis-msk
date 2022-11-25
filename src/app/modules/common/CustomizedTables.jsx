@@ -29,7 +29,7 @@ export default function CustomizedTables() {
     </h1>
    </Stack>
    <Stack spacing={0} style={{}}>
-    <Paper elevation={8} sx={{maxWidth: '670px'}}>
+    <Paper elevation={8} style={{maxWidth: '670px'}}>
      <Table aria-label='simple table' sx={{bgcolor: '#f7f7f7'}}>
       <TableHead>
        <TableRow>

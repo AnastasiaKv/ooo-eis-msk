@@ -48,14 +48,14 @@ export default function RepairOfElectricHeatersPage() {
       </p>
      </Stack>
      <Stack sx={{paddingLeft: '2em', marginRight: '2em'}}>
-      <h4>
+      <h6>
        <Typography
         variant='h6'
         style={{textAlign: 'center', paddingRight: '20px', paddingBottom: '1em'}}
        >
         Виды поломок
        </Typography>
-      </h4>
+      </h6>
       <Stack direction='column' spacing={0} alignItems='flex-start'>
        <Typography
         variant='caption'

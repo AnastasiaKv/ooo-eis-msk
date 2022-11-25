@@ -104,6 +104,7 @@ body {
 }
 
 .ees-content-card {
+ font-family: 'Roboto', sans-serif;
  display: flex;
  color: #1a202c;
  flex: 1 1 auto;
@@ -165,9 +166,62 @@ body {
  font-display: swap;
 }
 @font-face {
- font-family: 'Roboto';
- src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ font-family: 'Roboto', sans-serif;
+ src: local('../fonts/roboto/Roboto-Regular.ttf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+ /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+@font-face {
+ font-family: 'Roboto', sans-serif;
+ src: local('../fonts/roboto/Roboto-Black.ttf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+ /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+ font-family: 'Roboto', sans-serif;
+ src: local('../fonts/roboto/Roboto-BlackItalic.ttf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+ /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+ font-family: 'Roboto', sans-serif;
+ src: local('../fonts/roboto/Roboto-Bold.ttf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+ /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+ font-family: 'Roboto', sans-serif;
+ src: local('../fonts/roboto/Roboto-Medium.ttf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+ /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+ font-family: 'Roboto', sans-serif;
+ src: local('../fonts/roboto/Roboto-Regular.ttf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+ /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+ font-family: 'Roboto', sans-serif;
+ src: local('../fonts/roboto/Roboto-Thin.ttf');
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+ /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 @media screen and (min-width: 300px) and (max-width: 1281px) {
 }
 

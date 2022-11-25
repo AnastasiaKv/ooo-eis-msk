@@ -58,20 +58,20 @@ export default function RepairOfBoardsAndBlocksPage() {
       </h1>
      </p>
     </Stack>
-    <h3>
+    <h6>
      <Typography
       variant='h6'
       style={{fontFamily: 'Roboto', paddingRight: '16.8em', paddingBottom: '1em'}}
      >
       Список ремонтируемой электроники:
      </Typography>
-    </h3>
+    </h6>
     <ul style={{fontFamily: 'Roboto', fontSize: '16px', marginLeft: 0}}>
      <Stack direction='row' spacing={3}>
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт плат от бытовой техники
@@ -82,7 +82,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт плат от автомобильной электроники
@@ -92,7 +92,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт электронных блоков управления
@@ -102,7 +102,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт микропроцессорных печатных плат
@@ -112,7 +112,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт микроэлектроники специального назначения
@@ -122,7 +122,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт электронных модулей
@@ -132,7 +132,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт компьютеризованных панелей управления
@@ -142,7 +142,7 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
+       component='h5'
        style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
       >
        Ремонт различных источников питания (в т.ч. специального назначения)
