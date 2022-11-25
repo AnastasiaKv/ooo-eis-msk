@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
 import '../assets/css/style.css';
@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import {Typography} from '@material-ui/core';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
+import {Button} from '@material-ui/core';
 
 const textStyle = {
  fontFamily: 'Roboto',
@@ -33,7 +34,11 @@ const MyTextInput = ({label, ...props}) => {
  );
 };
 
-export default function contacts() {
+export default function Contacts() {
+  const contactUsForm = useRef();
+ const [emailjsResponse, setEmailjsResponse] = useState({});
+ const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
+
  return (
   <main className='ees-content-card'>
    <SEO
@@ -128,36 +133,40 @@ export default function contacts() {
         >
          <Formik
           initialValues={{
-           firstName: '',
-           tel: '',
+           name: '',
+           phone: '',
            email: '',
            acceptedTerms: false, // added for our checkbox
            jobType: '', // added for our select
           }}
-          validationSchema={Yup.object({
-           firstName: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
-           tel: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
-           email: Yup.string().email('Invalid email addresss`').required('Required'),
-           acceptedTerms: Yup.boolean()
-            .required('Required')
-            .oneOf([true], 'You must accept the terms and conditions.'),
-           jobType: Yup.string()
-            // specify the set of valid values for job type
-            // @see http://bit.ly/yup-mixed-oneOf
-            .oneOf(['designer', 'development', 'product', 'other'], 'Invalid Job Type')
-            .required('Required'),
-          })}
+          validationSchema={Yup.object().shape({
+            email: Yup.string().email('Вы ввели некорректный адрес электронной почты').required('Поле обязательно для заполнения'),
+            name: Yup.string().required('Поле обязательно для заполнения'),
+            phone: Yup.string().required('Поле обязательно для заполнения'),
+           })}
           onSubmit={async (values, {setSubmitting}) => {
-           await new Promise((r) => setTimeout(r, 500));
+          console.log('Sending e-mail');
+          emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUsForm.current).then(
+          (result) => {
+            setIsSendedSuccessfully(true);
+            setEmailjsResponse(result);
+          },
+          (error) => {
+            setIsSendedSuccessfully(false);
+            setEmailjsResponse(error);
+            console.log(error);
+          }
+          );
            setSubmitting(false);
           }}
          >
           <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
-           <Form style={{width: '22em', height: '24em'}}>
+           <Form 
+             ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
-             <MyTextInput label='Имя' name='firstName' type='text' placeholder='' />
+             <MyTextInput label='Имя' name='name' type='text' placeholder='' />
              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-             <MyTextInput label='Телефон' name='tel' type='text' placeholder='' />
+             <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
 
              <button
               style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
