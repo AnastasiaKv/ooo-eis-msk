@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import {withStyles} from '@material-ui/core/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
+import SendIcon from '@mui/icons-material/Send';
 import {
  Button,
  Dialog,
@@ -38,37 +39,48 @@ function Contact(props) {
  emailjs.init('GaqOI812E6KDw78sT');
 
  const contactUsForm = useRef();
- const [isOpenBackcallDialog, setOpenBackcallDialog] = useState(false);
+ const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
 
- const [isSubmitSuccessfully, setIsSubmitSuccessfully] = useState(false);
+ const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
  const [emailjsResponse, setEmailjsResponse] = useState({});
  const [isShowErrorDetails, setShowErrorDetails] = useState(false);
 
- const [isOpenSubmitResultForm, setOpenSubmitResultForm] = useState(false);
+ const [isOpenSubmitResultForm, setOpenSubmitResultDialog] = useState(false);
+
+ function handleSubmitContactUsForm(values, {setSubmitting}) {
+  handleSendEmail();
+  setOpenSubmitResultDialog(true);
+  setOpenContactUsDialog(false);
+  setSubmitting(false);
+ }
+
+ function handleCloseContactUsDialog() {
+  setOpenContactUsDialog(false);
+ }
+
+ function handleClickBackcallButton() {
+  setOpenContactUsDialog(true);
+ }
+ 
+ function handleCloseSubmitResultDialog() {
+  setOpenSubmitResultDialog(false);
+ }
 
  const handleSendEmail = (e) => {
   e.preventDefault();
   console.log('Sending e-mail');
   emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
    (result) => {
-    setIsSubmitSuccessfully(true);
+    setIsSubmittedSuccessfully(true);
     setEmailjsResponse(result);
    },
    (error) => {
-    setIsSubmitSuccessfully(false);
+    setIsSubmittedSuccessfully(false);
     setEmailjsResponse(error);
-    console.log(error);
+    console.error(error);
    }
   );
  };
-
- function handleCloseGratitude() {
-  setOpenBackcallDialog(false);
- }
-
- function handleOpenContactUs() {
-  setOpenBackcallDialog(true);
- }
 
  var enableDebugButtons = true;
 
@@ -85,7 +97,7 @@ function Contact(props) {
      </Typography>
     </div>
     <Button
-     onClick={() => handleOpenContactUs(false)}
+     onClick={handleClickBackcallButton}
      style={{
       borderRadius: 3,
       textTransform: 'inherit',
@@ -101,8 +113,8 @@ function Contact(props) {
 
     <Dialog
      sx={{width: '1000px'}}
-     open={isOpenBackcallDialog}
-     onClose={() => setOpenSubmitResultForm(true)}
+     open={isOpenContactUsDialog}
+     onClose={handleCloseContactUsDialog}
      aria-labelledby='form-dialog-title'
     >
      <DialogTitle style={{paddingLeft: '1em'}} id='form-dialog-title'>
@@ -113,12 +125,7 @@ function Contact(props) {
        {/* --------------------------------------------------------------------------------------------------------------------- */}
        <Formik
         initialValues={{email: '', name: '', phone: ''}}
-        onSubmit={(values, {setSubmitting}) => {
-         handleSendEmail();
-         setOpenSubmitResultForm(true);
-         setOpenBackcallDialog(false);
-         setSubmitting(false);
-        }}
+        onSubmit={handleSubmitContactUsForm}
         validationSchema={Yup.object().shape({
          email: Yup.string()
           .email('Вы ввели некорректный адрес электронной почты')
@@ -165,10 +172,11 @@ function Contact(props) {
                backgroundColor: '#2d3748',
               }}
               onClick={() => {
-               setIsSubmitSuccessfully(true);
+               setIsSubmittedSuccessfully(true);
                setEmailjsResponse({status: 200, text: ' OK '});
                console.log(emailjsResponse);
-               setSubmitionFinished(true);
+               setOpenSubmitResultDialog(true);
+               setOpenContactUsDialog(false);
               }}
              >
               Test OK
@@ -182,13 +190,14 @@ function Contact(props) {
                backgroundColor: '#2d3748',
               }}
               onClick={() => {
-               setIsSubmitSuccessfully(false);
+               setIsSubmittedSuccessfully(false);
                setEmailjsResponse({
                 status: 412,
                 text:
                  "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <orozov@bk.ru>: Relay access denied",
                });
-               setSubmitionFinished(true);
+               setOpenSubmitResultDialog(true);
+               setOpenContactUsDialog(false);
               }}
              >
               Test Error
@@ -207,12 +216,14 @@ function Contact(props) {
     <Dialog
      sx={{width: '1000px'}}
      open={isOpenSubmitResultForm}
-     onClose={() => setOpenSubmitResultForm(false)}
+     onClose={handleCloseSubmitResultDialog}
      aria-labelledby='form-dialog-title'
     >
      <DialogTitle>
-      {isSubmitSuccessfully ? (
-       'Ваша заявка зарегистрирована.'
+      {isSubmittedSuccessfully ? (
+        <>
+         'Ваша заявка зарегистрирована.'
+       </>
       ) : (
        <Alert variant='filled' severity='error' sx={{textAlign: 'left', fontSize: '1.1rem'}}>
         <p style={{fontWeight: 400, marginTop: '-0.15em'}}>
@@ -223,7 +234,7 @@ function Contact(props) {
      </DialogTitle>
      <DialogContent>
       <DialogContentText>
-       {isSubmitSuccessfully ? (
+       {isSubmittedSuccessfully ? (
         <div>
          Спасибо за Ваше обращение!
          <br />
@@ -265,11 +276,13 @@ function Contact(props) {
        )}
       </DialogContentText>
       <DialogActions>
-       <div style={{marginRight: '0em'}}>
-        <Button type='button' className='outline' onClick={handleCloseGratitude}>
-         Вернуться
-        </Button>
-       </div>
+       <Button
+        //sx={{all:{left: '0'}}}
+        className='outline'
+        onClick={() => setOpenSubmitResultDialog(false)}
+       >
+        Вернуться
+       </Button>
       </DialogActions>
      </DialogContent>
     </Dialog>
