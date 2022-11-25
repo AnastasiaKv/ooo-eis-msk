@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import {Stack} from '@mui/system';
 import ButtonBase from '@mui/material/ButtonBase';
 import PropTypes from 'prop-types';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link, Outlet, RouterProvider, useNavigate, createBrowserRouter} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LinkButton from '../../modules/common/LinkButton';
 import decorTop from '../../../assets/img/Decor/decorTop.png';
@@ -59,22 +59,14 @@ const useStyles = styled((theme) => ({
 function DecorTop({visability}) {
  return (
   <div>
-   {!visability ? (
-    <Box component='img' width='90' className='decor-top' src={decorTop} alt='DecorTop' />
-   ) : (
-    <Box component='img' width='90' className='decor-top-hidden' src={decorTop} alt='DecorTop' />
-   )}
+   <Box component='img' width='90' className={!visability ?'decor-top': 'decor-top-hidden'} src={decorTop} alt='DecorTop' />
   </div>
  );
 }
 function DecorBottom({visability}) {
  return (
   <div>
-   {!visability ? (
-    <Box component='img' className='decor-bottom' src={decorBottom} alt='DecorBottom' />
-   ) : (
-    <Box component='img' className='decor-bottom-hidden' src={decorBottom} alt='DecorBottom' />
-   )}
+   <Box component='img' className={!visability ? 'decor-bottom' : 'decor-bottom-hidden'} src={decorBottom} alt='DecorBottom' />
   </div>
  );
 }
@@ -211,11 +203,49 @@ function Page10({title, children, isActive, onShow}) {
 
 export default function Gridservices() {
  const [activeIndex, setActiveIndex] = useState(10);
- const [visability, setVisability] = useState(false);
  const classes = useStyles();
+ const navigate = useNavigate();
+  
+ const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    loader: rootLoader,
+    children: [
+      {
+        path: "team",
+        element: <Team />,
+        loader: teamLoader,
+      },
+    ],
+  },
+]);
 
  return (
-  <div>
+  <div> 
+   <RouterProvider router={router} />
+   <Routes>
+    <Route path="services">
+     <Route path='repair-motors-page' 
+      element=
+      {
+       () => {
+        setActiveIndex(0);
+        navigate("/");
+       }
+      }
+     />
+     <Route path='generator-repair-page' element={() => setActiveIndex(1)}/>
+     <Route path='repair-transformers-page' element={() => setActiveIndex(2)}/>
+     <Route path='refrigeration-machine-repair-page' element={() => setActiveIndex(3)}/>
+     <Route path='rewinding-motors-page' element={() => setActiveIndex(4)}/>
+     <Route path='repair-of-electric-heaters-page' element={() => setActiveIndex(5)}/>
+     <Route path='sale-of-electrical-components-page' element={() => setActiveIndex(6)}/>
+     <Route path='repair-of-boards-and-blocks-page' element={() => setActiveIndex(7)}/>
+     <Route path='maintenance-and-repair-of-passenger-cars-page' element={() => setActiveIndex(8)}/>
+     <Route path='surfacing-of-shafts-and-shields-page' element={() => setActiveIndex(9)}/>
+    </Route>
+   </Routes>
    <p
     style={{
      textAlign: 'left',
@@ -288,7 +318,6 @@ export default function Gridservices() {
        title='Etymology'
        isActive={activeIndex === 0}
        onShow={() => (activeIndex === 0 ? setActiveIndex(10) : setActiveIndex(0))}
-       visability={() => setVisability(true)}
        classes={classes}
       />
       <Page2
@@ -303,25 +332,12 @@ export default function Gridservices() {
        onShow={() => (activeIndex === 2 ? setActiveIndex(10) : setActiveIndex(2))}
        classes={classes}
       />
-      \
-     </Stack>
+    </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 0 ? (
-        <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 1 ? (
-        <Route path='/services/generator-repair-page' element={<GeneratorRepairPage />} />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 2 ? (
-        <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/repair-motors-page' element={<RepairMotorsPage/>}/>
+        <Route path='/services/generator-repair-page' element={<GeneratorRepairPage/>}/>
+        <Route path='/services/repair-transformers-page' element={<RepairTransformersPage/>}/>
       </Routes>
      </div>
      <Stack direction='row' spacing={1}>
@@ -346,27 +362,9 @@ export default function Gridservices() {
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 3 ? (
-        <Route
-         path='/services/refrigeration-machine-repair-page'
-         element={<RefrigerationMachineRepair />}
-        />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 4 ? (
+        <Route path='/services/refrigeration-machine-repair-page' element={<RefrigerationMachineRepair/>}/>
         <Route path='/services/rewinding-motors-page' element={<RewindingMotorsPage />} />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 5 ? (
-        <Route
-         path='/services/repair-of-electric-heaters-page'
-         element={<RepairOfElectricHeatersPage />}
-        />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/repair-of-electric-heaters-page' element={<RepairOfElectricHeatersPage />}/>
       </Routes>
      </div>
      <Stack direction='row' spacing={1}>
@@ -391,30 +389,9 @@ export default function Gridservices() {
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 6 ? (
-        <Route
-         path='/services/sale-of-electrical-components-page'
-         element={<SaleOfElectricalComponentsPage />}
-        />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 7 ? (
-        <Route
-         path='/services/repair-of-boards-and-blocks-page'
-         element={<RepairOfBoardsAndBlocksPage />}
-        />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 8 ? (
-        <Route
-         path='/services/maintenance-and-repair-of-passenger-cars-page'
-         element={<TORepairOfPassengerCarsPage />}
-        />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/sale-of-electrical-components-page' element={<SaleOfElectricalComponentsPage/>}/>
+        <Route path='/services/repair-of-boards-and-blocks-page' element={<RepairOfBoardsAndBlocksPage/>}/>
+        <Route path='/services/maintenance-and-repair-of-passenger-cars-page' element={<TORepairOfPassengerCarsPage/>}/>
       </Routes>
      </div>
      <Stack direction='row' sx={{paddingRight: '2.7em'}} spacing={1} justifyContent='center'>
@@ -427,14 +404,7 @@ export default function Gridservices() {
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 9 ? (
-        <Route
-         path='/services/surfacing-of-shafts-and-shields-page'
-         element={<SurfacingOfShaftsAndShieldsPage />}
-        />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/surfacing-of-shafts-and-shields-page' element={<SurfacingOfShaftsAndShieldsPage/>}/>
       </Routes>
      </div>
     </Box>
