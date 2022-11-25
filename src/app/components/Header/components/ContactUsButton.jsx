@@ -8,12 +8,12 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import axios from 'axios';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
 import {Stack, width} from '@mui/system';
 import {Typography} from '@material-ui/core';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
+import {Alert} from '@mui/material';
 
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
@@ -248,16 +248,13 @@ function Contact(props) {
      {isSubmitionFinished && (
       <React.Fragment>
        <DialogTitle id='form-dialog-title'>
-        {isSendedSuccessfully
-         ? 'Ваша заявка зарегистрирована.'
-         : <Alert 
-             variant="outlined" 
-             severity="error"
-             SX={{fontSize: '1.2em', fontWeight: '500'}}
-           >
-             При отправке заявки произошла непредвиденная ошибка!
-           </Alert>
-          }
+        {isSendedSuccessfully ? (
+         'Ваша заявка зарегистрирована.'
+        ) : (
+         <Alert variant='outlined' severity='error' SX={{fontSize: '1.2em', fontWeight: '500'}}>
+          При отправке заявки произошла непредвиденная ошибка!
+         </Alert>
+        )}
        </DialogTitle>
        <DialogContent>
         <DialogContentText>

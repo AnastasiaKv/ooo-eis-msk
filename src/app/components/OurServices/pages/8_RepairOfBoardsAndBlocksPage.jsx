@@ -17,8 +17,8 @@ export default function RepairOfBoardsAndBlocksPage() {
    />
    <Paper
     elevation={4}
-    sx={{
-     bgcolor: '#f7f7f7',
+    style={{
+     backgroundColor: '#f7f7f7',
      paddingLeft: '2em',
      paddingBottom: '0.6em',
      width: '31.2em',
@@ -67,12 +67,18 @@ export default function RepairOfBoardsAndBlocksPage() {
      </Typography>
     </h6>
     <ul style={{fontFamily: 'Roboto', fontSize: '16px', marginLeft: 0}}>
-     <Stack direction='row' spacing={3}>
+     <Stack direction='row' spacing={3} style={{}}>
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт плат от бытовой техники
       </Typography>
@@ -83,7 +89,13 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт плат от автомобильной электроники
       </Typography>
@@ -93,7 +105,13 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт электронных блоков управления
       </Typography>
@@ -103,7 +121,13 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт микропроцессорных печатных плат
       </Typography>
@@ -113,7 +137,13 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт микроэлектроники специального назначения
       </Typography>
@@ -123,7 +153,13 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт электронных модулей
       </Typography>
@@ -133,7 +169,13 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт компьютеризованных панелей управления
       </Typography>
@@ -143,7 +185,13 @@ export default function RepairOfBoardsAndBlocksPage() {
       <Typography
        variant='caption'
        component='h5'
-       style={{fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт различных источников питания (в т.ч. специального назначения)
       </Typography>

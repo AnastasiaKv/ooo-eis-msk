@@ -11,6 +11,7 @@ import {Typography} from '@material-ui/core';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
 import {Button} from '@material-ui/core';
+import emailjs, {init, SMTPClient} from '@emailjs/browser';
 
 const textStyle = {
  fontFamily: 'Roboto',
@@ -35,7 +36,7 @@ const MyTextInput = ({label, ...props}) => {
 };
 
 export default function Contacts() {
-  const contactUsForm = useRef();
+ const contactUsForm = useRef();
  const [emailjsResponse, setEmailjsResponse] = useState({});
  const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
 
@@ -140,29 +141,30 @@ export default function Contacts() {
            jobType: '', // added for our select
           }}
           validationSchema={Yup.object().shape({
-            email: Yup.string().email('Вы ввели некорректный адрес электронной почты').required('Поле обязательно для заполнения'),
-            name: Yup.string().required('Поле обязательно для заполнения'),
-            phone: Yup.string().required('Поле обязательно для заполнения'),
-           })}
+           email: Yup.string()
+            .email('Вы ввели некорректный адрес электронной почты')
+            .required('Поле обязательно для заполнения'),
+           name: Yup.string().required('Поле обязательно для заполнения'),
+           phone: Yup.string().required('Поле обязательно для заполнения'),
+          })}
           onSubmit={async (values, {setSubmitting}) => {
-          console.log('Sending e-mail');
-          emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUsForm.current).then(
-          (result) => {
-            setIsSendedSuccessfully(true);
-            setEmailjsResponse(result);
-          },
-          (error) => {
-            setIsSendedSuccessfully(false);
-            setEmailjsResponse(error);
-            console.log(error);
-          }
-          );
+           console.log('Sending e-mail');
+           emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUsForm.current).then(
+            (result) => {
+             setIsSendedSuccessfully(true);
+             setEmailjsResponse(result);
+            },
+            (error) => {
+             setIsSendedSuccessfully(false);
+             setEmailjsResponse(error);
+             console.log(error);
+            }
+           );
            setSubmitting(false);
           }}
          >
           <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
-           <Form 
-             ref={contactUsForm} style={{width: '22em', height: '24em'}}>
+           <Form ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
              <MyTextInput label='Имя' name='name' type='text' placeholder='' />
              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
