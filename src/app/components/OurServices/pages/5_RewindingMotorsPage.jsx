@@ -17,7 +17,7 @@ export default function RewindingMotorsPage() {
     name='ООО ЭИС'
    />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
-    <Stack direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
+    <Stack mt={2} direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
       style={{
        paddingTop: '0em',
@@ -110,9 +110,7 @@ export default function RewindingMotorsPage() {
         Просушка изоляции и тестирование обмоток
        </Typography>
       </div>
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left'}}
-      >
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left'}}>
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
        <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
         Сборка и испытание электродвигателя
