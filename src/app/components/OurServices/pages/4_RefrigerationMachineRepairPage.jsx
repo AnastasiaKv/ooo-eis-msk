@@ -53,48 +53,65 @@ export default function RefrigerationMachineRepairPage() {
       </h1>
      </p>
      <br />
-     <span style={{fontSize: 19, paddingRight: '12em', paddingBottom: '1em'}}>
-      <b>Выполняем следующие технологические операции:</b>
-     </span>
-     <Stack
-      direction='column'
-      spacing={2}
-      component='ul'
-      style={{fontSize: '16px', textAlign: 'left'}}
-     >
-      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
-      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
-       Тщательная диагностика и дефектовка холодильного компрессора
+     <p style={{paddingBottom: 10}}>
+      <span style={{fontSize: 19, paddingRight: '12em', paddingBottom: '1em'}}>
+       <b>Выполняем следующие технологические операции:</b>
       </span>
+     </p>
 
-      <DoneIcon
-       color='primary'
-       style={{margin: '3px -24px -38px 0em', height: '18px', color: 'sky'}}
-      />
-      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
-       Оценка уровня изношенности
-      </span>
-
-      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
-      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
-       Перемотка статора фреоностойким проводом высочайшего качества
-      </span>
-
-      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
-      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
-       Вакуумная пропитка
-      </span>
-
-      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
-      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
-       Сборка холодильного компрессора
-      </span>
-
-      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
-      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
-       Испытание компрессора под максимальной нагрузкой
-      </span>
-     </Stack>
+     <div>
+      <div
+       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
+      >
+       <DoneIcon color='primary' style={{margin: '0px -24px 0px 0em', height: '18px'}} />
+       <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+        Тщательная диагностика и дефектовка холодильного компрессора
+       </span>
+      </div>
+      <div
+       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
+      >
+       <DoneIcon
+        color='primary'
+        style={{margin: '0px -24px 0px 0em', height: '18px', color: 'sky'}}
+       />
+       <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+        Оценка уровня изношенности
+       </span>
+      </div>
+      <div
+       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
+      >
+       <DoneIcon color='primary' style={{margin: '0px -24px 0px 0em', height: '18px'}} />
+       <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+        Перемотка статора фреоностойким проводом высочайшего качества
+       </span>
+      </div>
+      <div
+       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
+      >
+       <DoneIcon color='primary' style={{margin: '0px -24px 0px 0em', height: '18px'}} />
+       <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+        Вакуумная пропитка
+       </span>
+      </div>
+      <div
+       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
+      >
+       <DoneIcon color='primary' style={{margin: '0px -24px 0px 0em', height: '18px'}} />
+       <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+        Сборка холодильного компрессора
+       </span>
+      </div>
+      <div
+       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
+      >
+       <DoneIcon color='primary' style={{margin: '0px -24px 0px 0em', height: '18px'}} />
+       <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+        Испытание компрессора под максимальной нагрузкой
+       </span>
+      </div>
+     </div>
     </Stack>
    </Paper>
   </form>
