@@ -18,9 +18,10 @@ export default function RefrigerationMachineRepairPage() {
    />
    <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
     <Stack
+     mt={1}
      direction='column'
      spacing={0}
-     sx={{color: '#1a202c', paddingLeft: '2em', paddingBottom: '2em'}}
+     style={{color: '#1a202c', paddingLeft: '2em', paddingBottom: '2em'}}
     >
      <p
       style={{
@@ -52,87 +53,47 @@ export default function RefrigerationMachineRepairPage() {
       </h1>
      </p>
      <br />
-     <h6>
-      <Typography variant='h6' style={{paddingRight: '9em', paddingBottom: '1em'}}>
-       Выполняем следующие технологические операции:
-      </Typography>
-     </h6>
+     <span style={{fontSize: 19, paddingRight: '12em', paddingBottom: '1em'}}>
+      <b>Выполняем следующие технологические операции:</b>
+     </span>
      <Stack
       direction='column'
-      spacing={1}
+      spacing={2}
       component='ul'
       style={{fontSize: '16px', textAlign: 'left'}}
      >
-      <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '3px -24px 0px 0em', height: '18px'}} />
-       <h5>
-        <Typography
-         variant='h5'
-         style={{color: '#1a202c', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-        >
-         Тщательная диагностика и дефектовка холодильного компрессора
-        </Typography>
-       </h5>
-      </Stack>
-      <Stack direction='row' spacing={3}>
-       <DoneIcon
-        color='primary'
-        style={{margin: '3px -24px 0px 0em', height: '18px', color: 'sky'}}
-       />
-       <h5>
-        <Typography
-         variant='h5'
-         style={{color: '#1a202c', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-        >
-         Оценка уровня изношенности
-        </Typography>
-       </h5>
-      </Stack>
+      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
+      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+       Тщательная диагностика и дефектовка холодильного компрессора
+      </span>
 
-      <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '3px -24px 0px 0em', height: '18px'}} />
-       <h5>
-        <Typography
-         variant='h5'
-         style={{color: '#1a202c', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-        >
-         Перемотка статора фреоностойким проводом высочайшего качества
-        </Typography>
-       </h5>
-      </Stack>
-      <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '3px -24px 0px 0em', height: '18px'}} />
-       <h5>
-        <Typography
-         variant='h5'
-         style={{color: '#1a202c', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-        >
-         Вакуумная пропитка
-        </Typography>
-       </h5>
-      </Stack>
-      <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '3px -24px 0px 0em', height: '18px'}} />
-       <h5>
-        <Typography
-         variant='h5'
-         style={{color: '#1a202c', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-        >
-         Сборка холодильного компрессора
-        </Typography>
-       </h5>
-      </Stack>
-      <Stack direction='row' spacing={3}>
-       <DoneIcon color='primary' style={{margin: '3px -24px 0px 0em', height: '18px'}} />
-       <h5>
-        <Typography
-         variant='h5'
-         style={{color: '#1a202c', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-        >
-         Испытание компрессора под максимальной нагрузкой
-        </Typography>
-       </h5>
-      </Stack>
+      <DoneIcon
+       color='primary'
+       style={{margin: '3px -24px -38px 0em', height: '18px', color: 'sky'}}
+      />
+      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+       Оценка уровня изношенности
+      </span>
+
+      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
+      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+       Перемотка статора фреоностойким проводом высочайшего качества
+      </span>
+
+      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
+      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+       Вакуумная пропитка
+      </span>
+
+      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
+      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+       Сборка холодильного компрессора
+      </span>
+
+      <DoneIcon color='primary' style={{margin: '3px -24px -38px 0em', height: '18px'}} />
+      <span style={{color: '#1a202c', paddingLeft: '34px', fontSize: '16px', marginLeft: 0}}>
+       Испытание компрессора под максимальной нагрузкой
+      </span>
      </Stack>
     </Stack>
    </Paper>
