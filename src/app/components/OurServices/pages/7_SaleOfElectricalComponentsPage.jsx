@@ -14,6 +14,8 @@ export default function SaleOfElectricalComponentsPage() {
     title='Продажа электрокомпонентов'
     description='Розничная продажа  электрокомпонетов по очень выгодным ценам!'
     name='ООО ЭИС'
+    keywords=''
+    href='https://eis-msk.ru/services/sale-of-electrical-components-page'
    />
    <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack mt={2} direction='column' style={{paddingBottom: '2em'}}>

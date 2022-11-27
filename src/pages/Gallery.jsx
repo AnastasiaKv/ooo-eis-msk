@@ -86,6 +86,7 @@ export default function Gallery() {
     title='Галерея'
     description='Сотрудники, цеха, аппаратура'
     name='ООО "ЭИС"'
+    keywords=''
     href='https://eis-msk.ru/gallery'
    />
    <Stack

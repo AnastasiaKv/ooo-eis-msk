@@ -82,6 +82,8 @@ const RepairTransformersPage = () => {
      title='Перемотка трансформаторов'
      description='Цены на перемотку трансформаторов от 9000 руб.'
      name='ООО ЭИС'
+     keywords=''
+     href='https://eis-msk.ru/services/repair-transformers-page'
     />
     <Paper elevation={4} sx={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
      <Stack mt={2} direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>

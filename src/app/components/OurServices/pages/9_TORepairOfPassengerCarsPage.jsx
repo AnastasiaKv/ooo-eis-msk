@@ -14,6 +14,8 @@ export default function TORepairOfPassengerCarsPage() {
     title='ТО и ремонт электрооборудования пассажирских вагонов'
     description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
     name='ООО ЭИС'
+    keywords=''
+    href='https://eis-msk.ru/services/maintenance-and-repair-of-passenger-cars-page'
    />
    <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack

@@ -16,6 +16,8 @@ export default function RewindingMotorsPage() {
      title='Ремонт и перемотка двигателей'
      description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
      name='ООО ЭИС'
+     keywords=''
+     href='https://eis-msk.ru/services/rewinding-motors-page'
     />
     <Paper elevation={4} sx={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
      <Stack

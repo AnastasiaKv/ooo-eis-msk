@@ -14,6 +14,8 @@ export default function RepairOfElectricHeatersPage() {
     title='Ремонт электронагревателей'
     description='Ремонт электронагревателей от 500 руб.'
     name='ООО ЭИС'
+    keywords=''
+    href='https://eis-msk.ru/services/repair-of-electric-heaters-page'
    />
    <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack

@@ -14,6 +14,8 @@ export default function SurfacingOfShaftsAndShieldsPage() {
     title='Наплавка валов и щитов'
     description='Наплавка валов и щитов от 4000 руб.'
     name='ООО ЭИС'
+    keywords=''
+    href='https://eis-msk.ru/services/surfacing-of-shafts-and-shields-page'
    />
    <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack

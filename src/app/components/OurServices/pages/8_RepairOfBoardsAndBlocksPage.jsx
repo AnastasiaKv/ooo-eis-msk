@@ -14,6 +14,8 @@ export default function RepairOfBoardsAndBlocksPage() {
     title='Ремонт плат и электронных блоков'
     description='Ремонт плат от автомобильной электроники'
     name='Ремонт плат и электронных блоков'
+    keywords=''
+    href='https://eis-msk.ru/services/repair-of-boards-and-blocks-page'
    />
    <Paper
     elevation={4}

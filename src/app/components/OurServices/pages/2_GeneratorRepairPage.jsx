@@ -57,38 +57,48 @@ const data = [
 const GeneratorRepairPage = () => {
  return (
   <form style={{height: '100%'}}>
-   <SEO title='Ремонт генератора' description='Ремонт генератора от 500 руб.' name='ООО ЭИС' />
+   <SEO
+    title='Ремонт генератора'
+    description='Ремонт генератора от 500 руб.'
+    name='ООО ЭИС'
+    keywords=''
+    href='https://eis-msk.ru/services/generator-repair-page'
+   />
    <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
-    <Stack mt={2} direction='column' spacing={0} style={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
-  
-      <p
-       style={{
-        paddingTop: '1em',
-        paddingLeft: '2rem',
-        width: '600px',
-        height: '211px',
-        textAlign: 'left',
-        paddingBottom: '0',
+    <Stack
+     mt={2}
+     direction='column'
+     spacing={0}
+     style={{paddingLeft: '0.6em', paddingBottom: '2em'}}
+    >
+     <p
+      style={{
+       paddingTop: '1em',
+       paddingLeft: '2rem',
+       width: '600px',
+       height: '211px',
+       textAlign: 'left',
+       paddingBottom: '0',
+      }}
+     >
+      <Box
+       sx={{
+        width: '9em',
+        height: '6em',
+        float: 'right' /* Выравнивание по правому краю  */,
+        margin: '2em -95px 13px 0px',
        }}
-      >
-       <Box
-        sx={{
-         width: '9em',
-         height: '6em',
-         float: 'right' /* Выравнивание по правому краю  */,
-         margin: '2em -95px 13px 0px',
-        }}
-        loading='lazy'
-        component='img'
-        alt='Ремонт генератора'
-        src={image2}
-       />
-       <h1 style={{paddingTop: '1em'}}>
-        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-         Ремонт генератора от 500 руб.
-        </Typography>
-       </h1>
-      </p>
+       loading='lazy'
+       component='img'
+       alt='Ремонт генератора'
+       src={image2}
+      />
+      <h1 style={{paddingTop: '1em'}}>
+       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+        Ремонт генератора от 500 руб.
+       </Typography>
+      </h1>
+     </p>
      <SimpleTable data={data} />
     </Stack>
    </Paper>

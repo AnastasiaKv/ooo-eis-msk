@@ -16,6 +16,8 @@ export default function RefrigerationMachineRepairPage() {
      title='Ремонт холодильных машин и компрессоров'
      description='Ремонт холодильных машин и компрессоров от 4000 руб.'
      name='ООО ЭИС'
+     keywords=''
+     href='https://eis-msk.ru/services/refrigeration-machine-repair-page'
     />
     <Paper elevation={4} sx={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
      <Stack mt={2} spacing={1} sx={{color: '#1a202c', paddingLeft: '2em', paddingBottom: '2em'}}>

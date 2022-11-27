@@ -62,6 +62,8 @@ export default function RepairMotorsPage() {
     title='Ремонт электродвигателя'
     description='Ремонт электродвигателя от 500 руб.'
     name='ООО ЭИС'
+    keywords=''
+    href='https://eis-msk.ru/services/repair-motors-page'
    />
    <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack
