@@ -58,63 +58,53 @@ export default function RewindingMotorsPage() {
        style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
       >
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
-        Разборка и очистка
-       </Typography>
+       <span style={{fontSize: '16px', marginLeft: 0}}>Разборка и очистка</span>
       </div>
       <div
        style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
       >
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
-        Расчет и подбор материалов для обмотки
-       </Typography>
+       <span style={{fontSize: '16px', marginLeft: 0}}>Расчет и подбор материалов для обмотки</span>
       </div>
       <div
        style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
       >
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
+       <span style={{fontSize: '16px', marginLeft: 0}}>
         Устранение дефектов ротора и/или статора с обработкой пазов
-       </Typography>
+       </span>
       </div>
       <div
        style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
       >
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
-        Намотка катушек
-       </Typography>
+       <span style={{fontSize: '16px', marginLeft: 0}}>Намотка катушек</span>
       </div>
       <div
        style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
       >
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
+       <span style={{fontSize: '16px', marginLeft: 0}}>
         Подготовка изоляции с последующей установкой обмотки
-       </Typography>
+       </span>
       </div>
       <div
        style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
       >
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
-        Пропитка токоведущих элементов
-       </Typography>
+       <span style={{fontSize: '16px', marginLeft: 0}}>Пропитка токоведущих элементов</span>
       </div>
       <div
        style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
       >
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
+       <span style={{fontSize: '16px', marginLeft: 0}}>
         Просушка изоляции и тестирование обмоток
-       </Typography>
+       </span>
       </div>
       <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left'}}>
        <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <Typography variant='caption' component='span' style={{fontSize: '16px', marginLeft: 0}}>
-        Сборка и испытание электродвигателя
-       </Typography>
+       <span style={{fontSize: '16px', marginLeft: 0}}>Сборка и испытание электродвигателя</span>
       </div>
      </ul>
      <CustomizedTables />
