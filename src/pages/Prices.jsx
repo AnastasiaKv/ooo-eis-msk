@@ -28,6 +28,7 @@ export default function Prices() {
     title='Стоимость'
     description='В таблицах с ценами представлена минимальная стоимость заказа'
     name='ООО "ЭИС"'
+    href='https://eis-msk.ru/prices'
    />
    <div style={componentStyle}>
     <div className='block1' style={componentStyle}>

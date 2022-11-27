@@ -82,7 +82,12 @@ const itemData3 = [
 export default function Gallery() {
  return (
   <main className='ees-content'>
-   <SEO title='Галерея' description='Сотрудники, цеха, аппаратура' name='ООО "ЭИС"' />
+   <SEO
+    title='Галерея'
+    description='Сотрудники, цеха, аппаратура'
+    name='ООО "ЭИС"'
+    href='https://eis-msk.ru/gallery'
+   />
    <Stack
     direction='column'
     spacing={3}

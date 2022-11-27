@@ -6,10 +6,10 @@ import Stack from '@mui/material/Stack';
 import {makeStyles} from '@material-ui/styles';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
-import About from '../../pages/about';
-import Contacts from '../../pages/contacts';
-import Prices from '../../pages/prices';
-import Gallery from '../../pages/gallery';
+import About from '../../pages/About';
+import Contacts from '../../pages/Contacts';
+import Prices from '../../pages/Prices';
+import Gallery from '../../pages/Gallery';
 import Services from '../../pages/services';
 import ServerModal from '../core/errors/ServerModal';
 
