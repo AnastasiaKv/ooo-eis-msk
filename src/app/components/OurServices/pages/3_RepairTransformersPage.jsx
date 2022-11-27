@@ -76,47 +76,49 @@ const data = [
 
 const RepairTransformersPage = () => {
  return (
-  <form style={{height: '100%'}}>
-   <SEO
-    title='Перемотка трансформаторов'
-    description='Цены на перемотку трансформаторов от 9000 руб.'
-    name='ООО ЭИС'
-   />
-   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
-    <Stack mt={2} direction='column' spacing={0} style={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
-     <p
-      style={{
-       paddingTop: '45px',
-       paddingLeft: '2rem',
-       width: '600px',
-       height: '211px',
-       textAlign: 'left',
-       paddingBottom: '0',
-      }}
-     >
-      <Box
-       sx={{
-        paddingTop: '18px',
-        width: '6em',
-        height: '6em',
-        float: 'right' /* Выравнивание по правому краю  */,
-        margin: '1em -95px 13px 0px',
+  <div className='eis-service-page'>
+   <form style={{height: '100%'}}>
+    <SEO
+     title='Перемотка трансформаторов'
+     description='Цены на перемотку трансформаторов от 9000 руб.'
+     name='ООО ЭИС'
+    />
+    <Paper elevation={4} sx={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+     <Stack mt={2} direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
+      <p
+       style={{
+        paddingTop: '45px',
+        paddingLeft: '2rem',
+        width: '600px',
+        height: '211px',
+        textAlign: 'left',
+        paddingBottom: '0',
        }}
-       loading='lazy'
-       component='img'
-       alt='Цены на перемотку трансформаторов'
-       src={image3}
-      />
-      <h1 style={{paddingTop: '10px'}}>
-       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-        Цены на перемотку трансформаторов от 9000 руб.
-       </Typography>
-      </h1>
-     </p>
-     <SimpleTable data={data} />
-    </Stack>
-   </Paper>
-  </form>
+      >
+       <Box
+        sx={{
+         paddingTop: '18px',
+         width: '6em',
+         height: '6em',
+         float: 'right' /* Выравнивание по правому краю  */,
+         margin: '1em -95px 13px 0px',
+        }}
+        component='img'
+        loading='lazy'
+        alt='Цены на перемотку трансформаторов'
+        src={image3}
+       />
+       <h1 style={{paddingTop: '10px'}}>
+        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+         Цены на перемотку трансформаторов от 9000 руб.
+        </Typography>
+       </h1>
+      </p>
+      <SimpleTable data={data} />
+     </Stack>
+    </Paper>
+   </form>
+  </div>
  );
 };
 export default RepairTransformersPage;
