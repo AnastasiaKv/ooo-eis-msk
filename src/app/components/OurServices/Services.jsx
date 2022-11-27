@@ -276,7 +276,7 @@ function Page4({onShow}) {
   </LinkButton>
  );
 }
-function Page5({title, children, isActive, onShow}) {
+function Page5({onShow}) {
  const classes = useStyles();
  const expectedUrl = '/services/rewinding-motors-page';
  const isUrlExpected = useMatch(expectedUrl);
@@ -453,7 +453,7 @@ function Page8({onShow}) {
   </LinkButton>
  );
 }
-function Page9({title, children, isActive, onShow}) {
+function Page9({onShow}) {
  const classes = useStyles();
  const expectedUrl = '/services/maintenance-and-repair-of-passenger-cars-page';
  const isUrlExpected = useMatch(expectedUrl);
@@ -500,7 +500,7 @@ function Page9({title, children, isActive, onShow}) {
   </LinkButton>
  );
 }
-function Page10({title, children, isActive, onShow}) {
+function Page10({onShow}) {
  const classes = useStyles();
  const expectedUrl = '/services/surfacing-of-shafts-and-shields-page';
  const isUrlExpected = useMatch(expectedUrl);
@@ -626,20 +626,14 @@ export default function Gridservices() {
     <Box sx={{flexGrow: 1, paddingLeft: '1em'}}>
      <Stack direction='row' spacing={1}>
       <Page1
-       title='Ремонт электродвигателей'
-       isActive={activeIndex === 0}
        onShow={() => (activeIndex === 0 ? setActiveIndex(10) : setActiveIndex(0))}
        classes={classes}
       />
       <Page2
-       title='Ремонт генераторов'
-       isActive={activeIndex === 1}
        onShow={() => (activeIndex === 1 ? setActiveIndex(10) : setActiveIndex(1))}
        classes={classes}
       />
       <Page3
-       title='Ремонт трансформаторов'
-       isActive={activeIndex === 2}
        onShow={() => (activeIndex === 2 ? setActiveIndex(10) : setActiveIndex(2))}
        classes={classes}
       />
@@ -654,20 +648,14 @@ export default function Gridservices() {
      </div>
      <Stack direction='row' spacing={1}>
       <Page4
-       title='Ремонт холодильных машин и компрессоров'
-       isActive={activeIndex === 3}
        onShow={() => (activeIndex === 3 ? setActiveIndex(10) : setActiveIndex(3))}
        classes={classes}
       />
       <Page5
-       title='Ремонт и перемотка двигателей'
-       isActive={activeIndex === 4}
        onShow={() => (activeIndex === 4 ? setActiveIndex(10) : setActiveIndex(4))}
        classes={classes}
       />
       <Page6
-       title='Ремонт электронагревателей'
-       isActive={activeIndex === 5}
        onShow={() => (activeIndex === 5 ? setActiveIndex(10) : setActiveIndex(5))}
        classes={classes}
       />
@@ -687,8 +675,6 @@ export default function Gridservices() {
      </div>
      <Stack direction='row' spacing={1}>
       <Page7
-       title='Продажа электрокомпонентов'
-       isActive={activeIndex === 6}
        onShow={() => (activeIndex === 6 ? setActiveIndex(10) : setActiveIndex(6))}
        classes={classes}
       />
@@ -699,8 +685,6 @@ export default function Gridservices() {
        classes={classes}
       />
       <Page9
-       title='ТО и ремонт электрооборудования пассажирских вагонов'
-       isActive={activeIndex === 8}
        onShow={() => (activeIndex === 8 ? setActiveIndex(10) : setActiveIndex(8))}
        classes={classes}
       />
@@ -723,8 +707,6 @@ export default function Gridservices() {
      </div>
      <Stack direction='row' sx={{paddingRight: '2.9em'}} spacing={2} justifyContent='center'>
       <Page10
-       title='Наплавка валов и щитов'
-       isActive={activeIndex === 9}
        onShow={() => (activeIndex === 9 ? setActiveIndex(10) : setActiveIndex(9))}
        classes={classes}
       />

@@ -81,7 +81,7 @@ const RepairTransformersPage = () => {
     <SEO
      title='Перемотка трансформаторов'
      description='Цены на перемотку трансформаторов от 9000 руб.'
-     siteTitle='ООО ЭИС'
+     siteTitle='ООО "ЭИС"'
      keywords=''
      href='https://eis-msk.ru/services/repair-transformers-page'
     />

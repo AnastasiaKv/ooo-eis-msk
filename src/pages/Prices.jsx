@@ -23,7 +23,7 @@ const componentStyle = {
 
 export default function Prices() {
  return (
-  <div className='ees-content'>
+  <main className='ees-content'>
    <SEO
     title='Стоимость'
     description='В таблицах с ценами представлена минимальная стоимость заказа'
@@ -165,6 +165,6 @@ export default function Prices() {
      </Stack>
     </div>
    </div>
-  </div>
+  </main>
  );
 }

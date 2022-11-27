@@ -1,8 +1,8 @@
 import React from 'react';
-import GServices3 from '../app/components/OurServices/Services';
+import Services from '../app/components/OurServices/Services';
 import SEO from '../app/components/SEO';
 
-export default function services() {
+export default function Main() {
  return (
   <div className='ees-content-card'>
    <SEO
@@ -13,7 +13,7 @@ export default function services() {
     keywords='Ремонт генераторов, Ремонт электродвигателей, Ремонт трансформаторов, Ремонт компрессоров, Ремонт холодильных машин, Перемотка генераторов, Перемотка электродвигателей, Ремонт нагревателей, Ремонт электронагревателей, Ремонт печей, Ремонт обогревателей, Наплавка валов, Восстановление валов'
     href='https://eis-msk.ru/'
    />
-   <GServices3 />
+   <Services />
   </div>
  );
 }

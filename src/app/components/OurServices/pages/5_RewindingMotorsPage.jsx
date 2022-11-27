@@ -15,7 +15,7 @@ export default function RewindingMotorsPage() {
     <SEO
      title='Ремонт и перемотка двигателей'
      description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
-     siteTitle='ООО ЭИС'
+     siteTitle='ООО "ЭИС"'
      keywords=''
      href='https://eis-msk.ru/services/rewinding-motors-page'
     />

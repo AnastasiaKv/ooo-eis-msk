@@ -13,7 +13,7 @@ export default function RepairOfBoardsAndBlocksPage() {
    <SEO
     title='Ремонт плат и электронных блоков'
     description='Ремонт плат от автомобильной электроники'
-    siteTitle='Ремонт плат и электронных блоков'
+    siteTitle='ООО "ЭИС"'
     keywords=''
     href='https://eis-msk.ru/services/repair-of-boards-and-blocks-page'
    />

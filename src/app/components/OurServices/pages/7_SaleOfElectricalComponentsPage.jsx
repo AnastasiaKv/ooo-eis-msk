@@ -13,7 +13,7 @@ export default function SaleOfElectricalComponentsPage() {
    <SEO
     title='Продажа электрокомпонентов'
     description='Розничная продажа электрокомпонетов по очень выгодным ценам!'
-    siteTitle='ООО ЭИС'
+    siteTitle='ООО "ЭИС"'
     keywords='недорогие компоненты, Электронные компоненты, Продажа электронных компонентов Купить резистор Купить транзистор Купить конденсатор, Купить электролитический конденсатор, Купить варистор, Купить диод, Купить ионистор'
     href='https://eis-msk.ru/services/sale-of-electrical-components-page'
    />

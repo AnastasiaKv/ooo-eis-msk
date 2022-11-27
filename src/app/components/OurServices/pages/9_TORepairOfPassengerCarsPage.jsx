@@ -13,7 +13,7 @@ export default function TORepairOfPassengerCarsPage() {
    <SEO
     title='ТО и ремонт электрооборудования пассажирских вагонов'
     description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
-    siteTitle='ООО ЭИС'
+    siteTitle='ООО "ЭИС"'
     keywords=''
     href='https://eis-msk.ru/services/maintenance-and-repair-of-passenger-cars-page'
    />

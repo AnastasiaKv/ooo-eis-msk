@@ -61,7 +61,7 @@ export default function RepairMotorsPage() {
    <SEO
     title='Ремонт электродвигателя'
     description='Ремонт электродвигателя от 500 руб.'
-    siteTitle='ООО ЭИС'
+    siteTitle='ООО "ЭИС"'
     keywords=''
     href='https://eis-msk.ru/services/repair-motors-page'
    />

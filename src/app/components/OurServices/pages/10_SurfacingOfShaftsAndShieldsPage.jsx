@@ -13,7 +13,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
    <SEO
     title='Наплавка валов и щитов'
     description='Наплавка валов и щитов от 4000 руб.'
-    siteTitle='ООО ЭИС'
+    siteTitle='ООО "ЭИС"'
     keywords=''
     href='https://eis-msk.ru/services/surfacing-of-shafts-and-shields-page'
    />

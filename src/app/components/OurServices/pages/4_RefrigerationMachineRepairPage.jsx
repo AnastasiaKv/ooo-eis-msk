@@ -15,7 +15,7 @@ export default function RefrigerationMachineRepairPage() {
     <SEO
      title='Ремонт холодильных машин и компрессоров'
      description='Ремонт холодильных машин и компрессоров от 4000 руб.'
-     siteTitle='ООО ЭИС'
+     siteTitle='ООО "ЭИС"'
      keywords=''
      href='https://eis-msk.ru/services/refrigeration-machine-repair-page'
     />

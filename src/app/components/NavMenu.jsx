@@ -10,7 +10,7 @@ import About from '../../pages/About';
 import Contacts from '../../pages/Contacts';
 import Prices from '../../pages/Prices';
 import Gallery from '../../pages/Gallery';
-import Services from '../../pages/services';
+import Main from '../../pages/Main';
 import ServerModal from '../core/errors/ServerModal';
 
 import Page1 from './OurServices/pages/1_RepairMotorsPage';
@@ -124,8 +124,8 @@ export default function NavTabs() {
     </Stack>
    </Tabs>
    <Routes>
-    <Route exact path='/' element={<Services />}>
-     <Route index path='/' element={<Services />} />
+    <Route exact path='/' element={<Main />}>
+     <Route index path='/' element={<Main />} />
      <Route exact path='/services/repair-motors-page' element={<Page1 />} />
      <Route exact path='/services/generator-repair-page' element={<Page2 />} />
      <Route exact path='/services/repair-transformers-page' element={<Page3 />} />
