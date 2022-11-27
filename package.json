@@ -67,14 +67,29 @@
   "postbuild": "react-snap"
  },
  "reactSnap": {
-  "source": "dist",
+  "source": "public",
   "destination": "build",
+  "minifyHtml": {
+   "collapseWhitespace": false,
+   "removeComments": false
+  },
   "include": [
    "/",
-   "/services",
    "/about",
    "/prices",
    "/contacts",
+   "/gallery",
+   "/services",
+   "/services/repair-motors-page",
+   "/services/generator-repair-page",
+   "/services/repair-transformers-page",
+   "/services/refrigeration-machine-repair-page",
+   "/services/rewinding-motors-page",
+   "/services/repair-of-electric-heaters-page",
+   "/services/sale-of-electrical-components-page",
+   "/services/repair-of-boards-and-blocks-page",
+   "/services/maintenance-and-repair-of-passenger-cars-page",
+   "/services/surfacing-of-shafts-and-shields-page",
    "/200",
    "/404",
    "/500"

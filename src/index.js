@@ -1,23 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import reportWebVitals from './app/core/reports/reportWebVitals';
 import registerServiceWorker from './registerServiceWorker';
 import App from './app/App';
 import './assets/fonts/Furore.otf';
 import './assets/css/index.css';
 import {Provider} from 'react-redux';
-import ServerModal from './app/core/errors/ServerModal';
 import {createStore} from 'react-redux';
-import {hydrate, render} from 'react-dom';
 
 const rootElement = document.getElementById('root');
-
 if (rootElement.hasChildNodes()) {
- hydrate(<App />, rootElement, rootElement.firstElementChild);
+ ReactDOM.hydrate(<App />, rootElement, rootElement.firstElementChild);
 } else {
- render(<App />, rootElement);
+ ReactDOM.render(<App />, rootElement);
 }
+
 console.log(process.env);
 reportWebVitals(console.log);
-
 registerServiceWorker();
