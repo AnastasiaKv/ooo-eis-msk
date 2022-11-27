@@ -3,10 +3,12 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import {Typography} from '@material-ui/core';
 import image4 from '../../../../assets/img/services/4.png';
-import '../../../../assets/css/pages-text.css';
+
 import Paper from '@mui/material/Paper';
 import DoneSvg from '@mui/icons-material/AcUnit';
 import SEO from '../../SEO';
+import '../../../../assets/css/browser-typography.css';
+import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
 
 export default function RefrigerationMachineRepairPage() {
  return (
@@ -48,40 +50,36 @@ export default function RefrigerationMachineRepairPage() {
        </h1>
       </p>
 
-      <Typography
-       variant='h7'
-       style={{textAlign: 'justify', marginRight: '15em', fontSize: '20px', paddingBottom: '0.5em'}}
-      >
-       <b> Выполняем следующие технологические операции: </b>
+      <Typography className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
+       Выполняем следующие технологические операции:
       </Typography>
-
-      <Stack component='ul' spacing={1} style={{fontSize: '16px', textAlign: 'left'}}>
-       <Typography>
+      <Stack component='ul' spacing={1} style={{textAlign: 'left'}}>
+       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Тщательная диагностика и дефектовка холодильного компрессора
        </Typography>
 
-       <Typography>
+       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Оценка уровня изношенности
        </Typography>
 
-       <Typography>
+       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Перемотка статора фреоностойким проводом высочайшего качества
        </Typography>
 
-       <Typography>
+       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Вакуумная пропитка
        </Typography>
 
-       <Typography>
+       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Сборка холодильного компрессора
        </Typography>
 
-       <Typography>
+       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Испытание компрессора под максимальной нагрузкой
        </Typography>

@@ -1,0 +1,58 @@
+.paragraph-text {
+ font-family: 'Roboto', sans-serif;
+ text-align: -webkit-auto;
+ margin-right: 0em;
+ font-size: 16px;
+ padding-bottom: '0.5em';
+}
+
+.subtitle3 {
+ font-family: 'Roboto', sans-serif;
+ text-align: -webkit-auto;
+ margin-right: 0em;
+ font-size: 1.5rem;
+ font-weight: 700;
+ padding-bottom: '0.5em';
+}
+/* .span {
+ font-family: 'Roboto', sans-serif;
+ text-align: -webkit-auto;
+ margin-right: 0em;
+ font-size: 15;
+ font-weight: 400;
+ padding-bottom: '0.5em';
+} */
+
+.safari-subtitle3 {
+ font-family: Roboto, sans-serif;
+ text-align: -webkit-auto;
+ margin-right: 0em;
+ font-size: 26px;
+ font-weight: 500;
+ color: #1a202c;
+}
+.safari-medium {
+ font-family: Roboto, sans-serif;
+ text-align: -webkit-auto;
+ margin-right: 0em;
+ font-size: 12px;
+ font-weight: 400;
+ padding-bottom: 0.2em;
+}
+
+.subtitle3 {
+ font-family: Roboto, sans-serif;
+ text-align: -webkit-auto;
+ margin-right: 0em;
+ font-size: 21px;
+ font-weight: 500;
+ color: #1a202c;
+}
+.medium {
+ font-family: Roboto, sans-serif;
+ text-align: -webkit-auto;
+ margin-right: 0em;
+ font-size: 16px;
+ font-weight: 400;
+ padding-bottom: 0.1em;
+}

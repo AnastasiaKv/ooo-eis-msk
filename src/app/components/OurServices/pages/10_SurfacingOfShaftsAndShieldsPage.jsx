@@ -6,6 +6,8 @@ import Handyman from '@mui/icons-material/Handyman';
 import image10 from '../../../../assets/img/services/10_1.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
+import '../../../../assets/css/browser-typography.css';
+import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
 
 export default function SurfacingOfShaftsAndShieldsPage() {
  return (

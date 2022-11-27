@@ -6,6 +6,8 @@ import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 import image6 from '../../../../assets/img/services/8.png';
 import ComputerIcon from '@mui/icons-material/Computer';
+import '../../../../assets/css/browser-typography.css';
+import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
 
 export default function RepairOfBoardsAndBlocksPage() {
  return (
