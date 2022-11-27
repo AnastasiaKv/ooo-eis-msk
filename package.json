@@ -67,7 +67,7 @@
   "postbuild": "react-snap"
  },
  "reactSnap": {
-  "source": "public",
+  "source": "build",
   "destination": "build",
   "minifyHtml": {
    "collapseWhitespace": false,
