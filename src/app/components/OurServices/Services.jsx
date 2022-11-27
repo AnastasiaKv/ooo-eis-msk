@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {styled} from '@mui/material/styles';
 import '../../../assets/css/styles-custom.css';
 import '../../../assets/css/decor-top.css';
 import '../../../assets/css/decor-bottom.css';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
+import {Box, Typography, Paper} from '@mui/material';
 import {Stack} from '@mui/system';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import {Routes, Route, useMatch} from 'react-router-dom';
 import LinkButton from '../../modules/common/LinkButton';
 import decorTop from '../../../assets/img/Decor/decorTop.png';
 import decorBottom from '../../../assets/img/Decor/decorBottom.png';
@@ -52,35 +50,45 @@ const useStyles = styled((theme) => ({
   },
  },
 }));
-
+ 
 function DecorTop({visability}) {
  return (
   <div>
-   {!visability ? (
-    <Box component='img' width='90' className='decor-top' src={decorTop} alt='DecorTop' />
-   ) : (
-    <Box component='img' width='90' className='decor-top-hidden' src={decorTop} alt='DecorTop' />
-   )}
+   <Box component='img' width='90' className={!visability ?'decor-top': 'decor-top-hidden'} src={decorTop} alt='DecorTop' />
   </div>
  );
 }
 function DecorBottom({visability}) {
  return (
   <div>
-   {!visability ? (
-    <Box component='img' className='decor-bottom' src={decorBottom} alt='DecorBottom' />
-   ) : (
-    <Box component='img' className='decor-bottom-hidden' src={decorBottom} alt='DecorBottom' />
-   )}
+   <Box component='img' className={!visability ? 'decor-bottom' : 'decor-bottom-hidden'} src={decorBottom} alt='DecorBottom' />
   </div>
  );
 }
 
-function Page1({title, children, isActive, onShow, visability}) {
+function ServiceLinkButton({linkUrl, image, onShow}) {
+  const classes = useStyles();
+  const isUrlExpected = useMatch(linkUrl);
+  console.log("matchCurrent: "+isUrlExpected);
+  return (
+   <LinkButton onClick={onShow} to={isUrlExpected ? "/" : linkUrl}>
+    {isUrlExpected && <DecorTop />}
+    <Paper sx={{boxShadow: 'none', width: '250px'}} className={classes.Item}>
+     <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image}/>
+    </Paper>
+    {isUrlExpected && <DecorBottom />}
+   </LinkButton>
+  );
+}
+
+function Page1({onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/repair-motors-page';
+ const isUrlExpected = useMatch(expectedUrl);
+ console.log("matchCurrent: "+isUrlExpected);
  return (
-  <LinkButton onClick={onShow} to='/services/repair-motors-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -115,16 +123,18 @@ function Page1({title, children, isActive, onShow, visability}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
-
-function Page2({title, children, isActive, onShow}) {
+ 
+function Page2({onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/generator-repair-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/generator-repair-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -159,16 +169,18 @@ function Page2({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
 
-function Page3({title, children, isActive, onShow}) {
+function Page3({onShow}) {
  const classes = useStyles();
+ const expectedUrl = 'services/repair-transformers-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='services/repair-transformers-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -192,8 +204,7 @@ function Page3({title, children, isActive, onShow}) {
       style={{filter: 'grayscale(100%)'}}
       sx={{
        paddingLeft: '1.1em',
-       width: '7.5em',
-       height: '6em' /* Выравнивание по правому краю  */,
+       widtt: '6em' /* Выравнивание по правому краю  */,
        margin: '-9px 0px 0px 14px',
       }}
       loading='lazy'
@@ -203,16 +214,18 @@ function Page3({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
 
-function Page4({title, children, isActive, onShow}) {
+function Page4({onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/refrigeration-machine-repair-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/refrigeration-machine-repair-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -247,15 +260,17 @@ function Page4({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
 function Page5({title, children, isActive, onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/rewinding-motors-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/rewinding-motors-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -290,15 +305,17 @@ function Page5({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
-function Page6({title, children, isActive, onShow}) {
+function Page6({onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/repair-of-electric-heaters-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/repair-of-electric-heaters-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -333,15 +350,17 @@ function Page6({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
-function Page7({title, children, isActive, onShow}) {
+function Page7({onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/sale-of-electrical-components-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/sale-of-electrical-components-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -376,15 +395,17 @@ function Page7({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
-function Page8({title, children, isActive, onShow}) {
+function Page8({onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/repair-of-boards-and-blocks-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/repair-of-boards-and-blocks-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -419,15 +440,17 @@ function Page8({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
 function Page9({title, children, isActive, onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/maintenance-and-repair-of-passenger-cars-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
   <LinkButton onClick={onShow} to='/services/maintenance-and-repair-of-passenger-cars-page'>
-   {isActive && <DecorTop />}
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -465,15 +488,17 @@ function Page9({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
 function Page10({title, children, isActive, onShow}) {
  const classes = useStyles();
+ const expectedUrl = '/services/surfacing-of-shafts-and-shields-page';
+ const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/surfacing-of-shafts-and-shields-page'>
-   {isActive && <DecorTop />}
+  <LinkButton onClick={onShow} to={isUrlExpected ? "/" : expectedUrl}>
+   {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
      <Typography
@@ -508,15 +533,20 @@ function Page10({title, children, isActive, onShow}) {
      />
     </Stack>
    </Paper>
-   {isActive && <DecorBottom />}
+   {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
 }
 
 export default function Gridservices() {
- const [activeIndex, setActiveIndex] = useState(10);
- const [visability, setVisability] = useState(false);
+ const ref = useRef({
+  renderCount: 0
+ });
+ const [activeIndex, setActiveIndex] = useState(0);
  const classes = useStyles();
+ 
+ ref.current.renderCount++;
+ console.log("renderCount: " + ref.current.renderCount);
 
  return (
   <div>
@@ -592,7 +622,6 @@ export default function Gridservices() {
        title='Ремонт электродвигателей'
        isActive={activeIndex === 0}
        onShow={() => (activeIndex === 0 ? setActiveIndex(10) : setActiveIndex(0))}
-       visability={() => setVisability(true)}
        classes={classes}
       />
       <Page2
@@ -607,24 +636,13 @@ export default function Gridservices() {
        onShow={() => (activeIndex === 2 ? setActiveIndex(10) : setActiveIndex(2))}
        classes={classes}
       />
+      \
      </Stack>
-     <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0.2em', marginRight: '0em'}}>
+     <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 0 ? (
-        <Route path='/services/repair-motors-page' element={<RepairMotorsPage />} />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 1 ? (
-        <Route path='/services/generator-repair-page' element={<GeneratorRepairPage />} />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 2 ? (
-        <Route path='services/repair-transformers-page' element={<RepairTransformersPage />} />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/repair-motors-page' element={<RepairMotorsPage/>}/>
+        <Route path='/services/generator-repair-page' element={<GeneratorRepairPage/>}/>
+        <Route path='/services/repair-transformers-page' element={<RepairTransformersPage/>}/>
       </Routes>
      </div>
      <Stack direction='row' spacing={1}>
@@ -645,31 +663,13 @@ export default function Gridservices() {
        isActive={activeIndex === 5}
        onShow={() => (activeIndex === 5 ? setActiveIndex(10) : setActiveIndex(5))}
        classes={classes}
-      />
+    />
      </Stack>
      <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 3 ? (
-        <Route
-         path='/services/refrigeration-machine-repair-page'
-         element={<RefrigerationMachineRepair />}
-        />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 4 ? (
+        <Route path='/services/refrigeration-machine-repair-page' element={<RefrigerationMachineRepair/>}/>
         <Route path='/services/rewinding-motors-page' element={<RewindingMotorsPage />} />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 5 ? (
-        <Route
-         path='/services/repair-of-electric-heaters-page'
-         element={<RepairOfElectricHeatersPage />}
-        />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/repair-of-electric-heaters-page' element={<RepairOfElectricHeatersPage />}/>
       </Routes>
      </div>
      <Stack direction='row' spacing={1}>
@@ -694,54 +694,26 @@ export default function Gridservices() {
      </Stack>
      <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0.2em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 6 ? (
-        <Route
-         path='/services/sale-of-electrical-components-page'
-         element={<SaleOfElectricalComponentsPage />}
-        />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 7 ? (
-        <Route
-         path='/services/repair-of-boards-and-blocks-page'
-         element={<RepairOfBoardsAndBlocksPage />}
-        />
-       ) : (
-        <></>
-       )}
-       {activeIndex === 8 ? (
-        <Route
-         path='/services/maintenance-and-repair-of-passenger-cars-page'
-         element={<TORepairOfPassengerCarsPage />}
-        />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/sale-of-electrical-components-page' element={<SaleOfElectricalComponentsPage/>}/>
+        <Route path='/services/repair-of-boards-and-blocks-page' element={<RepairOfBoardsAndBlocksPage/>}/>
+        <Route path='/services/maintenance-and-repair-of-passenger-cars-page' element={<TORepairOfPassengerCarsPage/>}/>
       </Routes>
      </div>
      <Stack direction='row' sx={{paddingRight: '2.9em'}} spacing={2} justifyContent='center'>
       <Page10
        title='Наплавка валов и щитов'
        isActive={activeIndex === 9}
-       onShow={() => (activeIndex === 9 ? setActiveIndex(10) : setActiveIndex(9))}
+       onShow={() => (activeIndex === 9 ? (setActiveIndex(10)) : setActiveIndex(9))}
        classes={classes}
       />
      </Stack>
      <div style={{marginLeft: '1.5em', marginBottom: 5, marginTop: '0.4em', marginRight: '0em'}}>
       <Routes>
-       {activeIndex === 9 ? (
-        <Route
-         path='/services/surfacing-of-shafts-and-shields-page'
-         element={<SurfacingOfShaftsAndShieldsPage />}
-        />
-       ) : (
-        <></>
-       )}
+        <Route path='/services/surfacing-of-shafts-and-shields-page' element={<SurfacingOfShaftsAndShieldsPage/>}/>
       </Routes>
      </div>
     </Box>
-   </Stack>
+   </Stack> 
    <p
     style={{
      textAlign: 'left',
