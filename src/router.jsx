@@ -8,6 +8,7 @@ export default (
   <Route path='/prices' />
   <Route path='/gallery' />
   <Route path='/contacts' />
+  
   <Route path='*' />
  </Route>
 );

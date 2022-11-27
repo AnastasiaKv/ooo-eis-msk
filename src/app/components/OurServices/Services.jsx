@@ -290,7 +290,6 @@ function Page5({title, children, isActive, onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -380,7 +379,6 @@ function Page7({onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -425,7 +423,6 @@ function Page8({onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -470,7 +467,6 @@ function Page9({title, children, isActive, onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -518,7 +514,6 @@ function Page10({title, children, isActive, onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -540,7 +535,7 @@ function Page10({title, children, isActive, onShow}) {
       }}
       loading='lazy'
       component='img'
-      alt='  Наплавка валов и щитов электрических машин'
+      alt='Наплавка валов и щитов электрических машин'
       src={img10}
      />
     </Stack>

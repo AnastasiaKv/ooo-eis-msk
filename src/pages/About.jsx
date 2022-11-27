@@ -19,8 +19,8 @@ export default function about() {
     <SEO
      title='О нас'
      description='Мы осуществляем ремонт электронного, электрического и механического оборудования для нужд АО "РЖД" и АО "ФПК" с 2007 года.'
-     name='ООО "ЭИС"'
-     keywords=''
+     siteTitle='ООО "ЭИС"'
+     keywords='ЭИС'
      href='https://eis-msk.ru/about'
     />
     <Paper elevation={0} sx={{paddingTop: '4.5em', marginBottom: 5}}>

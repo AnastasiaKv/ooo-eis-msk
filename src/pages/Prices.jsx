@@ -27,8 +27,8 @@ export default function Prices() {
    <SEO
     title='Стоимость'
     description='В таблицах с ценами представлена минимальная стоимость заказа'
-    name='ООО "ЭИС"'
-    keywords=''
+    siteTitle='ООО "ЭИС"'
+    keywords='цены на ремонт, цены, Перемотка электродвигателей, Ремонт трансформаторов, Ремонт электродвигателей, Ремонт генераторов'
     href='https://eis-msk.ru/prices'
    />
    <div style={componentStyle}>

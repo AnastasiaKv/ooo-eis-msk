@@ -85,7 +85,7 @@ export default function Gallery() {
    <SEO
     title='Галерея'
     description='Сотрудники, цеха, аппаратура'
-    name='ООО "ЭИС"'
+    siteTitle='ООО "ЭИС"'
     keywords=''
     href='https://eis-msk.ru/gallery'
    />

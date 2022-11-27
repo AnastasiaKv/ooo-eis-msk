@@ -63,11 +63,12 @@
   "test": "react-scripts test",
   "lint": "prettier --check .",
   "format": "prettier --write .",
-  "flow": "flow"
+  "flow": "flow",
+  "postbuild": "react-snap"
  },
  "reactSnap": {
   "source": "dist",
-  "destination": "dist",
+  "destination": "build",
   "include": [
    "/",
    "/services",

@@ -13,7 +13,7 @@ export default function RepairOfElectricHeatersPage() {
    <SEO
     title='Ремонт электронагревателей'
     description='Ремонт электронагревателей от 500 руб.'
-    name='ООО ЭИС'
+    siteTitle='ООО ЭИС'
     keywords=''
     href='https://eis-msk.ru/services/repair-of-electric-heaters-page'
    />

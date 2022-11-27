@@ -60,7 +60,7 @@ const GeneratorRepairPage = () => {
    <SEO
     title='Ремонт генератора'
     description='Ремонт генератора от 500 руб.'
-    name='ООО ЭИС'
+    siteTitle='ООО ЭИС'
     keywords=''
     href='https://eis-msk.ru/services/generator-repair-page'
    />

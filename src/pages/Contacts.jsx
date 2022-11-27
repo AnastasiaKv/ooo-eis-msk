@@ -46,8 +46,8 @@ export default function Contacts() {
     title='Контакты'
     description='В случае, если Вы хотите обсудить какие-либо вопросы, 
     свяжитесь с нами: по телефону: +7 (495) 135 82 88'
-    name='ООО "ЭИС"'
-    keywords=''
+    siteTitle='ООО "ЭИС"'
+    keywords='эис, эис мск, ооо эис, ЭИС, Электронные Инженерные Системы'
     href='https://eis-msk.ru/contacts'
    />
    <Box
