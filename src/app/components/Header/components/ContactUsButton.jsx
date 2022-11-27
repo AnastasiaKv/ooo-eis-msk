@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import {withStyles} from '@material-ui/core/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import SendIcon from '@mui/icons-material/Send';
+import CloseIcon from '@mui/icons-material/Close';
 import {
  Button,
  Dialog,
@@ -18,11 +19,11 @@ import * as Yup from 'yup';
 import {Stack} from '@mui/system';
 import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
+import MyTextInput from './MyTextInput';
 
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
-import MyTextInput from './MyTextInput';
 
 const styles = {};
 
@@ -30,7 +31,7 @@ const theme = createTheme({
  components: {
   // todo: remove once the issue is addressed: https://github.com/mui/material-ui/issues/31185
   MuiDialogContent: {
-   styleOverrides: {root: {paddingTop: `${20}px !important`}},
+   styleOverrides: {root: {paddingTop: `${20}px !important`, left: 'unset'}},
   },
  },
 });
@@ -116,6 +117,7 @@ function Contact(props) {
      open={isOpenContactUsDialog}
      onClose={handleCloseContactUsDialog}
      aria-labelledby='form-dialog-title'
+     Dialog
     >
      <DialogTitle style={{paddingLeft: '1em'}} id='form-dialog-title'>
       Оставьте свои данные - и мы Вам перезвоним!
