@@ -125,12 +125,11 @@ h6 {
  color: #1a202c;
 }
 
-p > *:last-child {
+/* p > *:last-child {
  margin-bottom: 0;
-}
-span {
-
-}
+} */
+/* span {
+} */
 a {
  color: inherit;
  text-decoration: underline;

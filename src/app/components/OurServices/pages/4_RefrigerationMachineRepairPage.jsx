@@ -47,8 +47,8 @@ export default function RefrigerationMachineRepairPage() {
       </p>
 
       <Typography
-       variant='caption'
-       style={{textAlign: 'justify', marginRight: '14em', fontSize: 20, paddingBottom: '0.5em'}}
+       variant='h7'
+       style={{textAlign: 'justify', marginRight: '15em', fontSize: '20px', paddingBottom: '0.5em'}}
       >
        <b> Выполняем следующие технологические операции: </b>
       </Typography>
