@@ -1,15 +1,13 @@
 import React, {useRef, useState, useEffect} from 'react';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
-import styled from '@emotion/styled';
 import '../assets/css/style.css';
 import '../assets/css/styles-custom.css';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import {Stack} from '@mui/system';
-import ButtonBase from '@mui/material/ButtonBase';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
 import {Button} from '@material-ui/core';
@@ -17,7 +15,8 @@ import emailjs, {init, SMTPClient} from '@emailjs/browser';
 
 const textStyle = {
  fontFamily: 'Roboto',
-
+ color: '#292929',
+ paddingLeft: '0em',
  lineHeight: '1.7',
  width: '40em',
  marginLeft: 0,
@@ -37,7 +36,7 @@ const MyTextInput = ({labelText, inputName, ...props}) => {
 };
 
 export default function Contacts() {
-  const contactUsForm = useRef();
+ const contactUsForm = useRef();
  const [emailjsResponse, setEmailjsResponse] = useState({});
  const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
 
@@ -85,16 +84,8 @@ export default function Contacts() {
         </h1>
         <br />
         <Stack style={{paddingLeft: '3em', width: '29em', paddingRight: '2em'}}>
-         <Typography
-          sx={{
-           fontFamily: 'Roboto',
-           color: '#292929',
-           paddingLeft: '7em',
-          }}
-          style={textStyle}
-          component='p'
-         >
-          <p>
+         <Typography style={textStyle} component='p'>
+          <p style={{paddingLeft: '7em'}}>
            В случае, если Вы хотите обсудить какие-либо вопросы,
            <br /> свяжитесь с нами:
           </p>
@@ -109,7 +100,7 @@ export default function Contacts() {
           >
            <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
            <Typography style={textStyle} component='p'>
-            по телефону: <strong>+7 (495) 135 82 88</strong>
+            По телефону: <strong>+7 (495) 135 82 88</strong>
            </Typography>
           </Stack>
           <Stack
@@ -119,7 +110,7 @@ export default function Contacts() {
           >
            <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
            <Typography style={textStyle} component='p'>
-            по электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
+            По электронной почте: <strong>i.timoshenkov@eis-msk.ru</strong>
            </Typography>
           </Stack>
           <Stack
@@ -129,7 +120,7 @@ export default function Contacts() {
           >
            <CircleIcon style={{margin: '11px 0px 0px 0px', height: 7}} />
            <Typography style={textStyle} component='p'>
-            заполнив форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
+            Заполните форму обратной связи. Наши менеджеры свяжутся с Вами в ближайшее время
            </Typography>
           </Stack>
          </Stack>

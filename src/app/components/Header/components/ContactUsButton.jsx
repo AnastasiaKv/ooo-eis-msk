@@ -1,24 +1,20 @@
 import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import {withStyles} from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import SendIcon from '@mui/icons-material/Send';
-import CloseIcon from '@mui/icons-material/Close';
-import {
- Button,
- Dialog,
- DialogTitle,
- DialogContent,
- DialogContentText,
- DialogActions,
- Paper,
-} from '@material-ui/core';
-import {Box, Alert, AlertTitle, FormControlLabel, Switch, Slide} from '@mui/material';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import Paper from '@material-ui/core/Paper,';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
-import {Stack} from '@mui/system';
-import Typography from '@mui/material/Typography';
+import {Stack, width} from '@mui/system';
+import {Typography} from '@material-ui/core';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
+import {Alert, FormControlLabel, Switch} from '@mui/material';
 import MyTextInput from './MyTextInput';
 
 // import { DisplayFormikState } from './formikHelper';
@@ -92,7 +88,7 @@ function Contact(props) {
      <Typography
       variant='h6'
       component='div'
-      sx={{flexGrow: 1, paddingLeft: '44px', color: '#2d3748'}}
+      style={{flexGrow: 1, paddingLeft: '44px', color: '#2d3748'}}
      >
       8 (495)-135-82-88
      </Typography>

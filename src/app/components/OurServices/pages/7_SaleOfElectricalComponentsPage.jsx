@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import CurrencyRubleRoundedIcon from '@mui/icons-material/CurrencyRubleRounded';
-import image7 from '../../../../assets/img/services/Продажа компонентов1.png';
+import image7 from '../../../../assets/img/services/7.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
@@ -15,13 +15,13 @@ export default function SaleOfElectricalComponentsPage() {
     description='Розничная продажа  электрокомпонетов по очень выгодным ценам!'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
-    <Stack direction='column' sx={{paddingBottom: '2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+    <Stack mt={2} direction='column' style={{paddingBottom: '2em'}}>
      <h1>
       <Typography
        variant='h4'
        component='h4'
-       sx={{fontFamily: 'Furore', paddingTop: '0em', textAlign: 'center', fontSize: '28px'}}
+       style={{fontFamily: 'Furore', paddingTop: '0em', textAlign: 'center', fontSize: '28px'}}
       >
        Продажа электрокомпонентов
       </Typography>
@@ -56,7 +56,7 @@ export default function SaleOfElectricalComponentsPage() {
        />
       </Stack>
       <ul>
-       <Stack sx={{paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
+       <Stack sx={{fontFamily: 'Roboto', paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
         <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '1.6em'}}>
          <CurrencyRubleRoundedIcon
           style={{
@@ -70,6 +70,7 @@ export default function SaleOfElectricalComponentsPage() {
           variant='caption'
           component='span'
           style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
@@ -92,6 +93,7 @@ export default function SaleOfElectricalComponentsPage() {
           variant='caption'
           component='span'
           style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',

@@ -17,7 +17,7 @@ export default function LinkButton(props) {
   <>
    <Paper sx={{boxShadow: 'none'}} className={classes.Item}>
     <ButtonBase
-     sx={{minWidth: '100px', minHeight: '25px'}}
+     style={{minWidth: '100px', minHeight: '25px'}}
      component={Link}
      onClick={(event) => {
       event.preventDefault();

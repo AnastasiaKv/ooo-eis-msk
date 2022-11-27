@@ -4,10 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Stack from '@mui/material/Stack';
 import {makeStyles} from '@material-ui/styles';
-import Typography from '@mui/material/Typography';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
-import App from '../App';
 import About from '../../pages/about';
 import Contacts from '../../pages/contacts';
 import Prices from '../../pages/prices';

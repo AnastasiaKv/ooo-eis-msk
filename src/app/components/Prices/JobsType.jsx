@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
-import Box from '@mui/material/Box';
-import {makeStyles} from '@material-ui/styles';
-import ButtonBase from '@mui/material/ButtonBase';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 
 const divStyle = {
  width: '36em',
@@ -61,11 +58,11 @@ export default function JobsType() {
        boxShadow: 'none',
       }}
      >
-      <Typography variant='h5' sx={{color: 'white', paddingTop: '0.6em', paddingBottom: '1em'}}>
+      <Typography variant='h5' style={{color: 'white', paddingTop: '0.6em', paddingBottom: '1em'}}>
        <b>{i.id}</b>
       </Typography>
       <Typography
-       sx={{
+       style={{
         paddingTop: '0.2em',
         fontSize: '15px',
         margin: '0 0 0 -10px',

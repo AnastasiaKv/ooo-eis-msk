@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import SimpleTable from '../../../modules/common/SimpleTable';
 import Paper from '@mui/material/Paper';
-import image3 from '../../../../assets/img/services/Ремонт трансформаторов1.png';
+import image3 from '../../../../assets/img/services/3.png';
 import SEO from '../../SEO';
 
 const data = [
@@ -82,39 +82,37 @@ const RepairTransformersPage = () => {
     description='Цены на перемотку трансформаторов от 9000 руб.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
-    <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
-     <Stack direction='row' style={{paddingTop: '0em'}}>
-      <p
-       style={{
-        paddingTop: '45px',
-        paddingLeft: '2rem',
-        width: '600px',
-        height: '211px',
-        textAlign: 'left',
-        paddingBottom: '0',
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+    <Stack mt={2} direction='column' spacing={0} style={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
+     <p
+      style={{
+       paddingTop: '45px',
+       paddingLeft: '2rem',
+       width: '600px',
+       height: '211px',
+       textAlign: 'left',
+       paddingBottom: '0',
+      }}
+     >
+      <Box
+       sx={{
+        paddingTop: '18px',
+        width: '6em',
+        height: '6em',
+        float: 'right' /* Выравнивание по правому краю  */,
+        margin: '1em -95px 13px 0px',
        }}
-      >
-       <Box
-        sx={{
-         paddingTop: '18px',
-         width: '6em',
-         height: '6em',
-         float: 'right' /* Выравнивание по правому краю  */,
-         margin: '1em -95px 13px 0px',
-        }}
-        loading='lazy'
-        component='img'
-        alt='Цены на перемотку трансформаторов'
-        src={image3}
-       />
-       <h1 style={{paddingTop: '10px'}}>
-        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-         Цены на перемотку трансформаторов от 9000 руб.
-        </Typography>
-       </h1>
-      </p>
-     </Stack>
+       loading='lazy'
+       component='img'
+       alt='Цены на перемотку трансформаторов'
+       src={image3}
+      />
+      <h1 style={{paddingTop: '10px'}}>
+       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+        Цены на перемотку трансформаторов от 9000 руб.
+       </Typography>
+      </h1>
+     </p>
      <SimpleTable data={data} />
     </Stack>
    </Paper>

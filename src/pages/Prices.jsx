@@ -2,11 +2,10 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {Stack} from '@mui/system';
 import JobsType from '../app/components/Prices/JobsType';
-import JobsStepper from '../app/components/Prices/stepper/JobsStepper';
 import TrustedBox from '../app/components/Prices/TrustedBox';
 import RepairMotorsPage from '../app/components/OurServices/pages/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/components/OurServices/pages/2_GeneratorRepairPage';
@@ -22,9 +21,9 @@ const componentStyle = {
  paddingLeft: '0em',
 };
 
-export default function prices() {
+export default function Prices() {
  return (
-  <main className='ees-content'>
+  <div className='ees-content'>
    <SEO
     title='Стоимость'
     description='В таблицах с ценами представлена минимальная стоимость заказа'
@@ -37,7 +36,7 @@ export default function prices() {
      <p>
       <Typography
        component='p'
-       sx={{
+       style={{
         textIndent: '2ch',
         lineHeight: '2.6em',
         flexGrow: 1,
@@ -61,7 +60,7 @@ export default function prices() {
       <Typography
        variant='h4'
        component='h1'
-       sx={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '31em', paddingBottom: '2em'}}
+       style={{fontFamily: 'Furore', fontSize: '28px', paddingRight: '31em', paddingBottom: '2em'}}
       >
        Этапы работ
       </Typography>
@@ -80,7 +79,7 @@ export default function prices() {
        <Typography
         variant='h4'
         component='h1'
-        sx={{
+        style={{
          paddingRight: '31em',
          paddingBottom: '2em',
          textAlign: 'center',
@@ -164,6 +163,6 @@ export default function prices() {
      </Stack>
     </div>
    </div>
-  </main>
+  </div>
  );
 }

@@ -10,6 +10,7 @@ export default function services() {
     description='Качество нашего ремонта проверено годами непрерывной работы, 
     и вы получите гарантию на устройство после ремонта'
     name='ООО "ЭИС"'
+    href='https://eis-msk.ru/'
    />
    <GServices3 />
   </div>

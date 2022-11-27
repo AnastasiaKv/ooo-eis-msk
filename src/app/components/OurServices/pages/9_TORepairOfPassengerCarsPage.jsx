@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import GppGoodRoundedIcon from '@mui/icons-material/GppGoodRounded';
-import image9 from '../../../../assets/img/services/ТО2.png';
+import image9 from '../../../../assets/img/services/9_1.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 
@@ -15,17 +15,18 @@ export default function TORepairOfPassengerCarsPage() {
     description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack
+     mt={2}
      direction='column'
      spacing={0}
-     sx={{paddingLeft: '0.5em', paddingTop: '0em', paddingBottom: '1em'}}
+     style={{paddingLeft: '0.5em', paddingTop: '0em', paddingBottom: '1em'}}
     >
      <h1>
       <Typography
        variant='h4'
        component='h4'
-       sx={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
+       style={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
       >
        ТО и ремонт электрооборудования пассажирских вагонов
       </Typography>
@@ -65,7 +66,7 @@ export default function TORepairOfPassengerCarsPage() {
          color: '#1a202c',
         }}
        >
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '3em'}}>
+        <Stack direction='row' spacing={3} sx={{fontFamily: 'Roboto', paddingBottom: '3em'}}>
          <GppGoodRoundedIcon
           style={{
            margin: '0px 0px 0px 0px',
@@ -101,6 +102,7 @@ export default function TORepairOfPassengerCarsPage() {
           variant='body2'
           component='p'
           style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
@@ -123,6 +125,7 @@ export default function TORepairOfPassengerCarsPage() {
           variant='body2'
           component='p'
           style={{
+           fontFamily: 'Roboto',
            paddingLeft: '3px',
            fontSize: '16px',
            marginLeft: '11px',
@@ -135,7 +138,7 @@ export default function TORepairOfPassengerCarsPage() {
        </Stack>
       </ul>
      </Stack>
-    </Stack>{' '}
+    </Stack>
    </Paper>
   </form>
  );

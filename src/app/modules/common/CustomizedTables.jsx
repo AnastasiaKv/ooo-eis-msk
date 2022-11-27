@@ -1,5 +1,4 @@
 import React from 'react';
-import {makeStyles} from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,7 +7,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import data from '../../containers/PowerKwData';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 
 export default function CustomizedTables() {
  return (
@@ -30,7 +29,7 @@ export default function CustomizedTables() {
     </h1>
    </Stack>
    <Stack spacing={0} style={{}}>
-    <Paper elevation={8} sx={{maxWidth: '670px'}}>
+    <Paper elevation={8} style={{maxWidth: '670px'}}>
      <Table aria-label='simple table' sx={{bgcolor: '#f7f7f7'}}>
       <TableHead>
        <TableRow>

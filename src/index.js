@@ -10,11 +10,21 @@ import ServerModal from './app/core/errors/ServerModal';
 import {createStore} from 'react-redux';
 import {hydrate, render} from 'react-dom';
 
-const rootElement = document.getElementById('root');
-if (rootElement.hasChildNodes()) {
- hydrate(<App />, rootElement, rootElement.firstElementChild);
-} else {
- render(<App />, rootElement);
+async function getComponent() {
+ const element = document.createElement('div');
+ const {default: _} = await import('lodash');
+ const rootElement = document.getElementById('root');
+
+ if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement, rootElement.firstElementChild);
+ } else {
+  render(<App />, rootElement);
+ }
+ console.log(process.env);
+ reportWebVitals(console.log);
+ return element;
 }
-console.log(process.env);
-reportWebVitals(console.log);
+
+getComponent().then((component) => {
+ document.body.appendChild(component);
+});

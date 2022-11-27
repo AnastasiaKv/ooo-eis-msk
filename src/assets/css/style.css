@@ -79,7 +79,7 @@ h4,
 h5,
 h6 {
  margin-bottom: 1rem;
- margin-top: 1em;
+ margin-top: '10px';
  font-weight: bold;
  font-family: Furore;
 }
@@ -128,7 +128,9 @@ h6 {
 p > *:last-child {
  margin-bottom: 0;
 }
+span {
 
+}
 a {
  color: inherit;
  text-decoration: underline;

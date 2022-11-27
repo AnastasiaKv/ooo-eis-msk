@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
-import image6 from '../../../../assets/img/services/Ремонт плат1.png';
+import image6 from '../../../../assets/img/services/8.png';
 import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function RepairOfBoardsAndBlocksPage() {
@@ -13,18 +13,18 @@ export default function RepairOfBoardsAndBlocksPage() {
    <SEO
     title='Ремонт плат и электронных блоков'
     description='Ремонт плат от автомобильной электроники'
-    name='ООО ЭИС'
+    name='Ремонт плат и электронных блоков'
    />
    <Paper
     elevation={4}
-    sx={{
-     bgcolor: '#f7f7f7',
+    style={{
+     backgroundColor: '#f7f7f7',
      paddingLeft: '2em',
      paddingBottom: '0.6em',
      width: '31.2em',
     }}
    >
-    <Stack direction='row' sx={{paddingLeft: '0em', textAlign: 'left'}}>
+    <Stack mt={2} direction='row' style={{paddingLeft: '0em', textAlign: 'left'}}>
      <p
       style={{
        paddingTop: '0em',
@@ -58,18 +58,27 @@ export default function RepairOfBoardsAndBlocksPage() {
       </h1>
      </p>
     </Stack>
-    <h3>
-     <Typography variant='h6' sx={{paddingRight: '16.8em', paddingBottom: '1em'}}>
+    <h6>
+     <Typography
+      variant='h6'
+      style={{fontFamily: 'Roboto', paddingRight: '16.8em', paddingBottom: '1em'}}
+     >
       Список ремонтируемой электроники:
      </Typography>
-    </h3>
+    </h6>
     <ul style={{fontFamily: 'Roboto', fontSize: '16px', marginLeft: 0}}>
-     <Stack direction='row' spacing={3}>
+     <Stack direction='row' spacing={3} style={{}}>
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт плат от бытовой техники
       </Typography>
@@ -79,8 +88,14 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт плат от автомобильной электроники
       </Typography>
@@ -89,8 +104,14 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт электронных блоков управления
       </Typography>
@@ -99,8 +120,14 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт микропроцессорных печатных плат
       </Typography>
@@ -109,8 +136,14 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт микроэлектроники специального назначения
       </Typography>
@@ -119,8 +152,14 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт электронных модулей
       </Typography>
@@ -129,8 +168,14 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт компьютеризованных панелей управления
       </Typography>
@@ -139,8 +184,14 @@ export default function RepairOfBoardsAndBlocksPage() {
       <ComputerIcon color='action' style={{margin: '3px 0px 0px 0px', height: '20px'}} />
       <Typography
        variant='caption'
-       component='span'
-       style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
+       component='h5'
+       style={{
+        color: '#1a202c',
+        fontFamily: 'Roboto',
+        paddingLeft: '10px',
+        fontSize: '16px',
+        marginLeft: 0,
+       }}
       >
        Ремонт различных источников питания (в т.ч. специального назначения)
       </Typography>

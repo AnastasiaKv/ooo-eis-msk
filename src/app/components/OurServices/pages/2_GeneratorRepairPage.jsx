@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import SimpleTable from '../../../modules/common/SimpleTable';
 import Paper from '@mui/material/Paper';
-import image2 from '../../../../assets/img/services/Ремонт генераторов1.png';
+import image2 from '../../../../assets/img/services/2.png';
 import SEO from '../../SEO';
 
 const data = [
@@ -58,9 +58,9 @@ const GeneratorRepairPage = () => {
  return (
   <form style={{height: '100%'}}>
    <SEO title='Ремонт генератора' description='Ремонт генератора от 500 руб.' name='ООО ЭИС' />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
-    <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
-     <Stack direction='row' style={{paddingTop: '0em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+    <Stack mt={2} direction='column' spacing={0} style={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
+  
       <p
        style={{
         paddingTop: '1em',
@@ -89,7 +89,6 @@ const GeneratorRepairPage = () => {
         </Typography>
        </h1>
       </p>
-     </Stack>
      <SimpleTable data={data} />
     </Stack>
    </Paper>

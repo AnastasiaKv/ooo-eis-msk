@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
+<html lang="ru">
+
+<head>
   <meta charset="UTF-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="%PUBLIC_URL%/favicons/safari-pinned-tab.svg" color="#d73746">
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="eis-msk.ru">
+  <meta name="application-name" content="eis-msk.ru">
   <meta name="viewport" content="width=device-width" />
+  <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#1a202c" />
-  <meta
-   name="description"
-   content="Наша компания занимается ремонтом электрооборудования всех типов."
-  />
+  <meta name="description" content="Наша компания занимается ремонтом электрооборудования всех типов." />
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link
-   rel="stylesheet"
-   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
   <link rel="canonical" href="https://eis-msk.ru/" />
 
   <!--
@@ -30,9 +38,8 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <meta
-   name="keywords"
-   content="Ремонт генераторов Ремонт электродвигателей Ремонт трансформаторов Ремонт компрессоров Ремонт холодильных машин Перемотка генераторов Перемотка электродвигателей Ремонт нагревателей Ремонт электронагревателей Ремонт печей Ремонт обогревателей Наплавка валов Восстановление валов 
+  <meta name="keywords"
+    content="Ремонт генераторов Ремонт электродвигателей Ремонт трансформаторов Ремонт компрессоров Ремонт холодильных машин Перемотка генераторов Перемотка электродвигателей Ремонт нагревателей Ремонт электронагревателей Ремонт печей Ремонт обогревателей Наплавка валов Восстановление валов 
   Восстановление посадочных поверхностей Обработка валов Обработка металлов Наплавка щитов 
   Восстановление щитов Восстановление деталей электрических машин 
   Ремонт электрических машин Ремонт электрооборудования 
@@ -44,239 +51,110 @@
   Ремонт микросхем Ремонт промышленной электроники Ремонт промышленного оборудования
   Ремонт блоков Ремонт блоков пассажирских вагонов Ремонт модулей Ремонт модулей и блоков ремонт модулей РЖД ремонт блоков РЖД Ремонт автоматики вагонов 
   Блоков ремонт блоков ремонт РЖД Блоки РЖД Модули РЖД Блоки управления вагонами Блоки управления энергоснабжением Ремонт БУЭК Ремонт БУГ Ремонт БЗ Ремонт БРН Ремонт БРНГ Ремонт БРЧ Ремонт РНГ Ремонт БУЭВ-Г Ремонт БУЭВ-П Ремонт автоматики Ремонт электроники
-  Ремонт П-01 Ремонт П-02 Ремонт РНП Ремонт CHG Ремонт вентиляторов Ремонт АВВ-CP430 Ремонт ДВД Ремонт ДТХ Купить резистор Купить транзистор Купить конденсатор Купить электролитический конденсатор Купить варистор Купить диод Купить ионистор"
-  />
+  Ремонт П-01 Ремонт П-02 Ремонт РНП Ремонт CHG Ремонт вентиляторов Ремонт АВВ-CP430 Ремонт ДВД Ремонт ДТХ Купить резистор Купить транзистор Купить конденсатор Купить электролитический конденсатор Купить варистор Купить диод Купить ионистор" />
   <title>ООО "Электронные Инженерные Системы"</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H2TWJ10F3"></script>
   <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag() {
-    dataLayer.push(arguments);
-   }
-   gtag('js', new Date());
-
-   gtag('config', 'G-3H2TWJ10F3');
-  </script>
- </head>
-
- <body>
-  <script>
-   (function () {
-    var vendors = ['webkit', 'moz', 'ms', 'o'],
-     vp = null;
-    for (
-     var x = 0;
-     x < vendors.length && !window.requestAnimationFrame && !window.cancelAnimationFrame;
-     x++
-    ) {
-     vp = vendors[x];
-     window.requestAnimationFrame =
-      window.requestAnimationFrame || window[vp + 'RequestAnimationFrame'];
-     window.cancelAnimationFrame =
-      window.cancelAnimationFrame ||
-      window[vp + 'CancelAnimationFrame'] ||
-      window[vp + 'CancelRequestAnimationFrame'];
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
     }
-    if (
-     /iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) ||
-     !window.requestAnimationFrame ||
-     !window.cancelAnimationFrame
-    ) {
-     //iOS6 is buggy.
-     var lastTime = 0;
-     window.requestAnimationFrame = function (callback, element) {
-      var now = window.performance.now();
-      var nextTime = Math.max(lastTime + 16, now); //First time will execute it immediately but barely noticeable and performance is gained.
-      return setTimeout(function () {
-       callback((lastTime = nextTime));
-      }, nextTime - now);
-     };
-     window.cancelAnimationFrame = clearTimeout;
-    }
-   })();
+    gtag('js', new Date());
+
+    gtag('config', 'G-3H2TWJ10F3');
   </script>
 
-  <!-- <script>
-    if (window.devicePixelRatio !== 1) {
-      // Костыль для определения иных устройств, с коэффициентом отличным от 1
-      var dpt = window.devicePixelRatio;
-      var widthM = window.screen.width * dpt;
-      var widthH = window.screen.height * dpt;
-      document.write('<meta name="viewport" content="width=' + widthM + ', height=' + widthH + '">');
-    }
-  </script> -->
 
+</head>
+
+<body>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
-   (function (m, e, t, r, i, k, a) {
-    m[i] =
-     m[i] ||
-     function () {
-      (m[i].a = m[i].a || []).push(arguments);
-     };
-    m[i].l = 1 * new Date();
-    for (var j = 0; j < document.scripts.length; j++) {
-     if (document.scripts[j].src === r) {
-      return;
-     }
-    }
-    (k = e.createElement(t)),
-     (a = e.getElementsByTagName(t)[0]),
-     (k.async = 1),
-     (k.src = r),
-     a.parentNode.insertBefore(k, a);
-   })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+          return;
+        }
+      }
+      (k = e.createElement(t)),
+        (a = e.getElementsByTagName(t)[0]),
+        (k.async = 1),
+        (k.src = r),
+        a.parentNode.insertBefore(k, a);
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
 
-   ym(91153158, 'init', {
-    clickmap: true,
-    trackLinks: true,
-    accurateTrackBounce: true,
-    webvisor: true,
-   });
+    ym(91153158, 'init', {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+    });
   </script>
   <noscript>
-   <div>
-    <img
-     src="https://mc.yandex.ru/watch/91153158"
-     style="position: absolute; left: -9999px"
-     alt=""
-    />
-   </div>
+    <div>
+      <img src="https://mc.yandex.ru/watch/91153158" style="position: absolute; left: -9999px" alt="" />
+    </div>
   </noscript>
   <!-- /Yandex.Metrika counter -->
 
   <noscript> You need to enable JavaScript to run this app.</noscript>
   <div id="root" class="d-flex flex-column flex-root"></div>
-  <div id="splash" class="splash">
-   <span>Loading ...</span>
+
+  <div id="loading" class="loading">
+    <style id="compiled-css" type="text/css">
+      .loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+      }
+
+      .loader {
+        left: 50%;
+        margin-left: -4em;
+        font-size: 10px;
+        border: .8em solid rgba(218, 219, 223, 1);
+        border-left: .8em solid rgba(243, 42, 42, 0.877);
+        animation: spin 1.1s infinite linear;
+      }
+
+      .loader,
+      .loader:after {
+        border-radius: 50%;
+        width: 8em;
+        height: 8em;
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -4.05em;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(360deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      /* EOS */
+    </style>
+    <div class="loader"></div>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1c73e38e-792b-4130-bab8-5f1712072ec1&lang=en_US"
+    type="text/javascript"></script>
+</body>
 
-  <script>
-   !(function (c) {
-    function e(e) {
-     for (var t, r, n = e[0], o = e[1], u = e[2], i = 0, a = []; i < n.length; i++)
-      (r = n[i]), f[r] && a.push(f[r][0]), (f[r] = 0);
-     for (t in o) Object.prototype.hasOwnProperty.call(o, t) && (c[t] = o[t]);
-     for (d && d(e); a.length; ) a.shift()();
-     return p.push.apply(p, u || []), l();
-    }
-    function l() {
-     for (var e, t = 0; t < p.length; t++) {
-      for (var r = p[t], n = !0, o = 1; o < r.length; o++) {
-       var u = r[o];
-       0 !== f[u] && (n = !1);
-      }
-      n && (p.splice(t--, 1), (e = s((s.s = r[0]))));
-     }
-     return e;
-    }
-    var r = {},
-     f = {3: 0},
-     p = [];
-    function s(e) {
-     if (r[e]) return r[e].exports;
-     var t = (r[e] = {i: e, l: !1, exports: {}});
-     return c[e].call(t.exports, t, t.exports, s), (t.l = !0), t.exports;
-    }
-    (s.e = function (u) {
-     var e = [],
-      r = f[u];
-     if (0 !== r)
-      if (r) e.push(r[2]);
-      else {
-       var t = new Promise(function (e, t) {
-        r = f[u] = [e, t];
-       });
-       e.push((r[2] = t));
-       var n,
-        o = document.getElementsByTagName('head')[0],
-        i = document.createElement('script');
-       (i.charset = 'utf-8'),
-        (i.timeout = 120),
-        s.nc && i.setAttribute('nonce', s.nc),
-        (i.src = s.p + 'static/js/' + ({}[u] || u) + '.' + {1: '10e59a8b'}[u] + '.chunk.js'),
-        (n = function (e) {
-         (i.onerror = i.onload = null), clearTimeout(a);
-         var t = f[u];
-         if (0 !== t) {
-          if (t) {
-           var r = e && ('load' === e.type ? 'missing' : e.type),
-            n = e && e.target && e.target.src,
-            o = new Error('Loading chunk ' + u + ' failed.\n(' + r + ': ' + n + ')');
-           (o.type = r), (o.request = n), t[1](o);
-          }
-          f[u] = void 0;
-         }
-        });
-       var a = setTimeout(function () {
-        n({type: 'timeout', target: i});
-       }, 12e4);
-       (i.onerror = i.onload = n), o.appendChild(i);
-      }
-     return Promise.all(e);
-    }),
-     (s.m = c),
-     (s.c = r),
-     (s.d = function (e, t, r) {
-      s.o(e, t) || Object.defineProperty(e, t, {enumerable: !0, get: r});
-     }),
-     (s.r = function (e) {
-      'undefined' != typeof Symbol &&
-       Symbol.toStringTag &&
-       Object.defineProperty(e, Symbol.toStringTag, {value: 'Module'}),
-       Object.defineProperty(e, '__esModule', {value: !0});
-     }),
-     (s.t = function (t, e) {
-      if ((1 & e && (t = s(t)), 8 & e)) return t;
-      if (4 & e && 'object' == typeof t && t && t.__esModule) return t;
-      var r = Object.create(null);
-      if (
-       (s.r(r),
-       Object.defineProperty(r, 'default', {enumerable: !0, value: t}),
-       2 & e && 'string' != typeof t)
-      )
-       for (var n in t)
-        s.d(
-         r,
-         n,
-         function (e) {
-          return t[e];
-         }.bind(null, n)
-        );
-      return r;
-     }),
-     (s.n = function (e) {
-      var t =
-       e && e.__esModule
-        ? function () {
-           return e.default;
-          }
-        : function () {
-           return e;
-          };
-      return s.d(t, 'a', t), t;
-     }),
-     (s.o = function (e, t) {
-      return Object.prototype.hasOwnProperty.call(e, t);
-     }),
-     (s.p = '/'),
-     (s.oe = function (e) {
-      throw (console.error(e), e);
-     });
-    var t = (window.webpackJsonp = window.webpackJsonp || []),
-     n = t.push.bind(t);
-    (t.push = e), (t = t.slice());
-    for (var o = 0; o < t.length; o++) e(t[o]);
-    var d = n;
-    l();
-   })([]);
-  </script>
-
-  <script
-   src="https://api-maps.yandex.ru/2.1/?apikey=1c73e38e-792b-4130-bab8-5f1712072ec1&lang=en_US"
-   type="text/javascript"
-  ></script>
- </body>
 </html>

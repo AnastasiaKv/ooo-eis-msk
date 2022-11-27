@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import {Typography} from '@material-ui/core';
 import {Stack} from '@mui/system';
 import Paper from '@mui/material/Paper';
 
@@ -68,7 +68,7 @@ const itemData3 = [
  {
   id: 2,
   image: image10,
-  title: 'Ремонт электронники',
+  title: 'Ремонт электроники',
   featured: true,
  },
  {
@@ -86,12 +86,16 @@ export default function Gallery() {
    <Stack
     direction='column'
     spacing={3}
-    sx={{paddingTop: '3em', paddingBottom: '2em', transform: 'translateZ(0)'}}
+    sx={{
+     paddingTop: '3em',
+     paddingBottom: '2em',
+     transform: 'translateZ(0)',
+    }}
    >
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData1.map((service) => (
       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+       <Typography style={{color: 'white', backgroundColor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
        <Box
@@ -107,7 +111,7 @@ export default function Gallery() {
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData2.map((service) => (
       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+       <Typography style={{color: 'white', backgroundColor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
        <Box
@@ -123,7 +127,7 @@ export default function Gallery() {
     <Stack direction='row' spacing={1} sx={{paddingLeft: '1.2em'}}>
      {itemData3.map((service) => (
       <Paper key={service.id} sx={{boxShadow: 'none'}}>
-       <Typography sx={{color: 'white', bgcolor: '#2d3748', opacity: '0.8'}}>
+       <Typography style={{color: 'white', backgroundColor: '#2d3748', opacity: '0.8'}}>
         {service.title}
        </Typography>
        <Box
