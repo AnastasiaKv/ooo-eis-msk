@@ -111,6 +111,14 @@ body {
  max-width: 40em;
  min-width: 40em;
 }
+.eis-service-page {
+ font-family: 'Roboto', sans-serif;
+ display: flex;
+ color: #1a202c;
+ flex: 1 1 auto;
+ max-width: 31.2em;
+ min-width: 31.2em;
+}
 
 .ees-sidebar-left {
  flex: 0 1 auto;

@@ -1,19 +1,26 @@
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 
-export default function SEO({title, description, siteTitle}) {
+export default function SEO({title, description, siteTitle, keywords, href}) {
  return (
   <Helmet
-   htmlAttributes={{lang: 'en'}}
+   htmlAttributes={{lang: 'ru'}}
    title={title}
-   link
-   rel='canonical'
-   href='https://eis-msk.ru/'
    titleTemplate={siteTitle ? `%s | ${siteTitle}` : null}
+   link={[
+    {
+     rel: `canonical`,
+     href: href,
+    },
+   ]}
    meta={[
     {
      name: `description`,
      content: description,
+    },
+    {
+     name: `keywords`,
+     content: keywords,
     },
     {
      property: `og:title`,
