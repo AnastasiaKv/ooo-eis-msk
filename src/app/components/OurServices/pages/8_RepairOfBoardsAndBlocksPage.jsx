@@ -24,7 +24,7 @@ export default function RepairOfBoardsAndBlocksPage() {
      width: '31.2em',
     }}
    >
-    <Stack direction='row' sx={{paddingLeft: '0em', textAlign: 'left'}}>
+    <Stack mt={2} direction='row' style={{paddingLeft: '0em', textAlign: 'left'}}>
      <p
       style={{
        paddingTop: '0em',

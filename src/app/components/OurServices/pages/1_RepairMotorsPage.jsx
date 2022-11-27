@@ -63,40 +63,44 @@ export default function RepairMotorsPage() {
     description='Ремонт электродвигателя от 500 руб.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
-    <Stack direction='column' spacing={0} sx={{paddingLeft: '0.6em', paddingBottom: '2em'}}>
-     <Stack direction='row' style={{paddingTop: '0em'}}>
-      <p
-       style={{
-        paddingTop: '0em',
-        paddingLeft: '2rem',
-        width: '600px',
-        height: '211px',
-        textAlign: 'left',
-        paddingBottom: '0',
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+    <Stack
+     mt={2}
+     direction='column'
+     spacing={0}
+     style={{paddingLeft: '0.6em', paddingBottom: '2em'}}
+    >
+     <p
+      style={{
+       paddingTop: '0em',
+       paddingLeft: '2rem',
+       width: '600px',
+       height: '211px',
+       textAlign: 'left',
+       paddingBottom: '0',
+      }}
+     >
+      <Box
+       sx={{
+        color: 'transparent',
+        paddingTop: '18px',
+        width: '8em',
+        height: '7em',
+        float: 'right' /* Выравнивание по правому краю  */,
+        margin: '2em -95px 13px 0px',
        }}
-      >
-       <Box
-        sx={{
-         color: 'transparent',
-         paddingTop: '18px',
-         width: '8em',
-         height: '7em',
-         float: 'right' /* Выравнивание по правому краю  */,
-         margin: '2em -95px 13px 0px',
-        }}
-        loading='lazy'
-        component='img'
-        alt='Ремонт электродвигателя'
-        src={image1}
-       />
-       <h1 style={{paddingTop: '1em'}}>
-        <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
-         Ремонт электродвигателя от 500 руб.
-        </Typography>
-       </h1>
-      </p>
-     </Stack>
+       loading='lazy'
+       component='img'
+       alt='Ремонт электродвигателя'
+       src={image1}
+      />
+      <h1 style={{paddingTop: '1em'}}>
+       <Typography variant='h4' component='h1' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+        Ремонт электродвигателя от 500 руб.
+       </Typography>
+      </h1>
+     </p>
+
      <SimpleTable data={data} />
     </Stack>
    </Paper>

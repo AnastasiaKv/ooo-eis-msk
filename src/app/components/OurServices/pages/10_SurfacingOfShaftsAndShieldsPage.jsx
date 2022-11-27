@@ -15,11 +15,12 @@ export default function SurfacingOfShaftsAndShieldsPage() {
     description='Наплавка валов и щитов от 4000 руб.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack
+     mt={2}
      direction='column'
      spacing={0}
-     sx={{color: '#1a202c', paddingTop: '0em', paddingLeft: '1em', paddingBottom: '1em'}}
+     style={{color: '#1a202c', paddingTop: '0em', paddingLeft: '1em', paddingBottom: '1em'}}
     >
      <h1>
       <Typography

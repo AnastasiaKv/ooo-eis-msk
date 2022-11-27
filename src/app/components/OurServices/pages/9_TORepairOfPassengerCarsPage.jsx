@@ -15,11 +15,12 @@ export default function TORepairOfPassengerCarsPage() {
     description='Наша фирма занимается обслуживанием всех видов ватного электрооборудования.'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
     <Stack
+     mt={2}
      direction='column'
      spacing={0}
-     sx={{paddingLeft: '0.5em', paddingTop: '0em', paddingBottom: '1em'}}
+     style={{paddingLeft: '0.5em', paddingTop: '0em', paddingBottom: '1em'}}
     >
      <h1>
       <Typography

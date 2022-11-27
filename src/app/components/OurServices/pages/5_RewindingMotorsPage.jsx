@@ -16,8 +16,8 @@ export default function RewindingMotorsPage() {
     description=' Разборка и очистка,  Расчет и подбор материалов для обмотки, Устранение дефектов ротора и/или статора с обработкой пазов,  Намотка катушек'
     name='ООО ЭИС'
    />
-   <Paper elevation={4} sx={{bgcolor: '#f7f7f7', width: '31.2em'}}>
-    <Stack mt={2} direction='column' spacing={0} sx={{paddingLeft: '2em', paddingBottom: '2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+    <Stack mt={2} direction='column' spacing={0} style={{paddingLeft: '2em', paddingBottom: '2em'}}>
      <p
       style={{
        paddingTop: '0em',
@@ -47,66 +47,52 @@ export default function RewindingMotorsPage() {
       </h1>
      </p>
      <br />
-     <ul style={{color: '#1a202c', textAlign: 'left', listStyle: 'none'}}>
-      <p style={{paddingBottom: '1em'}}>
-       <span style={{fontSize: 19, paddingRight: '12em', paddingBottom: '1em'}}>
-        <b>При выходе из строя электрообмоток производятся следующие работы:</b>
-       </span>
-      </p>
 
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
-      >
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>Разборка и очистка</span>
-      </div>
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
-      >
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>Расчет и подбор материалов для обмотки</span>
-      </div>
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
-      >
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>
-        Устранение дефектов ротора и/или статора с обработкой пазов
-       </span>
-      </div>
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
-      >
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>Намотка катушек</span>
-      </div>
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
-      >
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>
-        Подготовка изоляции с последующей установкой обмотки
-       </span>
-      </div>
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
-      >
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>Пропитка токоведущих элементов</span>
-      </div>
-      <div
-       style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}
-      >
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>
-        Просушка изоляции и тестирование обмоток
-       </span>
-      </div>
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left'}}>
-       <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
-       <span style={{fontSize: '16px', marginLeft: 0}}>Сборка и испытание электродвигателя</span>
-      </div>
-     </ul>
+     <p style={{paddingBottom: 10}}>
+      <span style={{fontSize: 20}}>
+       <b>При выходе из строя электрообмоток производятся следующие работы:</b>
+      </span>
+     </p>
+
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>Разборка и очистка</span>
+     </div>
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>Расчет и подбор материалов для обмотки</span>
+     </div>
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>
+       Устранение дефектов ротора и/или статора с обработкой пазов
+      </span>
+     </div>
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>Намотка катушек</span>
+     </div>
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>
+       Подготовка изоляции с последующей установкой обмотки
+      </span>
+     </div>
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>Пропитка токоведущих элементов</span>
+     </div>
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left', paddingBottom: 7}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>
+       Просушка изоляции и тестирование обмоток
+      </span>
+     </div>
+     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left'}}>
+      <BoltSvg style={{width: '25px', height: '26px', color: '#ffcf40'}} />
+      <span style={{fontSize: '16px', marginLeft: 0}}>Сборка и испытание электродвигателя</span>
+     </div>
+
      <CustomizedTables />
     </Stack>
    </Paper>
