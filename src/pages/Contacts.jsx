@@ -131,7 +131,7 @@ export default function Contacts() {
         <Stack
          direction='row'
          spacing={0}
-         sx={{fontFamily: 'Roboto', color: '#292929', marginLeft: '7em', paddingRight: '7em'}}
+         style={{fontFamily: 'Roboto', color: '#292929', marginLeft: '7em', paddingRight: '7em'}}
         >
          <Formik
           initialValues={{
@@ -167,11 +167,26 @@ export default function Contacts() {
           <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
            <Form ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
-             <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-             <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-             <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
+             <MyTextInput labelText='Имя' label='Имя' name='name' type='text' placeholder='' />
+             <MyTextInput
+              labelText='E-mail'
+              label='E-mail'
+              name='email'
+              type='email'
+              placeholder=''
+             />
+             <MyTextInput
+              labelText='Телефон'
+              label='Телефон'
+              name='phone'
+              type='text'
+              placeholder=''
+             />
 
-             <button style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}} type='submit'>
+             <button
+              style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
+              type='submit'
+             >
               Отправить
              </button>
             </Stack>
