@@ -44,8 +44,7 @@ export default function Contacts() {
   <main className='ees-content-card'>
    <SEO
     title='Контакты'
-    description='В случае, если Вы хотите обсудить какие-либо вопросы, 
-    свяжитесь с нами: по телефону: +7 (495) 135 82 88'
+    description='г. Москва ОГРН 1127746704986, ИНН 7701969621, КПП 770801001, ОКПО 11448465'
     siteTitle='ООО "ЭИС"'
     keywords='эис, эис мск, ооо эис, ЭИС, Электронные Инженерные Системы'
     href='https://eis-msk.ru/contacts'
