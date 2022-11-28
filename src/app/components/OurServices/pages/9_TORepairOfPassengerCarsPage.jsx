@@ -37,14 +37,15 @@ export default function TORepairOfPassengerCarsPage() {
      </h1>
      <br />
      <br />
-     <Stack direction='row-reverse' sx={{paddingRight: '3em'}}>
+
+     <Stack direction='row-reverse'>
       <Box
        sx={{
         borderRadius: '7px',
-        height: '11em',
-        width: '38em',
+        height: '12em',
+        width: '20em',
         float: 'right' /* Выравнивание по правому краю  */,
-        margin: '-7px -22px 29px 85px' /* Отступы вокруг картинки */,
+        margin: '-8px 11px 25px -45px' /* Отступы вокруг картинки */,
        }}
        loading='lazy'
        component='img'
@@ -52,17 +53,16 @@ export default function TORepairOfPassengerCarsPage() {
        src={image9}
       />
 
-      <Stack component='ul' spacing={3} style={{textAlign: 'left'}}>
+      <Stack
+       component='ul'
+       spacing={2}
+       style={{margin: '-7px'}}
+       className={isMobileSafari ? 'safari-medium-large' : 'medium'}
+      >
        <Typography
-        variant='body2'
-        component='p'
-        style={{
-         fontFamily: 'Roboto',
-         paddingLeft: '3px',
-         fontSize: '16px',
-         marginLeft: '11px',
-         textAlign: '-webkit-auto',
-        }}
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium3'}
        >
         <GppGoodSvg
          style={{
@@ -74,17 +74,10 @@ export default function TORepairOfPassengerCarsPage() {
         />
         Наша фирма занимается обслуживанием всех видов ватного электрооборудования.
        </Typography>
-
        <Typography
-        variant='body2'
-        component='p'
-        style={{
-         fontFamily: 'Roboto',
-         paddingLeft: '3px',
-         fontSize: '16px',
-         marginLeft: '11px',
-         textAlign: '-webkit-auto',
-        }}
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
        >
         <GppGoodSvg
          style={{
@@ -96,17 +89,10 @@ export default function TORepairOfPassengerCarsPage() {
         />
         Являемся подрядчиками ООО РЖД и ООО ФПК.
        </Typography>
-
        <Typography
-        variant='body2'
-        component='p'
-        style={{
-         fontFamily: 'Roboto',
-         paddingLeft: '3px',
-         fontSize: '16px',
-         marginLeft: '11px',
-         textAlign: '-webkit-auto',
-        }}
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
        >
         <GppGoodSvg
          style={{

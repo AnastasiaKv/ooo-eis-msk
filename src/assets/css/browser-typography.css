@@ -65,6 +65,15 @@
  padding-bottom: 0.2em;
 }
 
+.safari-medium-large {
+ font-family: Roboto, sans-serif;
+ text-align: left;
+ margin-left: 3em;
+ font-size: 22px;
+ font-weight: 400;
+ padding-bottom: 0.2em;
+}
+
 .subtitle3 {
  font-family: Roboto, sans-serif;
  text-align: -webkit-auto;
@@ -96,7 +105,7 @@
  margin-right: 1em;
  font-size: 16px;
  font-weight: 400;
- padding-bottom: 0.1em;
+ padding-bottom: 0.3em;
 }
 
 .medium2 {
@@ -107,4 +116,15 @@
  font-weight: 400;
  padding-bottom: 0.1em;
  text-align: left;
+}
+
+.medium3 {
+ font-family: Roboto, sans-serif;
+ text-align: -webkit-auto;
+ margin: 1em;
+ margin-right: 1em;
+ font-size: 16px;
+ font-weight: 400;
+ padding-bottom: 0.3em;
+ padding-top: 1.5em;
 }

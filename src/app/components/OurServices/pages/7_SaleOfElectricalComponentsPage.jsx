@@ -60,12 +60,8 @@ export default function SaleOfElectricalComponentsPage() {
        />
       </Stack>
 
-      <Stack
-       component='ul'
-       spacing={2}
-       sx={{fontFamily: 'Roboto', paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}
-      >
-       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+      <Stack component='ul' spacing={2} style={{paddingLeft: '10px', textAlign: 'left'}}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium-large' : 'medium'}>
         <CurrencyRubleSvg
          style={{
           margin: '0px 10px -4px 0em',
@@ -77,7 +73,7 @@ export default function SaleOfElectricalComponentsPage() {
         Осуществляем розничную продажу электрокомпонетов по очень выгодным ценам!
        </Typography>
 
-       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium-large' : 'medium'}>
         <CurrencyRubleSvg
          style={{
           margin: '0px 10px -4px 0em',
@@ -89,7 +85,7 @@ export default function SaleOfElectricalComponentsPage() {
         Перечень деталей в наличии.
        </Typography>
 
-       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium-large' : 'medium'}>
         <CurrencyRubleSvg
          style={{
           margin: '0px 10px -4px 0em',
