@@ -35,152 +35,116 @@ export default function SurfacingOfShaftsAndShieldsPage() {
        Наплавка валов и щитов от 4000 руб.
       </Typography>
      </h1>
-
-     <h6>
-      <Typography
-       variant='h6'
-       component='p'
-       style={{
-        textAlign: 'left',
-        color: '#1a202c',
-        paddingTop: '0em',
-        paddingRight: '15em',
-        paddingBottom: '15px',
-       }}
-      >
-       Примеры наших работ:
-      </Typography>
-     </h6>
-     <Stack
-      direction='row-reverse'
-      sx={{
-       display: 'flex',
-       textAlign: 'justify',
-       alignItems: 'center',
-       maxWidth: '800px',
-       fontSize: 15,
-       color: '#292929',
-      }}
+     <br />
+     <Typography
+      variant=''
+      style={{marginBottom: '20px'}}
+      className={isMobileSafari ? 'safari-subtitle1' : 'subtitle1'}
      >
-      <Stack direction='row' sx={{paddingRight: '5em'}}>
-       <Box
-        sx={{
-         borderRadius: '7px',
-         height: '19em',
-         width: '27em',
-         float: 'right' /* Выравнивание по правому краю  */,
-         margin: '-49px -4px 0px 2px' /* Отступы вокруг картинки */,
-        }}
-        loading='lazy'
-        component='img'
-        alt='Наплавка валов и щитов'
-        src={image10}
-       />
-      </Stack>
-      <ul>
-       <Stack
-        sx={{
-         marginRight: '2em',
-         color: '#1a202c',
-        }}
+      Примеры наших работ:
+     </Typography>
+
+     <Stack direction='row-reverse'>
+      <Box
+       sx={{
+        borderRadius: '7px',
+        height: '12em',
+        width: '20em',
+        float: 'right' /* Выравнивание по правому краю  */,
+        margin: '-4px 11px 25px -45px' /* Отступы вокруг картинки */,
+       }}
+       loading='lazy'
+       component='img'
+       alt='Наплавка валов и щитов'
+       src={image10}
+      />
+
+      <Stack
+       component='ul'
+       spacing={2}
+       style={{margin: '-7px'}}
+       className={isMobileSafari ? 'safari-medium-large' : 'medium'}
+      >
+       <Typography
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
        >
-        <Stack direction='row' sx={{paddingTop: '0.6em', paddingBottom: '2em'}}>
-         <Handyman
-          fontSize='medium'
-          color='action'
-          style={{
-           margin: '3px 0px 0px 0px',
-           height: '19px',
-          }}
-         />
-         <Typography
-          variant='body2'
-          component='p'
-          style={{
-           fontFamily: 'Roboto',
-           paddingLeft: '3px',
-           fontSize: '16px',
-           marginLeft: '11px',
-          }}
-         >
-          Восстановление вала
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
-         <Handyman
-          fontSize='medium'
-          color='action'
-          style={{
-           margin: '3px 0px 0px 0px',
-           height: '19px',
-          }}
-         />
-         <Typography
-          variant='body2'
-          component='p'
-          style={{paddingLeft: '3px', fontSize: '16px', marginLeft: '11px'}}
-         >
-          Восстановление шлицов
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
-         <Handyman
-          fontSize='medium'
-          color='action'
-          style={{
-           margin: '3px 0px 0px 0px',
-           height: '19px',
-          }}
-         />
-         <Typography
-          variant='body2'
-          component='p'
-          style={{
-           fontSize: '16px',
-           paddingLeft: '3px',
-           marginLeft: '11px',
-           textAlign: '-webkit-auto',
-          }}
-         >
-          Восстановление шпоночного паза
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
-         <Handyman
-          fontSize='medium'
-          color='action'
-          style={{
-           margin: '3px 0px 0px 0px',
-           height: '19px',
-          }}
-         />
-         <Typography
-          variant='body2'
-          component='p'
-          style={{paddingLeft: '3px', fontSize: '16px', marginLeft: '11px', height: '19px'}}
-         >
-          Наплавка валов
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '2em'}}>
-         <Handyman
-          fontSize='medium'
-          color='action'
-          style={{
-           margin: '3px 0px 0px 0px',
-           height: '19px',
-          }}
-         />
-         <Typography
-          variant='body2'
-          component='p'
-          style={{paddingLeft: '3px', fontSize: '16px', marginLeft: '11px', height: '19px'}}
-         >
-          Ремонт вала
-         </Typography>
-        </Stack>
-       </Stack>
-      </ul>
+        <Handyman
+         fontSize='medium'
+         color='action'
+         style={{
+          margin: '0px 10px -4px 0em',
+          height: '19px',
+         }}
+        />
+        Восстановление вала
+       </Typography>
+
+       <Typography
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
+       >
+        <Handyman
+         fontSize='medium'
+         color='action'
+         style={{
+          margin: '0px 10px -4px 0em',
+          height: '19px',
+         }}
+        />
+        Восстановление шлицов
+       </Typography>
+
+       <Typography
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
+       >
+        <Handyman
+         fontSize='medium'
+         color='action'
+         style={{
+          margin: '0px 10px -4px 0em',
+          height: '19px',
+         }}
+        />
+        Восстановление шпоночного паза
+       </Typography>
+
+       <Typography
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
+       >
+        <Handyman
+         fontSize='medium'
+         color='action'
+         style={{
+          margin: '0px 10px -4px 0em',
+          height: '19px',
+         }}
+        />
+        Наплавка валов
+       </Typography>
+
+       <Typography
+        variant=''
+        style={{marginRight: '53px'}}
+        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
+       >
+        <Handyman
+         fontSize='medium'
+         color='action'
+         style={{
+          margin: '0px 10px -4px 0em',
+          height: '19px',
+         }}
+        />
+        Ремонт вала
+       </Typography>
+      </Stack>
      </Stack>
     </Stack>
    </Paper>
