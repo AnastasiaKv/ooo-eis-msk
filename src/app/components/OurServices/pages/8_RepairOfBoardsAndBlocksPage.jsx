@@ -62,14 +62,9 @@ export default function RepairOfBoardsAndBlocksPage() {
       </h1>
      </p>
 
-     <Typography
-      variant=''
-      style={{textAlign: 'left', paddingBottom: '0.5em'}}
-      className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}
-     >
+     <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
       Список ремонтируемой электроники:
      </Typography>
-
      <Stack
       component='ul'
       spacing={1}
