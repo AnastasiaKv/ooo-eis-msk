@@ -56,60 +56,60 @@ export default function RewindingMotorsPage() {
         </Typography>
        </h1>
       </p>
-      <Typography className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
+      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
        При выходе из строя электрообмоток производятся следующие работы:
       </Typography>
       <Stack component='ul' spacing={1} style={{textAlign: 'left'}}>
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
         Разборка и очистка
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
         Расчет и подбор материалов для обмотки
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
         Устранение дефектов ротора и/или статора с обработкой пазов
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
         Намотка катушек
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
         Подготовка изоляции с последующей установкой обмотки
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
         Пропитка токоведущих элементов
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
         Просушка изоляции и тестирование обмоток
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <BoltSvg
          style={{margin: '0px 10px -4px 0em', width: '25px', height: '26px', color: '#ffcf40'}}
         />
@@ -117,7 +117,6 @@ export default function RewindingMotorsPage() {
        </Typography>
       </Stack>
       <br />
-
       <CustomizedTables />
      </Stack>
     </Paper>

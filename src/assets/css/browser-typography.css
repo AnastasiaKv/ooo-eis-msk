@@ -27,14 +27,30 @@
  font-family: Roboto, sans-serif;
  text-align: -webkit-auto;
  margin-right: 0em;
- font-size: 26px;
+ font-size: 30px;
  font-weight: 500;
  color: #1a202c;
+}
+.safari-subtitle2 {
+ font-family: Roboto, sans-serif;
+ margin-right: 0em;
+ font-size: 30px;
+ font-weight: 500;
+ color: #1a202c;
+ text-align: center;
 }
 .safari-medium {
  font-family: Roboto, sans-serif;
  text-align: -webkit-auto;
  margin-right: 0em;
+ font-size: 12px;
+ font-weight: 400;
+ padding-bottom: 0.2em;
+}
+.safari-medium2 {
+ font-family: Roboto, sans-serif;
+ text-align: left;
+ margin-left: 3em;
  font-size: 12px;
  font-weight: 400;
  padding-bottom: 0.2em;
@@ -48,11 +64,31 @@
  font-weight: 500;
  color: #1a202c;
 }
+.subtitle2 {
+ font-family: Roboto, sans-serif;
+ margin-right: 0em;
+ font-size: 21px;
+ font-weight: 500;
+ color: #1a202c;
+ text-align: center;
+}
+
 .medium {
  font-family: Roboto, sans-serif;
  text-align: -webkit-auto;
- margin-right: 0em;
+ margin: 1em;
+ margin-right: 1em;
  font-size: 16px;
  font-weight: 400;
  padding-bottom: 0.1em;
+}
+
+.medium2 {
+ font-family: Roboto, sans-serif;
+ margin: 1em;
+ margin-left: 2em;
+ font-size: 16px;
+ font-weight: 400;
+ padding-bottom: 0.1em;
+ text-align: left;
 }

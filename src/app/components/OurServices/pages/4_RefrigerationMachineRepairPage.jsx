@@ -50,36 +50,36 @@ export default function RefrigerationMachineRepairPage() {
        </h1>
       </p>
 
-      <Typography className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
+      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
        Выполняем следующие технологические операции:
       </Typography>
       <Stack component='ul' spacing={1} style={{textAlign: 'left'}}>
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Тщательная диагностика и дефектовка холодильного компрессора
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Оценка уровня изношенности
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Перемотка статора фреоностойким проводом высочайшего качества
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Вакуумная пропитка
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Сборка холодильного компрессора
        </Typography>
 
-       <Typography className={isMobileSafari ? 'safari-medium' : 'medium'}>
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
         <DoneSvg color='primary' style={{margin: '0px 10px -4px 0em', height: '18px'}} />
         Испытание компрессора под максимальной нагрузкой
        </Typography>

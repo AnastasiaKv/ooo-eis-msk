@@ -3,11 +3,12 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import {Typography} from '@material-ui/core';
 import image6 from '../../../../assets/img/services/6.png';
-import ReportProblemRoundedIcon from '@mui/icons-material/ReportProblemRounded';
+import ReportProblemSvg from '@mui/icons-material/ReportProblemRounded';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
 import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
+import {textAlign} from '@mui/system';
 
 export default function RepairOfElectricHeatersPage() {
  return (
@@ -36,11 +37,10 @@ export default function RepairOfElectricHeatersPage() {
      >
       <Box
        sx={{
-        paddingTop: '18px',
         width: '8em',
-        height: '7em',
+        height: '6em',
         float: 'right' /* Выравнивание по правому краю  */,
-        margin: '1em -83px 13px 0px',
+        margin: '-1em -112px 13px -29px',
        }}
        loading='lazy'
        component='img'
@@ -48,123 +48,85 @@ export default function RepairOfElectricHeatersPage() {
        src={image6}
       />
       <h1>
-       <Typography variant='h4' component='h4' style={{fontFamily: 'Furore', fontSize: '28px'}}>
+       <Typography
+        variant='h4'
+        component='h4'
+        style={{marginLeft: '1em', fontFamily: 'Furore', fontSize: '28px'}}
+       >
         Ремонт электронагревателей от 500 руб.
        </Typography>
       </h1>
      </p>
     </Stack>
-    <Stack sx={{paddingLeft: '2em', marginRight: '2em'}}>
-     <h6>
-      <Typography
-       variant='h6'
-       style={{textAlign: 'center', paddingRight: '20px', paddingBottom: '1em'}}
-      >
-       Виды поломок
-      </Typography>
-     </h6>
-     <Stack direction='column' spacing={0} alignItems='flex-start'>
-      <Typography
-       variant='caption'
-       component='p'
-       style={{textAlign: 'left', fontSize: '17px', color: '#1a202c'}}
-      >
-       Несмотря на относительную простоту конструкции, ремонт электрических
-       <br /> водонагревателей может потребоваться в нескольких случаях:
-      </Typography>
-      <ul>
-       <Stack sx={{paddingLeft: '1.5em', marginRight: '2em'}}>
-        <Stack direction='row' spacing={3} sx={{paddingTop: '1.9em'}}>
-         <ReportProblemRoundedIcon
-          style={{
-           margin: '0px 0px 0px 0px',
-           width: '25px',
-           height: '26px',
-           color: '#f44336',
-          }}
-         />
-         <Typography
-          variant='caption'
-          component='span'
-          style={{
-           paddingLeft: '10px',
-           fontSize: '16px',
-           marginLeft: 0,
-          }}
-         >
-          Выход из строя нагревательного элемента
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingTop: '10px'}}>
-         <ReportProblemRoundedIcon
-          style={{
-           margin: '0px 0px 0px 0px',
-           width: '25px',
-           height: '26px',
-           color: '#f44336',
-          }}
-         />
-         <Typography
-          variant='caption'
-          component='span'
-          style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-         >
-          Поломка терморегулятора
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingTop: '10px'}}>
-         <ReportProblemRoundedIcon
-          style={{
-           margin: '0px 0px 0px 0px',
-           width: '25px',
-           height: '26px',
-           color: '#f44336',
-          }}
-         />
-         <Typography
-          variant='caption'
-          component='span'
-          style={{textAlign: '-webkit-auto', paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-         >
-          Ухудшение эксплуатационных параметров, связанное с образованием накипи
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingTop: '10px', paddingBottom: '1.5em'}}>
-         <ReportProblemRoundedIcon
-          style={{
-           margin: '0px 0px 0px 0px',
-           width: '25px',
-           height: '26px',
-           color: '#f44336',
-          }}
-         />
-         <Typography
-          variant='caption'
-          component='span'
-          style={{paddingLeft: '10px', fontSize: '16px', marginLeft: 0}}
-         >
-          Возникновение коррозионных процессов.
-         </Typography>
-        </Stack>
-       </Stack>
-      </ul>
-
-      <Typography
-       variant='caption'
-       component='p'
+    <Typography variant='' className={isMobileSafari ? 'safari-subtitle2' : 'subtitle2'}>
+     Виды поломок
+    </Typography>
+    <div className={isMobileSafari ? 'safari-medium2' : 'medium2'}>
+     <Typography variant=''>
+      Несмотря на относительную простоту конструкции, ремонт электрических
+      <br /> водонагревателей может потребоваться в нескольких случаях:
+     </Typography>
+    </div>
+    {isMobileSafari ? <br /> : <></>}
+    <Stack component='ul' spacing={isMobileSafari ? 1 : 1} style={{marginLeft: '2em'}}>
+     <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+      <ReportProblemSvg
        style={{
-        fontStyle: 'oblique',
-        textAlign: 'justify',
-        fontSize: '16px',
-        color: '#1a202c',
+        margin: '0px 10px -4px 0em',
+        width: '25px',
+        height: '26px',
+        color: '#f44336',
        }}
-      >
+      />
+      Выход из строя нагревательного элемента
+     </Typography>
+
+     <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+      <ReportProblemSvg
+       style={{
+        margin: '0px 10px -4px 0em',
+        width: '25px',
+        height: '26px',
+        color: '#f44336',
+       }}
+      />
+      Поломка терморегулятора
+     </Typography>
+
+     <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+      <ReportProblemSvg
+       style={{
+        margin: '0px 10px -4px 0em',
+        width: '25px',
+        height: '26px',
+        color: '#f44336',
+       }}
+      />
+      Ухудшение эксплуатационных параметров, связанное с образованием накипи
+     </Typography>
+
+     <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+      <ReportProblemSvg
+       style={{
+        margin: '0px 10px -4px 0em',
+        width: '25px',
+        height: '26px',
+        color: '#f44336',
+       }}
+      />
+      Возникновение коррозионных процессов.
+     </Typography>
+    </Stack>
+    <div className={isMobileSafari ? 'safari-medium2' : 'medium2'}>
+     <Typography variant=''>
+      <i>
        *Наши специалисты устранят любые поломки электрических водонагревателей,
        <br />
        ремонт которых оправдан из экономических соображений.
-      </Typography>
-     </Stack>
-    </Stack>
+      </i>
+     </Typography>
+    </div>{' '}
+    <br />
    </Paper>
   </form>
  );
