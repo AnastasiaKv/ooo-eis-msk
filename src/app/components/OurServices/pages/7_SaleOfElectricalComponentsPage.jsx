@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import {Typography} from '@material-ui/core';
-import CurrencyRubleRoundedIcon from '@mui/icons-material/CurrencyRubleRounded';
+import CurrencyRubleSvg from '@mui/icons-material/CurrencyRubleRounded';
 import image7 from '../../../../assets/img/services/7.png';
 import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
@@ -59,78 +59,48 @@ export default function SaleOfElectricalComponentsPage() {
         src={image7}
        />
       </Stack>
-      <ul>
-       <Stack sx={{fontFamily: 'Roboto', paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}>
-        <Stack direction='row' spacing={3} sx={{paddingTop: '1em', paddingBottom: '1.6em'}}>
-         <CurrencyRubleRoundedIcon
-          style={{
-           margin: '5px 0px 0px 0px',
-           width: '25px',
-           height: '22px',
-           color: '#f12b21',
-          }}
-         />
-         <Typography
-          variant='caption'
-          component='span'
-          style={{
-           fontFamily: 'Roboto',
-           paddingLeft: '3px',
-           fontSize: '16px',
-           marginLeft: '11px',
-           textAlign: '-webkit-auto',
-          }}
-         >
-          Осуществляем розничную продажу электрокомпонетов по очень выгодным ценам!
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{paddingBottom: '1.6em'}}>
-         <CurrencyRubleRoundedIcon
-          style={{
-           margin: '5px 0px 0px 0px',
-           width: '25px',
-           height: '22px',
-           color: '#f44336',
-          }}
-         />
-         <Typography
-          variant='caption'
-          component='span'
-          style={{
-           fontFamily: 'Roboto',
-           paddingLeft: '3px',
-           fontSize: '16px',
-           marginLeft: '11px',
-           textAlign: '-webkit-auto',
-          }}
-         >
-          Перечень деталей в наличии.
-         </Typography>
-        </Stack>
-        <Stack direction='row' spacing={3} sx={{}}>
-         <CurrencyRubleRoundedIcon
-          style={{
-           margin: '5px 0px 0px 0px',
-           width: '25px',
-           height: '22px',
-           color: '#f44336',
-          }}
-         />
-         <Typography
-          variant='caption'
-          component='span'
-          style={{
-           paddingLeft: '3px',
-           fontSize: '16px',
-           marginLeft: '11px',
-           textAlign: '-webkit-auto',
-          }}
-         >
-          Проффесиональная консультация по подбору.
-         </Typography>
-        </Stack>
-       </Stack>
-      </ul>
+
+      <Stack
+       component='ul'
+       spacing={2}
+       sx={{fontFamily: 'Roboto', paddingLeft: '1em', marginRight: '2em', color: '#1a202c'}}
+      >
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+        <CurrencyRubleSvg
+         style={{
+          margin: '0px 10px -4px 0em',
+          width: '25px',
+          height: '22px',
+          color: '#f12b21',
+         }}
+        />
+        Осуществляем розничную продажу электрокомпонетов по очень выгодным ценам!
+       </Typography>
+
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+        <CurrencyRubleSvg
+         style={{
+          margin: '0px 10px -4px 0em',
+          width: '25px',
+          height: '22px',
+          color: '#f44336',
+         }}
+        />
+        Перечень деталей в наличии.
+       </Typography>
+
+       <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
+        <CurrencyRubleSvg
+         style={{
+          margin: '0px 10px -4px 0em',
+          width: '25px',
+          height: '22px',
+          color: '#f44336',
+         }}
+        />
+        Проффесиональная консультация по подбору.
+       </Typography>
+      </Stack>
      </Stack>
     </Stack>
    </Paper>
