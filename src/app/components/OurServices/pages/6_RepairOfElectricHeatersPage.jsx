@@ -125,7 +125,7 @@ export default function RepairOfElectricHeatersPage() {
        ремонт которых оправдан из экономических соображений.
       </i>
      </Typography>
-    </div>{' '}
+    </div>
     <br />
    </Paper>
   </form>
