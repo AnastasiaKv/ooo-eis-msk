@@ -458,7 +458,7 @@ function Page9({onShow}) {
  const expectedUrl = '/services/maintenance-and-repair-of-passenger-cars-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to='/services/maintenance-and-repair-of-passenger-cars-page'>
+  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
