@@ -4,7 +4,7 @@ import SEO from '../app/components/SEO';
 
 export default function Main() {
  return (
-  <div className='ees-content-card'>
+  <main className='ees-content'>
    <SEO
     title='Главная'
     description='Качество нашего ремонта проверено годами непрерывной работы, 
@@ -14,6 +14,6 @@ export default function Main() {
     href='https://eis-msk.ru/'
    />
    <Services />
-  </div>
+  </main>
  );
 }

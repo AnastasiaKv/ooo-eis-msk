@@ -7,6 +7,7 @@ export default function SEO({title, description, siteTitle, keywords, href}) {
    htmlAttributes={{lang: 'ru'}}
    title={title}
    titleTemplate={siteTitle ? `%s | ${siteTitle}` : null}
+   defaultTitle={title}
    link={[
     {
      rel: `canonical`,
@@ -35,7 +36,6 @@ export default function SEO({title, description, siteTitle, keywords, href}) {
      content: `website`,
     },
    ]}
-  
   />
  );
 }

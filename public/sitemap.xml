@@ -1,28 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-<loc>https://eis-msk.ru/</loc>
-<loc>https://eis-msk.ru/about</loc>
-<loc>https://eis-msk.ru/prices</loc>
-<loc>https://eis-msk.ru/gallery</loc>
-<loc>https://eis-msk.ru/contacts</loc>
-<loc>https://eis-msk.ru/services/repair-motors-page</loc>
-<loc>https://eis-msk.ru/services/generator-repair-page</loc>
-<loc>https://eis-msk.ru/services/repair-transformers-page</loc>
-<loc>https://eis-msk.ru/services/refrigeration-machine-repair-page</loc>
-<loc>https://eis-msk.ru/services/rewinding-motors-page</loc>
-<loc>https://eis-msk.ru/services/repair-of-electric-heaters-page</loc>
-<loc>https://eis-msk.ru/services/sale-of-electrical-components-page</loc>
-<loc>https://eis-msk.ru/services/repair-of-boards-and-blocks-page</loc>
-<loc>https://eis-msk.ru/services/maintenance-and-repair-of-passenger-cars-page</loc>
-<loc>https://eis-msk.ru/services/surfacing-of-shafts-and-shields-page</loc>
-  <lastmod>2022-11-09T04:14:20+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://eis-msk.ru/200.html</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/repair-transformers-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/gallery/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/rewinding-motors-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/prices/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/repair-motors-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/maintenance-and-repair-of-passenger-cars-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/repair-of-electric-heaters-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/about/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/repair-of-boards-and-blocks-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/generator-repair-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/contacts/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/sale-of-electrical-components-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/refrigeration-machine-repair-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eis-msk.ru/services/surfacing-of-shafts-and-shields-page/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
