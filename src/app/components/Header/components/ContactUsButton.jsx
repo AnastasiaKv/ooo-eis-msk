@@ -24,6 +24,7 @@ import MyTextInput from './MyTextInput';
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
+import SubmitResultDialog from './SubmitResultDialog';
 
 const styles = {};
 
@@ -36,6 +37,10 @@ const theme = createTheme({
  },
 });
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction='up' ref={ref} {...props} />;
+ });
+
 function Contact(props) {
  emailjs.init('GaqOI812E6KDw78sT');
 
@@ -44,7 +49,6 @@ function Contact(props) {
 
  const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
  const [emailjsResponse, setEmailjsResponse] = useState({});
- const [isShowErrorDetails, setShowErrorDetails] = useState(false);
 
  const [isOpenSubmitResultForm, setOpenSubmitResultDialog] = useState(false);
 
@@ -116,8 +120,8 @@ function Contact(props) {
      sx={{width: '1000px'}}
      open={isOpenContactUsDialog}
      onClose={handleCloseContactUsDialog}
+     TransitionComponent={Transition}
      aria-labelledby='form-dialog-title'
-     Dialog
     >
      <DialogTitle style={{paddingLeft: '1em'}} id='form-dialog-title'>
       Оставьте свои данные - и мы Вам перезвоним!
@@ -196,7 +200,7 @@ function Contact(props) {
                setEmailjsResponse({
                 status: 412,
                 text:
-                 "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <orozov@bk.ru>: Relay access denied",
+                 "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <recipient@mailserver.ru>: Relay access denied",
                });
                setOpenSubmitResultDialog(true);
                setOpenContactUsDialog(false);
@@ -215,79 +219,11 @@ function Contact(props) {
      </ThemeProvider>
     </Dialog>
 
-    <Dialog
-     sx={{width: '1000px'}}
-     open={isOpenSubmitResultForm}
-     onClose={handleCloseSubmitResultDialog}
-     aria-labelledby='form-dialog-title'
-    >
-     <DialogTitle>
-      {isSubmittedSuccessfully ? (
-        <>
-         'Ваша заявка зарегистрирована.'
-       </>
-      ) : (
-       <Alert variant='filled' severity='error' sx={{textAlign: 'left', fontSize: '1.1rem'}}>
-        <p style={{fontWeight: 400, marginTop: '-0.15em'}}>
-         Не удалось отправить заявку на обратный звонок в связи с технической проблемой.
-        </p>
-       </Alert>
-      )}
-     </DialogTitle>
-     <DialogContent>
-      <DialogContentText>
-       {isSubmittedSuccessfully ? (
-        <div>
-         Спасибо за Ваше обращение!
-         <br />
-         Мы позвоним Вам в ближайшее время.
-        </div>
-       ) : (
-        <div style={{textAlign: 'left', fontSize: '1.6em'}}>
-         <p>
-          Пожалуйста, попробуйте ещё раз позже или свяжитесь с нами другим способом.
-          <br />
-          <br />
-         </p>
-         <FormControlLabel
-          sx={{marginLeft: '-43px', fontSize: '1.1rem'}}
-          control={
-           <Switch
-            sx={{marginRight: '30px'}}
-            checked={isShowErrorDetails}
-            onChange={() => {
-             setShowErrorDetails((prev) => !prev);
-            }}
-           />
-          }
-          label='Подробности ошибки'
-         />
-         <br />
-         <Paper
-          sx={{fontSize: '0.3rem', fontFamily: 'Roboto', lineHeight: 1.5}}
-          elevation={0}
-          hidden={!isShowErrorDetails}
-         >
-          <div>
-           Код ответа: {emailjsResponse.status}
-           <br />
-           Ошибка: {emailjsResponse.text}
-          </div>
-         </Paper>
-        </div>
-       )}
-      </DialogContentText>
-      <DialogActions>
-       <Button
-        //sx={{all:{left: '0'}}}
-        className='outline'
-        onClick={() => setOpenSubmitResultDialog(false)}
-       >
-        Вернуться
-       </Button>
-      </DialogActions>
-     </DialogContent>
-    </Dialog>
+    <SubmitResultDialog
+     isOpenSubmitResultForm = {isOpenSubmitResultForm}
+     handleCloseSubmitResultDialog = {handleCloseSubmitResultDialog}
+     emailjsResponse = {emailjsResponse}
+    />
    </div>
   </React.Fragment>
  );
