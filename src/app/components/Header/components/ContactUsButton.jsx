@@ -20,7 +20,6 @@ import {Stack} from '@mui/system';
 import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import MyTextInput from './MyTextInput';
-
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
@@ -87,7 +86,7 @@ function Contact(props) {
   );
  };
 
- var enableDebugButtons = true;
+ var enableDebugButtons = useMatch("/debug");
 
  return (
   <React.Fragment>
@@ -163,11 +162,8 @@ function Contact(props) {
             Отправить
            </Button>
 
-           {
-            /*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
-            (enableDebugButtons = true)
-           }
-           {enableDebugButtons && (
+           {/*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
+           enableDebugButtons && (
             <div>
              <Button
               style={{
