@@ -650,7 +650,7 @@ export default function Gridservices() {
      </div>
      <Stack direction='row' spacing={1}>
       <Page7 />
-      <Page8 title='Ремонт плат и электронных блоков'/>
+      <Page8 />
       <Page9 />
      </Stack>
      <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0.2em', marginRight: '0em'}}>
