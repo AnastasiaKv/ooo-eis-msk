@@ -549,7 +549,6 @@ export default function Gridservices() {
  const ref = useRef({
   renderCount: 0,
  });
- const [activeIndex, setActiveIndex] = useState(0);
  const classes = useStyles();
 
  ref.current.renderCount++;
@@ -625,19 +624,9 @@ export default function Gridservices() {
     </h2>
     <Box sx={{flexGrow: 1, paddingLeft: '1em'}}>
      <Stack direction='row' spacing={1}>
-      <Page1
-       onShow={() => (activeIndex === 0 ? setActiveIndex(10) : setActiveIndex(0))}
-       classes={classes}
-      />
-      <Page2
-       onShow={() => (activeIndex === 1 ? setActiveIndex(10) : setActiveIndex(1))}
-       classes={classes}
-      />
-      <Page3
-       onShow={() => (activeIndex === 2 ? setActiveIndex(10) : setActiveIndex(2))}
-       classes={classes}
-      />
-      \
+      <Page1 />
+      <Page2 />
+      <Page3 />
      </Stack>
      <div style={{marginLeft: '1.8em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
@@ -647,18 +636,9 @@ export default function Gridservices() {
       </Routes>
      </div>
      <Stack direction='row' spacing={1}>
-      <Page4
-       onShow={() => (activeIndex === 3 ? setActiveIndex(10) : setActiveIndex(3))}
-       classes={classes}
-      />
-      <Page5
-       onShow={() => (activeIndex === 4 ? setActiveIndex(10) : setActiveIndex(4))}
-       classes={classes}
-      />
-      <Page6
-       onShow={() => (activeIndex === 5 ? setActiveIndex(10) : setActiveIndex(5))}
-       classes={classes}
-      />
+      <Page4 />
+      <Page5 />
+      <Page6 />
      </Stack>
      <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0em', marginRight: '0em'}}>
       <Routes>
@@ -674,20 +654,9 @@ export default function Gridservices() {
       </Routes>
      </div>
      <Stack direction='row' spacing={1}>
-      <Page7
-       onShow={() => (activeIndex === 6 ? setActiveIndex(10) : setActiveIndex(6))}
-       classes={classes}
-      />
-      <Page8
-       title='Ремонт плат и электронных блоков'
-       isActive={activeIndex === 7}
-       onShow={() => (activeIndex === 7 ? setActiveIndex(10) : setActiveIndex(7))}
-       classes={classes}
-      />
-      <Page9
-       onShow={() => (activeIndex === 8 ? setActiveIndex(10) : setActiveIndex(8))}
-       classes={classes}
-      />
+      <Page7 />
+      <Page8 title='Ремонт плат и электронных блоков'/>
+      <Page9 />
      </Stack>
      <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0.2em', marginRight: '0em'}}>
       <Routes>
@@ -706,10 +675,7 @@ export default function Gridservices() {
       </Routes>
      </div>
      <Stack direction='row' sx={{paddingRight: '2.9em'}} spacing={2} justifyContent='center'>
-      <Page10
-       onShow={() => (activeIndex === 9 ? setActiveIndex(10) : setActiveIndex(9))}
-       classes={classes}
-      />
+      <Page10 />
      </Stack>
      <div style={{marginLeft: '1.5em', marginBottom: 5, marginTop: '0.4em', marginRight: '0em'}}>
       <Routes>
