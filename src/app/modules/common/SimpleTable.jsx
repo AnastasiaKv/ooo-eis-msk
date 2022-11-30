@@ -11,7 +11,7 @@ export default function SimpleTable2({data}) {
  return (
   <Stack spacing={0} style={{paddingTop: '1em', paddingLeft: '1em'}}>
    <Paper elevation={8} sx={{maxWidth: '670px'}}>
-    <Table aria-label='simple table' sx={{bgcolor: '#f7f7f7'}}>
+    <Table aria-label='simple table' sx={{bgcolor: '#f7f7f7', textSizeAdjust: 'none'}}>
      <TableHead>
       <TableRow>
        <TableCell style={{fontSize: '18px'}}>

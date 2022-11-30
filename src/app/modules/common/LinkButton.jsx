@@ -19,9 +19,6 @@ export default function LinkButton(props) {
     <ButtonBase
      style={{minWidth: '100px', minHeight: '25px'}}
      component={Link}
-     onClick={(event) => {
-      event.preventDefault();
-     }}
      {...props}
     />
    </Paper>
