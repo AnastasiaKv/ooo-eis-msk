@@ -22,13 +22,13 @@ const textStyle = {
  marginLeft: 0,
  textAlign: '-webkit-auto',
 };
-const MyTextInput = ({labelText, inputName, ...props}) => {
+const MyTextInput = ({label, inputName, ...props}) => {
  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
  // which we can spread on <input> and alse replace ErrorMessage entirely.
  const [field, meta] = useField(props);
  return (
   <>
-   <label for={inputName}>{labelText}</label>
+   <label for={inputName}>{label}</label>
    <input className='text-input' id={inputName} name={inputName} {...field} {...props} />
    {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
   </>
@@ -167,16 +167,14 @@ export default function Contacts() {
           <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
            <Form ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
-             <MyTextInput labelText='Имя' label='Имя' name='name' type='text' placeholder='' />
+             <MyTextInput label='Имя' name='name' type='text' placeholder='' />
              <MyTextInput
-              labelText='E-mail'
               label='E-mail'
               name='email'
               type='email'
               placeholder=''
              />
              <MyTextInput
-              labelText='Телефон'
               label='Телефон'
               name='phone'
               type='text'

@@ -77,12 +77,12 @@ function DecorBottom({visability}) {
  );
 }
 
-function ServiceLinkButton({linkUrl, image, onShow}) {
+function ServiceLinkButton({linkUrl, image}) {
  const classes = useStyles();
  const isUrlExpected = useMatch(linkUrl);
  console.log('matchCurrent: ' + isUrlExpected);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : linkUrl}>
+  <LinkButton to={isUrlExpected ? '/' : linkUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper sx={{boxShadow: 'none', width: '250px'}} className={classes.Item}>
     <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image} />
@@ -92,13 +92,13 @@ function ServiceLinkButton({linkUrl, image, onShow}) {
  );
 }
 
-function Page1({onShow}) {
+function Page1() {
  const classes = useStyles();
  const expectedUrl = '/services/repair-motors-page';
  const isUrlExpected = useMatch(expectedUrl);
  console.log('matchCurrent: ' + isUrlExpected);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -107,7 +107,6 @@ function Page1({onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -139,12 +138,12 @@ function Page1({onShow}) {
  );
 }
 
-function Page2({onShow}) {
+function Page2() {
  const classes = useStyles();
  const expectedUrl = '/services/generator-repair-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -153,7 +152,6 @@ function Page2({onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -185,12 +183,12 @@ function Page2({onShow}) {
  );
 }
 
-function Page3({onShow}) {
+function Page3() {
  const classes = useStyles();
  const expectedUrl = 'services/repair-transformers-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -199,7 +197,6 @@ function Page3({onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -231,12 +228,12 @@ function Page3({onShow}) {
  );
 }
 
-function Page4({onShow}) {
+function Page4() {
  const classes = useStyles();
  const expectedUrl = '/services/refrigeration-machine-repair-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -245,7 +242,6 @@ function Page4({onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -276,12 +272,12 @@ function Page4({onShow}) {
   </LinkButton>
  );
 }
-function Page5({onShow}) {
+function Page5() {
  const classes = useStyles();
  const expectedUrl = '/services/rewinding-motors-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -320,12 +316,12 @@ function Page5({onShow}) {
   </LinkButton>
  );
 }
-function Page6({onShow}) {
+function Page6() {
  const classes = useStyles();
  const expectedUrl = '/services/repair-of-electric-heaters-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -334,7 +330,6 @@ function Page6({onShow}) {
       sx={{
        lineHeight: '1.1em',
        fontFamily: 'Roboto',
-
        fontSize: 'medium',
        fontVariant: 'menu',
        textAlign: 'center',
@@ -365,12 +360,12 @@ function Page6({onShow}) {
   </LinkButton>
  );
 }
-function Page7({onShow}) {
+function Page7() {
  const classes = useStyles();
  const expectedUrl = '/services/sale-of-electrical-components-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -409,12 +404,12 @@ function Page7({onShow}) {
   </LinkButton>
  );
 }
-function Page8({onShow}) {
+function Page8() {
  const classes = useStyles();
  const expectedUrl = '/services/repair-of-boards-and-blocks-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -453,12 +448,12 @@ function Page8({onShow}) {
   </LinkButton>
  );
 }
-function Page9({onShow}) {
+function Page9() {
  const classes = useStyles();
  const expectedUrl = '/services/maintenance-and-repair-of-passenger-cars-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>
@@ -500,12 +495,12 @@ function Page9({onShow}) {
   </LinkButton>
  );
 }
-function Page10({onShow}) {
+function Page10() {
  const classes = useStyles();
  const expectedUrl = '/services/surfacing-of-shafts-and-shields-page';
  const isUrlExpected = useMatch(expectedUrl);
  return (
-  <LinkButton onClick={onShow} to={isUrlExpected ? '/' : expectedUrl}>
+  <LinkButton to={isUrlExpected ? '/' : expectedUrl}>
    {isUrlExpected && <DecorTop />}
    <Paper elevation={3} className={classes.Item}>
     <Stack direction='column' sx={{height: '250px', width: '240px'}}>

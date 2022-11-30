@@ -76,6 +76,7 @@ export default function NavTabs() {
  return (
   <div style={{color: '#FFFFFF'}}>
    <Tabs
+    value={0}
     onChange={handleChange}
     sx={{
      '.MuiTabs-indicator': {
