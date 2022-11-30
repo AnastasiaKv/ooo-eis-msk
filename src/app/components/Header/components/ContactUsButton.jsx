@@ -20,10 +20,10 @@ import {Stack} from '@mui/system';
 import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import MyTextInput from './MyTextInput';
-
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
+import {useMatch} from 'react-router-dom';
 
 const styles = {};
 
@@ -83,7 +83,7 @@ function Contact(props) {
   );
  };
 
- var enableDebugButtons = true;
+ var enableDebugButtons = useMatch("/debug");
 
  return (
   <React.Fragment>
@@ -159,11 +159,8 @@ function Contact(props) {
             Отправить
            </Button>
 
-           {
-            /*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
-            (enableDebugButtons = true)
-           }
-           {enableDebugButtons && (
+           {/*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
+           enableDebugButtons && (
             <div>
              <Button
               style={{
@@ -196,7 +193,7 @@ function Contact(props) {
                setEmailjsResponse({
                 status: 412,
                 text:
-                 "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <orozov@bk.ru>: Relay access denied",
+                 "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <recipient@mailserver.ru>: Relay access denied",
                });
                setOpenSubmitResultDialog(true);
                setOpenContactUsDialog(false);
