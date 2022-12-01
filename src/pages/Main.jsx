@@ -1,5 +1,6 @@
 import React from 'react';
 import Services from '../app/components/OurServices/Services';
+import MyServices from '../app/MyThemeProvider';
 import SEO from '../app/components/SEO';
 
 export default function Main() {
