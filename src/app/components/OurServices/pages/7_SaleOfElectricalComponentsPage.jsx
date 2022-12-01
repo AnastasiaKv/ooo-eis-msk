@@ -16,7 +16,7 @@ export default function SaleOfElectricalComponentsPage() {
     keywords='недорогие компоненты, Электронные компоненты, Продажа электронных компонентов Купить резистор Купить транзистор Купить конденсатор, Купить электролитический конденсатор, Купить варистор, Купить диод, Купить ионистор'
     href='https://eis-msk.ru/services/sale-of-electrical-components-page'
    />
-   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em', paddingLeft: '1em', paddingTop: '1em'}}>
     <Stack mt={2} direction='column' style={{paddingBottom: '2em'}}>
      <h1>
       <Typography
