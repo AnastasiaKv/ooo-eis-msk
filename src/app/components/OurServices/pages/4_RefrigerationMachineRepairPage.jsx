@@ -1,10 +1,7 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import {Typography} from '@material-ui/core';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import image4 from '../../../../assets/img/services/4.png';
 
-import Paper from '@mui/material/Paper';
 import DoneSvg from '@mui/icons-material/AcUnit';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
@@ -50,7 +47,7 @@ export default function RefrigerationMachineRepairPage() {
        </h1>
       </p>
 
-      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
+      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'} style={{textAlign: 'left'}}>
        Выполняем следующие технологические операции:
       </Typography>
       <Stack component='ul' spacing={1} style={{textAlign: 'left'}}>

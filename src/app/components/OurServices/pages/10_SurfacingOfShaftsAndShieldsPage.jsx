@@ -1,10 +1,7 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import {Typography} from '@material-ui/core';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import Handyman from '@mui/icons-material/Handyman';
 import image10 from '../../../../assets/img/services/10_1.png';
-import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
 import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
@@ -19,7 +16,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
     keywords=''
     href='https://eis-msk.ru/services/surfacing-of-shafts-and-shields-page'
    />
-   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em', paddingTop: '1em', paddingLeft: '0.5em', paddingRight: '0.5em'}}>
     <Stack
      mt={2}
      direction='column'
@@ -62,7 +59,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
       <Stack
        component='ul'
        spacing={2}
-       style={{margin: '-7px'}}
+       style={{margin: '-7px', textAlign: 'left'}}
        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
       >
        <Typography

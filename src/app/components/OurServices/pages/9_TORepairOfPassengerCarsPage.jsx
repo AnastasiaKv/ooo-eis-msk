@@ -1,10 +1,7 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import {Typography} from '@material-ui/core';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import GppGoodSvg from '@mui/icons-material/GppGoodRounded';
 import image9 from '../../../../assets/img/services/9_1.png';
-import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
 import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
@@ -24,19 +21,16 @@ export default function TORepairOfPassengerCarsPage() {
      mt={2}
      direction='column'
      spacing={0}
-     style={{paddingLeft: '0.5em', paddingTop: '0em', paddingBottom: '1em'}}
+     style={{paddingLeft: '1em', paddingTop: '1em', paddingBottom: '1em', paddingRight: '1em'}}
     >
-     <h1>
+     
       <Typography
        variant='h4'
        component='h4'
-       style={{fontFamily: 'Furore', textAlign: 'center', fontSize: '21px'}}
+       style={{fontFamily: 'Furore', textAlign: 'center', fontSize: '25px', marginBottom: '3em'}}
       >
        ТО и ремонт электрооборудования пассажирских вагонов
       </Typography>
-     </h1>
-     <br />
-     <br />
 
      <Stack direction='row-reverse'>
       <Box
@@ -45,7 +39,7 @@ export default function TORepairOfPassengerCarsPage() {
         height: '12em',
         width: '20em',
         float: 'right' /* Выравнивание по правому краю  */,
-        margin: '-8px 11px 25px -45px' /* Отступы вокруг картинки */,
+        margin: '0px 0px 0px -0px'/* '-8px 11px 25px -45px' */ /* Отступы вокруг картинки */,
        }}
        loading='lazy'
        component='img'
@@ -56,7 +50,7 @@ export default function TORepairOfPassengerCarsPage() {
       <Stack
        component='ul'
        spacing={2}
-       style={{margin: '-7px'}}
+       style={{margin: 0/* '-7px' */, textAlign: 'left'}}
        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
       >
        <Typography

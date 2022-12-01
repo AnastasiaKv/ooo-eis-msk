@@ -1,10 +1,7 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import {Typography} from '@material-ui/core';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import CurrencyRubleSvg from '@mui/icons-material/CurrencyRubleRounded';
 import image7 from '../../../../assets/img/services/7.png';
-import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
 import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
@@ -19,7 +16,7 @@ export default function SaleOfElectricalComponentsPage() {
     keywords='недорогие компоненты, Электронные компоненты, Продажа электронных компонентов Купить резистор Купить транзистор Купить конденсатор, Купить электролитический конденсатор, Купить варистор, Купить диод, Купить ионистор'
     href='https://eis-msk.ru/services/sale-of-electrical-components-page'
    />
-   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em', paddingLeft: '1em', paddingTop: '1em'}}>
     <Stack mt={2} direction='column' style={{paddingBottom: '2em'}}>
      <h1>
       <Typography

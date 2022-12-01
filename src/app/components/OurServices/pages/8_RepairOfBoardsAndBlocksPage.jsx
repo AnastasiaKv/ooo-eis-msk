@@ -1,8 +1,5 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import {Typography} from '@material-ui/core';
-import Paper from '@mui/material/Paper';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import SEO from '../../SEO';
 import image6 from '../../../../assets/img/services/8.png';
 import ComputerSvg from '@mui/icons-material/Computer';
