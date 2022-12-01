@@ -16,7 +16,7 @@ export default function SurfacingOfShaftsAndShieldsPage() {
     keywords=''
     href='https://eis-msk.ru/services/surfacing-of-shafts-and-shields-page'
    />
-   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em'}}>
+   <Paper elevation={4} style={{backgroundColor: '#f7f7f7', width: '31.2em', paddingTop: '1em', paddingLeft: '0.5em', paddingRight: '0.5em'}}>
     <Stack
      mt={2}
      direction='column'
