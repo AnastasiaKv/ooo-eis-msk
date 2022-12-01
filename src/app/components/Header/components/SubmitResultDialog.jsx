@@ -8,7 +8,7 @@ import {
  DialogContentText,
  DialogActions,
  Paper,
-} from '@material-ui/core';
+} from '@mui/material';
 import {Alert, FormControlLabel, Switch, Slide} from '@mui/material';
 import Typography from '@mui/material/Typography';
 
