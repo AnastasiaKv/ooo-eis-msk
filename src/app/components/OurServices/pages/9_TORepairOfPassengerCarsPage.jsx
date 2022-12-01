@@ -56,7 +56,7 @@ export default function TORepairOfPassengerCarsPage() {
       <Stack
        component='ul'
        spacing={2}
-       style={{margin: '-7px'}}
+       style={{margin: '-7px', textAlign: 'left'}}
        className={isMobileSafari ? 'safari-medium-large' : 'medium'}
       >
        <Typography
