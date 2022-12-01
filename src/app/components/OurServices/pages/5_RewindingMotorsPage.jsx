@@ -53,7 +53,7 @@ export default function RewindingMotorsPage() {
         </Typography>
        </h1>
       </p>
-      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
+      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}  style={{textAlign: 'left'}}>
        При выходе из строя электрообмоток производятся следующие работы:
       </Typography>
       <Stack component='ul' spacing={1} style={{textAlign: 'left'}}>

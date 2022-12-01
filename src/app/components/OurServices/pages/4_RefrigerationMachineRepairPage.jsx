@@ -47,7 +47,7 @@ export default function RefrigerationMachineRepairPage() {
        </h1>
       </p>
 
-      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'}>
+      <Typography variant='' className={isMobileSafari ? 'safari-subtitle3' : 'subtitle3'} style={{textAlign: 'left'}}>
        Выполняем следующие технологические операции:
       </Typography>
       <Stack component='ul' spacing={1} style={{textAlign: 'left'}}>
