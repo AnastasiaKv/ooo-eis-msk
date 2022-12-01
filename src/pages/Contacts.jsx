@@ -86,7 +86,7 @@ export default function Contacts() {
         <br />
         <Stack style={{paddingLeft: '3em', width: '29em', paddingRight: '2em'}}>
          <Typography style={textStyle} component='p'>
-          <p style={{paddingLeft: '7em'}}>
+          <p style={{paddingLeft: '7em', fontSize: '12px'}}>
            В случае, если Вы хотите обсудить какие-либо вопросы,
            <br /> свяжитесь с нами:
           </p>
@@ -168,18 +168,8 @@ export default function Contacts() {
            <Form ref={contactUsForm} style={{width: '22em', height: '24em'}}>
             <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
              <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-             <MyTextInput
-              label='E-mail'
-              name='email'
-              type='email'
-              placeholder=''
-             />
-             <MyTextInput
-              label='Телефон'
-              name='phone'
-              type='text'
-              placeholder=''
-             />
+             <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+             <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
 
              <button
               style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
