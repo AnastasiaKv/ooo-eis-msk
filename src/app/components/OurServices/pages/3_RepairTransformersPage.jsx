@@ -1,9 +1,6 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import {Typography} from '@material-ui/core';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import SimpleTable from '../../../modules/common/SimpleTable';
-import Paper from '@mui/material/Paper';
 import image3 from '../../../../assets/img/services/3.png';
 import SEO from '../../SEO';
 
