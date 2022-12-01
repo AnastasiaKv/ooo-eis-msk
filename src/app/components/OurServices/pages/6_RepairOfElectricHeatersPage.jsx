@@ -68,7 +68,7 @@ export default function RepairOfElectricHeatersPage() {
      </Typography>
     </div>
     {isMobileSafari ? <br /> : <></>}
-    <Stack component='ul' spacing={isMobileSafari ? 1 : 1} style={{marginLeft: '2em'}}>
+    <Stack component='ul' spacing={isMobileSafari ? 1 : 1} style={{marginLeft: '2em', textAlign: 'left'}}>
      <Typography variant='' className={isMobileSafari ? 'safari-medium' : 'medium'}>
       <ReportProblemSvg
        style={{
