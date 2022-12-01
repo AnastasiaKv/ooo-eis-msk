@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import TopMediaBlock from './layouts/TopMediaBlockLayout';
 import SEO from './components/SEO';
+import MyThemeProvider from './MyThemeProvider';
 
 const helmetContext = {};
 
@@ -34,7 +35,9 @@ function App() {
           </header>
           <div className='ees-main'>
            <div className='ees-main-row'>
-            <TopMediaBlock />
+            <MyThemeProvider>
+             <TopMediaBlock />
+            </MyThemeProvider>
            </div>
           </div>
           <footer className='ees-footer'>

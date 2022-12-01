@@ -1,10 +1,7 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import {Typography} from '@material-ui/core';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import image6 from '../../../../assets/img/services/6.png';
 import ReportProblemSvg from '@mui/icons-material/ReportProblemRounded';
-import Paper from '@mui/material/Paper';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
 import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';

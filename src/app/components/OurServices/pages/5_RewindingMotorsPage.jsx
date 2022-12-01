@@ -1,16 +1,13 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import {Paper, Box, Stack, Typography} from '@mui/material';
 import CustomizedTables from '../../../modules/common/CustomizedTables';
 import image5 from '../../../../assets/img/services/5.png';
-import Paper from '@mui/material/Paper';
 import BoltSvg from '@mui/icons-material/Bolt';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
 import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
 
-export default function RewindingMotorsPage() {
+export default function RewindingMotorsPage() {    
  return (
   <div>
    <form style={{height: '100%'}}>
