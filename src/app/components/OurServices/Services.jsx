@@ -589,7 +589,6 @@ export default function Gridservices() {
       justifyContent: 'space-around',
       textAlign: 'justify',
       color: '#292929',
-      textSizeAdjust:'none',
      }}
     >
      Наша компания занимается ремонтом электрооборудования всех типов, представленных в каталоге
