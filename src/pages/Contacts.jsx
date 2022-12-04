@@ -64,7 +64,7 @@ export default function Contacts() {
     <div>
      <Stack>
       <p style={{paddingTop: '20px'}}>
-       <ul
+       <span
         style={{
          paddingLeft: '2em',
          textAlign: 'justify',
@@ -184,7 +184,7 @@ export default function Contacts() {
           </Paper>
          </Formik>
         </Stack>
-       </ul>
+       </span>
       </p>
      </Stack>
     </div>

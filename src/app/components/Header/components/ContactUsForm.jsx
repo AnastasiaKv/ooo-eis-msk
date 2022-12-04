@@ -1,4 +1,4 @@
-import React, {useRef/* , useState */} from 'react';
+import React, {useRef /* , useState */} from 'react';
 import emailjs from '@emailjs/browser';
 /* import {withStyles} from '@mui/material/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
@@ -11,9 +11,9 @@ import {
  DialogContent,
  DialogContentText, */
  DialogActions,
-/*  Paper, */
+ /*  Paper, */
 } from '@mui/material';
-import {/* Alert, FormControlLabel, Switch,  */Slide} from '@mui/material';
+import {/* Alert, FormControlLabel, Switch,  */ Slide} from '@mui/material';
 import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import {Stack} from '@mui/system';
@@ -26,23 +26,35 @@ import '../../../../assets/css/styles-custom.css';
 /* import SubmitResultDialog from './SubmitResultDialog'; */
 import {useMatch} from 'react-router-dom';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+/* const Transition = React.forwardRef(function Transition(props, ref) {
  return <Slide direction='up' ref={ref} {...props} />;
-});
+}); */
 
 export default function ContactUsForm({
-    setEmailjsResponse,
-    setOpenContactUsDialog,
-    setOpenSubmitResultDialog}
-) {
- function handleSubmitContactUsForm(values, {setSubmitting}) {
-  handleSendEmail();
-  setOpenContactUsDialog(false);
-  setOpenSubmitResultDialog(true);
-  setSubmitting(false);
+ setEmailjsResponse,
+ setOpenContactUsDialog,
+ setOpenSubmitResultDialog,
+}) {
+ function handleSubmitContactUsForm(/* values,  */ {setSubmitting}) {
+  console.log('Sending e-mail');
+  emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
+   (result) => {
+    setEmailjsResponse(result);
+    setOpenContactUsDialog(false);
+    setOpenSubmitResultDialog(true);
+    setSubmitting(false);
+   },
+   (error) => {
+    setEmailjsResponse(error);
+    console.error(error);
+    //setOpenContactUsDialog(false);
+    setOpenSubmitResultDialog(true);
+    setSubmitting(false);
+   }
+  );
  }
 
- const handleSendEmail = (e) => {
+/*  const handleSendEmail = (e) => {
   e.preventDefault();
   console.log('Sending e-mail');
   emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
@@ -54,7 +66,7 @@ export default function ContactUsForm({
     console.error(error);
    }
   );
- };
+ }; */
 
  const contactUsForm = useRef();
 

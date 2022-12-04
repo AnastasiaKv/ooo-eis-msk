@@ -7,7 +7,7 @@ import {Paper} from '@mui/material';
 /* import {useAutocomplete} from '@mui/base/AutocompleteUnstyled'; */
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 import {Typography} from '@mui/material';
-import {makeStyles} from '@mui/material/styles';
+import {makeStyles} from '@mui/styles';
 import Page1 from '../../OurServices/pages/1_RepairMotorsPage';
 import Page2 from '../../OurServices/pages/2_GeneratorRepairPage';
 import Page3 from '../../OurServices/pages/3_RepairTransformersPage';

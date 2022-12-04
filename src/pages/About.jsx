@@ -45,8 +45,7 @@ export default function about() {
       </Typography>
 
       <Stack direction='column' spacing={0} sx={{paddingLeft: '1.5em', paddingTop: '1em'}}>
-       <h2>
-        <Typography
+       <Typography
          variant='h2'
          style={{
           flexGrow: 1,
@@ -61,8 +60,7 @@ export default function about() {
          }}
         >
          Наш коллектив
-        </Typography>
-       </h2>
+    </Typography>
        <Stack>
         <Paper elevation={0}>
          <Box

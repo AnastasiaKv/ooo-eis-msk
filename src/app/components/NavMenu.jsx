@@ -46,7 +46,7 @@ const useStyles = makeStyles({
  },
 });
 
-function LinkTab(props) {
+const LinkTab = (props) => {
  return (
   <Tab
    sx={{
@@ -57,14 +57,14 @@ function LinkTab(props) {
    }}
    component={Link}
    /* onClick={(event) => {
-    event.preventDefault();
-    console.log(event.target);
-    console.log(event.preventDefault());
-   }} */
+             event.preventDefault();
+             console.log(event.target);
+             console.log(event.preventDefault());
+            }} */
    {...props}
   />
  );
-}
+};
 export default function NavTabs() {
  /*  const [value, setValue] = React.useState(0); */
 
@@ -76,7 +76,7 @@ export default function NavTabs() {
  return (
   <div style={{color: '#FFFFFF'}}>
    <Tabs
-    value={1}
+    value={0}
     /* onChange={handleChange} */
     sx={{
      '.MuiTabs-indicator': {
@@ -85,50 +85,50 @@ export default function NavTabs() {
       height: '0px',
      },
     }}
-    indicator=""
+    /* indicator='' */
    >
-    <Stack sx={{marginLeft: '-35px', paddingLeft: '0px'}} direction='row' spacing={4}>
-     <LinkTab
-      /* onClick={value} */
-      value={0}
-      label='Главная'
-      to='/'
-      className={classes.button}
-      style={buttonStyle}
-     />
-     <LinkTab
-      /* onClick={value} */
-      value={1}
-      label='О нас'
-      to='/about'
-      className={classes.button}
-      style={buttonStyle}
-     />
-     <LinkTab
-      /* onClick={value} */
-      value={2}
-      label='Стоимость'
-      to='/prices'
-      className={classes.button}
-      style={buttonStyle}
-     />
-     <LinkTab
-      /* onClick={value} */
-      value={3}
-      label='Галерея'
-      to='/gallery'
-      className={classes.button}
-      style={buttonStyle}
-     />
-     <LinkTab
-      /* onClick={value} */
-      value={4}
-      label='Контакты'
-      to='/contacts'
-      className={classes.button}
-      style={buttonStyle}
-     />
-    </Stack>
+    {/* <Stack sx={{marginLeft: '-35px', paddingLeft: '0px'}} direction='row' spacing={4}> */}
+    <LinkTab
+     /* onClick={value} */
+     /* value={0} */
+     label='Главная'
+     to='/'
+     className={classes.button}
+     style={buttonStyle}
+    />
+    <LinkTab
+     /* onClick={value} */
+     /* value={1} */
+     label='О нас'
+     to='/about'
+     className={classes.button}
+     style={buttonStyle}
+    />
+    <LinkTab
+     /* onClick={value} */
+     /* value={2} */
+     label='Стоимость'
+     to='/prices'
+     className={classes.button}
+     style={buttonStyle}
+    />
+    <LinkTab
+     /* onClick={value} */
+     /* value={3} */
+     label='Галерея'
+     to='/gallery'
+     className={classes.button}
+     style={buttonStyle}
+    />
+    <LinkTab
+     /* onClick={value} */
+     /* value={4} */
+     label='Контакты'
+     to='/contacts'
+     className={classes.button}
+     style={buttonStyle}
+    />
+    {/* </Stack> */}
    </Tabs>
    <Routes>
     <Route exact path='/' element={<Main />}>
