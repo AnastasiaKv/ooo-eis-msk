@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Typography} from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
+import {Typography} from '@mui/material';
+/* import Grid from '@mui/material/Grid'; */
 import {Stack} from '@mui/system';
 import Paper from '@mui/material/Paper';
 import trkLogo from '../assets/img/companiesLogos/trk/trkLogo.svg';
@@ -45,8 +45,7 @@ export default function about() {
       </Typography>
 
       <Stack direction='column' spacing={0} sx={{paddingLeft: '1.5em', paddingTop: '1em'}}>
-       <h2>
-        <Typography
+       <Typography
          variant='h2'
          style={{
           flexGrow: 1,
@@ -61,8 +60,7 @@ export default function about() {
          }}
         >
          Наш коллектив
-        </Typography>
-       </h2>
+    </Typography>
        <Stack>
         <Paper elevation={0}>
          <Box

@@ -1,17 +1,17 @@
-import React, {useRef, useState, useEffect} from 'react';
-import {Formik, Form, useField, useFormikContext} from 'formik';
+import React, {useRef, useState} from 'react';
+import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import '../assets/css/style.css';
 import '../assets/css/styles-custom.css';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import {Stack} from '@mui/system';
 import Box from '@mui/material/Box';
-import {Typography} from '@material-ui/core';
+import {Typography, Paper} from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
-import {Button} from '@material-ui/core';
-import emailjs, {init, SMTPClient} from '@emailjs/browser';
+import {Button} from '@mui/material';
+import emailjs /* , {init, SMTPClient} */ from '@emailjs/browser';
+import SubmittionResultDialog from '../app/components/Header/components/SubmittionResultDialog';
+import MyTextInput from '../app/modules/common/MyTextInput';
 
 const textStyle = {
  fontFamily: 'Roboto',
@@ -22,23 +22,17 @@ const textStyle = {
  marginLeft: 0,
  textAlign: '-webkit-auto',
 };
-const MyTextInput = ({label, inputName, ...props}) => {
- // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
- // which we can spread on <input> and alse replace ErrorMessage entirely.
- const [field, meta] = useField(props);
- return (
-  <>
-   <label for={inputName}>{label}</label>
-   <input className='text-input' id={inputName} name={inputName} {...field} {...props} />
-   {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
-  </>
- );
-};
 
 export default function Contacts() {
- const contactUsForm = useRef();
+ const contactUs2Form = useRef();
  const [emailjsResponse, setEmailjsResponse] = useState({});
- const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
+ const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
+ const [isOpenSubmittionResultDialog, setOpenSubmittionResultDialog] = useState(false);
+ function handleCloseSubmittionResultDialog() {
+  setOpenSubmittionResultDialog(false);
+ }
+
+ emailjs.init('GaqOI812E6KDw78sT');
 
  return (
   <main className='ees-content-card'>
@@ -50,19 +44,17 @@ export default function Contacts() {
     href='https://eis-msk.ru/contacts'
    />
    <Box
-    component='form'
     sx={{
      paddingTop: '1em',
      '& .MuiTextField-root': {m: 1, width: '25ch'},
      paddingBottom: '1em',
     }}
-    noValidate
     autoComplete='off'
    >
     <div>
      <Stack>
       <p style={{paddingTop: '20px'}}>
-       <ul
+       <span
         style={{
          paddingLeft: '2em',
          textAlign: 'justify',
@@ -150,43 +142,71 @@ export default function Contacts() {
           })}
           onSubmit={async (values, {setSubmitting}) => {
            console.log('Sending e-mail');
-           emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUsForm.current).then(
+           emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUs2Form.current).then(
             (result) => {
-             setIsSendedSuccessfully(true);
+             console.info('Email sent succesfully.');
+             console.info(result);
              setEmailjsResponse(result);
+             setOpenContactUsDialog(false);
+             setOpenSubmittionResultDialog(true);
+             setSubmitting(false);
             },
             (error) => {
-             setIsSendedSuccessfully(false);
+             console.info('Error: Email did not sent.');
+             console.info(error);
              setEmailjsResponse(error);
-             console.log(error);
+             setOpenContactUsDialog(false);
+             setOpenSubmittionResultDialog(true);
+             setSubmitting(false);
             }
            );
-           setSubmitting(false);
           }}
          >
-          <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
-           <Form ref={contactUsForm} style={{width: '22em', height: '24em'}}>
-            <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
-             <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-             <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-             <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
-
-             <button
-              style={{marginLeft: '84px', marginTop: '50px', width: '15em', height: '50px'}}
-              type='submit'
-             >
-              Отправить
-             </button>
-            </Stack>
+          {(props) => (
+           <Form
+            ref={contactUs2Form}
+            style={{width: '22em', height: '30em', paddingTop:0}}
+            onSubmit={props.handleSubmit}
+           >
+            <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
+             <Stack sx={{paddingLeft: '60px', paddingTop: '1em', paddingBottom: '1.5em'}} direction='column'>
+              <MyTextInput label='Имя' name='name' type='text' placeholder='' />
+              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+              <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
+              <Button
+               style={{
+                left: 0,
+                marginLeft: '84px',
+                marginTop: '10px',
+                width: '15em',
+                height: '50px',
+                borderRadius: '1',
+                color: '#F1F1F1F1',
+                backgroundColor: '#2d3748',
+               }}
+               type='submit'
+               className='btn btn-primary'
+               variant='contained'
+               disabled={props.isSubmitting}
+              >
+               Отправить
+              </Button>
+             </Stack>
+            </Paper>
            </Form>
-          </Paper>
+          )}
          </Formik>
         </Stack>
-       </ul>
+       </span>
       </p>
      </Stack>
     </div>
     <Box sx={{height: '2em'}} />
+    <SubmittionResultDialog
+     isOpenSubmittionResultDialog={isOpenSubmittionResultDialog}
+     handleCloseSubmittionResultDialog={handleCloseSubmittionResultDialog}
+     emailjsResponse={emailjsResponse}
+    />
    </Box>
   </main>
  );
