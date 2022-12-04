@@ -12,7 +12,6 @@ import * as Yup from 'yup';
 import MyTextInput from '../../../modules/common/MyTextInput';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
-/* import SubmitResultDialog from './SubmitResultDialog'; */
 import {useMatch} from 'react-router-dom';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
@@ -90,7 +89,7 @@ export default function ContactUsForm(
    >
     {(props) => (
     <Form ref={contactUsForm} style={{width: 'fitContent'/* width: '22em', height: '24em' */}} onSubmit={props.handleSubmit}>
-     <Stack direction='column' /* noValidate */>
+     <Stack direction='column' noValidate>
       <MyTextInput label='Имя' name='name' type='text' placeholder='' />
       <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
       <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
@@ -102,7 +101,7 @@ export default function ContactUsForm(
          left:0,
          width: '12em',
          height: '45px',
-         borderRadius: '2',
+         borderRadius: '1',
          color: '#F1F1F1F1',
          backgroundColor: '#2d3748',
          margin: '10px',
@@ -115,7 +114,6 @@ export default function ContactUsForm(
        >
         Отправить
        </Button>
-      
 
        {//Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой
         enableDebugButtons && (
@@ -138,7 +136,7 @@ export default function ContactUsForm(
             setOpenSubmittionResultDialog(true);
            }}
           >
-            Test OK
+          Test OK
           </Button>
           <Button
            style={{
@@ -167,7 +165,7 @@ export default function ContactUsForm(
          </div>
         )
        }
-       </div>
+      </div>
      </DialogActions>
     </Form>
     )}
