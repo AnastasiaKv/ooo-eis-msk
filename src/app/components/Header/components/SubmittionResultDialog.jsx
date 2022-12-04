@@ -23,7 +23,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
  return <Slide direction='up' ref={ref} {...props} />;
 });
 
-function SubmitResultDialog({
+function SubmittionResultDialog({
  isOpenSubmittionResultDialog,
  handleCloseSubmittionResultDialog,
  emailjsResponse,
@@ -114,4 +114,4 @@ function SubmitResultDialog({
   </Dialog>
  );
 }
-export default SubmitResultDialog;
+export default SubmittionResultDialog;

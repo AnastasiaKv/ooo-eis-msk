@@ -1,34 +1,19 @@
-import React, {useRef /* , useState */} from 'react';
+import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
-/* import {withStyles} from '@mui/material/styles';
-import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import SendIcon from '@mui/icons-material/Send';
+/* import SendIcon from '@mui/icons-material/Send';
 import CloseIcon from '@mui/icons-material/Close'; */
 import {
  Button,
- /* Dialog,
- DialogTitle,
- DialogContent,
- DialogContentText, */
  DialogActions,
- /*  Paper, */
 } from '@mui/material';
-/* import {Alert, FormControlLabel, Switch,  Slide} from '@mui/material'; */
 import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import {Stack} from '@mui/system';
-/* import Typography from '@mui/material/Typography';
-import {createTheme, ThemeProvider} from '@mui/material/styles'; */
 import MyTextInput from '../../../modules/common/MyTextInput';
-// import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
 /* import SubmitResultDialog from './SubmitResultDialog'; */
 import {useMatch} from 'react-router-dom';
-
-/* const Transition = React.forwardRef(function Transition(props, ref) {
- return <Slide direction='up' ref={ref} {...props} />;
-}); */
 
 export default function ContactUsForm({
  setEmailjsResponse,
@@ -36,6 +21,7 @@ export default function ContactUsForm({
  setOpenSubmittionResultDialog,
 }) {
  emailjs.init('GaqOI812E6KDw78sT');
+
  function handleSubmitContactUsForm( values, {setSubmitting}) {
   console.log('Sending e-mail');
   console.log(values);
@@ -59,24 +45,9 @@ export default function ContactUsForm({
   );
  }
 
- /*  const handleSendEmail = (e) => {
-  e.preventDefault();
-  console.log('Sending e-mail');
-  emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
-   (result) => {
-    setEmailjsResponse(result);
-   },
-   (error) => {
-    setEmailjsResponse(error);
-    console.error(error);
-   }
-  );
- }; */
-
  const contactUsForm = useRef();
 
  var enableDebugButtons = useMatch('/debug');
- //return (<br/>);
  return (
   <>
    <Formik
@@ -90,7 +61,8 @@ export default function ContactUsForm({
      phone: Yup.string().required('Поле обязательно для заполнения'),
     })}
    >
-    <Form ref={contactUsForm} style={{width: '22em', height: '24em'}}>
+    {(props) => (
+    <Form ref={contactUsForm} style={{width: '22em', height: '24em'}} onSubmit={props.handleSubmit}>
      <Stack sx={{paddingLeft: '60px', paddingBottom: '1.5em'}} direction='column' noValidate>
       <MyTextInput label='Имя' name='name' type='text' placeholder='' />
       <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
@@ -110,6 +82,7 @@ export default function ContactUsForm({
         type='submit'
         className='btn btn-primary'
         variant='contained'
+        disabled={props.isSubmitting}
        >
         Отправить
        </Button>
@@ -160,6 +133,7 @@ export default function ContactUsForm({
       </div>
      </DialogActions>
     </Form>
+    )}
    </Formik>
   </>
  );
