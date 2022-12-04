@@ -5,7 +5,7 @@ import '../assets/css/style.css';
 import '../assets/css/styles-custom.css';
 import {Stack} from '@mui/system';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
+import {Typography, Paper} from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
 import {Button} from '@mui/material';
@@ -165,32 +165,34 @@ export default function Contacts() {
           {(props) => (
            <Form
             ref={contactUs2Form}
-            style={{width: '22em', height: '24em'}}
+            style={{width: '22em', height: '30em', paddingTop:0}}
             onSubmit={props.handleSubmit}
            >
-            <Stack sx={{paddingLeft: '60px', paddingTop: '2.5em'}} direction='column'>
-             <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-             <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-             <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
-             <Button
-              style={{
-               left: 0,
-               marginLeft: '84px',
-               marginTop: '50px',
-               width: '15em',
-               height: '50px',
-               borderRadius: '1',
-               color: '#F1F1F1F1',
-               backgroundColor: '#2d3748',
-              }}
-              type='submit'
-              className='btn btn-primary'
-              variant='contained'
-              disabled={props.isSubmitting}
-             >
-              Отправить
-             </Button>
-            </Stack>
+            <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
+             <Stack sx={{paddingLeft: '60px', paddingTop: '1em', paddingBottom: '1.5em'}} direction='column'>
+              <MyTextInput label='Имя' name='name' type='text' placeholder='' />
+              <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+              <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
+              <Button
+               style={{
+                left: 0,
+                marginLeft: '84px',
+                marginTop: '10px',
+                width: '15em',
+                height: '50px',
+                borderRadius: '1',
+                color: '#F1F1F1F1',
+                backgroundColor: '#2d3748',
+               }}
+               type='submit'
+               className='btn btn-primary'
+               variant='contained'
+               disabled={props.isSubmitting}
+              >
+               Отправить
+              </Button>
+             </Stack>
+            </Paper>
            </Form>
           )}
          </Formik>
