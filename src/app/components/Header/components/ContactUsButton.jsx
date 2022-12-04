@@ -1,27 +1,15 @@
-import React, {/* useRef,  */useState} from 'react';
-/* import emailjs from '@emailjs/browser'; */
+import React, {useState} from 'react';
 import {withStyles} from '@mui/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-/* import SendIcon from '@mui/icons-material/Send';
-import CloseIcon from '@mui/icons-material/Close'; */
 import {
  Button,
  Dialog,
  DialogTitle,
  DialogContent,
-/*  DialogContentText,
- DialogActions,
- Paper, */
+ Slide,
+ Typography,
 } from '@mui/material';
-import {/* Alert, FormControlLabel, Switch, */ Slide} from '@mui/material';
-/* import {Formik, Form} from 'formik';
-import * as Yup from 'yup';
-import {Stack} from '@mui/system'; */
-import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-/* import MyTextInput from './MyTextInput'; */
-/* import {useMatch} from 'react-router-dom'; */
-// import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
 import SubmittionResultDialog from './SubmittionResultDialog';
