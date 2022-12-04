@@ -1,14 +1,7 @@
 import React, {useState} from 'react';
 import {withStyles} from '@mui/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import {
- Button,
- Dialog,
- DialogTitle,
- DialogContent,
- Slide,
- Typography,
-} from '@mui/material';
+import {Button, Dialog, DialogTitle, DialogContent, Slide, Typography} from '@mui/material';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
@@ -26,32 +19,27 @@ const theme = createTheme({
  },
 });
 
-/* const Transition = React.forwardRef(function Transition(props, ref) {
+const SlideTransition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction='up' ref={ref} {...props} />;
- }); */
+ });
 
 function Contact(props) {
  const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
-
  const [emailjsResponse, setEmailjsResponse] = useState({});
-
  const [isOpenSubmittionResultDialog, setOpenSubmittionResultDialog] = useState(false);
-
 
  function handleCloseContactUsDialog() {
   setOpenContactUsDialog(false);
  }
-
  function handleClickBackcallButton() {
   setOpenContactUsDialog(true);
  }
- 
+
  function handleCloseSubmittionResultDialog() {
   setOpenSubmittionResultDialog(false);
  }
 
  return (
-  <React.Fragment>
    <div style={{display: 'flex', flexWrap: 'wrap'}}>
     <div>
      <Typography
@@ -74,38 +62,46 @@ function Contact(props) {
      variant='contained'
      startIcon={<HeadsetMicIcon />}
     >
-     Обратный звонок
-    </Button>
-
-    <Dialog
-     sx={{width: '1000px'}}
+     <span>Обратный звонок</span>
+     
+    <Dialog 
+     maxWidth='sm'
+     fullWidth={false}
+     /* style={{maxWidth: '400px, right: 0, top: 0}} */
+     //sx={{/* width: '600px', */ m:0, p:0}}
+     //PaperProps={{ sx: { mt: "50px", verticalAlign: "top", textAlign: 'center', justifySelf: 'auto'} }}
+     scroll='body'
      open={isOpenContactUsDialog}
      onClose={handleCloseContactUsDialog}
-     /* TransitionComponent={Transition} */
+     TransitionComponent={SlideTransition}
+     transitionDuration={{appear: 1000, enter: 1000, exit: 1000}}
      aria-labelledby='form-dialog-title'
+     PaperProps={{ sx: { top:10, left:10, m:0 }}}
+     /* sx={{'& .MuiDialog-container': {
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start'
+     }}} */
     >
-     <DialogTitle style={{paddingLeft: '1em'}} id='form-dialog-title'>
-      Оставьте свои данные - и мы Вам перезвоним!
+     <DialogTitle sx={{p: '1em', m:0}} id='form-dialog-title'>
+      <Typography sx={{fontSize: '1.8em' , textAlign: 'center'}}>
+       Оставьте свои данные и мы Вам перезвоним!
+      </Typography>
      </DialogTitle>
      <ThemeProvider theme={theme}>
       <DialogContent>
        {/* --------------------------------------------------------------------------------------------------------------------- */}
-       <ContactUsForm 
+       <ContactUsForm
         setEmailjsResponse={setEmailjsResponse}
         setOpenContactUsDialog={setOpenContactUsDialog}
-        setOpenSubmittionResultDialog={setOpenSubmittionResultDialog}/>
+        setOpenSubmittionResultDialog={setOpenSubmittionResultDialog}
+       />
        {/* --------------------------------------------------------------------------------------------------------------------- */}
       </DialogContent>
      </ThemeProvider>
     </Dialog>
-
-    <SubmittionResultDialog
-     isOpenSubmittionResultDialog={isOpenSubmittionResultDialog}
-     handleCloseSubmittionResultDialog={handleCloseSubmittionResultDialog}
-     emailjsResponse={emailjsResponse}
-    />
+    <SubmittionResultDialog {...{isOpenSubmittionResultDialog, handleCloseSubmittionResultDialog, emailjsResponse}} />
+    </Button>
    </div>
-  </React.Fragment>
  );
 }
 
