@@ -19,9 +19,9 @@ import {
  Slide,
 } from '@mui/material';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+/* const Transition = React.forwardRef(function Transition(props, ref) {
  return <Slide direction='up' ref={ref} {...props} />;
-});
+}); */
 
 function SubmittionResultDialog({
  isOpenSubmittionResultDialog,
@@ -36,7 +36,7 @@ function SubmittionResultDialog({
    sx={{width: '1000px', left:'45'}}
    open={isOpenSubmittionResultDialog}
    onClose={handleCloseSubmittionResultDialog}
-   TransitionComponent={Transition}
+   /* TransitionComponent={Transition} */
    aria-labelledby='form-dialog-title'
   >
    <DialogTitle>

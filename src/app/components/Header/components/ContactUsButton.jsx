@@ -26,9 +26,9 @@ const theme = createTheme({
  },
 });
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+/* const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction='up' ref={ref} {...props} />;
- });
+ }); */
 
 function Contact(props) {
  const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
@@ -81,7 +81,7 @@ function Contact(props) {
      sx={{width: '1000px'}}
      open={isOpenContactUsDialog}
      onClose={handleCloseContactUsDialog}
-     TransitionComponent={Transition}
+     /* TransitionComponent={Transition} */
      aria-labelledby='form-dialog-title'
     >
      <DialogTitle style={{paddingLeft: '1em'}} id='form-dialog-title'>
