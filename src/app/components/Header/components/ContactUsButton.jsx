@@ -1,14 +1,29 @@
-import React, {useState} from 'react';
-import {withStyles} from '@mui/styles';
+import React, {useRef, useState} from 'react';
+import emailjs from '@emailjs/browser';
+import {withStyles} from '@material-ui/core/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import {Button, Dialog, DialogTitle, DialogContent, Slide, Typography} from '@mui/material';
+import {
+ Button,
+ Dialog,
+ DialogTitle,
+ DialogContent,
+ DialogContentText,
+ DialogActions,
+ Paper,
+} from '@material-ui/core';
+import {Alert, FormControlLabel, Switch, Slide} from '@mui/material';
+import {Formik, Form} from 'formik';
+import * as Yup from 'yup';
+import {Stack} from '@mui/system';
+import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
+import MyTextInput from '../../../modules/common/MyTextInput';
+// import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
+import {useMatch} from 'react-router-dom';
 import SubmittionResultDialog from './SubmittionResultDialog';
 import ContactUsForm from './ContactUsForm';
-
-const styles = {};
 
 const theme = createTheme({
  components: {
@@ -18,28 +33,15 @@ const theme = createTheme({
   },
  },
 });
-
-const SlideTransition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction='up' ref={ref} {...props} />;
- });
-
-function Contact(props) {
- const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
- const [emailjsResponse, setEmailjsResponse] = useState({});
- const [isOpenSubmittionResultDialog, setOpenSubmittionResultDialog] = useState(false);
-
- function handleCloseContactUsDialog() {
-  setOpenContactUsDialog(false);
- }
+export default function ContactUsButton({setOpenContactUsDialog}) {
  function handleClickBackcallButton() {
+  console.log(setOpenContactUsDialog);
+  console.log('ContactUsButton     setOpenContactUsDialog(true);');
   setOpenContactUsDialog(true);
  }
 
- function handleCloseSubmittionResultDialog() {
-  setOpenSubmittionResultDialog(false);
- }
-
  return (
+  <React.Fragment>
    <div style={{display: 'flex', flexWrap: 'wrap'}}>
     <div>
      <Typography
@@ -62,47 +64,9 @@ function Contact(props) {
      variant='contained'
      startIcon={<HeadsetMicIcon />}
     >
-     <span>Обратный звонок</span>
-     
-    <Dialog 
-     maxWidth='sm'
-     fullWidth={false}
-     /* style={{maxWidth: '400px, right: 0, top: 0}} */
-     //sx={{/* width: '600px', */ m:0, p:0}}
-     //PaperProps={{ sx: { mt: "50px", verticalAlign: "top", textAlign: 'center', justifySelf: 'auto'} }}
-     scroll='body'
-     open={isOpenContactUsDialog}
-     onClose={handleCloseContactUsDialog}
-     TransitionComponent={SlideTransition}
-     transitionDuration={{appear: 1000, enter: 1000, exit: 1000}}
-     aria-labelledby='form-dialog-title'
-     PaperProps={{ sx: { top:10, left:10, m:0 }}}
-     /* sx={{'& .MuiDialog-container': {
-      justifyContent: 'flex-start',
-      alignItems: 'flex-start'
-     }}} */
-    >
-     <DialogTitle sx={{p: '1em', m:0}} id='form-dialog-title'>
-      <Typography sx={{fontSize: '1.8em' , textAlign: 'center'}}>
-       Оставьте свои данные и мы Вам перезвоним!
-      </Typography>
-     </DialogTitle>
-     <ThemeProvider theme={theme}>
-      <DialogContent>
-       {/* --------------------------------------------------------------------------------------------------------------------- */}
-       <ContactUsForm
-        setEmailjsResponse={setEmailjsResponse}
-        setOpenContactUsDialog={setOpenContactUsDialog}
-        setOpenSubmittionResultDialog={setOpenSubmittionResultDialog}
-       />
-       {/* --------------------------------------------------------------------------------------------------------------------- */}
-      </DialogContent>
-     </ThemeProvider>
-    </Dialog>
-    <SubmittionResultDialog {...{isOpenSubmittionResultDialog, handleCloseSubmittionResultDialog, emailjsResponse}} />
+    <span>Обратный звонок</span>
     </Button>
    </div>
+  </React.Fragment>
  );
 }
-
-export default withStyles(styles)(Contact);

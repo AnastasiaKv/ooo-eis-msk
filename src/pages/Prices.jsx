@@ -2,9 +2,9 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import {Typography, Stack} from '@mui/material';
+import {Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-/* import {Stack} from '@mui/system'; */
+import {Stack} from '@mui/system';
 import JobsType from '../app/components/Prices/JobsType';
 import TrustedBox from '../app/components/Prices/TrustedBox';
 import RepairMotorsPage from '../app/components/OurServices/pages/1_RepairMotorsPage';

@@ -1,17 +1,19 @@
-import React, {useRef, useState} from 'react';
-import {Formik, Form} from 'formik';
+import React, {useRef, useState, useEffect} from 'react';
+import {Formik, Form, useField, useFormikContext} from 'formik';
 import * as Yup from 'yup';
 import '../assets/css/style.css';
 import '../assets/css/styles-custom.css';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import {Stack} from '@mui/system';
 import Box from '@mui/material/Box';
-import {Typography, Paper} from '@mui/material';
+import {Typography} from '@material-ui/core';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
-import {Button} from '@mui/material';
-import emailjs /* , {init, SMTPClient} */ from '@emailjs/browser';
+import {Button} from '@material-ui/core';
+import emailjs, {init, SMTPClient} from '@emailjs/browser';
+import MyTextInput from "../../src/app/modules/common/MyTextInput";
 import SubmittionResultDialog from '../app/components/Header/components/SubmittionResultDialog';
-import MyTextInput from '../app/modules/common/MyTextInput';
 
 const textStyle = {
  fontFamily: 'Roboto',
@@ -24,17 +26,17 @@ const textStyle = {
 };
 
 export default function Contacts() {
- const contactUs2Form = useRef();
- const [emailjsResponse, setEmailjsResponse] = useState({});
- const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
- const [isOpenSubmittionResultDialog, setOpenSubmittionResultDialog] = useState(false);
- function handleCloseSubmittionResultDialog() {
-  setOpenSubmittionResultDialog(false);
- }
-
- emailjs.init('GaqOI812E6KDw78sT');
+    const contactUs2Form = useRef();
+    const [emailjsResponse, setEmailjsResponse] = useState({});
+    const [isOpenSubmittionResultDialog, setOpenSubmittionResultDialog] = useState(false);
+    function handleCloseSubmittionResultDialog() {
+     setOpenSubmittionResultDialog(false);
+    }
+   
+    emailjs.init('GaqOI812E6KDw78sT');
 
  return (
+    <>
   <main className='ees-content-card'>
    <SEO
     title='Контакты'
@@ -49,6 +51,7 @@ export default function Contacts() {
      '& .MuiTextField-root': {m: 1, width: '25ch'},
      paddingBottom: '1em',
     }}
+    noValidate
     autoComplete='off'
    >
     <div>
@@ -147,7 +150,6 @@ export default function Contacts() {
              console.info('Email sent succesfully.');
              console.info(result);
              setEmailjsResponse(result);
-             setOpenContactUsDialog(false);
              setOpenSubmittionResultDialog(true);
              setSubmitting(false);
             },
@@ -155,7 +157,6 @@ export default function Contacts() {
              console.info('Error: Email did not sent.');
              console.info(error);
              setEmailjsResponse(error);
-             setOpenContactUsDialog(false);
              setOpenSubmittionResultDialog(true);
              setSubmitting(false);
             }
@@ -169,15 +170,16 @@ export default function Contacts() {
             onSubmit={props.handleSubmit}
            >
             <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
-             <Stack sx={{paddingLeft: '60px', paddingTop: '1em', paddingBottom: '1.5em'}} direction='column'>
+             <Stack sx={{paddingLeft: '1.5em', paddingTop: '1em', paddingBottom: '1.5em', paddingRight: '1em'}} direction='column'>
               <MyTextInput label='Имя' name='name' type='text' placeholder='' />
               <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
               <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
               <Button
                style={{
                 left: 0,
-                marginLeft: '84px',
-                marginTop: '10px',
+                marginLeft: '110px',
+                marginTop: '15px',
+                marginBottom: '15px',
                 width: '15em',
                 height: '50px',
                 borderRadius: '1',
@@ -202,12 +204,13 @@ export default function Contacts() {
      </Stack>
     </div>
     <Box sx={{height: '2em'}} />
+   </Box>
+  </main>
     <SubmittionResultDialog
      isOpenSubmittionResultDialog={isOpenSubmittionResultDialog}
      handleCloseSubmittionResultDialog={handleCloseSubmittionResultDialog}
      emailjsResponse={emailjsResponse}
     />
-   </Box>
-  </main>
+ </>
  );
 }

@@ -1,7 +1,7 @@
-import React/* , {useState} */ from 'react';
+import React, {useState} from 'react';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import {Typography} from '@mui/material';
+import {Typography} from '@material-ui/core';
 
 const divStyle = {
  width: '36em',
