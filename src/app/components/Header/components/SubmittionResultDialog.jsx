@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import CheckIcon from '@mui/icons-material/Check'; */
-import SendIcon from '@mui/icons-material/Check';
+import {Send as SendIcon, CheckCircleOutline as CheckCircleOutlineIcon} from '@mui/icons-material';
 import {
  Button,
  Dialog,
@@ -19,33 +19,34 @@ import {
  Slide,
 } from '@mui/material';
 
-/* const Transition = React.forwardRef(function Transition(props, ref) {
+const SlideTransition = React.forwardRef(function Transition(props, ref) {
  return <Slide direction='up' ref={ref} {...props} />;
-}); */
+});
 
-function SubmittionResultDialog({
- isOpenSubmittionResultDialog,
+function SubmittionResultDialog(
+ {isOpenSubmittionResultDialog,
  handleCloseSubmittionResultDialog,
- emailjsResponse,
-}) {
+ emailjsResponse}
+) {
  console.log('SubmittionResultDialog:');
  console.log(emailjsResponse);
  const [isShowErrorDetails, setShowErrorDetails] = useState(false);
  return (
   <Dialog
-   sx={{width: '1000px', left:'45'}}
+   style={{width: '1000px'/* , position: 'absolute', right: 0, top: 0 */}}
+   //sx={{width: '1000px', left:'45', m:0}}
    open={isOpenSubmittionResultDialog}
    onClose={handleCloseSubmittionResultDialog}
-   /* TransitionComponent={Transition} */
+   TransitionComponent={SlideTransition}
    aria-labelledby='form-dialog-title'
   >
    <DialogTitle>
     {emailjsResponse.status === 200 ? (
      <Alert
-      icon={<SendIcon style={{fontSize: '2rem'}} />}
+      icon={<CheckCircleOutlineIcon style={{fontSize: '1.7rem'}} />}
       variant='filled'
       severity='success'
-      style={{textAlign: 'left', fontSize: '2.5em'}}
+      style={{textAlign: 'left', fontSize: '1.7rem'}}
      >
       Ваша заявка зарегистрирована.
      </Alert>
@@ -60,10 +61,10 @@ function SubmittionResultDialog({
    <DialogContent>
     <DialogContentText>
      {emailjsResponse.status === 200 ? (
-      <Typography component='div' sx={{textAlign: 'left', textSize: '1.5rem'}}>
+      <Typography component='div' sx={{textAlign: 'left', textSize: '4rem'}}>
        Спасибо за Ваше обращение!
        <br />
-       Мы позвоним Вам в ближайшее время.
+       Мы свяжемся с Вами в ближайшее время.
       </Typography>
      ) : (
       <div style={{textAlign: 'left', fontSize: '1.2em'}}>

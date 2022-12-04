@@ -35,6 +35,7 @@ export default function Contacts() {
  emailjs.init('GaqOI812E6KDw78sT');
 
  return (
+    <>
   <main className='ees-content-card'>
    <SEO
     title='Контакты'
@@ -169,15 +170,16 @@ export default function Contacts() {
             onSubmit={props.handleSubmit}
            >
             <Paper elevation={10} sx={{width: '-webkit-fill-available'}}>
-             <Stack sx={{paddingLeft: '60px', paddingTop: '1em', paddingBottom: '1.5em'}} direction='column'>
+             <Stack sx={{paddingLeft: '1.5em', paddingTop: '1em', paddingBottom: '1.5em', paddingRight: '1em'}} direction='column'>
               <MyTextInput label='Имя' name='name' type='text' placeholder='' />
               <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
               <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
               <Button
                style={{
                 left: 0,
-                marginLeft: '84px',
-                marginTop: '10px',
+                marginLeft: '110px',
+                marginTop: '15px',
+                marginBottom: '15px',
                 width: '15em',
                 height: '50px',
                 borderRadius: '1',
@@ -202,12 +204,15 @@ export default function Contacts() {
      </Stack>
     </div>
     <Box sx={{height: '2em'}} />
-    <SubmittionResultDialog
-     isOpenSubmittionResultDialog={isOpenSubmittionResultDialog}
-     handleCloseSubmittionResultDialog={handleCloseSubmittionResultDialog}
-     emailjsResponse={emailjsResponse}
-    />
+    
    </Box>
+   
   </main>
+  <SubmittionResultDialog
+  isOpenSubmittionResultDialog={isOpenSubmittionResultDialog}
+  handleCloseSubmittionResultDialog={handleCloseSubmittionResultDialog}
+  emailjsResponse={emailjsResponse}
+ />
+ </>
  );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
+import {Typography, Stack} from '@mui/material';
 /* import Grid from '@mui/material/Grid'; */
-import {Stack} from '@mui/system';
+/* import {Stack} from '@mui/system'; */
 import Paper from '@mui/material/Paper';
 import trkLogo from '../assets/img/companiesLogos/trk/trkLogo.svg';
 import mlrzLogo from '../assets/img/companiesLogos/mlrz/MLRZ-logo.png';
