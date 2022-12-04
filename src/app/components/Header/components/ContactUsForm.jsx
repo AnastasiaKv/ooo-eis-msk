@@ -98,7 +98,7 @@ export default function ContactUsForm(
       <div/*  style={{ justifyContent: 'center', textAlign: 'center', boxSizing: 'contentBox', }} */>
        <Button
          sx={{
-         left:0,
+        left:0,
          width: '12em',
          height: '45px',
          borderRadius: '1',
@@ -136,7 +136,7 @@ export default function ContactUsForm(
             setOpenSubmittionResultDialog(true);
            }}
           >
-          Test OK
+           Test OK
           </Button>
           <Button
            style={{
@@ -157,7 +157,7 @@ export default function ContactUsForm(
            console.info(response);
            setEmailjsResponse(response);
            setOpenContactUsDialog(false);
-           setOpenSubmittionResultDialog(true);
+            setOpenSubmittionResultDialog(true);
            }
           }>
            Test Error

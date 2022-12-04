@@ -65,8 +65,8 @@ export default function ContactUsButton({setOpenContactUsDialog}) {
      startIcon={<HeadsetMicIcon />}
     >
     <span>Обратный звонок</span>
-             </Button>
-        </div>
+    </Button>
+   </div>
   </React.Fragment>
  );
 }
