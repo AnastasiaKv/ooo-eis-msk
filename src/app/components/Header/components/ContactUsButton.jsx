@@ -1,5 +1,5 @@
-import React, {useRef, useState} from 'react';
-import emailjs from '@emailjs/browser';
+import React, {/* useRef,  */useState} from 'react';
+/* import emailjs from '@emailjs/browser'; */
 import {withStyles} from '@mui/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 /* import SendIcon from '@mui/icons-material/Send';
@@ -20,11 +20,11 @@ import {Stack} from '@mui/system'; */
 import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 /* import MyTextInput from './MyTextInput'; */
-import {useMatch} from 'react-router-dom';
+/* import {useMatch} from 'react-router-dom'; */
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
-import SubmitResultDialog from './SubmitResultDialog';
+import SubmittionResultDialog from './SubmittionResultDialog';
 import ContactUsForm from './ContactUsForm';
 
 const styles = {};
@@ -43,14 +43,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
  });
 
 function Contact(props) {
- emailjs.init('GaqOI812E6KDw78sT');
-
- const contactUsForm = useRef();
  const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
 
  const [emailjsResponse, setEmailjsResponse] = useState({});
 
- const [isOpenSubmitResultForm, setOpenSubmitResultDialog] = useState(false);
+ const [isOpenSubmittionResultDialog, setOpenSubmittionResultDialog] = useState(false);
 
 
  function handleCloseContactUsDialog() {
@@ -61,25 +58,9 @@ function Contact(props) {
   setOpenContactUsDialog(true);
  }
  
- function handleCloseSubmitResultDialog() {
-  setOpenSubmitResultDialog(false);
+ function handleCloseSubmittionResultDialog() {
+  setOpenSubmittionResultDialog(false);
  }
-
-/*  const handleSendEmail = (e) => {
-  e.preventDefault();
-  console.log('Sending e-mail');
-  emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
-   (result) => {
-    setEmailjsResponse(result);
-   },
-   (error) => {
-    setEmailjsResponse(error);
-    console.error(error);
-   }
-  );
- };
-
- var enableDebugButtons = useMatch("/debug"); */
 
  return (
   <React.Fragment>
@@ -121,16 +102,19 @@ function Contact(props) {
      <ThemeProvider theme={theme}>
       <DialogContent>
        {/* --------------------------------------------------------------------------------------------------------------------- */}
-       <ContactUsForm/>
+       <ContactUsForm 
+        setEmailjsResponse={setEmailjsResponse}
+        setOpenContactUsDialog={setOpenContactUsDialog}
+        setOpenSubmittionResultDialog={setOpenSubmittionResultDialog}/>
        {/* --------------------------------------------------------------------------------------------------------------------- */}
       </DialogContent>
      </ThemeProvider>
     </Dialog>
 
-    <SubmitResultDialog
-     isOpenSubmitResultForm = {isOpenSubmitResultForm}
-     handleCloseSubmitResultDialog = {handleCloseSubmitResultDialog}
-     emailjsResponse = {emailjsResponse}
+    <SubmittionResultDialog
+     isOpenSubmittionResultDialog={isOpenSubmittionResultDialog}
+     handleCloseSubmittionResultDialog={handleCloseSubmittionResultDialog}
+     emailjsResponse={emailjsResponse}
     />
    </div>
   </React.Fragment>

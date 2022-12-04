@@ -87,7 +87,7 @@ export default function NavTabs() {
     }}
     /* indicator='' */
    >
-    {/* <Stack sx={{marginLeft: '-35px', paddingLeft: '0px'}} direction='row' spacing={4}> */}
+    <Stack sx={{marginLeft: '-35px', paddingLeft: '0px'}} direction='row' spacing={4}>
     <LinkTab
      /* onClick={value} */
      /* value={0} */
@@ -128,7 +128,7 @@ export default function NavTabs() {
      className={classes.button}
      style={buttonStyle}
     />
-    {/* </Stack> */}
+    </Stack>
    </Tabs>
    <Routes>
     <Route exact path='/' element={<Main />}>

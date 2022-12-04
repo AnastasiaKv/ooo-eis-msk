@@ -13,13 +13,13 @@ import {
  DialogActions,
  /*  Paper, */
 } from '@mui/material';
-import {/* Alert, FormControlLabel, Switch,  */ Slide} from '@mui/material';
+/* import {Alert, FormControlLabel, Switch,  Slide} from '@mui/material'; */
 import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import {Stack} from '@mui/system';
 /* import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles'; */
-import MyTextInput from './MyTextInput';
+import MyTextInput from '../../../modules/common/MyTextInput';
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
@@ -33,28 +33,33 @@ import {useMatch} from 'react-router-dom';
 export default function ContactUsForm({
  setEmailjsResponse,
  setOpenContactUsDialog,
- setOpenSubmitResultDialog,
+ setOpenSubmittionResultDialog,
 }) {
- function handleSubmitContactUsForm(/* values,  */ {setSubmitting}) {
+ emailjs.init('GaqOI812E6KDw78sT');
+ function handleSubmitContactUsForm( values, {setSubmitting}) {
   console.log('Sending e-mail');
+  console.log(values);
   emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
    (result) => {
+    console.info('Email sent succesfully.');
+    console.info(result);
     setEmailjsResponse(result);
     setOpenContactUsDialog(false);
-    setOpenSubmitResultDialog(true);
+    setOpenSubmittionResultDialog(true);
     setSubmitting(false);
    },
    (error) => {
+    console.info('Error: Email did not sent.');
+    console.info(error);
     setEmailjsResponse(error);
-    console.error(error);
-    //setOpenContactUsDialog(false);
-    setOpenSubmitResultDialog(true);
+    setOpenContactUsDialog(false);
+    setOpenSubmittionResultDialog(true);
     setSubmitting(false);
    }
   );
  }
 
-/*  const handleSendEmail = (e) => {
+ /*  const handleSendEmail = (e) => {
   e.preventDefault();
   console.log('Sending e-mail');
   emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
@@ -95,6 +100,7 @@ export default function ContactUsForm({
       <div style={{paddingRight: '7.5em'}}>
        <Button
         style={{
+        left:0,
          width: '12em',
          height: '45px',
          borderRadius: '1',
@@ -109,7 +115,7 @@ export default function ContactUsForm({
        </Button>
 
        {
-        /*Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой */
+        //Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой
         enableDebugButtons && (
          <div>
           <Button
@@ -122,7 +128,7 @@ export default function ContactUsForm({
            }}
            onClick={() => {
             setEmailjsResponse({status: 200, text: ' OK '});
-            setOpenSubmitResultDialog(true);
+            setOpenSubmittionResultDialog(true);
             setOpenContactUsDialog(false);
            }}
           >
@@ -138,11 +144,11 @@ export default function ContactUsForm({
            }}
            onClick={() => {
             setEmailjsResponse({
-             status: 412,
+             status: 410,
              text:
               "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <recipient@mailserver.ru>: Relay access denied",
             });
-            setOpenSubmitResultDialog(true);
+            setOpenSubmittionResultDialog(true);
             setOpenContactUsDialog(false);
            }}
           >
