@@ -3,7 +3,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Stack from '@mui/material/Stack';
-import {makeStyles} from '@material-ui/styles';
+import {makeStyles} from '@mui/styles';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 
 import About from '../../pages/About';
@@ -11,7 +11,7 @@ import Contacts from '../../pages/Contacts';
 import Prices from '../../pages/Prices';
 import Gallery from '../../pages/Gallery';
 import Main from '../../pages/Main';
-import ServerModal from '../core/errors/ServerModal';
+/* import ServerModal from '../core/errors/ServerModal'; */
 
 import Page1 from './OurServices/pages/1_RepairMotorsPage';
 import Page2 from './OurServices/pages/2_GeneratorRepairPage';
@@ -56,28 +56,28 @@ function LinkTab(props) {
     minHeight: '25px',
    }}
    component={Link}
-   onClick={(event) => {
+   /* onClick={(event) => {
     event.preventDefault();
     console.log(event.target);
     console.log(event.preventDefault());
-   }}
+   }} */
    {...props}
   />
  );
 }
 export default function NavTabs() {
- const [value, setValue] = React.useState(0);
+ /*  const [value, setValue] = React.useState(0); */
 
- const handleChange = (event, newValue) => {
+ /*  const handleChange = (event, newValue) => {
   setValue(newValue);
- };
+ }; */
  const classes = useStyles();
 
  return (
   <div style={{color: '#FFFFFF'}}>
    <Tabs
-    value={0}
-    onChange={handleChange}
+    value={1}
+    /* onChange={handleChange} */
     sx={{
      '.MuiTabs-indicator': {
       left: '0px',
@@ -85,38 +85,44 @@ export default function NavTabs() {
       height: '0px',
      },
     }}
+    indicator=""
    >
     <Stack sx={{marginLeft: '-35px', paddingLeft: '0px'}} direction='row' spacing={4}>
      <LinkTab
-      onClick={value}
+      /* onClick={value} */
+      value={0}
       label='Главная'
       to='/'
       className={classes.button}
       style={buttonStyle}
      />
      <LinkTab
-      onClick={value}
+      /* onClick={value} */
+      value={1}
       label='О нас'
       to='/about'
       className={classes.button}
       style={buttonStyle}
      />
      <LinkTab
-      onClick={value}
+      /* onClick={value} */
+      value={2}
       label='Стоимость'
       to='/prices'
       className={classes.button}
       style={buttonStyle}
      />
      <LinkTab
-      onClick={value}
+      /* onClick={value} */
+      value={3}
       label='Галерея'
       to='/gallery'
       className={classes.button}
       style={buttonStyle}
      />
      <LinkTab
-      onClick={value}
+      /* onClick={value} */
+      value={4}
       label='Контакты'
       to='/contacts'
       className={classes.button}

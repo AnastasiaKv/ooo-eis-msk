@@ -1,18 +1,18 @@
 import React, {useState} from 'react';
 import MapIcon from '@mui/icons-material/Map';
-import {Typography} from '@material-ui/core';
+import {Typography} from '@mui/material';
 import Button from '@mui/material/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+/* import DialogContentText from '@mui/material/DialogContentText'; */
+import DialogTitle from '@mui/material/DialogTitle';
 import axios from 'axios';
-import {Formik, Form, Field, ErrorMessage} from 'formik';
-import {Stack, width} from '@mui/system';
+import {Formik, Form/* , Field, ErrorMessage */} from 'formik';
+import {Stack/* , width */} from '@mui/system';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import {YMaps, Map, Placemark, GeolocationControl, RouteButton} from '@pbe/react-yandex-maps';
-import {Paper} from '@mui/material';
+import {YMaps, Map, Placemark, GeolocationControl/* , RouteButton */} from '@pbe/react-yandex-maps';
+/* import {Paper} from '@mui/material'; */
 
 const theme = createTheme({
  components: {
@@ -50,28 +50,28 @@ function YMap() {
 }
 
 function YMapButton(props) {
- const {classes} = props;
+/*  const {classes} = props; */
  const [open, setOpen] = useState(false);
- const [isSubmitionCompleted, setSubmitionCompleted] = useState(false);
+/*  const [isSubmitionCompleted, setSubmitionCompleted] = useState(false); */
 
- const [isShown, setIsShown] = useState(false);
- const [fullWidth, setFullWidth] = useState(true);
+/*  const [isShown, setIsShown] = useState(false); */
+/*  const [fullWidth, setFullWidth] = useState(true); */
 
- const handleClick = (event) => {
+ /* const handleClick = (event) => {
   // 👇️ toggle shown state
 
   setIsShown((current) => !current);
   // 👇️ or simply set it to true
   //setIsShown(true);
   setFullWidth(event.target.checked);
- };
+ }; */
 
  function handleClose() {
   setOpen(false);
  }
 
  function handleClickOpen() {
-  setSubmitionCompleted(false);
+/*   setSubmitionCompleted(false); */
   setOpen(true);
  }
 
@@ -95,7 +95,7 @@ function YMapButton(props) {
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </Button>
     <Dialog maxWidth='md' open={open} onClose={handleClose} aria-labelledby='form-dialog-title'>
-     {!isShown && (
+     {/* !isShown */1 && (
       <Stack sx={{backgroundColor: '#2d3748', color: '#FFFFFFFF', flexGrow: 1}}>
        <DialogTitle style={{marginTop: '-0.5em', marginBottom: '-0.5em'}} id='form-dialog-title'>
         <Typography
@@ -126,7 +126,7 @@ function YMapButton(props) {
              },
             })
             .then((resp) => {
-             setSubmitionCompleted(true);
+              setSubmitting(false);
             });
           }}
          >

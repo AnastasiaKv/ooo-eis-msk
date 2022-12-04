@@ -1,25 +1,25 @@
 import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import {withStyles} from '@material-ui/core/styles';
+import {withStyles} from '@mui/styles';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import SendIcon from '@mui/icons-material/Send';
-import CloseIcon from '@mui/icons-material/Close';
+/* import SendIcon from '@mui/icons-material/Send';
+import CloseIcon from '@mui/icons-material/Close'; */
 import {
  Button,
  Dialog,
  DialogTitle,
  DialogContent,
- DialogContentText,
+/*  DialogContentText,
  DialogActions,
- Paper,
+ Paper, */
 } from '@mui/material';
-import {Alert, FormControlLabel, Switch, Slide} from '@mui/material';
-import {Formik, Form} from 'formik';
+import {/* Alert, FormControlLabel, Switch, */ Slide} from '@mui/material';
+/* import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
-import {Stack} from '@mui/system';
+import {Stack} from '@mui/system'; */
 import Typography from '@mui/material/Typography';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import MyTextInput from './MyTextInput';
+/* import MyTextInput from './MyTextInput'; */
 import {useMatch} from 'react-router-dom';
 // import { DisplayFormikState } from './formikHelper';
 import '../../../../assets/css/style.css';
@@ -48,7 +48,6 @@ function Contact(props) {
  const contactUsForm = useRef();
  const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
 
- const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
  const [emailjsResponse, setEmailjsResponse] = useState({});
 
  const [isOpenSubmitResultForm, setOpenSubmitResultDialog] = useState(false);
@@ -66,23 +65,21 @@ function Contact(props) {
   setOpenSubmitResultDialog(false);
  }
 
- const handleSendEmail = (e) => {
+/*  const handleSendEmail = (e) => {
   e.preventDefault();
   console.log('Sending e-mail');
   emailjs.sendForm('service_6netdbf', 'backCallForm', contactUsForm.current).then(
    (result) => {
-    setIsSubmittedSuccessfully(true);
     setEmailjsResponse(result);
    },
    (error) => {
-    setIsSubmittedSuccessfully(false);
     setEmailjsResponse(error);
     console.error(error);
    }
   );
  };
 
- var enableDebugButtons = useMatch("/debug");
+ var enableDebugButtons = useMatch("/debug"); */
 
  return (
   <React.Fragment>

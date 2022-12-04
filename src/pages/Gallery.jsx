@@ -1,7 +1,7 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+/* import {makeStyles} from '@mui/material/styles'; */
 import Box from '@mui/material/Box';
-import {Typography} from '@material-ui/core';
+import {Typography} from '@mui/material';
 import {Stack} from '@mui/system';
 import Paper from '@mui/material/Paper';
 

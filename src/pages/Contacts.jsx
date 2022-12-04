@@ -1,17 +1,17 @@
-import React, {useRef, useState, useEffect} from 'react';
-import {Formik, Form, useField, useFormikContext} from 'formik';
+import React, {useRef, useState/* , useEffect */} from 'react';
+import {Formik, Form, useField/* , useFormikContext */} from 'formik';
 import * as Yup from 'yup';
 import '../assets/css/style.css';
 import '../assets/css/styles-custom.css';
-import Grid from '@mui/material/Grid';
+/* import Grid from '@mui/material/Grid'; */
 import Paper from '@mui/material/Paper';
 import {Stack} from '@mui/system';
 import Box from '@mui/material/Box';
-import {Typography} from '@material-ui/core';
+import {Typography} from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
-import {Button} from '@material-ui/core';
-import emailjs, {init, SMTPClient} from '@emailjs/browser';
+/* import {Button} from '@material-ui/core'; */
+import emailjs/* , {init, SMTPClient} */ from '@emailjs/browser';
 
 const textStyle = {
  fontFamily: 'Roboto',
@@ -39,6 +39,8 @@ export default function Contacts() {
  const contactUsForm = useRef();
  const [emailjsResponse, setEmailjsResponse] = useState({});
  const [isSendedSuccessfully, setIsSendedSuccessfully] = useState(false);
+
+ emailjs.init('GaqOI812E6KDw78sT');
 
  return (
   <main className='ees-content-card'>

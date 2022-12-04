@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import CloseIcon from '@mui/icons-material/Close';
+/* import CloseIcon from '@mui/icons-material/Close'; */
 import {
  Button,
  Dialog,
@@ -10,7 +10,7 @@ import {
  Paper,
 } from '@mui/material';
 import {Alert, FormControlLabel, Switch, Slide} from '@mui/material';
-import Typography from '@mui/material/Typography';
+/* import Typography from '@mui/material/Typography'; */
 
 const Transition = React.forwardRef(function Transition(props, ref) {
  return <Slide direction='up' ref={ref} {...props} />;

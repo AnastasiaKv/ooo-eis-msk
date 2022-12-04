@@ -77,7 +77,7 @@ function DecorBottom({visability}) {
  );
 }
 
-function ServiceLinkButton({linkUrl, image}) {
+/* function ServiceLinkButton({linkUrl, image}) {
  const classes = useStyles();
  const isUrlExpected = useMatch(linkUrl);
  console.log('matchCurrent: ' + isUrlExpected);
@@ -90,7 +90,7 @@ function ServiceLinkButton({linkUrl, image}) {
    {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
-}
+} */
 
 function Page1() {
  const classes = useStyles();
@@ -544,7 +544,7 @@ export default function Gridservices() {
  const ref = useRef({
   renderCount: 0,
  });
- const classes = useStyles();
+/*  const classes = useStyles(); */
 
  ref.current.renderCount++;
  console.log('renderCount: ' + ref.current.renderCount);
