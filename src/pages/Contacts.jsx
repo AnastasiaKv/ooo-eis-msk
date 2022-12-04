@@ -142,7 +142,7 @@ export default function Contacts() {
           })}
           onSubmit={async (values, {setSubmitting}) => {
            console.log('Sending e-mail');
-           emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUs2Form.current).then(
+           emailjs.sendForm('service_6netdbf', 'contactUs2Form', contactUs2Form.current).then(
             (result) => {
              console.info('Email sent succesfully.');
              console.info(result);
