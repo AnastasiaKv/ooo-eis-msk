@@ -4,8 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import {Typography, Stack} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-/* import {Stack} from '@mui/system'; */
-import JobsType from '../app/components/Prices/JobsType';
+import WorkStages from '../app/components/Prices/WorkStages';
 import TrustedBox from '../app/components/Prices/TrustedBox';
 import RepairMotorsPage from '../app/components/OurServices/pages/1_RepairMotorsPage';
 import GeneratorRepairPage from '../app/components/OurServices/pages/2_GeneratorRepairPage';
@@ -70,7 +69,7 @@ export default function Prices() {
 
      <br />
      <div style={{paddingLeft: '3em', paddingRight: '5em', paddingBottom: '2em'}}>
-      <JobsType />
+      <WorkStages />
      </div>
     </div>
     <br /> <br /> <br />
