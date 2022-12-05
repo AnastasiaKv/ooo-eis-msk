@@ -548,12 +548,31 @@ abbr {
  margin-top: 1px;
 }
 
-.formik-text-input {
+.formik-input-text {
 }
 
 .formik-input-label {
  margin:'2px 0';
  padding: 0
+}
+
+.formik-submit-button {
+ left: 0;
+ width: 12em;
+ height: 45px;
+ border-radius: 1;
+ color: #F1F1F1F1;
+ background-color: #2d3748;
+ margin: 20px,
+}
+.formik-debug-button {
+        left: 0;
+        width: 12em;
+        height: 45px;
+        border-radius: 1;
+        background-color: #2d3748;
+        margin: 20px;
+        color: green;
 }
 
 @media (prefers-color-scheme: dark) {
