@@ -10,7 +10,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
 import {Button} from '@mui/material';
 import emailjs from '@emailjs/browser';
-import MyTextInput from '../../src/app/modules/common/MyTextInput';
+import CustomTextInput from '../app/modules/common/CustomTextInput';
 import SubmittionResultDialog from '../app/components/Header/components/SubmittionResultDialog';
 
 const textStyle = {
@@ -186,9 +186,9 @@ export default function Contacts() {
                }}
                direction='column'
               >
-               <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-               <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-               <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
+               <CustomTextInput label='Имя' name='name' type='text' placeholder='' />
+               <CustomTextInput label='E-mail' name='email' type='email' placeholder='' />
+               <CustomTextInput label='Телефон' name='phone' type='text' placeholder='' />
                <Button
                 sx={{
                  left: 0,

@@ -5,8 +5,6 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './app/App';
 import './assets/fonts/Furore.otf';
 import './assets/css/index.css';
-/* import {Provider} from 'react-redux';
-import {createStore} from 'react-redux'; */
 
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {

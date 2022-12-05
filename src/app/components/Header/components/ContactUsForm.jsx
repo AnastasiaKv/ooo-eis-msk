@@ -5,7 +5,7 @@ import CloseIcon from '@mui/icons-material/Close'; */
 import {Button, DialogActions, Stack} from '@mui/material';
 import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
-import MyTextInput from '../../../modules/common/MyTextInput';
+import CustomTextInput from '../../../modules/common/CustomTextInput';
 import {useMatch} from 'react-router-dom';
 /* import AccountCircle from '@mui/icons-material/AccountCircle'; */
 
@@ -79,9 +79,9 @@ export default function ContactUsForm({
       onSubmit={props.handleSubmit}
      >
       <Stack direction='column' /* noValidate */>
-       <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-       <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-       <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
+       <CustomTextInput label='Имя' name='name' type='text' placeholder='' />
+       <CustomTextInput label='E-mail' name='email' type='email' placeholder='' />
+       <CustomTextInput label='Телефон' name='phone' type='text' placeholder='' />
       </Stack>
       <DialogActions
        style={{justifyContent: 'center' /*, boxSizing: 'contentBox', width: 'fitContent' */}}

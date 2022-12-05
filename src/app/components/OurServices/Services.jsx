@@ -4,7 +4,6 @@ import '../../../assets/css/styles-custom.css';
 import '../../../assets/css/decor-top.css';
 import '../../../assets/css/decor-bottom.css';
 import {Box, Typography, Paper, Stack} from '@mui/material';
-/* import {Stack} from '@mui/system'; */
 import {Routes, Route, useMatch} from 'react-router-dom';
 import LinkButton from '../../modules/common/LinkButton';
 import decorTop from '../../../assets/img/Decor/decorTop.png';
@@ -76,21 +75,6 @@ function DecorBottom({visability}) {
   </div>
  );
 }
-
-/* function ServiceLinkButton({linkUrl, image}) {
- const classes = useStyles();
- const isUrlExpected = useMatch(linkUrl);
- console.log('matchCurrent: ' + isUrlExpected);
- return (
-  <LinkButton to={isUrlExpected ? '/' : linkUrl}>
-   {isUrlExpected && <DecorTop />}
-   <Paper sx={{boxShadow: 'none', width: '250px'}} className={classes.Item}>
-    <Box sx={{height: '250px', width: '250px'}} component='img' alt='button' src={image} />
-   </Paper>
-   {isUrlExpected && <DecorBottom />}
-  </LinkButton>
- );
-} */
 
 function Page1() {
  const classes = useStyles();
@@ -544,8 +528,6 @@ export default function Gridservices() {
  const ref = useRef({
   renderCount: 0,
  });
-/*  const classes = useStyles(); */
-
  ref.current.renderCount++;
  console.log('renderCount: ' + ref.current.renderCount);
 

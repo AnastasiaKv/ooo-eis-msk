@@ -7,7 +7,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 
-export default function SimpleTable2({data}) {
+export default function SimpleTable({data}) {
  return (
   <Stack spacing={0} style={{paddingTop: '1em', paddingLeft: '1em'}}>
    <Paper elevation={8} sx={{maxWidth: '670px'}}>

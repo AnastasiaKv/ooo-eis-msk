@@ -2,12 +2,6 @@ import React from 'react';
 import {Stack} from '@mui/system';
 import SEO from '../../components/SEO';
 
-// componentDidMount() {
-//    if (typeof window !== 'undefined') {
-
-//window.location = "https://www.eis-msk.ru";
-//    }
-// }
 const Error404 = () => {
  return (
   <main className='ees-content'>
