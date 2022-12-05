@@ -24,6 +24,7 @@ import '../../../../assets/css/styles-custom.css';
 import {useMatch} from 'react-router-dom';
 import SubmittionResultDialog from './SubmittionResultDialog';
 import ContactUsForm from './ContactUsForm';
+import SendUsEmailDialog from './SendUsEmailDialog'
 
 const theme = createTheme({
  components: {
@@ -33,40 +34,39 @@ const theme = createTheme({
   },
  },
 });
-export default function ContactUsButton({setOpenContactUsDialog}) {
+
+export default function ContactUsButton() {
  function handleClickBackcallButton() {
-  console.log(setOpenContactUsDialog);
-  console.log('ContactUsButton     setOpenContactUsDialog(true);');
   setOpenContactUsDialog(true);
  }
+ const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
 
  return (
-  <React.Fragment>
-   <div style={{display: 'flex', flexWrap: 'wrap'}}>
-    <div>
-     <Typography
-      variant='h6'
-      component='div'
-      style={{flexGrow: 1, paddingLeft: '44px', color: '#2d3748'}}
-     >
-      8 (495)-135-82-88
-     </Typography>
-    </div>
-    <Button
-     onClick={handleClickBackcallButton}
-     style={{
-      borderRadius: 3,
-      textTransform: 'inherit',
-      color: '#ffffff',
-      backgroundColor: '#F12B29',
-      height: '37.1px',
-     }}
-     variant='contained'
-     startIcon={<HeadsetMicIcon />}
+  <div style={{display: 'flex', flexWrap: 'wrap'}}>
+   <div>
+    <Typography
+     variant='h6'
+     component='div'
+     style={{flexGrow: 1, paddingLeft: '44px', color: '#2d3748'}}
     >
-    <span>Обратный звонок</span>
-    </Button>
+     8 (495)-135-82-88
+    </Typography>
    </div>
-  </React.Fragment>
+   <Button
+    onClick={handleClickBackcallButton}
+    style={{
+     borderRadius: 3,
+     textTransform: 'inherit',
+     color: '#ffffff',
+     backgroundColor: '#F12B29',
+     height: '37.1px',
+    }}
+    variant='contained'
+    startIcon={<HeadsetMicIcon />}
+   >
+    <span>Обратный звонок</span>
+   </Button>
+   <SendUsEmailDialog {...{isOpenContactUsDialog, setOpenContactUsDialog}}/>
+  </div>
  );
 }

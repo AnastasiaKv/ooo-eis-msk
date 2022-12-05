@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-/* import CloseIcon from '@mui/icons-material/Close';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
-import CheckIcon from '@mui/icons-material/Check'; */
-import {Send as SendIcon, CheckCircleOutline as CheckCircleOutlineIcon} from '@mui/icons-material';
+/* import CloseIcon, SendIcon from '@mui/icons-material/Close'; */
+import {
+ ErrorOutlineRounded as ErrorOutlineRoundedIcon,
+ CheckCircleOutline as CheckCircleOutlineIcon,
+} from '@mui/icons-material';
 import {
  Button,
  Dialog,
@@ -33,21 +33,22 @@ function SubmittionResultDialog({
  const [isShowErrorDetails, setShowErrorDetails] = useState(false);
  return (
   <Dialog
-   disableScrollLock
+   maxWidth='lg'
+   /* disableScrollLock */
    scroll='body'
    TransitionComponent={SlideTransition}
    transitionDuration={{appear: 0, enter: 350, exit: 350}}
    PaperProps={{
-    sx: {width: 'fitContext', left: 0},
+    sx: {maxWidth: '700px', maxHeight: '800px', width: 'fitContent', height: 'fitContent' /* '20em' */, left: 0},
    }}
-   sx={{
+   sx={{ /* width: '1200px', */ left:0, 
     '& .MuiDialog-container': {
      justifyContent: 'flex-start',
      alignItems: 'flex-start',
     },
    }}
-   /* style={{width: '1000px', position: 'absolute', right: 0, top: 0}}
-   sx={{width: '1000px', left:'45', m:0}} */
+   /* style={{width: '1000px', position: 'absolute', right: 0, top: 0}} */
+   /* sx={{width: '1000px', left:'45', m:2}} */
    open={isOpenSubmittionResultDialog}
    onClose={handleCloseSubmittionResultDialog}
    aria-labelledby='form-dialog-title'
@@ -55,39 +56,54 @@ function SubmittionResultDialog({
    <DialogTitle>
     {emailjsResponse.status === 200 ? (
      <Alert
-      icon={<CheckCircleOutlineIcon style={{fontSize: '2.3rem'}} />}
+      icon={<CheckCircleOutlineIcon style={{fontSize: '2em'}} />}
       variant='filled'
       severity='success'
-      style={{textAlign: 'left', fontSize: '1.7rem'}}
+      //style={{textAlign: 'left', textSize: '6rem'}}
      >
-      Ваша заявка зарегистрирована.
+      <Typography component='p' sx={{fontSize: '2em'}}>
+       Ваша заявка зарегистрирована.
+      </Typography>
      </Alert>
     ) : (
-     <Alert variant='filled' severity='error' sx={{textAlign: 'left', fontSize: '1.3em'}}>
-      Не удалось отправить заявку на обратный звонок в связи с технической проблемой.
+     <Alert
+      icon={<ErrorOutlineRoundedIcon style={{fontSize: '4em'}} />}
+      variant='filled'
+      severity='error'
+     >
+      <Typography component='p' sx={{fontSize: '2em'}}>
+       Не удалось отправить заявку на обратный
+      </Typography>
+      <Typography component='p' sx={{fontSize: '2em'}}>
+       звонок в связи с технической проблемой.
+      </Typography>
      </Alert>
     )}
    </DialogTitle>
-   <DialogContent>
+   <DialogContent sx={{pb: '10px'}}>
     <DialogContentText>
      {emailjsResponse.status === 200 ? (
-      <Typography component='div' sx={{textAlign: 'left', textSize: '4rem'}}>
-       Спасибо за Ваше обращение!
-       <br />
-       Мы свяжемся с Вами в ближайшее время.
-      </Typography>
+      <>
+       <Typography component='p' sx={{fontSize: '1.5em'}}>
+        Спасибо за Ваше обращение!
+       </Typography>
+       <Typography component='p' sx={{fontSize: '1.5em'}}>
+        Мы свяжемся с Вами в ближайшее время.
+       </Typography>
+      </>
      ) : (
-      <div style={{textAlign: 'left', fontSize: '1.2em'}}>
-       <p>
-        Пожалуйста, попробуйте ещё раз позже или свяжитесь с нами другим способом.
-        <br />
-        <br />
-       </p>
+      <div sx={{pl:'3em', pr:'3em'}}>
+       <Typography component='p' sx={{/* ml: '30px',  */fontSize: '2em'}}>
+        Пожалуйста, попробуйте ещё раз позже
+       </Typography>
+       <Typography component='p' sx={{fontSize: '2em'}}>
+        или свяжитесь с нами другим способом.
+       </Typography>
        <FormControlLabel
-        sx={{marginLeft: '-43px', fontSize: '1.1rem'}}
+        sx={{marginLeft: '-43px', '& .MuiFormControlLabel-label': {fontSize: '1.5em', paddingTop: '2px'}}}
         control={
          <Switch
-          sx={{marginRight: '30px'}}
+          sx={{marginRight: '35px', fontSize: '1.5em'}}
           checked={isShowErrorDetails}
           onChange={() => {
            setShowErrorDetails((prev) => !prev);
@@ -97,21 +113,19 @@ function SubmittionResultDialog({
         label='Подробности ошибки'
        />
        <br />
-       <Paper
-        //sx={{fontSize: '0.3rem', fontFamily: 'Roboto', lineHeight: 1.5}}
+       <Paper sx={{width: 'fitContent', height: 'fitContent', maxWidth:'680px'/* , left: 0 */}}
         elevation={0}
         hidden={!isShowErrorDetails}
        >
-       <Typography component='p'>Код ответа: {emailjsResponse.status}</Typography>
-
-       <Typography component='div' style={{paddingLeft: '4.29em'}}>
-        <p style={{textIndent: '-4.29em'}}>Ошибка: {emailjsResponse.text}</p>
-       </Typography>
+        <Typography component='p' sx={{fontSize: '1.5em'}}>Код ответа: {emailjsResponse.status}</Typography>
+        <Typography component='p' sx={{fontSize: '1.5em'}} style={{paddingLeft: '4.29em', textIndent: '-4.29em'}}>
+         Ошибка: {emailjsResponse.text}
+        </Typography>
        </Paper>
       </div>
      )}
     </DialogContentText>
-    <DialogActions>
+    <DialogActions>{/* {emailjsResponse.text} */}
      <Button
       style={{left: 0}}
       className='outline'

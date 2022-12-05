@@ -39,7 +39,7 @@ export default function SendUsEmailDialog({isOpenContactUsDialog, setOpenContact
     transitionDuration={{appear: 0, enter: 350, exit: 350}}
     aria-labelledby='form-dialog-title'
     PaperProps={{
-     sx: {width: 'fitContext', left: 0},
+     sx: {width: 'fitContent', left: 0},
     }} /* {{sx: {position:'fixed', top:10, left:10, m:2}}} */ /* {{sx: {width:'90%', height:'90%', left:0}}} */
     sx={{
      '& .MuiDialog-container': {

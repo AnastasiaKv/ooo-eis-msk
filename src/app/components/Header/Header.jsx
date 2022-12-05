@@ -10,10 +10,9 @@ import {useTheme} from '@mui/material/styles';
 import ContactUsButton from './components/ContactUsButton';
 import YMapButton from './components/YMapButton';
 import LiveSearch from './components/LiveSearch';
-import SendUsEmailDialog from './components/SendUsEmailDialog'
 
 export default function Header() {
- const [isOpenContactUsDialog, setOpenContactUsDialog] = useState(false);
+ 
  return (
   <>
   <AppBar className='ees-header-content' elevation={0} sx={{bgcolor: 'white'}}>
@@ -26,9 +25,8 @@ export default function Header() {
     />
     <YMapButton />
     <LiveSearch iconEnd={<SearchIcon />} />
-    <ContactUsButton setOpenContactUsDialog = {setOpenContactUsDialog}/>
+    <ContactUsButton />
    </Toolbar>
-  <SendUsEmailDialog isOpenContactUsDialog = {isOpenContactUsDialog} setOpenContactUsDialog={setOpenContactUsDialog}/>
   </AppBar>
   </>
  );
