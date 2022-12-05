@@ -6,8 +6,6 @@ import {Button, DialogActions, Stack} from '@mui/material';
 import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import MyTextInput from '../../../modules/common/MyTextInput';
-import '../../../../assets/css/style.css';
-import '../../../../assets/css/styles-custom.css';
 import {useMatch} from 'react-router-dom';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
@@ -75,10 +73,7 @@ export default function ContactUsForm({
     })}
    >
     {(props) => (
-     <Form
-      ref={contactUsForm}
-      style={{width: 'fitContent'}} onSubmit={props.handleSubmit}
-     >
+     <Form ref={contactUsForm} style={{width: 'fitContent'}} onSubmit={props.handleSubmit}>
       <Stack direction='column' noValidate>
        <MyTextInput label='Имя' name='name' type='text' placeholder='' />
        <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
@@ -87,11 +82,21 @@ export default function ContactUsForm({
       <DialogActions
        style={{justifyContent: 'center' /*, boxSizing: 'contentBox', width: 'fitContent' */}}
       >
-       <div  style={{ justifyContent: 'center', textAlign: 'center', boxSizing: 'contentBox', }}
-       >
+       <div style={{justifyContent: 'center', textAlign: 'center', boxSizing: 'contentBox'}}>
         <Button
+         sx={{
+          left: '0',
+          width: '12em',
+          height: '45px',
+          borderRadius: '1',
+          color: '#F1F1F1F1',
+          backgroundColor: '#2d3748',
+          margin: '10px',
+          '&:hover': {
+            backgroundColor: '#F00000'
+          },
+         }}
          type='submit'
-         className='btn btn-primary formik-submit-button'
          variant='contained'
          disabled={props.isSubmitting}
         >
@@ -102,8 +107,19 @@ export default function ContactUsForm({
          enableDebugButtons && (
           <div>
            <Button
-            style={{color: 'green'}}
-            className='btn btn-primary formik-debug-button'
+            sx={{
+             left: '0',
+             width: '12em',
+             height: '45px',
+             borderRadius: '2',
+             backgroundColor: 'green',
+             margin: '10px',
+             color: 'white',
+             '&:hover': {
+              backgroundColor: 'blue',
+              color: 'green'
+             },
+            }}
             variant='outlined'
             onClick={() => {
              var response = {status: 200, text: ' OK '};
@@ -114,15 +130,27 @@ export default function ContactUsForm({
            >
             Test OK
            </Button>
-           
+
            <Button
-            style={{color: 'red'}}
-            className='btn btn-primary formik-debug-button'
+            sx={{
+             left: '0',
+             width: '12em',
+             height: '45px',
+             borderRadius: '2',
+             backgroundColor: 'red',
+             margin: '10px',
+             color: 'white',
+             '&:hover': {
+              backgroundColor: 'blue',
+              color: 'red'
+             },
+            }}
             variant='outlined'
             onClick={() => {
              var response = {
               status: 410,
-              text: "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <recipient@mailserver.ru>: Relay access denied",
+              text:
+               "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <recipient@mailserver.ru>: Relay access denied",
              };
              setEmailjsResponse(response);
              setOpenContactUsDialog(false);
@@ -141,4 +169,20 @@ export default function ContactUsForm({
    </Formik>
   </>
  );
+
+ /* const StyledButton = withStyles({
+  root: {
+   left: '0',
+   width: '12em',
+   height: '45px',
+   borderRadius: '1',
+   color: '#F1F1F1F1',
+   backgroundColor: '#2d3748',
+   margin: '20px',
+   '&:hover': {
+    backgroundColor: '#FFFFFF',
+    color: '#000000',
+   },
+  },
+ })(Button);*/
 }

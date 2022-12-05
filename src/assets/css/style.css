@@ -553,26 +553,7 @@ abbr {
 
 .formik-input-label {
  margin:'2px 0';
- padding: 0
-}
-
-.formik-submit-button {
- left: 0;
- width: 12em;
- height: 45px;
- border-radius: 1;
- color: #F1F1F1F1;
- background-color: #2d3748;
- margin: 20px,
-}
-.formik-debug-button {
-        left: 0;
-        width: 12em;
-        height: 45px;
-        border-radius: 1;
-        background-color: #2d3748;
-        margin: 20px;
-        color: green;
+ padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {

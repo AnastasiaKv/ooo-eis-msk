@@ -59,7 +59,7 @@ function SubmittionResultDialog({
       icon={<CheckCircleOutlineIcon style={{fontSize: '2em'}} />}
       variant='filled'
       severity='success'
-      //style={{textAlign: 'left', textSize: '6rem'}}
+      //style={{textAlign: 'left', textSize: '4rem'}}
      >
       <Typography component='p' sx={{fontSize: '2em'}}>
        Ваша заявка зарегистрирована.
@@ -67,14 +67,14 @@ function SubmittionResultDialog({
      </Alert>
     ) : (
      <Alert
-      icon={<ErrorOutlineRoundedIcon style={{fontSize: '4em'}} />}
+      icon={<ErrorOutlineRoundedIcon style={{fontSize: '2em'}} />}
       variant='filled'
       severity='error'
      >
-      <Typography component='p' sx={{fontSize: '2em'}}>
+      <Typography component='p' sx={{fontSize: '1.8em'}}>
        Не удалось отправить заявку на обратный
       </Typography>
-      <Typography component='p' sx={{fontSize: '2em'}}>
+      <Typography component='p' sx={{fontSize: '1.8em'}}>
        звонок в связи с технической проблемой.
       </Typography>
      </Alert>
@@ -113,7 +113,7 @@ function SubmittionResultDialog({
         label='Подробности ошибки'
        />
        <br />
-       <Paper sx={{width: 'fitContent', height: 'fitContent', maxWidth:'680px'/* , left: 0 */}}
+       <Paper sx={{width: 'fitContent', height: 'fitContent', maxWidth:'700px', left: 0}}
         elevation={0}
         hidden={!isShowErrorDetails}
        >
