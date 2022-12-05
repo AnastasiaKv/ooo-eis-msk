@@ -5,7 +5,7 @@
 /storybook-static
 /.pnp
 .pnp.js
-
+/yarn.lock
 # testing
 /coverage
 
