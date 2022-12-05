@@ -94,7 +94,7 @@ function YMapButton(props) {
     >
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </Button>
-    <Dialog maxWidth='md' open={open} onClose={handleClose} aria-labelledby='form-dialog-title'>
+    <Dialog maxWidth='md' open={open} onClose={handleClose} aria-labelledby='form-dialog-title' setSubmitionCompleted>
      {/* !isShown */1 && (
       <Stack sx={{backgroundColor: '#2d3748', color: '#FFFFFFFF', flexGrow: 1}}>
        <DialogTitle style={{marginTop: '-0.5em', marginBottom: '-0.5em'}} id='form-dialog-title'>
