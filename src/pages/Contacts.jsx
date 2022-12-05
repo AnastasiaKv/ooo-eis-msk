@@ -81,7 +81,7 @@ export default function Contacts() {
         <br />
         <Stack style={{paddingLeft: '3em', width: '29em', paddingRight: '2em'}}>
          <Typography style={textStyle} component='p'>
-          <p style={{paddingLeft: '7em', fontSize: '12px'}}>
+          <p style={{paddingLeft: '7em', marginRight: '-6em'}}>
            В случае, если Вы хотите обсудить какие-либо вопросы,
            <br /> свяжитесь с нами:
           </p>
