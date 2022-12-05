@@ -5,9 +5,9 @@ import '../assets/css/App.css';
 import LayoutProvider from './layouts/LayoutProvider';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import TopMediaBlock from './layouts/TopMediaBlockLayout';
+import MediaBlock from './components/MediaBlock';
 import SEO from './components/SEO';
-import MyThemeProvider from './MyThemeProvider';
+import MyThemeProvider from './layouts/ThemeProvider';
 
 const helmetContext = {};
 
@@ -36,7 +36,7 @@ function App() {
           <div className='ees-main'>
            <div className='ees-main-row'>
             <MyThemeProvider>
-             <TopMediaBlock />
+             <MediaBlock />
             </MyThemeProvider>
            </div>
           </div>

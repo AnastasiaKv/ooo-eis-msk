@@ -2,11 +2,7 @@ import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 /* import SendIcon from '@mui/icons-material/Send';
 import CloseIcon from '@mui/icons-material/Close'; */
-import {
- Button,
- DialogActions,
- Stack,
-} from '@mui/material';
+import {Button, DialogActions, Stack} from '@mui/material';
 import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import MyTextInput from '../../../modules/common/MyTextInput';
@@ -63,7 +59,7 @@ export default function ContactUsForm({
        })
      })
     } */
-      /* .test(
+    /* .test(
           'email or phone',
           'Обязательно заполнить E-mmail или Телефон',
           (value) => has(value, 'email') || has(value, 'phone')
@@ -77,40 +73,45 @@ export default function ContactUsForm({
     })}
    >
     {(props) => (
-    <Form ref={contactUsForm} style={{width: 'fitContent'/* width: '22em', height: '24em' */}} onSubmit={props.handleSubmit}>
-     <Stack direction='column' /* noValidate */>
-      <MyTextInput label='Имя' name='name' type='text' placeholder='' />
-      <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
-      <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
-     </Stack>
+     <Form
+      ref={contactUsForm}
+      style={{width: 'fitContent' /* width: '22em', height: '24em' */}}
+      onSubmit={props.handleSubmit}
+     >
+      <Stack direction='column' /* noValidate */>
+       <MyTextInput label='Имя' name='name' type='text' placeholder='' />
+       <MyTextInput label='E-mail' name='email' type='email' placeholder='' />
+       <MyTextInput label='Телефон' name='phone' type='text' placeholder='' />
+      </Stack>
       <DialogActions
        style={{justifyContent: 'center' /*, boxSizing: 'contentBox', width: 'fitContent' */}}
       >
        <div style={{justifyContent: 'center', textAlign: 'center', boxSizing: 'contentBox'}}>
-       <Button
+        <Button
          sx={{
           left: '0',
-         width: '12em',
-         height: '45px',
+          width: '12em',
+          height: '45px',
           borderRadius: '1',
-         color: '#F1F1F1F1',
-         backgroundColor: '#2d3748',
-         margin: '10px',
+          color: '#F1F1F1F1',
+          backgroundColor: '#2d3748',
+          margin: '10px',
           '&:hover': {
-            backgroundColor: '#F00000'
+           backgroundColor: '#e53e3e',
           },
-        }}
-        type='submit'
-        variant='contained'
-        disabled={props.isSubmitting}
-       >
-        Отправить
-       </Button>
+         }}
+         type='submit'
+         variant='contained'
+         disabled={props.isSubmitting}
+        >
+         Отправить
+        </Button>
 
-       {//Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой
-        enableDebugButtons && (
-         <div>
-          <Button
+        {
+         //Кнопки для теста, имитирующие отправку формы: успешную или с ошибкой
+         enableDebugButtons && (
+          <div>
+           <Button
             sx={{
              left: '0',
              width: '12em',
@@ -121,21 +122,21 @@ export default function ContactUsForm({
              color: 'white',
              '&:hover': {
               backgroundColor: 'blue',
-              color: 'green'
+              color: 'green',
              },
-           }}
+            }}
             variant='outlined'
-           onClick={() => {
-            var response = {status: 200, text: ' OK '};
-            setEmailjsResponse(response);
-            setOpenContactUsDialog(false);
-            setOpenSubmittionResultDialog(true);
-           }}
-          >
-          Test OK
-          </Button>
+            onClick={() => {
+             var response = {status: 200, text: ' OK '};
+             setEmailjsResponse(response);
+             setOpenContactUsDialog(false);
+             setOpenSubmittionResultDialog(true);
+            }}
+           >
+            Test OK
+           </Button>
 
-          <Button
+           <Button
             sx={{
              left: '0',
              width: '12em',
@@ -146,29 +147,29 @@ export default function ContactUsForm({
              color: 'white',
              '&:hover': {
               backgroundColor: 'blue',
-              color: 'red'
+              color: 'red',
              },
-           }}
+            }}
             variant='outlined'
-           onClick={() => {
-            var response = {
-             status: 410,
-             text:
-              "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <recipient@mailserver.ru>: Relay access denied",
-            };
-           setEmailjsResponse(response);
-           setOpenContactUsDialog(false);
-           setOpenSubmittionResultDialog(true);
+            onClick={() => {
+             var response = {
+              status: 410,
+              text:
+               "SMTP: Can't send mail - all recipients were rejected: 554 5.7.1 <recipient@mailserver.ru>: Relay access denied",
+             };
+             setEmailjsResponse(response);
+             setOpenContactUsDialog(false);
+             setOpenSubmittionResultDialog(true);
             }}
            >
-           Test Error
-          </Button>
-         </div>
-        )
-       }
-      </div>
-     </DialogActions>
-    </Form>
+            Test Error
+           </Button>
+          </div>
+         )
+        }
+       </div>
+      </DialogActions>
+     </Form>
     )}
    </Formik>
   </>

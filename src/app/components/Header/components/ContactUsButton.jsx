@@ -29,7 +29,7 @@ export default function ContactUsButton() {
      borderRadius: 3,
      textTransform: 'inherit',
      color: '#ffffff',
-     backgroundColor: '#F12B29',
+     backgroundColor: '#e53e3e',
      height: '37.1px',
     }}
     variant='contained'

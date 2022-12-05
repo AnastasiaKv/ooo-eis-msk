@@ -1,4 +1,4 @@
-import React/* , {useState} */ from 'react';
+import React /* , {useState} */ from 'react';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import {Typography} from '@mui/material';
@@ -58,7 +58,7 @@ export default function JobsType() {
        boxShadow: 'none',
       }}
      >
-      <Typography variant='h5' style={{color: 'white', paddingTop: '0.6em', paddingBottom: '1em'}}>
+      <Typography variant='h5' style={{color: 'white', paddingTop: '1.3em', paddingBottom: '1em'}}>
        <b>{i.id}</b>
       </Typography>
       <Typography

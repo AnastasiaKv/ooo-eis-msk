@@ -1,11 +1,11 @@
 import * as React from 'react';
 /* import {styled} from '@mui/material/styles'; */
-import Slider from '../components/ImageSlider/Slider';
+import Slider from './ImageSlider/Slider';
 
 import Box from '@mui/material/Box';
 /* import Paper from '@mui/material/Paper'; */
 import Grid from '@mui/material/Unstable_Grid2';
-import NavTabs from '../components/NavMenu';
+import NavTabs from './NavMenu';
 
 /* const Item = styled(Paper)(({theme}) => ({
  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -15,7 +15,7 @@ import NavTabs from '../components/NavMenu';
  color: theme.palette.text.secondary,
 })); */
 
-export default function TopMediaBlock() {
+export default function MediaBlock() {
  return (
   <>
    <Box
