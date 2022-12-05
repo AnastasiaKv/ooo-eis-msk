@@ -23,27 +23,39 @@ const SlideTransition = React.forwardRef(function Transition(props, ref) {
  return <Slide direction='up' ref={ref} {...props} />;
 });
 
-function SubmittionResultDialog(
- {isOpenSubmittionResultDialog,
+function SubmittionResultDialog({
+ isOpenSubmittionResultDialog,
  handleCloseSubmittionResultDialog,
- emailjsResponse}
-) {
+ emailjsResponse,
+}) {
  console.log('SubmittionResultDialog:');
  console.log(emailjsResponse);
  const [isShowErrorDetails, setShowErrorDetails] = useState(false);
  return (
   <Dialog
-   style={{width: '1000px'/* , position: 'absolute', right: 0, top: 0 */}}
-   //sx={{width: '1000px', left:'45', m:0}}
+   disableScrollLock
+   scroll='body'
+   TransitionComponent={SlideTransition}
+   transitionDuration={{appear: 0, enter: 350, exit: 350}}
+   PaperProps={{
+    sx: {width: 'fitContext', left: 0},
+   }}
+   sx={{
+    '& .MuiDialog-container': {
+     justifyContent: 'flex-start',
+     alignItems: 'flex-start',
+    },
+   }}
+   /* style={{width: '1000px', position: 'absolute', right: 0, top: 0}}
+   sx={{width: '1000px', left:'45', m:0}} */
    open={isOpenSubmittionResultDialog}
    onClose={handleCloseSubmittionResultDialog}
-   TransitionComponent={SlideTransition}
    aria-labelledby='form-dialog-title'
   >
    <DialogTitle>
     {emailjsResponse.status === 200 ? (
      <Alert
-      icon={<CheckCircleOutlineIcon style={{fontSize: '1.7rem'}} />}
+      icon={<CheckCircleOutlineIcon style={{fontSize: '2.3rem'}} />}
       variant='filled'
       severity='success'
       style={{textAlign: 'left', fontSize: '1.7rem'}}
@@ -52,9 +64,7 @@ function SubmittionResultDialog(
      </Alert>
     ) : (
      <Alert variant='filled' severity='error' sx={{textAlign: 'left', fontSize: '1.3em'}}>
-      <p style={{fontWeight: 400, marginTop: '-0.15em'}}>
-       Не удалось отправить заявку на обратный звонок в связи с технической проблемой.
-      </p>
+      Не удалось отправить заявку на обратный звонок в связи с технической проблемой.
      </Alert>
     )}
    </DialogTitle>
@@ -92,11 +102,11 @@ function SubmittionResultDialog(
         elevation={0}
         hidden={!isShowErrorDetails}
        >
-        <Typography component='p'>Код ответа: {emailjsResponse.status}</Typography>
+       <Typography component='p'>Код ответа: {emailjsResponse.status}</Typography>
 
-        <Typography component='div' style={{paddingLeft: '4.29em'}}>
-         <p style={{textIndent: '-4.29em'}}>Ошибка: {emailjsResponse.text}</p>
-        </Typography>
+       <Typography component='div' style={{paddingLeft: '4.29em'}}>
+        <p style={{textIndent: '-4.29em'}}>Ошибка: {emailjsResponse.text}</p>
+       </Typography>
        </Paper>
       </div>
      )}
@@ -104,7 +114,6 @@ function SubmittionResultDialog(
     <DialogActions>
      <Button
       style={{left: 0}}
-      //sx={{all:{left: '0'}}}
       className='outline'
       onClick={() => handleCloseSubmittionResultDialog()}
      >
