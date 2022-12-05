@@ -33,22 +33,22 @@ function SubmittionResultDialog({
  const [isShowErrorDetails, setShowErrorDetails] = useState(false);
  return (
   <Dialog
-   maxWidth='md'
-   disableScrollLock
+   maxWidth='lg'
+   /* disableScrollLock */
    scroll='body'
    TransitionComponent={SlideTransition}
    transitionDuration={{appear: 0, enter: 350, exit: 350}}
-   /* PaperProps={{
-    sx: {width: '700px' 'fitContent', left: 0},
-   }} */
-   /* sx={{ width: '1200px', left:0, 
+   PaperProps={{
+    sx: {maxWidth: '700px', maxHeight: '800px', width: 'fitContent', height: 'fitContent' /* '20em' */, left: 0},
+   }}
+   sx={{ /* width: '1200px', */ left:0, 
     '& .MuiDialog-container': {
      justifyContent: 'flex-start',
      alignItems: 'flex-start',
     },
-   }} */
-   /* style={{width: '1000px', position: 'absolute', right: 0, top: 0}}
-   sx={{width: '1000px', left:'45', m:0}} */
+   }}
+   /* style={{width: '1000px', position: 'absolute', right: 0, top: 0}} */
+   /* sx={{width: '1000px', left:'45', m:2}} */
    open={isOpenSubmittionResultDialog}
    onClose={handleCloseSubmittionResultDialog}
    aria-labelledby='form-dialog-title'
@@ -67,7 +67,7 @@ function SubmittionResultDialog({
      </Alert>
     ) : (
      <Alert
-      icon={<ErrorOutlineRoundedIcon style={{fontSize: '2em'}} />}
+      icon={<ErrorOutlineRoundedIcon style={{fontSize: '4em'}} />}
       variant='filled'
       severity='error'
      >
@@ -80,7 +80,7 @@ function SubmittionResultDialog({
      </Alert>
     )}
    </DialogTitle>
-   <DialogContent>
+   <DialogContent sx={{pb: '10px'}}>
     <DialogContentText>
      {emailjsResponse.status === 200 ? (
       <>
@@ -93,7 +93,7 @@ function SubmittionResultDialog({
       </>
      ) : (
       <div sx={{pl:'3em', pr:'3em'}}>
-       <Typography component='p' sx={{fontSize: '2em'}}>
+       <Typography component='p' sx={{/* ml: '30px',  */fontSize: '2em'}}>
         Пожалуйста, попробуйте ещё раз позже
        </Typography>
        <Typography component='p' sx={{fontSize: '2em'}}>
@@ -113,15 +113,13 @@ function SubmittionResultDialog({
         label='Подробности ошибки'
        />
        <br />
-       <Paper
-        //sx={{fontSize: '0.3rem', fontFamily: 'Roboto', lineHeight: 1.5}}
+       <Paper sx={{width: 'fitContent', height: 'fitContent', maxWidth:'680px'/* , left: 0 */}}
         elevation={0}
         hidden={!isShowErrorDetails}
        >
-        <Typography component='p'>Код ответа: {emailjsResponse.status}</Typography>
-
-        <Typography component='p' style={{paddingLeft: '4.29em'}} sx={{fontSize:1}}>
-         <p style={{textIndent: '-4.29em'}}>Ошибка: {emailjsResponse.text}</p>
+        <Typography component='p' sx={{fontSize: '1.5em'}}>Код ответа: {emailjsResponse.status}</Typography>
+        <Typography component='p' sx={{fontSize: '1.5em'}} style={{paddingLeft: '4.29em', textIndent: '-4.29em'}}>
+         Ошибка: {emailjsResponse.text}
         </Typography>
        </Paper>
       </div>
