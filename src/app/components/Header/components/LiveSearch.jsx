@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-import { Paper } from '@mui/material';
+import {Paper} from '@mui/material';
 /* import {useAutocomplete} from '@mui/base/AutocompleteUnstyled'; */
-import { Link } from 'react-router-dom';
-import { Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import {Link} from 'react-router-dom';
+import {Typography} from '@mui/material';
+import {makeStyles} from '@mui/styles';
 import Page1 from '../../OurServices/pages/1_RepairMotorsPage';
 import Page2 from '../../OurServices/pages/2_GeneratorRepairPage';
 import Page3 from '../../OurServices/pages/3_RepairTransformersPage';
@@ -150,8 +150,9 @@ export default SearchBar;
 function LinkButton(props) {
  return (
   <Button
-   sx={{
+   style={{
     textTransform: 'inherit',
+    color: '#292929',
     bgcolor: '#808080',
     minWidth: '100px',
     minHeight: '25px',
