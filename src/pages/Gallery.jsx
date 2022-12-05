@@ -1,8 +1,8 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+/* import {makeStyles} from '@mui/styles'; */
 import Box from '@mui/material/Box';
-import {Typography} from '@material-ui/core';
-import {Stack} from '@mui/system';
+import {Typography, Stack} from '@mui/material';
+/* import {Stack} from '@mui/system'; */
 import Paper from '@mui/material/Paper';
 
 import image1 from '../assets/img/gallery/Gallery_ASIG.png';

@@ -7,10 +7,10 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import {Stack} from '@mui/system';
 import Box from '@mui/material/Box';
-import {Typography} from '@material-ui/core';
+import {Typography} from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
-import {Button} from '@material-ui/core';
+import {Button} from '@mui/material';
 import emailjs, {init, SMTPClient} from '@emailjs/browser';
 import MyTextInput from "../../src/app/modules/common/MyTextInput";
 import SubmittionResultDialog from '../app/components/Header/components/SubmittionResultDialog';
@@ -51,12 +51,12 @@ export default function Contacts() {
      '& .MuiTextField-root': {m: 1, width: '25ch'},
      paddingBottom: '1em',
     }}
-    noValidate
+    /* noValidate */
     autoComplete='off'
    >
     <div>
      <Stack>
-      <p style={{paddingTop: '20px'}}>
+      <p style={{paddingTop: '20px'}} sx={{m:''}}>
        <span
         style={{
          paddingLeft: '2em',
@@ -147,15 +147,11 @@ export default function Contacts() {
            console.log('Sending e-mail');
            emailjs.sendForm('service_6netdbf', 'contactUsForm', contactUs2Form.current).then(
             (result) => {
-             console.info('Email sent succesfully.');
-             console.info(result);
              setEmailjsResponse(result);
              setOpenSubmittionResultDialog(true);
              setSubmitting(false);
             },
             (error) => {
-             console.info('Error: Email did not sent.');
-             console.info(error);
              setEmailjsResponse(error);
              setOpenSubmittionResultDialog(true);
              setSubmitting(false);
