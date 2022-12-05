@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-import {Paper} from '@mui/material';
+import { Paper } from '@mui/material';
 /* import {useAutocomplete} from '@mui/base/AutocompleteUnstyled'; */
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
-import {Typography} from '@mui/material';
-import {makeStyles} from '@mui/styles';
+import { Link } from 'react-router-dom';
+import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Page1 from '../../OurServices/pages/1_RepairMotorsPage';
 import Page2 from '../../OurServices/pages/2_GeneratorRepairPage';
 import Page3 from '../../OurServices/pages/3_RepairTransformersPage';
@@ -18,8 +18,6 @@ import Page7 from '../../OurServices/pages/7_SaleOfElectricalComponentsPage';
 import Page8 from '../../OurServices/pages/8_RepairOfBoardsAndBlocksPage';
 import Page9 from '../../OurServices/pages/9_TORepairOfPassengerCarsPage';
 import Page10 from '../../OurServices/pages/10_SurfacingOfShaftsAndShieldsPage';
-
-import {useNavigate} from 'react-router-dom';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Dialog from '@mui/material/Dialog';
 
@@ -50,7 +48,6 @@ const filterData = (query, itemList) => {
 
 const SearchBar = ({setSearchQueries, iconStart, iconEnd, InputProps, ...props}) => {
  const classes = useStyles();
- const navigate = useNavigate();
  const [isShown, setIsShown] = useState(false);
  const [searchedService, setSearchedService] = useState({});
  const [openModal, setOpenModal] = useState(false);

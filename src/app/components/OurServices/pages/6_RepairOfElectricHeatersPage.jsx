@@ -4,8 +4,7 @@ import image6 from '../../../../assets/img/services/6.png';
 import ReportProblemSvg from '@mui/icons-material/ReportProblemRounded';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
-import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
-import {textAlign} from '@mui/system';
+import {isMobileSafari} from 'react-device-detect';
 
 export default function RepairOfElectricHeatersPage() {
  return (

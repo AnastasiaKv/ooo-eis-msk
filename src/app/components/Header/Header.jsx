@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 // importing material UI components
 import {AppBar} from '@mui/material';
 import Box from '@mui/material/Box';

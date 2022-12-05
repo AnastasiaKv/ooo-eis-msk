@@ -1,9 +1,8 @@
-import React, {useRef, useState, useEffect} from 'react';
-import {Formik, Form, useField, useFormikContext} from 'formik';
+import React, {useRef, useState} from 'react';
+import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
-import '../assets/css/style.css';
-import '../assets/css/styles-custom.css';
-import Grid from '@mui/material/Grid';
+/* import '../assets/css/style.css';
+import '../assets/css/styles-custom.css'; */
 import Paper from '@mui/material/Paper';
 import {Stack} from '@mui/system';
 import Box from '@mui/material/Box';
@@ -11,7 +10,7 @@ import {Typography} from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import SEO from '../app/components/SEO';
 import {Button} from '@mui/material';
-import emailjs, {init, SMTPClient} from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import MyTextInput from "../../src/app/modules/common/MyTextInput";
 import SubmittionResultDialog from '../app/components/Header/components/SubmittionResultDialog';
 
@@ -55,8 +54,8 @@ export default function Contacts() {
     autoComplete='off'
    >
     <div>
-     <Stack>
-      <p style={{paddingTop: '20px'}} sx={{m:''}}>
+     <Stack  style={{margin:'-2em 0em 0em 2em'}}>
+      <p style={{paddingTop: '20px'}}>
        <span
         style={{
          paddingLeft: '2em',
@@ -181,6 +180,9 @@ export default function Contacts() {
                 borderRadius: '1',
                 color: '#F1F1F1F1',
                 backgroundColor: '#2d3748',
+                '&:hover': {
+                  backgroundColor: '#F00000'
+                },
                }}
                type='submit'
                className='btn btn-primary'

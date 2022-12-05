@@ -1,11 +1,11 @@
 import React from 'react';
-import {Paper, Box, Stack, Typography} from '@mui/material';
+import { Paper, Stack, Typography } from '@mui/material';
 import CustomizedTables from '../../../modules/common/CustomizedTables';
 import image5 from '../../../../assets/img/services/5.png';
 import BoltSvg from '@mui/icons-material/Bolt';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
-import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
+import { isMobileSafari } from 'react-device-detect';
 
 export default function RewindingMotorsPage() {    
  return (

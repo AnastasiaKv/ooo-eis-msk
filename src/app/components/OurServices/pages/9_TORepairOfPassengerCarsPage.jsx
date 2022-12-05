@@ -4,7 +4,7 @@ import GppGoodSvg from '@mui/icons-material/GppGoodRounded';
 import image9 from '../../../../assets/img/services/9_1.png';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
-import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
+import {isMobileSafari} from 'react-device-detect';
 
 export default function TORepairOfPassengerCarsPage() {
  return (

@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef} from 'react';
 import {styled} from '@mui/material/styles';
 import '../../../assets/css/styles-custom.css';
 import '../../../assets/css/decor-top.css';
