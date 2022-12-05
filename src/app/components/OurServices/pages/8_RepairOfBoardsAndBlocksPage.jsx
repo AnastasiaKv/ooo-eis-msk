@@ -4,7 +4,7 @@ import SEO from '../../SEO';
 import image6 from '../../../../assets/img/services/8.png';
 import ComputerSvg from '@mui/icons-material/Computer';
 import '../../../../assets/css/browser-typography.css';
-import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
+import {isMobileSafari} from 'react-device-detect';
 
 export default function RepairOfBoardsAndBlocksPage() {
  return (

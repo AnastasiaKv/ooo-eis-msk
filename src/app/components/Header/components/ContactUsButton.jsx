@@ -1,39 +1,10 @@
-import React, {useRef, useState} from 'react';
-import emailjs from '@emailjs/browser';
-import {withStyles} from '@material-ui/core/styles';
+import React, {useState} from 'react';
+/* import {withStyles} from '@mui/styles'; */
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import {
- Button,
- Dialog,
- DialogTitle,
- DialogContent,
- DialogContentText,
- DialogActions,
- Paper,
-} from '@material-ui/core';
-import {Alert, FormControlLabel, Switch, Slide} from '@mui/material';
-import {Formik, Form} from 'formik';
-import * as Yup from 'yup';
-import {Stack} from '@mui/system';
-import Typography from '@mui/material/Typography';
-import {createTheme, ThemeProvider} from '@mui/material/styles';
-import MyTextInput from '../../../modules/common/MyTextInput';
-// import { DisplayFormikState } from './formikHelper';
+import {Button, Typography} from '@mui/material';
 import '../../../../assets/css/style.css';
 import '../../../../assets/css/styles-custom.css';
-import {useMatch} from 'react-router-dom';
-import SubmittionResultDialog from './SubmittionResultDialog';
-import ContactUsForm from './ContactUsForm';
-import SendUsEmailDialog from './SendUsEmailDialog'
-
-const theme = createTheme({
- components: {
-  // todo: remove once the issue is addressed: https://github.com/mui/material-ui/issues/31185
-  MuiDialogContent: {
-   styleOverrides: {root: {paddingTop: `${20}px !important`, left: 'unset'}},
-  },
- },
-});
+import SendUsEmailDialog from './SendUsEmailDialog';
 
 export default function ContactUsButton() {
  function handleClickBackcallButton() {
@@ -66,7 +37,7 @@ export default function ContactUsButton() {
    >
     <span>Обратный звонок</span>
    </Button>
-   <SendUsEmailDialog {...{isOpenContactUsDialog, setOpenContactUsDialog}}/>
+   <SendUsEmailDialog {...{isOpenContactUsDialog, setOpenContactUsDialog}} />
   </div>
  );
 }

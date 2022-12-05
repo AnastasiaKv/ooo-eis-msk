@@ -1,11 +1,11 @@
 import React from 'react';
-import {Paper, Box, Stack, Typography} from '@mui/material';
+import {Paper, Stack, Typography} from '@mui/material';
 import image4 from '../../../../assets/img/services/4.png';
 
 import DoneSvg from '@mui/icons-material/AcUnit';
 import SEO from '../../SEO';
 import '../../../../assets/css/browser-typography.css';
-import {isSafari, isMobileSafari, isChrome, isFirefox, isDesktop} from 'react-device-detect';
+import {isMobileSafari} from 'react-device-detect';
 
 export default function RefrigerationMachineRepairPage() {
  return (

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import LoadingSplashCircular from '../modules/shared/LoadingSplashCircular';
+/* import LoadingSplashCircular from '../modules/shared/LoadingSplashCircular'; */
 
 const disableSplashScreen = () => {
  const splashScreen = document.getElementById('loading');

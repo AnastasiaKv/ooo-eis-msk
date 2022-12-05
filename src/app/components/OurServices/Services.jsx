@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef} from 'react';
 import {styled} from '@mui/material/styles';
 import '../../../assets/css/styles-custom.css';
 import '../../../assets/css/decor-top.css';
@@ -77,7 +77,7 @@ function DecorBottom({visability}) {
  );
 }
 
-function ServiceLinkButton({linkUrl, image}) {
+/* function ServiceLinkButton({linkUrl, image}) {
  const classes = useStyles();
  const isUrlExpected = useMatch(linkUrl);
  console.log('matchCurrent: ' + isUrlExpected);
@@ -90,7 +90,7 @@ function ServiceLinkButton({linkUrl, image}) {
    {isUrlExpected && <DecorBottom />}
   </LinkButton>
  );
-}
+} */
 
 function Page1() {
  const classes = useStyles();
@@ -544,7 +544,7 @@ export default function Gridservices() {
  const ref = useRef({
   renderCount: 0,
  });
- const classes = useStyles();
+/*  const classes = useStyles(); */
 
  ref.current.renderCount++;
  console.log('renderCount: ' + ref.current.renderCount);
@@ -651,7 +651,7 @@ export default function Gridservices() {
      </div>
      <Stack direction='row' spacing={1}>
       <Page7 />
-      <Page8 title='Ремонт плат и электронных блоков'/>
+      <Page8 />
       <Page9 />
      </Stack>
      <div style={{marginLeft: '1.2em', marginBottom: 5, marginTop: '0.2em', marginRight: '0em'}}>

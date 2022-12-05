@@ -2,7 +2,6 @@ import React from 'react';
 import {Paper, Box, Stack, Typography} from '@mui/material';
 import SimpleTable from '../../../modules/common/SimpleTable';
 import image1 from '../../../../assets/img/services/1.png';
-import {Outlet} from 'react-router-dom';
 import SEO from '../../SEO';
 
 const data = [
